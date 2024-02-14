@@ -1,0 +1,26 @@
+//font 변수 정의
+
+@mixin header {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 1px;
+	color: $dark-grey2;
+}
+
+@mixin nav {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+	color: $dark-grey2;
+}
+
+@mixin title {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	color: $dark-grey2;
+}

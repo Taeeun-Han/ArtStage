@@ -1,0 +1,238 @@
+@import "color.scss";
+@import "font.scss";
+
+.container {
+	background-color: $main-color;
+	.wrap {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 30px;
+
+		.login-txt {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+
+			div {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 5px;
+				margin-bottom: 20px;
+
+				p {
+					@include header;
+					font-size: 18px;
+					color: $white;
+				}
+			}
+
+			span {
+				font-family: "Pretendard-Regular", Arial, sans-serif;
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 20px;
+				letter-spacing: 1px;
+				color: $white;
+			}
+		}
+
+		main {
+			width: calc(100% + 40px);
+			margin-left: -20px;
+			margin-right: -20px;
+			padding: 30px 20px;
+			background-color: $white;
+			border-top-left-radius: 30px;
+			border-top-right-radius: 30px;
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+			padding-bottom: 80px;
+            margin-bottom: -20px;
+
+			.member {
+				background-color: #f0f0f0; // 배경 색상
+				padding: 5px;
+				display: flex;
+				border-radius: 50px;
+				position: relative; // 애니메이션을 위한 상대 위치 지정
+
+				button {
+					background-color: #f0f0f0; // 버튼 기본 색상
+					width: 50%;
+					border-radius: 50px;
+					padding: 9px;
+					border: none;
+					cursor: pointer;
+					transition: background-color 0.3s ease,
+						margin-left 0.3s ease; // 배경색 및 마진 변경시 애니메이션 효과
+					margin-right: 20px; // 버튼 간격
+
+					&:first-child {
+						background-color: #ffffff; // "일반회원" 초기 배경색
+					}
+
+					&:last-child {
+						margin-right: 0; // 마지막 버튼의 오른쪽 마진 제거
+					}
+				}
+
+				.active {
+					background-color: #ffffff; // 활성 상태의 배경색
+				}
+			}
+
+			.login-form {
+				display: flex;
+				flex-direction: column;
+				gap: 30px;
+
+				.login-input {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					gap: 10px;
+
+					p {
+						@include title;
+
+						span {
+							color: $red;
+							font-size: 14px;
+							font-weight: 500;
+						}
+					}
+
+					input {
+						border: 1px solid $grey1;
+						width: 100%;
+						padding: 10px 20px 10px 15px;
+						border-radius: 50px;
+						outline: none;
+						caret-color: $main-color;
+
+						&::placeholder {
+							font-size: 12px;
+						}
+
+						&:focus {
+							outline: none;
+						}
+					}
+				}
+
+				.login-option {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					margin-top: -25px;
+
+					.toggle {
+						display: flex;
+						align-items: center;
+						gap: 3px;
+
+						input {
+							display: none;
+						}
+
+						.toggle-switch {
+							width: 30px; /* 너비를 30px로 조정 */
+							height: 15px; /* 높이 조정 */
+							display: block;
+							position: relative;
+							border-radius: 7.5px; /* 둥근 모서리 반경 조정 */
+							background-color: #fff;
+							box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.15);
+							cursor: pointer;
+
+							margin: 10px 10px 10px 5px; /* 마진 조정 */
+
+							.toggle-button {
+								width: 10px; /* 버튼의 너비 조정 */
+								height: 10px; /* 버튼의 높이 조정 */
+								position: absolute;
+								top: 50%;
+								left: 2px; /* 초기 위치 조정 */
+								transform: translateY(-50%);
+								border-radius: 50%;
+								background: #f03d3d;
+								transition: all 0.2s ease-in;
+							}
+
+							transition: all 0.2s ease-in;
+						}
+
+						input[type="checkbox"]:checked ~ .toggle-switch {
+							background: #f03d3d;
+
+							.toggle-button {
+								left: calc(
+									100% - 14px
+								); /* 체크 시 버튼의 위치 조정 */
+								background: #fff;
+							}
+						}
+
+						span {
+							font-weight: 400;
+							font-size: 12px;
+							color: $dark-grey2;
+							letter-spacing: 0.5px;
+						}
+					}
+
+					.forgot-pw {
+						p {
+							font-weight: 500;
+							font-size: 12px;
+							color: $main-color;
+							letter-spacing: 0.5px;
+						}
+					}
+				}
+
+				.login-button {
+					width: 100%;
+
+					button {
+						width: 100%;
+						background-color: $main-color;
+						padding: 15px;
+						border-radius: 50px;
+						color: $white;
+					}
+				}
+			}
+
+			.social-login-txt {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 10px;
+
+				div {
+					border-top: 1px solid $grey1;
+					width: 100px;
+				}
+
+				p {
+					font-weight: 500;
+					font-size: 12px;
+					color: $dark-grey1;
+					letter-spacing: 0.5px;
+					text-align: center;
+				}
+			}
+
+			.social-login {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 15px;
+			}
+		}
+	}
+}
