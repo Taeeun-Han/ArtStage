@@ -1,9 +1,9 @@
 @charset 'utf-8';
 
 // IMPORT SCSS
-@import "login.scss";
 @import "font.scss";
 @import "color.scss";
+@import "join.scss";
 
 // FONT
 @font-face {
@@ -13,7 +13,6 @@
 	font-weight: 400;
 	font-style: normal;
 }
-
 
 // COMMON STYLE
 html,
@@ -34,9 +33,10 @@ body {
 	margin: 0 auto;
 	position: relative;
 	padding: 20px;
+	padding-bottom: 130px;
 }
 
-.wrap{
+.wrap {
 	width: 100%;
 }
 
@@ -159,16 +159,41 @@ ul.nav {
 		color: #fff;
 		width: 100%;
 		height: 50px;
-		font-size: 16px;
-		font-weight: 600;
 		border: none;
-		text-align: center;
 		cursor: pointer;
 		letter-spacing: 1px;
-	}
 
-	.disabled {
-		opacity: 0.5;
+		@include button;
+	}
+}
+
+// DISABD BUTTON STYLE
+.btn-wrap-disabled {
+	z-index: 999;
+	width: 100%;
+
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+
+	background-color: #fff;
+	padding: 10px 20px 20px 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	button {
+		background: $grey2;
+		border-radius: 16px;
+		color: #fff;
+		width: 100%;
+		height: 50px;
+		border: none;
+		cursor: pointer;
+		letter-spacing: 1px;
+
+		@include button;
 	}
 }
 
@@ -178,7 +203,7 @@ header {
 	position: sticky;
 	z-index: 999;
 	top: 0;
-	//background: $white;
+	background: $white;
 	//padding: 0px 20px;
 
 	.wrap {
@@ -197,8 +222,7 @@ header {
 					justify-content: center;
 					align-items: center;
 
-					span{
-						color: $white;
+					span {
 						font-size: 20px;
 					}
 				}
@@ -208,7 +232,7 @@ header {
 		.header-center {
 			.txt {
 				p {
-					//@include header-title;
+					@include header;
 					word-break: keep-all;
 				}
 			}
@@ -234,5 +258,303 @@ header {
 	img {
 		position: absolute;
 		right: 20px;
+	}
+}
+
+// LOGIN-FORM STYLE
+.login-form {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+
+	.login-input {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+
+		p {
+			@include login-title;
+
+			span {
+				@include login-essential;
+			}
+		}
+
+		input[type="text"],
+		select {
+			border: 1px solid $grey2;
+			width: 100%;
+			padding: 10px 20px 10px 15px;
+			border-radius: 10px;
+			outline: none;
+			caret-color: $main-color;
+			color: $dark-grey1;
+
+			&::placeholder {
+				font-size: 12px;
+				color: $grey3;
+			}
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		button {
+			padding: 10px 20px;
+			border-radius: 10px;
+
+			@include login-toggle;
+
+			color: $main-color;
+			border: 1px solid $main-color;
+			background-color: $white;
+			cursor: pointer;
+		}
+	}
+}
+
+.login {
+	background-color: $main-color;
+	padding-bottom: 0px;
+
+	header {
+		background-color: transparent;
+		position: relative;
+
+		.wrap {
+			.header-left {
+				.icon {
+					a {
+						span {
+							color: $white;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.wrap {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 30px;
+
+		.login-txt {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+
+			div {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 5px;
+				margin-bottom: 20px;
+
+				p {
+					@include header;
+					font-size: 18px;
+					color: $white;
+				}
+			}
+
+			span {
+				@include header-span;
+			}
+		}
+
+		main {
+			width: calc(100% + 40px);
+			margin-left: -20px;
+			margin-right: -20px;
+			padding: 30px 20px;
+			background-color: $white;
+			border-top-left-radius: 30px;
+			border-top-right-radius: 30px;
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+			padding-bottom: 50px;
+			margin-bottom: -20px;
+
+			.member {
+				background-color: #f0f0f0;
+				padding: 5px;
+				border-radius: 10px;
+
+				display: flex;
+				align-items: center;
+
+				button {
+					width: 100%;
+					background-color: #f0f0f0;
+					border-radius: 10px;
+					padding: 9px 30px;
+					border: none;
+					cursor: pointer;
+					transition: background-color 0.3s ease,
+						margin-left 0.3s ease;
+					margin-right: 10px;
+
+					@include header-span;
+					color: $dark-grey1;
+
+					&:first-child {
+						background-color: #ffffff;
+					}
+
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+
+				.active {
+					background-color: #ffffff;
+				}
+			}
+
+			.login-form {
+				display: flex;
+				flex-direction: column;
+				gap: 30px;
+
+				.login-input {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					gap: 10px;
+
+					p {
+						@include login-title;
+
+						span {
+							@include login-essential;
+						}
+					}
+
+					input {
+						border: 1px solid $grey1;
+						width: 100%;
+						padding: 10px 20px 10px 15px;
+						border-radius: 10px;
+						outline: none;
+						caret-color: $main-color;
+
+						&::placeholder {
+							font-size: 12px;
+						}
+
+						&:focus {
+							outline: none;
+						}
+					}
+				}
+
+				.login-option {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					margin-top: -25px;
+
+					.toggle {
+						display: flex;
+						align-items: center;
+						gap: 3px;
+
+						input {
+							display: none;
+						}
+
+						.toggle-switch {
+							width: 30px;
+							height: 15px;
+							display: block;
+							position: relative;
+							border-radius: 7.5px;
+							background-color: #fff;
+							box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.15);
+							cursor: pointer;
+
+							margin: 10px 10px 10px 5px;
+							transition: all 0.2s ease-in;
+
+							.toggle-button {
+								width: 10px;
+								height: 10px;
+								position: absolute;
+								top: 50%;
+								left: 2px;
+								transform: translateY(-50%);
+								border-radius: 50%;
+								background: #f03d3d;
+								transition: all 0.2s ease-in;
+							}
+						}
+
+						input[type="checkbox"]:checked ~ .toggle-switch {
+							background: #f03d3d;
+
+							.toggle-button {
+								left: calc(100% - 14px);
+								background: #fff;
+							}
+						}
+
+						span {
+							@include login-toggle;
+						}
+					}
+
+					.forgot-pw {
+						p {
+							@include login-toggle;
+							cursor: pointer;
+						}
+					}
+				}
+
+				.login-button {
+					width: 100%;
+
+					button {
+						width: 100%;
+						background-color: $main-color;
+						padding: 15px;
+						border-radius: 10px;
+
+						@include header-span;
+					}
+				}
+			}
+
+			.social-login {
+				margin: 10px 0px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 15px;
+			}
+
+			.join {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				p {
+					@include header-span;
+					color: $dark-grey1;
+
+					span {
+						font-weight: 700;
+						text-decoration: underline;
+						margin-left: 3px;
+						cursor: pointer;
+					}
+				}
+			}
+		}
 	}
 }
