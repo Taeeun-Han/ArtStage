@@ -21,10 +21,10 @@
 .container .wrap main .progress-bar ::-webkit-progress-bar {
   background-color: grey;
   border-radius: 50px;
-  background-color: #ffccbb;
+  background-color: #dce9fd;
 }
 .container .wrap main .progress-bar ::-webkit-progress-value {
-  background-color: #ff8066;
+  background-color: #2575fc;
   border-radius: 50px;
 }
 .container .wrap main .join-content {
@@ -48,7 +48,7 @@
   color: #3d3d3d;
 }
 .container .wrap main .join-content .join-txt p span {
-  color: #ff8066;
+  color: #2575fc;
 }
 .container .wrap main .join-content .join-confirm {
   gap: 10px;
@@ -129,14 +129,29 @@
   color: #3d3d3d;
 }
 .container .wrap main .join-content .img {
-  margin-top: 20px;
   width: 230px;
   height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container .wrap main .join-content .img img {
   width: 100%;
   height: auto;
   object-fit: contain;
+}
+.container .wrap main .join-content .join-biz-txt {
+  display: flex;
+  align-items: center;
+}
+.container .wrap main .join-content .join-biz-txt p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #3d3d3d;
+}
+.container .wrap main .join-content .join-biz-txt p span {
+  color: #2575fc;
 }
 
 @font-face {
@@ -214,38 +229,6 @@ input[type=password]::placeholder {
   color: #e2e8f0;
 }
 
-ul.nav {
-  z-index: 999;
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  width: 100%;
-  height: 96px;
-  background-color: #fff;
-  border-top: 1px solid #dfdfdf;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-  padding: 10px 20px 30px 20px;
-}
-ul.nav li {
-  width: 20%;
-  padding: 30px 0px;
-}
-ul.nav li a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-}
-ul.nav .on {
-  border-radius: 16px;
-}
 .btn-wrap {
   z-index: 999;
   width: 100%;
@@ -260,7 +243,7 @@ ul.nav .on {
   justify-content: center;
 }
 .btn-wrap button {
-  background: #ff8066;
+  background: #2575fc;
   border-radius: 16px;
   color: #fff;
   width: 100%;
@@ -329,6 +312,13 @@ header .wrap .header-left .icon a span,
 header .wrap .header-right .icon a span {
   font-size: 20px;
 }
+header .wrap .img {
+  width: 100px;
+}
+header .wrap .img a img {
+  width: 100%;
+  object-fit: contain;
+}
 header .wrap .header-center .txt p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 700;
@@ -382,7 +372,7 @@ header .wrap .header-center .txt p {
   padding: 10px 20px 10px 15px;
   border-radius: 10px;
   outline: none;
-  caret-color: #ff8066;
+  caret-color: #2575fc;
   color: #555555;
 }
 .login-form .login-input input[type=text]::placeholder,
@@ -394,6 +384,21 @@ header .wrap .header-center .txt p {
 .login-form .login-input select:focus {
   outline: none;
 }
+.login-form .login-input #custom-button {
+  padding: 10px 20px 10px 15px;
+  color: white;
+  background-color: #2575fc;
+  border: 1px solid #2575fc;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.login-form .login-input #custom-button:hover {
+  background-color: #0056b3;
+}
+.login-form .login-input #custom-text {
+  font-size: 12px;
+  color: #555555;
+}
 .login-form .login-input button {
   padding: 10px 20px;
   border-radius: 10px;
@@ -401,14 +406,85 @@ header .wrap .header-center .txt p {
   font-size: 12px;
   color: #3d3d3d;
   letter-spacing: 0.5px;
-  color: #ff8066;
-  border: 1px solid #ff8066;
+  color: #2575fc;
+  border: 1px solid #2575fc;
   background-color: #ffffff;
   cursor: pointer;
 }
 
+ul.nav {
+  z-index: 999;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  width: 100%;
+  height: 96px;
+  background-color: #fff;
+  border-top: 1px solid #dfdfdf;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  padding: 10px 20px 30px 20px;
+}
+ul.nav li {
+  width: 20%;
+  padding: 30px 0px;
+}
+ul.nav li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  gap: 4px;
+}
+ul.nav li a p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  text-align: center;
+  color: #8b8b8b;
+}
+ul.nav li a i span {
+  color: #8b8b8b;
+  font-size: 24px;
+}
+ul.nav .on {
+  background-color: #dce9fd;
+  border-radius: 16px;
+}
+ul.nav .on p {
+  color: #2575fc;
+}
+ul.nav .on i span {
+  color: #2575fc;
+}
+
+.category-icons swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.category-icons swiper-container swiper-slide {
+  width: 100%;
+  height: 150px;
+  cursor: pointer;
+}
+.category-icons swiper-container swiper-slide .img {
+  width: 100%;
+  height: 150px;
+}
+.category-icons swiper-container swiper-slide .img img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
 .login {
-  background-color: #ff8066;
+  background-color: #2575fc;
   padding-bottom: 0px;
 }
 .login header {
@@ -500,114 +576,6 @@ header .wrap .header-center .txt p {
 .login .wrap main .member .active {
   background-color: #ffffff;
 }
-.login .wrap main .login-form {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-.login .wrap main .login-form .login-input {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.login .wrap main .login-form .login-input p {
-  font-family: "Pretendard-Regular", Arial, sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  color: #3d3d3d;
-}
-.login .wrap main .login-form .login-input p span {
-  color: #f03d3d;
-  font-size: 14px;
-  font-weight: 500;
-}
-.login .wrap main .login-form .login-input input {
-  border: 1px solid #e2e8f0;
-  width: 100%;
-  padding: 10px 20px 10px 15px;
-  border-radius: 10px;
-  outline: none;
-  caret-color: #ff8066;
-}
-.login .wrap main .login-form .login-input input::placeholder {
-  font-size: 12px;
-}
-.login .wrap main .login-form .login-input input:focus {
-  outline: none;
-}
-.login .wrap main .login-form .login-option {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: -25px;
-}
-.login .wrap main .login-form .login-option .toggle {
-  display: flex;
-  align-items: center;
-  gap: 3px;
-}
-.login .wrap main .login-form .login-option .toggle input {
-  display: none;
-}
-.login .wrap main .login-form .login-option .toggle .toggle-switch {
-  width: 30px;
-  height: 15px;
-  display: block;
-  position: relative;
-  border-radius: 7.5px;
-  background-color: #fff;
-  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-  margin: 10px 10px 10px 5px;
-  transition: all 0.2s ease-in;
-}
-.login .wrap main .login-form .login-option .toggle .toggle-switch .toggle-button {
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  top: 50%;
-  left: 2px;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  background: #f03d3d;
-  transition: all 0.2s ease-in;
-}
-.login .wrap main .login-form .login-option .toggle input[type=checkbox]:checked ~ .toggle-switch {
-  background: #f03d3d;
-}
-.login .wrap main .login-form .login-option .toggle input[type=checkbox]:checked ~ .toggle-switch .toggle-button {
-  left: calc(100% - 14px);
-  background: #fff;
-}
-.login .wrap main .login-form .login-option .toggle span {
-  font-weight: 400;
-  font-size: 12px;
-  color: #3d3d3d;
-  letter-spacing: 0.5px;
-}
-.login .wrap main .login-form .login-option .forgot-pw p {
-  font-weight: 400;
-  font-size: 12px;
-  color: #3d3d3d;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-}
-.login .wrap main .login-form .login-button {
-  width: 100%;
-}
-.login .wrap main .login-form .login-button button {
-  width: 100%;
-  background-color: #ff8066;
-  padding: 15px;
-  border-radius: 10px;
-  font-family: "Pretendard-Regular", Arial, sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.5px;
-  color: #ffffff;
-}
 .login .wrap main .social-login {
   margin: 10px 0px;
   display: flex;
@@ -634,6 +602,66 @@ header .wrap .header-center .txt p {
   text-decoration: underline;
   margin-left: 3px;
   cursor: pointer;
+}
+
+.main main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.main main .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.main main .menu .main-title p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+.main main .menu .menu-ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.main main .menu .menu-ul li {
+  width: 30%;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+.main main .menu .menu-ul li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.main main .menu .menu-ul li a .img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main main .menu .menu-ul li a p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  word-break: keep-all;
+  text-align: center;
+}
+.main main .menu .menu-ul li:hover {
+  background-color: #2575fc;
+}
+.main main .menu .menu-ul li:hover a {
+  color: #ffffff;
+}
+.main main .member-profile .main-title p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
 }
 
 /*# sourceMappingURL=style.css.map */

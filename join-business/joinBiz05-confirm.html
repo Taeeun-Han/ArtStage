@@ -8,7 +8,7 @@
 
 
     <!-- CSS 연결 -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <!-- CSS 초기화 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -21,7 +21,7 @@
 
 
     <!-- Script 연결 -->
-    <script defer src="./js/main.js"></script>
+    <script defer src="../js/main.js"></script>
 
 
 </head>
@@ -45,7 +45,7 @@
 
                 <div class="header-center">
                     <div class="txt">
-                        <p>본인인증</p>
+                        <p>가입완료</p>
                     </div>
                 </div>
 
@@ -59,20 +59,30 @@
             <main>
                 <!-- 프로그레스 바 -->
                 <div class="progress-bar">
-                    <progress id="progress" value="60" min="0" max="100"></progress>
+                    <progress id="progress" value="100" min="0" max="100"></progress>
                     <span class="material-symbols-outlined">
                         sports_score
                     </span>
                 </div>
 
-                <div class="login-form">
-                    <!-- 이메일 입력 -->
-                    <div class="login-input">
-                        <p>이메일 <span>*</span></p>
-                        <button type="button" onclick="location.href='join-personal-info.html'">본인인증 하기</button>
+                <div class="join-content">
+                    <div class="join-txt join-confirm">
+                        <p>Leo 님,</p>
+                        <p>가입을 축하합니다!</p>
+
+                        <span>공연/예술의 모든것, 아트스테이지입니다.</span>
+                    </div>
+
+                    <div class="img">
+                        <img src="../img/logo/logo-full.png" alt="로고">
                     </div>
                 </div>
             </main>
+
+            <!-- 버튼 활성화시 -->
+            <div class="btn-wrap">
+                <button type="button" onclick="location.href='index.html'">로그인</button>
+            </div>
         </div>
 
     </div>

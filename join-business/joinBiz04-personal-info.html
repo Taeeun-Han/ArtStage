@@ -8,7 +8,7 @@
 
 
     <!-- CSS 연결 -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <!-- CSS 초기화 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -21,7 +21,7 @@
 
 
     <!-- Script 연결 -->
-    <script defer src="./js/main.js"></script>
+    <script defer src="../js/main.js"></script>
 
 
 </head>
@@ -45,7 +45,7 @@
 
                 <div class="header-center">
                     <div class="txt">
-                        <p>개인정보</p>
+                        <p>기업회원 정보</p>
                     </div>
                 </div>
 
@@ -67,36 +67,52 @@
 
                 <div class="login-form">
 
-
-                    <!-- 이름 -->
+                    <!-- 담당자 이름 -->
                     <div class="login-input">
-                        <p>이름 <span>*</span></p>
-                        <input type="text" placeholder="이메일을 입력해주세요">
-                    </div>
-
-                    <!-- 닉네임 -->
-                    <div class="login-input">
-                        <p>닉네임 <span>*</span></p>
-                        <input type="text" placeholder="닉네임을 입력해주세요">
-                    </div>
-
-                    <!-- 전화번호 -->
-                    <div class="login-input">
-                        <p>전화번호 <span>*</span></p>
+                        <p>담당자 이름 <span>*</span></p>
                         <input type="text">
                     </div>
 
-                    <!-- 생년월일 -->
+
+                    <!-- 담당자 전화번호 -->
                     <div class="login-input">
-                        <p>생년월일 <span>*</span></p>
+                        <p>담당자 전화번호 <span>*</span></p>
                         <input type="text">
                     </div>
 
-                    <!-- 성별 -->
+
+                    <!-- 소속명 -->
                     <div class="login-input">
-                        <p>성별 <span>*</span></p>
+                        <p>소속명 <span>*</span></p>
+                        <input type="text" placeholder="회사명, 기관명, 단체명 등">
+                    </div>
+
+                    <!-- 소속 전화번호 -->
+                    <div class="login-input">
+                        <p>소속 전화번호 <span>*</span></p>
                         <input type="text">
                     </div>
+
+                    <!-- 소속 주소 -->
+                    <div class="login-input">
+                        <p>소속 주소 <span>*</span></p>
+                        <input type="text">
+                    </div>
+
+                    <!-- 사업자 번호 -->
+                    <div class="login-input">
+                        <p>사업자 번호 <span>*</span></p>
+                        <input type="text">
+                    </div>
+
+                    <!-- 사업자 등록증 -->
+                    <div class="login-input">
+                        <p>사업자 등록증 <span>*</span></p>
+                        <input type="file" id="real-file" hidden="hidden" />
+                        <button type="button" id="custom-button">파일 선택</button>
+                        <span id="custom-text">선택된 파일이 없습니다.</span>
+                    </div>
+
 
                     <!-- 방문경로 -->
                     <div class="login-input">
@@ -121,7 +137,7 @@
 
             <!-- 버튼 비활성화시 -->
             <div class="btn-wrap-disabled">
-                <button type="button" onclick="location.href='join-confirm.html'">다음</button>
+                <button type="button" onclick="location.href='joinBiz05-confirm.html'">다음</button>
             </div>
 
             <!-- 버튼 활성화시 -->

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=360, user-scalable=no">
+    <title>Art Stage</title>
+
+
+    <!-- CSS 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- CSS 초기화 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+    <!-- Google Material Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+
+    <!-- Script 연결 -->
+    <script defer src="../js/main.js"></script>
+
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <div class="wrap">
+
+                <div class="header-left">
+                    <div class="icon">
+                        <a href="#">
+                            <span class="material-symbols-outlined">
+                                arrow_back_ios
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="header-center">
+                    <div class="txt">
+                        <p>개인정보</p>
+                    </div>
+                </div>
+
+                <div class="header-right">
+                </div>
+
+            </div>
+        </header>
+
+        <div class="wrap">
+            <main>
+                <!-- 프로그레스 바 -->
+                <div class="progress-bar">
+                    <progress id="progress" value="80" min="0" max="100"></progress>
+                    <span class="material-symbols-outlined">
+                        sports_score
+                    </span>
+                </div>
+
+                <div class="login-form">
+
+
+                    <!-- 이름 -->
+                    <div class="login-input">
+                        <p>이름 <span>*</span></p>
+                        <input type="text">
+                    </div>
+
+                    <!-- 닉네임 -->
+                    <div class="login-input">
+                        <p>닉네임 <span>*</span></p>
+                        <input type="text" placeholder="닉네임을 입력해주세요">
+                    </div>
+
+                    <!-- 전화번호 -->
+                    <div class="login-input">
+                        <p>전화번호 <span>*</span></p>
+                        <input type="text">
+                    </div>
+
+                    <!-- 생년월일 -->
+                    <div class="login-input">
+                        <p>생년월일 <span>*</span></p>
+                        <input type="text">
+                    </div>
+
+
+                    <!-- 방문경로 -->
+                    <div class="login-input">
+                        <p>방문경로 </p>
+                        <select name="" id="">
+                            <option value="">선택해주세요</option>
+                            <option value="">네이버 검색</option>
+                            <option value="">블로그</option>
+                            <option value="">구글 검색</option>
+                            <option value="">지인 소개</option>
+                            <option value="">인스타그램</option>
+                            <option value="">페이스북</option>
+                            <option value="">기타</option>
+                        </select>
+                    </div>
+                </div>
+
+
+
+
+            </main>
+
+            <!-- 버튼 비활성화시 -->
+            <div class="btn-wrap-disabled">
+                <button type="button" onclick="location.href='join05-confirm.html'">다음</button>
+            </div>
+
+            <!-- 버튼 활성화시 -->
+            <div class="btn-wrap" style="display: none;">
+                <button>다음</button>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
