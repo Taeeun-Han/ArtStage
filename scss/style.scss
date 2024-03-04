@@ -73,7 +73,7 @@ input[type="password"] {
 input[type="text"],
 input[type="password"] {
 	caret-color: $dark-grey3;
-	color: $grey4;
+	caret-color: $dark-grey3;
 
 	&:focus {
 		outline: none;
@@ -82,7 +82,7 @@ input[type="password"] {
 
 input[type="text"]::placeholder,
 input[type="password"]::placeholder {
-	color: $grey1;
+	color: $placeholder;
 }
 
 // BUTTON STYLE
@@ -132,7 +132,7 @@ input[type="password"]::placeholder {
 	justify-content: center;
 
 	button {
-		background: $grey2;
+		background: $placeholder;
 		border-radius: 16px;
 		color: #fff;
 		width: 100%;
@@ -242,7 +242,7 @@ header {
 
 		input[type="text"],
 		select {
-			border: 1px solid $grey2;
+			border: 1px solid $placeholder;
 			width: 100%;
 			padding: 10px 20px 10px 15px;
 			border-radius: 10px;
@@ -252,7 +252,7 @@ header {
 
 			&::placeholder {
 				font-size: 12px;
-				color: $grey3;
+				color: $placeholder;
 			}
 
 			&:focus {
@@ -288,6 +288,87 @@ header {
 			border: 1px solid $main-color;
 			background-color: $white;
 			cursor: pointer;
+		}
+	}
+
+	.login-option {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: -25px;
+
+		.toggle {
+			display: flex;
+			align-items: center;
+			gap: 3px;
+
+			input {
+				display: none;
+			}
+
+			.toggle-switch {
+				width: 30px; /* 너비를 30px로 조정 */
+				height: 15px; /* 높이 조정 */
+				display: block;
+				position: relative;
+				border-radius: 7.5px; /* 둥근 모서리 반경 조정 */
+				background-color: #fff;
+				box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.15);
+				cursor: pointer;
+
+				margin: 10px 5px 10px 5px; /* 마진 조정 */
+
+				.toggle-button {
+					width: 10px; /* 버튼의 너비 조정 */
+					height: 10px; /* 버튼의 높이 조정 */
+					position: absolute;
+					top: 50%;
+					left: 2px; /* 초기 위치 조정 */
+					transform: translateY(-50%);
+					border-radius: 50%;
+					background: #f03d3d;
+					transition: all 0.2s ease-in;
+				}
+
+				transition: all 0.2s ease-in;
+			}
+
+			input[type="checkbox"]:checked ~ .toggle-switch {
+				background: #f03d3d;
+
+				.toggle-button {
+					left: calc(100% - 14px); /* 체크 시 버튼의 위치 조정 */
+					background: #fff;
+				}
+			}
+
+			span {
+				font-weight: 400;
+				font-size: 12px;
+				color: $dark-grey2;
+				letter-spacing: 0.5px;
+			}
+		}
+
+		.forgot-pw {
+			p {
+				font-weight: 500;
+				font-size: 12px;
+				color: $main-color;
+				letter-spacing: 0.5px;
+			}
+		}
+	}
+
+	.login-button {
+		width: 100%;
+
+		button {
+			width: 100%;
+			background-color: $main-color;
+			padding: 15px;
+			border-radius: 50px;
+			color: $white;
 		}
 	}
 }
@@ -343,41 +424,43 @@ ul.nav {
 	}
 
 	.on {
-		background-color: $main-color-light;
+		background-color: $main-color;
 		border-radius: 16px;
 
 		p {
-			color: $main-color;
+			color: $white;
 		}
 
 		i {
 			span {
-				color: $main-color;
+				color: $white;
 			}
 		}
 	}
 }
 
-// VISUAL-SLIDE
-.category-icons {
-	swiper-container {
-		width: 100%;
-		height: 100%;
+.swiper1 {
+	width: 100%;
+	height: 150px;
+	position: relative;
 
-		swiper-slide {
+	swiper-slide {
+		text-align: center;
+		font-size: 18px;
+		background: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.img {
 			width: 100%;
-			height: 150px;
-			cursor: pointer;
+			height: auto;
+			object-fit: contain;
 
-			.img {
+			img {
 				width: 100%;
-				height: 150px;
-
-				img {
-					width: 100%;
-					height: 150px;
-					object-fit: cover;
-				}
+				height: auto;
+				object-fit: contain;
 			}
 		}
 	}
@@ -525,8 +608,17 @@ ul.nav {
 			gap: 15px;
 
 			.main-title {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
 				p {
 					@include main-title;
+					color: $dark-grey3;
+
+					&:nth-child(2) {
+						font-size: 10px;
+					}
 				}
 			}
 
@@ -541,21 +633,29 @@ ul.nav {
 					padding: 10px;
 					border-radius: 10px;
 					transition: all 0.3s;
+					cursor: pointer;
 
 					a {
 						display: flex;
 						flex-direction: column;
 						align-items: center;
-						gap: 5px;
+						gap: 15px;
+						color: $dark-grey2;
 
 						.img {
-							width: 20px;
-							height: 20px;
-							border-radius: 50%;
+							width: 50px;
+							height: 50px;
 
 							display: flex;
 							justify-content: center;
 							align-items: center;
+
+							border-radius: 10px;
+
+							img {
+								width: 30px;
+								height: 30px;
+							}
 						}
 
 						p {
@@ -570,6 +670,254 @@ ul.nav {
 							color: $white;
 						}
 					}
+
+					&:nth-child(1) {
+						a {
+							.img {
+								background-color: $main-li1;
+							}
+						}
+					}
+
+					&:nth-child(2) {
+						a {
+							.img {
+								background-color: $main-li3;
+							}
+						}
+					}
+
+					&:nth-child(3) {
+						a {
+							.img {
+								background-color: $main-li4;
+							}
+						}
+					}
+
+					&:nth-child(4) {
+						a {
+							.img {
+								background-color: $main-li5;
+							}
+						}
+					}
+
+					&:nth-child(5) {
+						a {
+							.img {
+								background-color: $main-li7;
+							}
+						}
+					}
+
+					&:nth-child(6) {
+						a {
+							.img {
+								background-color: $main-li8;
+							}
+						}
+					}
+				}
+			}
+
+			.menu-ul2 {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: center;
+				gap: 10px;
+
+				li {
+					width: 30%;
+					border-radius: 50px;
+					transition: all 0.3s;
+					cursor: pointer;
+					padding: 5px 10px;
+
+					border: 1px solid #cccccc;
+
+					a {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						gap: 10px;
+						color: $dark-grey2;
+
+						.img {
+							width: 25px;
+
+							display: flex;
+							justify-content: center;
+							align-items: center;
+
+							img {
+								width: 25px;
+								height: 25px;
+							}
+						}
+
+						p {
+							@include main-menu;
+						}
+					}
+
+					&:hover {
+						background-color: $main-color;
+
+						a {
+							color: $white;
+						}
+					}
+				}
+			}
+
+			.recruitment-table-container {
+				.recruitment-table {
+					width: 100%;
+					border-collapse: collapse;
+					table-layout: fixed; // 테이블의 레이아웃을 고정
+
+					thead tr th,
+					tbody tr td {
+						padding: 8px; // 모든 테이블 셀에 패딩 적용
+					}
+
+					thead {
+						tr {
+							th {
+								@include main-table-title;
+
+								&:nth-child(1) {
+									width: 10%;
+								} // 순번
+								&:nth-child(2) {
+									width: 65%;
+								} // 제목
+								&:nth-child(3) {
+									width: 25%;
+								} // 업로드날짜
+							}
+						}
+					}
+
+					tbody {
+						tr {
+							td {
+								@include main-table-content;
+
+								&:nth-child(1) {
+									width: 10%;
+									text-align: center;
+								} // 순번
+
+								&:nth-child(2) {
+									// 제목
+									width: 65%;
+									padding: 0px;
+
+									.ellipsis {
+										width: 100%;
+										white-space: nowrap;
+										overflow: hidden;
+										text-overflow: ellipsis;
+										display: block;
+										text-align: left;
+									}
+								}
+
+								&:nth-child(3) {
+									padding: 0px;
+									width: 25%;
+								} // 업로드날짜
+							}
+
+							&:nth-child(odd) {
+								background-color: #f9f9f9; // 홀수 번째 행의 배경색 설정
+							}
+						}
+					}
+				}
+			}
+
+			.menu-ul3 {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+
+				li {
+					width: 100%;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					gap: 10px;
+					height: 70px;
+
+					.img {
+						width: 50%;
+						height: 100%;
+						background-color: $bg;
+
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+						}
+					}
+
+					.txt {
+						width: 50%;
+						display: flex;
+						flex-direction: column;
+						gap: 10px;
+
+						p {
+							&:nth-child(1) {
+								@include main-ul3-title;
+							}
+
+							&:nth-child(2) {
+								@include main-ul3-date;
+							}
+						}
+					}
+				}
+			}
+
+			.more-btn {
+				display: block;
+				width: max-content;
+
+				margin: 20px auto 0; // 버튼을 테이블 아래 중앙에 위치
+				padding: 15px 10px;
+
+				background-color: $main-color;
+				color: white;
+
+				border: none;
+				cursor: pointer;
+
+				transition: background-color 0.3s;
+				border-radius: 10px;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 3px;
+
+				p {
+					@include main-table-btn;
+					line-height: 12px;
+				}
+
+				span {
+					font-size: 18px;
+					line-height: 12px;
+				}
+
+				&:hover {
+					background-color: darken($main-color, 10%);
 				}
 			}
 		}

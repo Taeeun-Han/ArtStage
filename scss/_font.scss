@@ -85,3 +85,41 @@
 	word-break: keep-all;
 	text-align: center;
 }
+
+@mixin main-table-title {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 700;
+	font-size: 12px;
+	word-break: keep-all;
+	text-align: center;
+}
+
+@mixin main-table-content {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 500;
+	font-size: 12px;
+	word-break: keep-all;
+	text-align: center;
+}
+
+@mixin main-table-btn {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 500;
+	font-size: 12px;
+	word-break: keep-all;
+	text-align: center;
+}
+
+@mixin main-ul3-title {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 700;
+	font-size: 14px;
+	word-break: keep-all;
+}
+
+@mixin main-ul3-date {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 500;
+	font-size: 12px;
+	word-break: keep-all;
+}

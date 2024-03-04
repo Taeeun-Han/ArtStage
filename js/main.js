@@ -1,3 +1,4 @@
+// index.html 일반회원, 기업회원 버튼
 document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.querySelectorAll('.member button');
     const memberDiv = document.querySelector('.member');

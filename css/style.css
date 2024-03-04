@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .container header {
   margin-bottom: 20px;
 }
@@ -21,10 +22,10 @@
 .container .wrap main .progress-bar ::-webkit-progress-bar {
   background-color: grey;
   border-radius: 50px;
-  background-color: #dce9fd;
+  background-color: #a5a6f6;
 }
 .container .wrap main .progress-bar ::-webkit-progress-value {
-  background-color: #2575fc;
+  background-color: #5d5fef;
   border-radius: 50px;
 }
 .container .wrap main .join-content {
@@ -48,7 +49,7 @@
   color: #3d3d3d;
 }
 .container .wrap main .join-content .join-txt p span {
-  color: #2575fc;
+  color: #5d5fef;
 }
 .container .wrap main .join-content .join-confirm {
   gap: 10px;
@@ -151,7 +152,7 @@
   color: #3d3d3d;
 }
 .container .wrap main .join-content .join-biz-txt p span {
-  color: #2575fc;
+  color: #5d5fef;
 }
 
 @font-face {
@@ -217,7 +218,7 @@ input[type=password] {
 input[type=text],
 input[type=password] {
   caret-color: #242424;
-  color: #8b8b8b;
+  caret-color: #242424;
 }
 input[type=text]:focus,
 input[type=password]:focus {
@@ -226,7 +227,7 @@ input[type=password]:focus {
 
 input[type=text]::placeholder,
 input[type=password]::placeholder {
-  color: #e2e8f0;
+  color: #c1c1c1;
 }
 
 .btn-wrap {
@@ -243,7 +244,7 @@ input[type=password]::placeholder {
   justify-content: center;
 }
 .btn-wrap button {
-  background: #2575fc;
+  background: #5d5fef;
   border-radius: 16px;
   color: #fff;
   width: 100%;
@@ -361,7 +362,7 @@ header .wrap .header-center .txt p {
   color: #3d3d3d;
 }
 .login-form .login-input p span {
-  color: #f03d3d;
+  color: #ff5959;
   font-size: 14px;
   font-weight: 500;
 }
@@ -372,13 +373,13 @@ header .wrap .header-center .txt p {
   padding: 10px 20px 10px 15px;
   border-radius: 10px;
   outline: none;
-  caret-color: #2575fc;
+  caret-color: #5d5fef;
   color: #555555;
 }
 .login-form .login-input input[type=text]::placeholder,
 .login-form .login-input select::placeholder {
   font-size: 12px;
-  color: #a5a5a5;
+  color: #c1c1c1;
 }
 .login-form .login-input input[type=text]:focus,
 .login-form .login-input select:focus {
@@ -387,8 +388,8 @@ header .wrap .header-center .txt p {
 .login-form .login-input #custom-button {
   padding: 10px 20px 10px 15px;
   color: white;
-  background-color: #2575fc;
-  border: 1px solid #2575fc;
+  background-color: #5d5fef;
+  border: 1px solid #5d5fef;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -406,10 +407,76 @@ header .wrap .header-center .txt p {
   font-size: 12px;
   color: #3d3d3d;
   letter-spacing: 0.5px;
-  color: #2575fc;
-  border: 1px solid #2575fc;
+  color: #5d5fef;
+  border: 1px solid #5d5fef;
   background-color: #ffffff;
   cursor: pointer;
+}
+.login-form .login-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -25px;
+}
+.login-form .login-option .toggle {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.login-form .login-option .toggle input {
+  display: none;
+}
+.login-form .login-option .toggle .toggle-switch {
+  width: 30px; /* 너비를 30px로 조정 */
+  height: 15px; /* 높이 조정 */
+  display: block;
+  position: relative;
+  border-radius: 7.5px; /* 둥근 모서리 반경 조정 */
+  background-color: #fff;
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  margin: 10px 5px 10px 5px; /* 마진 조정 */
+  transition: all 0.2s ease-in;
+}
+.login-form .login-option .toggle .toggle-switch .toggle-button {
+  width: 10px; /* 버튼의 너비 조정 */
+  height: 10px; /* 버튼의 높이 조정 */
+  position: absolute;
+  top: 50%;
+  left: 2px; /* 초기 위치 조정 */
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: #f03d3d;
+  transition: all 0.2s ease-in;
+}
+.login-form .login-option .toggle input[type=checkbox]:checked ~ .toggle-switch {
+  background: #f03d3d;
+}
+.login-form .login-option .toggle input[type=checkbox]:checked ~ .toggle-switch .toggle-button {
+  left: calc(100% - 14px); /* 체크 시 버튼의 위치 조정 */
+  background: #fff;
+}
+.login-form .login-option .toggle span {
+  font-weight: 400;
+  font-size: 12px;
+  color: #3d3d3d;
+  letter-spacing: 0.5px;
+}
+.login-form .login-option .forgot-pw p {
+  font-weight: 500;
+  font-size: 12px;
+  color: #5d5fef;
+  letter-spacing: 0.5px;
+}
+.login-form .login-button {
+  width: 100%;
+}
+.login-form .login-button button {
+  width: 100%;
+  background-color: #5d5fef;
+  padding: 15px;
+  border-radius: 50px;
+  color: #ffffff;
 }
 
 ul.nav {
@@ -454,37 +521,42 @@ ul.nav li a i span {
   font-size: 24px;
 }
 ul.nav .on {
-  background-color: #dce9fd;
+  background-color: #5d5fef;
   border-radius: 16px;
 }
 ul.nav .on p {
-  color: #2575fc;
+  color: #ffffff;
 }
 ul.nav .on i span {
-  color: #2575fc;
+  color: #ffffff;
 }
 
-.category-icons swiper-container {
-  width: 100%;
-  height: 100%;
-}
-.category-icons swiper-container swiper-slide {
+.swiper1 {
   width: 100%;
   height: 150px;
-  cursor: pointer;
+  position: relative;
 }
-.category-icons swiper-container swiper-slide .img {
-  width: 100%;
-  height: 150px;
+.swiper1 swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.category-icons swiper-container swiper-slide .img img {
+.swiper1 swiper-slide .img {
   width: 100%;
-  height: 150px;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
+}
+.swiper1 swiper-slide .img img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .login {
-  background-color: #2575fc;
+  background-color: #5d5fef;
   padding-bottom: 0px;
 }
 .login header {
@@ -614,10 +686,19 @@ ul.nav .on i span {
   flex-direction: column;
   gap: 15px;
 }
+.main main .menu .main-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .main main .menu .main-title p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 700;
   font-size: 16px;
+  color: #242424;
+}
+.main main .menu .main-title p:nth-child(2) {
+  font-size: 10px;
 }
 .main main .menu .menu-ul {
   display: flex;
@@ -630,20 +711,26 @@ ul.nav .on i span {
   padding: 10px;
   border-radius: 10px;
   transition: all 0.3s;
+  cursor: pointer;
 }
 .main main .menu .menu-ul li a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
+  gap: 15px;
+  color: #3d3d3d;
 }
 .main main .menu .menu-ul li a .img {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
+  width: 50px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
+}
+.main main .menu .menu-ul li a .img img {
+  width: 30px;
+  height: 30px;
 }
 .main main .menu .menu-ul li a p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
@@ -653,10 +740,201 @@ ul.nav .on i span {
   text-align: center;
 }
 .main main .menu .menu-ul li:hover {
-  background-color: #2575fc;
+  background-color: #5d5fef;
 }
 .main main .menu .menu-ul li:hover a {
   color: #ffffff;
+}
+.main main .menu .menu-ul li:nth-child(1) a .img {
+  background-color: #f4d5d9;
+}
+.main main .menu .menu-ul li:nth-child(2) a .img {
+  background-color: #dbecee;
+}
+.main main .menu .menu-ul li:nth-child(3) a .img {
+  background-color: #f1ebe7;
+}
+.main main .menu .menu-ul li:nth-child(4) a .img {
+  background-color: #f0e2ec;
+}
+.main main .menu .menu-ul li:nth-child(5) a .img {
+  background-color: #e4eee6;
+}
+.main main .menu .menu-ul li:nth-child(6) a .img {
+  background-color: #e9e9d3;
+}
+.main main .menu .menu-ul2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.main main .menu .menu-ul2 li {
+  width: 30%;
+  border-radius: 50px;
+  transition: all 0.3s;
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid #cccccc;
+}
+.main main .menu .menu-ul2 li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #3d3d3d;
+}
+.main main .menu .menu-ul2 li a .img {
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main main .menu .menu-ul2 li a .img img {
+  width: 25px;
+  height: 25px;
+}
+.main main .menu .menu-ul2 li a p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  word-break: keep-all;
+  text-align: center;
+}
+.main main .menu .menu-ul2 li:hover {
+  background-color: #5d5fef;
+}
+.main main .menu .menu-ul2 li:hover a {
+  color: #ffffff;
+}
+.main main .menu .recruitment-table-container .recruitment-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.main main .menu .recruitment-table-container .recruitment-table thead tr th,
+.main main .menu .recruitment-table-container .recruitment-table tbody tr td {
+  padding: 8px;
+}
+.main main .menu .recruitment-table-container .recruitment-table thead tr th {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  word-break: keep-all;
+  text-align: center;
+}
+.main main .menu .recruitment-table-container .recruitment-table thead tr th:nth-child(1) {
+  width: 10%;
+}
+.main main .menu .recruitment-table-container .recruitment-table thead tr th:nth-child(2) {
+  width: 65%;
+}
+.main main .menu .recruitment-table-container .recruitment-table thead tr th:nth-child(3) {
+  width: 25%;
+}
+.main main .menu .recruitment-table-container .recruitment-table tbody tr td {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  word-break: keep-all;
+  text-align: center;
+}
+.main main .menu .recruitment-table-container .recruitment-table tbody tr td:nth-child(1) {
+  width: 10%;
+  text-align: center;
+}
+.main main .menu .recruitment-table-container .recruitment-table tbody tr td:nth-child(2) {
+  width: 65%;
+  padding: 0px;
+}
+.main main .menu .recruitment-table-container .recruitment-table tbody tr td:nth-child(2) .ellipsis {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  text-align: left;
+}
+.main main .menu .recruitment-table-container .recruitment-table tbody tr td:nth-child(3) {
+  padding: 0px;
+  width: 25%;
+}
+.main main .menu .recruitment-table-container .recruitment-table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+.main main .menu .menu-ul3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.main main .menu .menu-ul3 li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  height: 70px;
+}
+.main main .menu .menu-ul3 li .img {
+  width: 50%;
+  height: 100%;
+  background-color: #f4f4f4;
+}
+.main main .menu .menu-ul3 li .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main main .menu .menu-ul3 li .txt {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.main main .menu .menu-ul3 li .txt p:nth-child(1) {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  word-break: keep-all;
+}
+.main main .menu .menu-ul3 li .txt p:nth-child(2) {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  word-break: keep-all;
+}
+.main main .menu .more-btn {
+  display: block;
+  width: max-content;
+  margin: 20px auto 0;
+  padding: 15px 10px;
+  background-color: #5d5fef;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+.main main .menu .more-btn p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  word-break: keep-all;
+  text-align: center;
+  line-height: 12px;
+}
+.main main .menu .more-btn span {
+  font-size: 18px;
+  line-height: 12px;
+}
+.main main .menu .more-btn:hover {
+  background-color: #2f31ea;
 }
 .main main .member-profile .main-title p {
   font-family: "Pretendard-Regular", Arial, sans-serif;

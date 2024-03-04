@@ -22,6 +22,7 @@
 
     <!-- Script 연결 -->
     <script defer src="./js/main.js"></script>
+    <script defer src="./js/swiper.js"></script>
 
     <!-- swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -56,28 +57,59 @@
         <div class="wrap">
 
             <main>
-                <div class="category-icons">
-                    <swiper-container class="mySwiper" slides-per-view="1" free-mode="true">
+                <swiper-container class="mySwiper swiper1" pagination="true" pagination-type="fraction">
 
-                        <swiper-slide>
-                            <div class="img">
-                                <img src="./img/img/visual-slide01.jpg" alt="슬라이드1">
-                            </div>
-                        </swiper-slide>
-
-                        <swiper-slide>
-                            <div class="img">
-                                <img src="./img/img/visual-slide02.jpg" alt="슬라이드2">
-                            </div>
-                        </swiper-slide>
-
-                        <swiper-slide>
-                            <div class="img">
-                                <img src="./img/img/visual-slide03.png" alt="슬라이드3">
-                            </div>
-                        </swiper-slide>
-                    </swiper-container>
-                </div>
+                    <swiper-slide>
+                        <div class="img">
+                            <img src="./img/img/visual-slide03.png" alt="슬라이드3">
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div class="img">
+                            <img src="./img/img/visual-slide02.jpg" alt="슬라이드2">
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div class="img">
+                            <img src="./img/img/visual-slide01.jpg" alt="슬라이드1">
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div class="img">
+                            <img src="./img/img/visual-slide02.jpg" alt="슬라이드2">
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div class="img">
+                            <img src="./img/img/visual-slide01.jpg" alt="슬라이드1">
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div class="img">
+                            <img src="./img/img/visual-slide03.png" alt="슬라이드3">
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div class="img">
+                            <img src="./img/img/visual-slide01.jpg" alt="슬라이드1">
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div class="img">
+                            <img src="./img/img/visual-slide02.jpg" alt="슬라이드2">
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div class="img">
+                            <img src="./img/img/visual-slide03.png" alt="슬라이드3">
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div class="img">
+                            <img src="./img/img/visual-slide01.jpg" alt="슬라이드1">
+                        </div>
+                    </swiper-slide>
+                </swiper-container>
 
                 <div class="menu">
                     <div class="main-title">
@@ -88,9 +120,7 @@
                         <li>
                             <a href="">
                                 <div class="img">
-                                    <span class="material-symbols-outlined">
-                                        person
-                                    </span>
+                                    <img src="./img/icon/profile-search.png" alt="공연예술인 찾기">
                                 </div>
                                 <p>공연예술인 찾기</p>
                             </a>
@@ -98,9 +128,7 @@
                         <li>
                             <a href="">
                                 <div class="img">
-                                    <span class="material-symbols-outlined">
-                                        person_search
-                                    </span>
+                                    <img src="./img/icon/profile-edit.png" alt="공연예술인 모집">
                                 </div>
                                 <p>공연예술인 모집</p>
                             </a>
@@ -108,9 +136,7 @@
                         <li>
                             <a href="">
                                 <div class="img">
-                                    <span class="material-symbols-outlined">
-                                        event_available
-                                    </span>
+                                    <img src="./img/icon/register.png" alt="행사 참가">
                                 </div>
                                 <p>행사참가</p>
                             </a>
@@ -118,9 +144,7 @@
                         <li>
                             <a href="">
                                 <div class="img">
-                                    <span class="material-symbols-outlined">
-                                        apartment
-                                    </span>
+                                    <img src="./img/icon/company.png" alt="기업/기관/단체">
                                 </div>
                                 <p>기업/기관/단체</p>
                             </a>
@@ -128,9 +152,7 @@
                         <li>
                             <a href="">
                                 <div class="img">
-                                    <span class="material-symbols-outlined">
-                                        frame_inspect
-                                    </span>
+                                    <img src="./img/icon/government.png" alt="정부 공고">
                                 </div>
                                 <p>정부공고</p>
                             </a>
@@ -138,9 +160,7 @@
                         <li>
                             <a href="">
                                 <div class="img">
-                                    <span class="material-symbols-outlined">
-                                        ad
-                                    </span>
+                                    <img src="./img/icon/promotion.png" alt="광고">
                                 </div>
                                 <p>광고</p>
                             </a>
@@ -148,12 +168,216 @@
                     </ul>
                 </div>
 
-                <div class="member-profile">
+                <div class="menu">
                     <div class="main-title">
-                        <p>공연예술인 찾기</p>
+                        <p>공연/예술인 찾기</p>
                     </div>
 
-                    
+                    <!-- <swiper-container class="mySwiper swiper2" slides-per-view="auto" space-between="10">
+                        <swiper-slide>
+                            <div class="img">
+                                <img src="./img/icon/play.png" alt="연기">
+                            </div>
+                            <p>연기</p>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div class="img">
+                                <img src="./img/icon/dance.png" alt="무용">
+                            </div>
+                            <p>무용</p>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div class="img">
+                                <img src="./img/icon/music.png" alt="음악">
+                            </div>
+                            <p>음악</p>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div class="img">
+                                <img src="./img/icon/korean-music.png" alt="국악">
+                            </div>
+                            <p>국악</p>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div class="img">
+                                <img src="./img/icon/art.png" alt="미술">
+                            </div>
+                            <p>미술</p>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div class="img">
+                                <img src="./img/icon/etc.png" alt="기타">
+                            </div>
+                            <p>기타</p>
+                        </swiper-slide>
+                    </swiper-container> -->
+
+                    <ul class="menu-ul2">
+                        <li>
+                            <a href="">
+                                <div class="img">
+                                    <img src="./img/icon/play.png" alt="연기">
+                                </div>
+                                <p>연기</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="img">
+                                    <img src="./img/icon/dance.png" alt="무용">
+                                </div>
+                                <p>무용</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="img">
+                                    <img src="./img/icon/music.png" alt="음악">
+                                </div>
+                                <p>음악</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="img">
+                                    <img src="./img/icon/korean-music.png" alt="국악">
+                                </div>
+                                <p>국악</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="img">
+                                    <img src="./img/icon/art.png" alt="미술">
+                                </div>
+                                <p>미술</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="img">
+                                    <img src="./img/icon/etc.png" alt="기타">
+                                </div>
+                                <p>기타</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="menu">
+                    <div class="main-title">
+                        <p>공연/예술인 모집</p>
+                    </div>
+
+                    <div class="recruitment-table-container">
+                        <table class="recruitment-table">
+                            <thead>
+                                <tr>
+                                    <th>순번</th>
+                                    <th>
+                                        <div class="ellipsis">
+                                            제목
+                                        </div>
+                                    </th>
+                                    <th>업로드날짜</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>
+                                        <div class="ellipsis">
+                                            국악 코리아행사 악기 연주자 모집합니다
+                                        </div>
+                                    </td>
+                                    <td>2023-01-01</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>
+                                        <div class="ellipsis">
+                                            코리아뮤직페스티벌 베이스기타, 드럼 연주자 28일 급구
+                                        </div>
+                                    </td>
+                                    <td>2023-01-02</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>
+                                        <div class="ellipsis">
+                                            코리아뮤지컬에 함께하실 조명기사 모십니다.
+                                        </div>
+                                    </td>
+                                    <td>2023-01-03</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>
+                                        <div class="ellipsis">
+                                            [한국무용] 천안 지역 행사 함께 하실 분
+                                        </div>
+                                    </td>
+                                    <td>2023-01-04</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>
+                                        <div class="ellipsis">
+                                            공연예술인 모집공고 제목 5
+                                        </div>
+                                    </td>
+                                    <td>2023-01-05</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button class="more-btn">
+                            <p>
+                                최신 모집글 더 보기
+                            </p>
+                            <span class="material-symbols-outlined">
+                                keyboard_arrow_right
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu">
+                    <div class="main-title">
+                        <p>빠른 신청 가능 행사</p>
+                        <p>AD</p>
+                    </div>
+
+                    <ul class="menu-ul3">
+                        <li>
+                            <div class="img">
+                                <img src="./img/img/visual-slide03.png" alt="이미지1">
+                            </div>
+
+                            <div class="txt">
+                                <p>코리아뮤직페스티벌</p>
+                                <p>2024. 05. 17 | 경기도 가평군</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img">
+                                <img src="./img/img/visual-slide02.jpg" alt="이미지2">
+                            </div>
+
+                            <div class="txt">
+                                <p>뮤지컬 [써-울 로맨스]</p>
+                                <p>2024. 04. 05 | 세종문화회관</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <button class="more-btn">
+                        <p>
+                            최신 행사글 더보기
+                        </p>
+                        <span class="material-symbols-outlined">
+                            keyboard_arrow_right
+                        </span>
+                    </button>
                 </div>
             </main>
 
