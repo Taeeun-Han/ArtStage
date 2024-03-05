@@ -338,8 +338,10 @@ header .wrap .header-center .txt p {
   width: 100%;
   border-radius: 16px;
   padding: 16px 20px;
+  border: 1px solid #8b8b8b;
 }
 .search-bar img {
+  width: 18px;
   position: absolute;
   right: 20px;
 }
@@ -746,6 +748,8 @@ ul.nav .on i span {
 }
 .main main .menu .main-title p:nth-child(2) {
   font-size: 10px;
+  color: #8b8b8b;
+  font-weight: 500;
 }
 .main main .menu .menu-ul {
   display: flex;
@@ -963,6 +967,7 @@ ul.nav .on i span {
   align-items: center;
   gap: 3px;
   background-color: transparent;
+  color: #242424;
 }
 .main main .menu .more-btn p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
@@ -1005,6 +1010,50 @@ ul.nav .on i span {
   font-size: 12px;
   word-break: keep-all;
   color: #ffffff;
+}
+.main main .menu .main-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.main main .menu .main-content button {
+  padding: 10px 15px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  border: 1px solid #a5a6f6;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  word-break: keep-all;
+}
+.main main .menu .search-history {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  background-color: #ffffff;
+}
+.main main .menu .search-history .search-history-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.main main .menu .search-history .search-history-content span {
+  width: 5%;
+  font-size: 20px;
+  color: #555555;
+}
+.main main .menu .search-history .search-history-content p {
+  width: 80%;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  word-break: keep-all;
 }
 .main main .member-profile .main-title p {
   font-family: "Pretendard-Regular", Arial, sans-serif;

@@ -209,12 +209,11 @@ header {
 		width: 100%;
 		border-radius: 16px;
 		padding: 16px 20px;
-		//background-color: $bg_g;
-
-		//@include search-bar;
+		border: 1px solid $grey4;
 	}
 
 	img {
+		width: 18px;
 		position: absolute;
 		right: 20px;
 	}
@@ -662,6 +661,8 @@ ul.nav {
 
 					&:nth-child(2) {
 						font-size: 10px;
+						color: $grey4;
+						font-weight: 500;
 					}
 				}
 			}
@@ -942,6 +943,7 @@ ul.nav {
 				align-items: center;
 				gap: 3px;
 				background-color: transparent;
+				color: $dark-grey3;
 
 				p {
 					@include main-table-btn;
@@ -958,7 +960,7 @@ ul.nav {
 				}
 			}
 
-			.company-info{
+			.company-info {
 				width: 100%;
 				padding: 20px;
 				border-radius: 20px;
@@ -968,11 +970,11 @@ ul.nav {
 				align-items: center;
 				gap: 10px;
 
-				p{
+				p {
 					@include main-company-info;
 				}
 
-				.company-info-btn{
+				.company-info-btn {
 					padding: 10px 20px;
 					border-radius: 10px;
 					margin-top: 15px;
@@ -980,6 +982,54 @@ ul.nav {
 
 					@include main-company-info-btn;
 					color: $white;
+				}
+			}
+
+			.main-content {
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+				gap: 10px;
+
+				button {
+					padding: 10px 15px;
+					border-radius: 50px;
+					background-color: $white;
+					border: 1px solid $main-color-light;
+
+					@include search-button;
+				}
+			}
+
+			.search-history {
+				padding-top: 10px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-between;
+				gap: 20px;
+
+				width: 100%;
+				background-color: $white;
+
+
+				.search-history-content {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+
+					width: 100%;
+
+					span {
+						width: 5%;
+						font-size: 20px;
+						color: $dark-grey1;
+					}
+
+					p {
+						width: 80%;
+						@include search-history;
+					}
 				}
 			}
 		}
