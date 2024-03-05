@@ -555,6 +555,51 @@ ul.nav .on i span {
   object-fit: contain;
 }
 
+.swiper-wrap {
+  display: flex;
+  align-items: center;
+  background-color: #7879f1;
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-left: 10px;
+}
+.swiper-wrap p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  word-break: keep-all;
+  color: #ffffff;
+  font-weight: 700;
+  width: 15%;
+}
+.swiper-wrap .swiper2 {
+  width: 85%;
+  height: 50px;
+  background-color: #7879f1;
+  display: flex;
+  justify-content: center;
+}
+.swiper-wrap .swiper2 swiper-slide {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+}
+.swiper-wrap .swiper2 swiper-slide a {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  word-break: keep-all;
+  color: #ffffff;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+  width: 97%;
+}
+
 .login {
   background-color: #5d5fef;
   padding-bottom: 0px;
@@ -685,8 +730,10 @@ ul.nav .on i span {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  align-items: flex-end;
 }
 .main main .menu .main-title {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -906,12 +953,7 @@ ul.nav .on i span {
   word-break: keep-all;
 }
 .main main .menu .more-btn {
-  display: block;
-  width: max-content;
-  margin: 20px auto 0;
-  padding: 15px 10px;
-  background-color: #5d5fef;
-  color: white;
+  padding-top: 10px;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -920,6 +962,7 @@ ul.nav .on i span {
   justify-content: center;
   align-items: center;
   gap: 3px;
+  background-color: transparent;
 }
 .main main .menu .more-btn p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
@@ -935,6 +978,33 @@ ul.nav .on i span {
 }
 .main main .menu .more-btn:hover {
   background-color: #2f31ea;
+}
+.main main .menu .company-info {
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #c1c1c1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.main main .menu .company-info p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  word-break: keep-all;
+}
+.main main .menu .company-info .company-info-btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 15px;
+  background-color: #5d5fef;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  word-break: keep-all;
+  color: #ffffff;
 }
 .main main .member-profile .main-title p {
   font-family: "Pretendard-Regular", Arial, sans-serif;

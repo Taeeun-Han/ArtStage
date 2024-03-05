@@ -466,6 +466,48 @@ ul.nav {
 	}
 }
 
+.swiper-wrap {
+	display: flex;
+	align-items: center;
+	background-color: $main-color-dark;
+	width: calc(100% + 40px);
+	margin-left: -20px;
+	margin-right: -20px;
+
+	padding-left: 10px;
+
+	p {
+		@include main-swiper2-a;
+		font-weight: 700;
+		width: 15%;
+	}
+
+	.swiper2 {
+		width: 85%;
+		height: 50px;
+		background-color: $main-color-dark;
+		display: flex;
+		justify-content: center;
+
+		swiper-slide {
+			display: flex;
+			align-items: center;
+			text-align: left;
+			width: 100%;
+
+			a {
+				@include main-swiper2-a;
+				display: block;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				text-align: left;
+				width: 97%;
+			}
+		}
+	}
+}
+
 .login {
 	background-color: $main-color;
 	padding-bottom: 0px;
@@ -606,8 +648,10 @@ ul.nav {
 			display: flex;
 			flex-direction: column;
 			gap: 15px;
+			align-items: flex-end;
 
 			.main-title {
+				width: 100%;
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
@@ -886,15 +930,7 @@ ul.nav {
 			}
 
 			.more-btn {
-				display: block;
-				width: max-content;
-
-				margin: 20px auto 0; // 버튼을 테이블 아래 중앙에 위치
-				padding: 15px 10px;
-
-				background-color: $main-color;
-				color: white;
-
+				padding-top: 10px;
 				border: none;
 				cursor: pointer;
 
@@ -905,6 +941,7 @@ ul.nav {
 				justify-content: center;
 				align-items: center;
 				gap: 3px;
+				background-color: transparent;
 
 				p {
 					@include main-table-btn;
@@ -918,6 +955,31 @@ ul.nav {
 
 				&:hover {
 					background-color: darken($main-color, 10%);
+				}
+			}
+
+			.company-info{
+				width: 100%;
+				padding: 20px;
+				border-radius: 20px;
+				border: 1px solid $placeholder;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 10px;
+
+				p{
+					@include main-company-info;
+				}
+
+				.company-info-btn{
+					padding: 10px 20px;
+					border-radius: 10px;
+					margin-top: 15px;
+					background-color: $main-color;
+
+					@include main-company-info-btn;
+					color: $white;
 				}
 			}
 		}
