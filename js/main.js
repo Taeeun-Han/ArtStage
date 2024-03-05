@@ -81,3 +81,16 @@ document.getElementById('real-file').addEventListener('change', function () {
     const fileName = document.getElementById('real-file').value.split('\\').pop();
     document.getElementById('custom-text').textContent = fileName ? fileName : "선택된 파일이 없습니다.";
 });
+
+
+// 알림페이지 tab
+document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', function () {
+        let currentTab = this.getAttribute('data-tab');
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+
+        document.querySelector(`[data-tab="${currentTab}"]`).classList.add('active');
+        document.getElementById(currentTab).classList.add('active');
+    });
+});

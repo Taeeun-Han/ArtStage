@@ -637,407 +637,474 @@ ul.nav {
 	}
 }
 
-.main {
-	main {
+main {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+
+	.menu {
 		display: flex;
 		flex-direction: column;
-		gap: 30px;
+		gap: 15px;
+		align-items: flex-end;
 
-		.menu {
+		.main-title {
+			width: 100%;
 			display: flex;
-			flex-direction: column;
-			gap: 15px;
-			align-items: flex-end;
+			justify-content: space-between;
+			align-items: center;
 
-			.main-title {
-				width: 100%;
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-
-				p {
-					@include main-title;
-					color: $dark-grey3;
-
-					&:nth-child(2) {
-						font-size: 10px;
-						color: $grey4;
-						font-weight: 500;
-					}
-				}
-			}
-
-			.menu-ul {
-				display: flex;
-				justify-content: space-between;
-				flex-wrap: wrap;
-				gap: 10px;
-
-				li {
-					width: 30%;
-					padding: 10px;
-					border-radius: 10px;
-					transition: all 0.3s;
-					cursor: pointer;
-
-					a {
-						display: flex;
-						flex-direction: column;
-						align-items: center;
-						gap: 15px;
-						color: $dark-grey2;
-
-						.img {
-							width: 50px;
-							height: 50px;
-
-							display: flex;
-							justify-content: center;
-							align-items: center;
-
-							border-radius: 10px;
-
-							img {
-								width: 30px;
-								height: 30px;
-							}
-						}
-
-						p {
-							@include main-menu;
-						}
-					}
-
-					&:hover {
-						background-color: $main-color;
-
-						a {
-							color: $white;
-						}
-					}
-
-					&:nth-child(1) {
-						a {
-							.img {
-								background-color: $main-li1;
-							}
-						}
-					}
-
-					&:nth-child(2) {
-						a {
-							.img {
-								background-color: $main-li3;
-							}
-						}
-					}
-
-					&:nth-child(3) {
-						a {
-							.img {
-								background-color: $main-li4;
-							}
-						}
-					}
-
-					&:nth-child(4) {
-						a {
-							.img {
-								background-color: $main-li5;
-							}
-						}
-					}
-
-					&:nth-child(5) {
-						a {
-							.img {
-								background-color: $main-li7;
-							}
-						}
-					}
-
-					&:nth-child(6) {
-						a {
-							.img {
-								background-color: $main-li8;
-							}
-						}
-					}
-				}
-			}
-
-			.menu-ul2 {
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: center;
-				align-items: center;
-				gap: 10px;
-
-				li {
-					width: 30%;
-					border-radius: 50px;
-					transition: all 0.3s;
-					cursor: pointer;
-					padding: 5px 10px;
-
-					border: 1px solid #cccccc;
-
-					a {
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						gap: 10px;
-						color: $dark-grey2;
-
-						.img {
-							width: 25px;
-
-							display: flex;
-							justify-content: center;
-							align-items: center;
-
-							img {
-								width: 25px;
-								height: 25px;
-							}
-						}
-
-						p {
-							@include main-menu;
-						}
-					}
-
-					&:hover {
-						background-color: $main-color;
-
-						a {
-							color: $white;
-						}
-					}
-				}
-			}
-
-			.recruitment-table-container {
-				.recruitment-table {
-					width: 100%;
-					border-collapse: collapse;
-					table-layout: fixed; // 테이블의 레이아웃을 고정
-
-					thead tr th,
-					tbody tr td {
-						padding: 8px; // 모든 테이블 셀에 패딩 적용
-					}
-
-					thead {
-						tr {
-							th {
-								@include main-table-title;
-
-								&:nth-child(1) {
-									width: 10%;
-								} // 순번
-								&:nth-child(2) {
-									width: 65%;
-								} // 제목
-								&:nth-child(3) {
-									width: 25%;
-								} // 업로드날짜
-							}
-						}
-					}
-
-					tbody {
-						tr {
-							td {
-								@include main-table-content;
-
-								&:nth-child(1) {
-									width: 10%;
-									text-align: center;
-								} // 순번
-
-								&:nth-child(2) {
-									// 제목
-									width: 65%;
-									padding: 0px;
-
-									.ellipsis {
-										width: 100%;
-										white-space: nowrap;
-										overflow: hidden;
-										text-overflow: ellipsis;
-										display: block;
-										text-align: left;
-									}
-								}
-
-								&:nth-child(3) {
-									padding: 0px;
-									width: 25%;
-								} // 업로드날짜
-							}
-
-							&:nth-child(odd) {
-								background-color: #f9f9f9; // 홀수 번째 행의 배경색 설정
-							}
-						}
-					}
-				}
-			}
-
-			.menu-ul3 {
-				width: 100%;
-				display: flex;
-				flex-direction: column;
-				gap: 10px;
-
-				li {
-					width: 100%;
-					display: flex;
-					justify-content: space-between;
-					align-items: center;
-					gap: 10px;
-					height: 70px;
-
-					.img {
-						width: 50%;
-						height: 100%;
-						background-color: $bg;
-
-						img {
-							width: 100%;
-							height: 100%;
-							object-fit: cover;
-						}
-					}
-
-					.txt {
-						width: 50%;
-						display: flex;
-						flex-direction: column;
-						gap: 10px;
-
-						p {
-							&:nth-child(1) {
-								@include main-ul3-title;
-							}
-
-							&:nth-child(2) {
-								@include main-ul3-date;
-							}
-						}
-					}
-				}
-			}
-
-			.more-btn {
-				padding-top: 10px;
-				border: none;
-				cursor: pointer;
-
-				transition: background-color 0.3s;
-				border-radius: 10px;
-
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				gap: 3px;
-				background-color: transparent;
+			p {
+				@include main-title;
 				color: $dark-grey3;
 
-				p {
-					@include main-table-btn;
-					line-height: 12px;
-				}
-
-				span {
-					font-size: 18px;
-					line-height: 12px;
-				}
-
-				&:hover {
-					background-color: darken($main-color, 10%);
+				&:nth-child(2) {
+					font-size: 10px;
+					color: $grey4;
+					font-weight: 500;
 				}
 			}
+		}
 
-			.company-info {
-				width: 100%;
-				padding: 20px;
-				border-radius: 20px;
-				border: 1px solid $placeholder;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 10px;
+		.menu-ul {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			gap: 10px;
 
-				p {
-					@include main-company-info;
-				}
+			li {
+				width: 30%;
+				padding: 10px;
+				border-radius: 10px;
+				transition: all 0.3s;
+				cursor: pointer;
 
-				.company-info-btn {
-					padding: 10px 20px;
-					border-radius: 10px;
-					margin-top: 15px;
-					background-color: $main-color;
-
-					@include main-company-info-btn;
-					color: $white;
-				}
-			}
-
-			.main-content {
-				display: flex;
-				align-items: center;
-				flex-wrap: wrap;
-				gap: 10px;
-
-				button {
-					padding: 10px 15px;
-					border-radius: 50px;
-					background-color: $white;
-					border: 1px solid $main-color-light;
-
-					@include search-button;
-				}
-			}
-
-			.search-history {
-				padding-top: 10px;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				justify-content: space-between;
-				gap: 20px;
-
-				width: 100%;
-				background-color: $white;
-
-
-				.search-history-content {
+				a {
 					display: flex;
+					flex-direction: column;
 					align-items: center;
-					justify-content: space-between;
+					gap: 15px;
+					color: $dark-grey2;
 
-					width: 100%;
+					.img {
+						width: 50px;
+						height: 50px;
 
-					span {
-						width: 5%;
-						font-size: 20px;
-						color: $dark-grey1;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+
+						border-radius: 10px;
+
+						img {
+							width: 30px;
+							height: 30px;
+						}
 					}
 
 					p {
-						width: 80%;
-						@include search-history;
+						@include main-menu;
+					}
+				}
+
+				&:hover {
+					background-color: $main-color;
+
+					a {
+						color: $white;
+					}
+				}
+
+				&:nth-child(1) {
+					a {
+						.img {
+							background-color: $main-li1;
+						}
+					}
+				}
+
+				&:nth-child(2) {
+					a {
+						.img {
+							background-color: $main-li3;
+						}
+					}
+				}
+
+				&:nth-child(3) {
+					a {
+						.img {
+							background-color: $main-li4;
+						}
+					}
+				}
+
+				&:nth-child(4) {
+					a {
+						.img {
+							background-color: $main-li5;
+						}
+					}
+				}
+
+				&:nth-child(5) {
+					a {
+						.img {
+							background-color: $main-li7;
+						}
+					}
+				}
+
+				&:nth-child(6) {
+					a {
+						.img {
+							background-color: $main-li8;
+						}
 					}
 				}
 			}
 		}
 
-		.member-profile {
-			.main-title {
+		.menu-ul2 {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			gap: 10px;
+
+			li {
+				width: 30%;
+				border-radius: 50px;
+				transition: all 0.3s;
+				cursor: pointer;
+				padding: 5px 10px;
+
+				border: 1px solid #cccccc;
+
+				a {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					gap: 10px;
+					color: $dark-grey2;
+
+					.img {
+						width: 25px;
+
+						display: flex;
+						justify-content: center;
+						align-items: center;
+
+						img {
+							width: 25px;
+							height: 25px;
+						}
+					}
+
+					p {
+						@include main-menu;
+					}
+				}
+
+				&:hover {
+					background-color: $main-color;
+
+					a {
+						color: $white;
+					}
+				}
+			}
+		}
+
+		.recruitment-table-container {
+			.recruitment-table {
+				width: 100%;
+				border-collapse: collapse;
+				table-layout: fixed; // 테이블의 레이아웃을 고정
+
+				thead tr th,
+				tbody tr td {
+					padding: 8px; // 모든 테이블 셀에 패딩 적용
+				}
+
+				thead {
+					tr {
+						th {
+							@include main-table-title;
+
+							&:nth-child(1) {
+								width: 10%;
+							} // 순번
+							&:nth-child(2) {
+								width: 65%;
+							} // 제목
+							&:nth-child(3) {
+								width: 25%;
+							} // 업로드날짜
+						}
+					}
+				}
+
+				tbody {
+					tr {
+						td {
+							@include main-table-content;
+
+							&:nth-child(1) {
+								width: 10%;
+								text-align: center;
+							} // 순번
+
+							&:nth-child(2) {
+								// 제목
+								width: 65%;
+								padding: 0px;
+
+								.ellipsis {
+									width: 100%;
+									white-space: nowrap;
+									overflow: hidden;
+									text-overflow: ellipsis;
+									display: block;
+									text-align: left;
+								}
+							}
+
+							&:nth-child(3) {
+								padding: 0px;
+								width: 25%;
+							} // 업로드날짜
+						}
+
+						&:nth-child(odd) {
+							background-color: #f9f9f9; // 홀수 번째 행의 배경색 설정
+						}
+					}
+				}
+			}
+		}
+
+		.menu-ul3 {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+
+			li {
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				gap: 10px;
+				height: 70px;
+
+				.img {
+					width: 50%;
+					height: 100%;
+					background-color: $bg;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+
+				.txt {
+					width: 50%;
+					display: flex;
+					flex-direction: column;
+					gap: 10px;
+
+					p {
+						&:nth-child(1) {
+							@include main-ul3-title;
+						}
+
+						&:nth-child(2) {
+							@include main-ul3-date;
+						}
+					}
+				}
+			}
+		}
+
+		.more-btn {
+			padding-top: 10px;
+			border: none;
+			cursor: pointer;
+
+			transition: background-color 0.3s;
+			border-radius: 10px;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 3px;
+			background-color: transparent;
+			color: $dark-grey3;
+
+			p {
+				@include main-table-btn;
+				line-height: 12px;
+			}
+
+			span {
+				font-size: 18px;
+				line-height: 12px;
+			}
+
+			&:hover {
+				background-color: darken($main-color, 10%);
+			}
+		}
+
+		.company-info {
+			width: 100%;
+			padding: 20px;
+			border-radius: 20px;
+			border: 1px solid $placeholder;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 10px;
+
+			p {
+				@include main-company-info;
+			}
+
+			.company-info-btn {
+				padding: 10px 20px;
+				border-radius: 10px;
+				margin-top: 15px;
+				background-color: $main-color;
+
+				@include main-company-info-btn;
+				color: $white;
+			}
+		}
+
+		.main-content {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 10px;
+
+			button {
+				padding: 10px 15px;
+				border-radius: 50px;
+				background-color: $white;
+				border: 1px solid $main-color-light;
+
+				@include search-button;
+			}
+		}
+
+		.search-history {
+			padding-top: 10px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+			gap: 20px;
+
+			width: 100%;
+			background-color: $white;
+
+			.search-history-content {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				width: 100%;
+
+				span {
+					width: 5%;
+					font-size: 20px;
+					color: $dark-grey1;
+				}
+
 				p {
-					@include main-title;
+					width: 80%;
+					@include search-history;
+				}
+			}
+		}
+	}
+
+	.member-profile {
+		.main-title {
+			p {
+				@include main-title;
+			}
+		}
+	}
+
+	.notifications {
+		width: 100%;
+
+		.tabs {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			background-color: $white;
+			border-bottom: 2px solid #eee;
+
+
+			li {
+				padding: 10px 15px;
+				cursor: pointer;
+				border-top-left-radius: 10px;
+				border-top-right-radius: 10px;
+				@include alarm-li;
+
+
+				&.active {
+					background-color: #eee;
+				}
+			}
+		}
+
+		.tab-content {
+			padding-top: 20px;
+
+			.content {
+				width: 100%;
+				display: none;
+
+				&.active {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					gap: 15px;
+
+					img{
+						width: 60px;
+						height: 60px;
+						object-fit: contain;
+						border-radius: 50%;
+					}
+					
+					.txt{
+						display: flex;
+						flex-direction: column;
+						align-items: flex-start;
+						gap: 10px;
+
+						p{
+							@include alarm-content-txt;
+
+							&:nth-child(2){
+								color: $grey4;
+								font-size: 10px;
+							}
+						}
+					}
+
+					span{
+						font-size: 22px;
+					}
 				}
 			}
 		}

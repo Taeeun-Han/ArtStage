@@ -159,3 +159,18 @@
 	font-size: 14px;
 	word-break: keep-all;
 }
+
+@mixin alarm-li {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 500;
+	font-size: 14px;
+	word-break: keep-all;
+}
+
+@mixin alarm-content-txt {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 20px;
+	word-break: keep-all;
+}
