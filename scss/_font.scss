@@ -171,6 +171,30 @@
 	font-family: "Pretendard-Regular", Arial, sans-serif;
 	font-weight: 500;
 	font-size: 12px;
-	line-height: 20px;
+	line-height: 18px;
+	word-break: keep-all;
+}
+
+@mixin profile-add {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 18px;
+	word-break: keep-all;
+}
+
+@mixin profile-title {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 700;
+	font-size: 13px;
+	line-height: 16px;
+	word-break: keep-all;
+}
+
+@mixin profile-p {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 18px;
 	word-break: keep-all;
 }

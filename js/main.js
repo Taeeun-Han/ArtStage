@@ -94,3 +94,17 @@ document.querySelectorAll('.tab').forEach(tab => {
         document.getElementById(currentTab).classList.add('active');
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    // 슬라이드 클릭 이벤트 리스너 추가
+    document.querySelectorAll('.profileSwiper .swiper-slide').forEach(function (slide) {
+        slide.addEventListener('click', function () {
+            // 모든 슬라이드에서 'on' 클래스 제거
+            document.querySelectorAll('.mySwiper .swiper-slide').forEach(function (el) {
+                el.classList.remove('on');
+            });
+            // 클릭된 슬라이드에 'on' 클래스 추가
+            this.classList.add('on');
+        });
+    });
+});
