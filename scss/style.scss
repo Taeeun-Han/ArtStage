@@ -19,7 +19,8 @@ html,
 body {
 	margin: 0;
 	padding: 0;
-	background-color: #f9f8ff;
+	background-color: #fff;
+	//background-color: $white;
 }
 
 * {
@@ -33,7 +34,7 @@ body {
 	width: 100%;
 	margin: 0 auto;
 	position: relative;
-	padding: 20px;
+	padding: 0px 20px;
 	padding-bottom: 130px;
 }
 
@@ -103,7 +104,7 @@ input[type="password"]::placeholder {
 	transform: translate(-50%, 0);
 
 	background-color: #fff;
-	padding: 10px 20px 20px 20px;
+	padding: 10px 15px 15px 15px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -133,7 +134,7 @@ input[type="password"]::placeholder {
 	transform: translate(-50%, 0);
 
 	background-color: #fff;
-	padding: 10px 20px 20px 20px;
+	padding: 10px 15px 15px 15px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -154,12 +155,14 @@ input[type="password"]::placeholder {
 
 // HEADER STYLE
 header {
-	width: 100%;
+	width: calc(100% + 40px);
+	margin-left: -20px;
+	margin-right: -20px;
 	position: sticky;
 	z-index: 999;
 	top: 0;
 	background: $white;
-	//padding: 0px 20px;
+	padding: 0px 15px;
 
 	.wrap {
 		display: flex;
@@ -172,13 +175,16 @@ header {
 			width: 24px;
 
 			.icon {
+				width: 24px;
+
 				a {
 					display: flex;
 					justify-content: center;
 					align-items: center;
+					width: 24px;
 
 					span {
-						font-size: 20px;
+						font-size: 15px;
 					}
 				}
 			}
@@ -211,19 +217,32 @@ header {
 	display: flex;
 	align-items: center;
 	position: relative;
+	width: 100%;
 
 	input {
 		width: 100%;
-		border-radius: 16px;
-		padding: 16px 20px;
-		border: 1px solid $grey4;
-		padding-right: 50px;
+		border-radius: 50px;
+		padding: 12px 45px 12px 45px;
+		font-size: 12px;
+		font-weight: 500;
+		background-color: #fafafa;
+
+		&::placeholder {
+			color: $placeholder;
+		}
 	}
 
-	img {
-		width: 18px;
+	.searchImage {
+		width: 16px;
 		position: absolute;
-		right: 20px;
+		left: 15px;
+	}
+
+	.deleteImage {
+		width: 14px;
+		position: absolute;
+		right: 15px;
+		cursor: pointer;
 	}
 }
 
@@ -251,7 +270,7 @@ header {
 		select {
 			border: 1px solid $placeholder;
 			width: 100%;
-			padding: 10px 20px 10px 15px;
+			padding: 10px 15px 10px 15px;
 			border-radius: 10px;
 			outline: none;
 			caret-color: $main-color;
@@ -268,7 +287,7 @@ header {
 		}
 
 		#custom-button {
-			padding: 10px 20px 10px 15px;
+			padding: 10px 15px 10px 15px;
 			color: white;
 			background-color: $main-color;
 			border: 1px solid $main-color;
@@ -286,7 +305,7 @@ header {
 		}
 
 		button {
-			padding: 10px 20px;
+			padding: 10px 15px;
 			border-radius: 10px;
 
 			@include login-toggle;
@@ -389,6 +408,7 @@ ul.nav {
 	transform: translateX(-50%);
 
 	display: flex;
+	justify-content: space-between;
 
 	width: 100%;
 	height: 96px;
@@ -399,11 +419,10 @@ ul.nav {
 	border-top-left-radius: 16px;
 	border-top-right-radius: 16px;
 
-	padding: 10px 20px 30px 20px;
+	padding: 10px 15px 30px 15px;
 
 	li {
-		width: 20%;
-		padding: 30px 0px;
+		padding: 10px 20px;
 
 		a {
 			display: block;
@@ -478,8 +497,8 @@ ul.nav {
 	align-items: center;
 	background-color: $main-color-dark;
 	width: calc(100% + 40px);
-	margin-left: -20px;
-	margin-right: -20px;
+	margin-left: -15px;
+	margin-right: -15px;
 
 	padding-left: 10px;
 
@@ -517,19 +536,52 @@ ul.nav {
 
 .login {
 	background-color: $main-color;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
 	padding-bottom: 0px;
 
 	header {
 		background-color: transparent;
 		position: relative;
 
-		.wrap {
-			.header-left {
+		width: 100%;
+		padding: 0px;
+
+		> .wrap {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			height: 50px;
+
+			.header-left,
+			.header-right {
+				width: 24px;
+
 				.icon {
+					width: 24px;
+
 					a {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 24px;
+
 						span {
+							font-size: 15px;
 							color: $white;
 						}
+					}
+				}
+			}
+
+			.header-center {
+				.txt {
+					p {
+						@include header;
+						word-break: keep-all;
 					}
 				}
 			}
@@ -543,6 +595,7 @@ ul.nav {
 		gap: 30px;
 
 		.login-txt {
+			width: 100%;
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
@@ -552,7 +605,7 @@ ul.nav {
 				flex-direction: column;
 				align-items: flex-start;
 				gap: 5px;
-				margin-bottom: 20px;
+				margin-bottom: 15px;
 
 				p {
 					@include header;
@@ -570,7 +623,8 @@ ul.nav {
 			width: calc(100% + 40px);
 			margin-left: -20px;
 			margin-right: -20px;
-			padding: 30px 20px;
+
+			padding: 30px 15px;
 			background-color: $white;
 			border-top-left-radius: 30px;
 			border-top-right-radius: 30px;
@@ -578,10 +632,9 @@ ul.nav {
 			flex-direction: column;
 			gap: 30px;
 			padding-bottom: 50px;
-			margin-bottom: -20px;
 
 			.member {
-				background-color: #f0f0f0;
+				background-color: $bg;
 				padding: 5px;
 				border-radius: 10px;
 
@@ -590,7 +643,7 @@ ul.nav {
 
 				button {
 					width: 100%;
-					background-color: #f0f0f0;
+					background-color: $bg;
 					border-radius: 10px;
 					padding: 9px 30px;
 					border: none;
@@ -649,6 +702,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	gap: 30px;
+	padding-bottom: 30px;
 
 	.menu {
 		display: flex;
@@ -969,8 +1023,8 @@ main {
 
 		.company-info {
 			width: 100%;
-			padding: 20px;
-			border-radius: 20px;
+			padding: 15px;
+			border-radius: 15px;
 			border: 1px solid $placeholder;
 			display: flex;
 			flex-direction: column;
@@ -982,7 +1036,7 @@ main {
 			}
 
 			.company-info-btn {
-				padding: 10px 20px;
+				padding: 10px 15px;
 				border-radius: 10px;
 				margin-top: 15px;
 				background-color: $main-color;
@@ -997,46 +1051,86 @@ main {
 			align-items: center;
 			flex-wrap: wrap;
 			gap: 10px;
+			width: 100%;
 
-			button {
-				padding: 10px 15px;
-				border-radius: 50px;
-				background-color: $white;
-				border: 1px solid $main-color-light;
+			ul {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
 
-				@include search-button;
+				li {
+					width: 100%;
+					padding: 10px 5px;
+					background-color: $white;
+
+					@include search-li;
+
+					display: flex;
+					align-items: center;
+					gap: 10px;
+
+					span {
+						border: 1px solid $main-color;
+						width: 15px;
+						height: 15px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						background-color: $main-color;
+						color: $white;
+
+						@include search-li;
+						font-size: 11px;
+					}
+				}
 			}
 		}
 
 		.search-history {
-			padding-top: 10px;
 			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: space-between;
-			gap: 20px;
+			gap: 15px;
 
 			width: 100%;
-			background-color: $white;
+
+			padding-top: 10px;
 
 			.search-history-content {
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
+				position: relative;
 
-				width: 100%;
+				border-radius: 50px;
 
-				span {
-					width: 5%;
-					font-size: 20px;
-					color: $dark-grey1;
-				}
+				padding: 10px 30px 10px 20px;
+
+				background-color: $search-history;
 
 				p {
-					width: 80%;
 					@include search-history;
+					color: $grey4;
+				}
+
+				span {
+					font-size: 14px;
+					color: $placeholder;
+					position: absolute;
+					right: 10px;
 				}
 			}
+		}
+	}
+
+	.search {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+
+		margin-top: 50px;
+
+		.main-title {
+			@include main-title-search;
 		}
 	}
 
@@ -1050,8 +1144,16 @@ main {
 
 	.notifications {
 		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		margin-top: -15px;
 
 		.tabs {
+			width: calc(100% + 40px);
+			margin-left: -20px;
+			margin-right: -20px;
+			padding: 15px 15px 0px;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -1067,17 +1169,22 @@ main {
 				@include alarm-li;
 
 				&.active {
-					background-color: #eee;
+					background-color: $main-color-light;
 				}
 			}
 		}
 
 		.tab-content {
-			padding-top: 20px;
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
 
 			.content {
 				width: 100%;
 				display: none;
+				background-color: $search-history;
+				padding: 15px;
+				border-radius: 15px;
 
 				&.active {
 					display: flex;
@@ -1109,7 +1216,8 @@ main {
 					}
 
 					span {
-						font-size: 22px;
+						font-size: 20px;
+						color: $placeholder;
 					}
 				}
 			}
@@ -1117,186 +1225,507 @@ main {
 	}
 }
 
-.profile-add {
-	gap: 20px;
+.profile-list {
+	background-color: $main-color-light;
 
-	.category {
-		width: calc(100% + 40px);
-		margin-right: -20px;
-		margin-left: -20px;
-		background-color: $white;
-		padding: 10px 0px;
-
-		swiper-container {
-			width: 100%;
-			margin-right: -20px;
-			padding-left: 20px;
-
-			swiper-slide {
-				width: auto;
-				padding: 10px;
-				border-radius: 10px;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				gap: 5px;
-
-				span {
-					font-size: 18px;
-				}
-
-				p {
-					@include profile-add;
-				}
-			}
-
-			.on {
-				background-color: #f6f4fc;
-
-				span {
-					color: #4424a8;
-				}
-
-				p {
-					color: #4424a8;
-					font-weight: 700;
-				}
-			}
-		}
-	}
-
-	.search-option {
-		width: 100%;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-
-		button {
-			padding: 5px 15px;
-			border-radius: 10px;
-			background-color: $main-color;
-			color: $white;
-
-			@include profile-add;
-
-			&:hover {
-				background-color: $white;
-				color: $main-color;
-				border: 1px solid $main-color;
-			}
-		}
-
-		.filter {
-			select {
-				padding: 5px 10px;
-				border-radius: 10px;
-			}
-		}
-	}
-
-	.profile-wrap {
-		.profile {
-			display: flex;
-			flex-direction: column;
+	.wrap {
+		.profile-add {
 			gap: 15px;
-			align-items: center;
-			background-color: $white;
-			border-radius: 10px;
-			padding: 20px;
 
-			border: 1px solid $bg;
+			.category {
+				width: calc(100% + 40px);
+				margin-right: -20px;
+				margin-left: -20px;
+				background-color: $white;
+				padding: 5px 0px;
 
-			.title {
-				display: flex;
-				justify-content: space-between;
-				width: 100%;
-				align-items: center;
+				swiper-container {
+					width: 100%;
+					padding: 0px 15px;
 
-				p {
-					@include profile-title;
-				}
-
-				.review {
-					display: flex;
-					align-items: center;
-					gap: 5px;
-
-					span {
-						font-size: 16px;
-						line-height: 18px;
-					}
-
-					p {
-						@include profile-title;
-					}
-				}
-			}
-
-			.content {
-				width: 100%;
-				display: flex;
-				gap: 15px;
-
-				.content-l {
-					display: flex;
-					flex-direction: column;
-					gap: 10px;
-					align-items: center;
-
-					.img {
-						width: 70px;
-						height: 70px;
-						border-radius: 50%;
-						overflow: hidden;
+					swiper-slide {
+						width: auto;
+						padding: 10px;
+						border-radius: 10px;
 						display: flex;
 						justify-content: center;
 						align-items: center;
+						gap: 5px;
 
-						img {
-							border-radius: 50%;
-							width: 100%;
-							height: 100%;
-							object-fit: cover;
+						span {
+							font-size: 18px;
+						}
+
+						p {
+							@include profile-add;
 						}
 					}
 
-					.name {
-						@include profile-p;
-						font-weight: 700;
-						font-size: 12px;
-					}
-
-					.location {
-						margin-top: -8px;
-						@include profile-p;
-						font-size: 10px;
-
-						display: flex;
-						align-items: center;
-						gap: 0px;
+					.on {
+						background-color: #f6f4fc;
 
 						span {
-							font-size: 14px;
+							color: #4424a8;
+						}
+
+						p {
+							color: #4424a8;
+							font-weight: 700;
 						}
 					}
 				}
+			}
 
-				.txt {
-					flex-grow: 1;
+			.search-bar-option {
+				display: flex;
+				align-items: center;
+				gap: 10px;
 
+				select {
+					padding: 10px;
+					@include profile-add;
+					border-radius: 10px;
+					border: 1px solid transparent;
+				}
+
+				.search-bar {
+					input {
+						padding-right: 20px;
+						border-radius: 10px;
+					}
+				}
+			}
+
+			.search-option {
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				button {
+					padding: 8px 15px;
+					border-radius: 10px;
+					background-color: $main-color;
+					color: $white;
+					cursor: pointer;
+
+					@include profile-add;
+
+					&:hover {
+						background-color: $white;
+						color: $main-color;
+						border: 1px solid $main-color;
+					}
+				}
+
+				.filter {
+					select {
+						padding: 8% 10px;
+						border-radius: 10px;
+						border: 1px solid transparent;
+
+						@include profile-add;
+					}
+				}
+			}
+
+			.profile-wrap {
+				.profile {
 					display: flex;
 					flex-direction: column;
-					justify-content: center;
-					gap: 5px;
+					gap: 15px;
+					align-items: center;
+					background-color: $white;
+					border-radius: 10px;
+					padding: 15px;
 
-					p {
-						@include profile-p;
-					}
+					border: 1px solid $bg;
 
-					.chat {
+					.title {
 						display: flex;
-						justify-content: flex-end;
+						justify-content: space-between;
+						width: 100%;
+						align-items: center;
+
+						p {
+							@include profile-title;
+						}
+
+						.review {
+							display: flex;
+							align-items: center;
+							gap: 5px;
+
+							span {
+								font-size: 16px;
+								line-height: 18px;
+							}
+
+							p {
+								@include profile-title;
+							}
+						}
 					}
+
+					.content {
+						width: 100%;
+						display: flex;
+						gap: 15px;
+
+						.content-l {
+							display: flex;
+							flex-direction: column;
+							gap: 10px;
+							align-items: center;
+
+							.img {
+								width: 70px;
+								height: 70px;
+								border-radius: 50%;
+								overflow: hidden;
+								display: flex;
+								justify-content: center;
+								align-items: center;
+
+								img {
+									border-radius: 50%;
+									width: 100%;
+									height: 100%;
+									object-fit: cover;
+								}
+							}
+
+							.name {
+								@include profile-p;
+								font-weight: 700;
+								font-size: 12px;
+							}
+
+							.location {
+								margin-top: -8px;
+								@include profile-p;
+								font-size: 10px;
+
+								display: flex;
+								align-items: center;
+								gap: 0px;
+
+								span {
+									font-size: 14px;
+								}
+							}
+						}
+
+						.txt {
+							flex-grow: 1;
+
+							display: flex;
+							flex-direction: column;
+							justify-content: center;
+							gap: 5px;
+
+							p {
+								@include profile-p;
+							}
+
+							.chat {
+								display: flex;
+								justify-content: flex-end;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.draft {
+	display: flex;
+	justify-content: flex-end;
+	padding-bottom: 15px;
+	gap: 5px;
+
+	button {
+		padding: 10px;
+		border-radius: 10px;
+		background-color: $main-color;
+		border: 1px solid $main-color;
+		color: $white;
+
+		@include search-history;
+
+		cursor: pointer;
+
+		&:nth-child(1) {
+			background-color: $main-color-light;
+			color: $main-color;
+		}
+
+		&:nth-child(2) {
+			padding: 10px 20px;
+		}
+	}
+}
+
+.profile-add {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	width: calc(100% + 40px);
+	margin-right: -20px;
+	margin-left: -20px;
+
+	.profile-img {
+		width: 100%;
+		height: 350px;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		input[type="file"] {
+			width: 100%;
+			height: 100%;
+
+			position: absolute;
+			top: 0px; // 상단에서 얼마나 떨어뜨릴지 설정
+			left: 50%; // 왼쪽에서 50% 위치에 배치 (가운데 정렬 효과)
+			transform: translateX(
+				-50%
+			); // 왼쪽으로 50% 이동하여 정확히 가운데 오도록 조정
+
+			cursor: pointer; // 마우스 오버 시 커서 변경
+			opacity: 0; // 버튼 숨김, 여전히 클릭 가능
+		}
+
+		.image-preview {
+			width: 100%;
+			height: 100%;
+
+			border-top: 1px solid #ccc;
+			border-bottom: 1px solid #ccc;
+			background-color: #efefef;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden;
+
+			font-weight: 500;
+			font-size: 12px;
+
+			img {
+				width: 100%;
+				object-fit: contain;
+			}
+		}
+	}
+
+	.profile-sentence {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: -20px;
+		padding: 0px 20px;
+
+		p {
+			@include profile-add-title;
+			width: 100%;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			input {
+				width: 75%;
+				padding: 5px 10px;
+				@include profile-add-title;
+				border-bottom: 1px solid #ccc;
+			}
+
+			#charCount {
+				text-align: right;
+				margin-left: 10px;
+
+				font-weight: 500;
+				font-size: 10px;
+			}
+		}
+	}
+
+	.profile-content {
+		width: 100%;
+		padding: 0px 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 30px;
+
+		.profile-info {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 20px;
+			width: 100%;
+
+			.profile-add-form {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				gap: 20px;
+
+				p {
+					text-align: right;
+					@include profile-add-form;
+					width: 20%;
+				}
+
+				input,
+				select {
+					width: 80%;
+					padding: 5px 10px;
+					border: none;
+					border-bottom: 1px solid #ccc;
+					@include profile-add-form;
+					font-weight: 500;
+				}
+			}
+		}
+
+		.profile-location {
+			width: 100%;
+			display: flex;
+			gap: 20px;
+
+			p {
+				width: 20%;
+				text-align: right;
+				@include profile-add-form;
+			}
+
+			.location-wrap {
+				width: 80%;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+
+				button {
+					padding: 10px 15px;
+					border-radius: 10px;
+					background-color: $main-color-light;
+					color: $dark-grey3;
+					@include profile-add-form-button;
+				}
+			}
+		}
+
+		.profile-edu,
+		.profile-history,
+		.profile-awards {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			align-items: flex-end;
+
+			.profile-edu-wrap,
+			.profile-history-wrap,
+			.profile-awards-wrap {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				gap: 20px;
+
+				p {
+					width: 20%;
+					text-align: right;
+					@include profile-add-form;
+				}
+
+				.input-wrap {
+					width: 80%;
+					display: flex;
+					flex-wrap: wrap;
+					gap: 10px;
+					@include profile-add-form;
+
+					input {
+						border-bottom: 1px solid #ccc;
+						@include profile-add-form;
+
+						&:nth-child(1),
+						&:nth-child(2) {
+							width: 10%;
+						}
+
+						&:nth-child(3) {
+							width: 60%;
+							margin-left: 10px;
+						}
+					}
+				}
+			}
+
+			#addEdu,
+			#addHistory,
+			#addAwards {
+				padding: 8px;
+				border-radius: 8px;
+				background-color: $main-color-light;
+				color: $dark-grey3;
+				@include profile-add-form-button;
+			}
+		}
+
+		.introduce {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			gap: 20px;
+
+			p {
+				text-align: right;
+				@include profile-add-form;
+				width: 20%;
+			}
+
+			.textarea-container {
+				width: 80%;
+				height: 150px;
+				position: relative;
+
+				#introduceText {
+					width: 100%;
+					height: 150px;
+					@include profile-add-title;
+					font-weight: 500;
+					font-size: 12px;
+					border: 1px solid #ccc;
+					padding: 10px;
+
+					&:focus {
+						border: 1px solid #ccc;
+						outline: none;
+					}
+				}
+
+				#charCount {
+					position: absolute;
+					bottom: 5px;
+					right: 10px;
+
+					background: rgba(255, 255, 255, 0.7);
+
+					@include profile-add-title;
+					text-align: right;
+					margin-left: 10px;
+
+					font-weight: 500;
+					font-size: 10px;
+					padding: 0px;
 				}
 			}
 		}

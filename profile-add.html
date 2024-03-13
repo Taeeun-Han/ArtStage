@@ -25,27 +25,30 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
     <!-- Script 연결 -->
-    <script defer src="./js/swiper.js"></script>
-    <script defer src="./js/main.js"></script>
+    <script defer src="./js/profile-add.js"></script>
 
 </head>
 
 <body>
 
-    <div class="container main">
+    <div class="container">
 
         <header>
             <div class="wrap">
 
-                <div class="header-left img">
-                    <a href="#">
-                        <img src="./img/logo/logo-full.png" alt="로고">
-                    </a>
+                <div class="header-left">
+                    <div class="icon">
+                        <a href="#">
+                            <span class="material-symbols-outlined">
+                                arrow_back_ios
+                            </span>
+                        </a>
+                    </div>
                 </div>
 
                 <div class="header-center">
                     <div class="txt">
-                        <p></p>
+                        <p>내 프로필 등록</p>
                     </div>
                 </div>
 
@@ -57,114 +60,190 @@
 
         <div class="wrap">
 
+            <div class="draft">
+                <button>임시저장 불러오기</button>
+                <button>저장</button>
+            </div>
+
             <main class="profile-add">
-                <div class="category">
-                    <swiper-container class="mySwiper profileSwiper" space-between="10" slides-per-view="auto">
-                        <swiper-slide class="on">
-                            <span class="material-symbols-outlined">
-                                format_list_bulleted
-                            </span>
-                            <p>전체</p>
-                        </swiper-slide>
-                        <swiper-slide>
-                            <span class="material-symbols-outlined">
-                                theater_comedy
-                            </span>
-                            <p>연극/뮤지컬</p>
-                        </swiper-slide>
-                        <swiper-slide>
-                            <span class="material-symbols-outlined">
-                                accessibility_new
-                            </span>
-                            <p>무용</p>
-                        </swiper-slide>
-                        <swiper-slide>
-                            <span class="material-symbols-outlined">
-                                music_note
-                            </span>
-                            <p>음악</p>
-                        </swiper-slide>
-                        <swiper-slide>
-                            <span class="material-symbols-outlined">
-                                palette
-                            </span>
-                            <p>미술</p>
-                        </swiper-slide>
-                        <swiper-slide>
-                            <span class="material-symbols-outlined">
-                                more_horiz
-                            </span>
-                            <p>기타</p>
-                        </swiper-slide>
-                    </swiper-container>
+
+                <!-- 프로필 이미지 -->
+                <div class="profile-img">
+                    <label for="productImage"></label>
+                    <input type="file" id="productImage" name="productImage" accept="image/*" required>
+                    <div class="image-preview" id="imagePreview">여기를 눌러서 프로필 사진을 등록해주세요</div>
                 </div>
 
-                <div class="search-bar">
-                    <input type="text" placeholder="이름, 소속, 직업, 주전공, 주활동지역 검색">
-                    <img src="./img/icon/search.png" alt="검색">
+                <div class="profile-sentence">
+                    <p>" <input type="text" id="textInput" maxlength="35" placeholder="나의 한 줄 소개를 입력해주세요" /> "
+                        <span id="charCount">0/35</span>
+                    </p>
                 </div>
 
-                <div class="search-option">
-                    <button>내 프로필 등록</button>
-                    <div class="filter">
-                        <select name="sortOrder" id="sortOrder">
-                            <option value="newest">최신등록순</option>
-                            <option value="random">랜덤순</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="profile-wrap">
-                    <div class="profile">
-                        <div class="title">
-                            <p>독일에서 갈고 닦은 실력 보여주겠습니다!</p>
-
-                            <div class="review">
-                                <span class="material-symbols-outlined">
-                                    kid_star
-                                </span>
-                                <p>4.7/5</p>
-                            </div>
+                <div class="profile-content">
+                    <div class="profile-info">
+                        <div class="profile-add-form">
+                            <p>기본설정</p>
+                            <input type="text">
                         </div>
 
-                        <div class="content">
-                            <div class="content-l">
-                                <div class="img">
-                                    <img src="./img/img/대표 악기 프로필 사진.jpg" alt="프로필 사진">
-                                </div>
-                                <div class="name">
-                                    <p>한동윤</p>
-                                </div>
-                                <div class="location">
-                                    <span class="material-symbols-outlined">
-                                        location_on
-                                    </span>
-                                    <p>서울 | 경기 | 인천</p>
-                                </div>
-                            </div>
+                        <div class="profile-add-form">
+                            <p>이름</p>
+                            <input type="text">
+                        </div>
 
+                        <div class="profile-add-form">
+                            <p>분야</p>
+                            <select name="major" id="major">
+                                <option value="major">선택해주세요</option>
+                                <option value="major">연주자</option>
+                                <option value="major">작곡가</option>
+                            </select>
+                        </div>
 
-                            <div class="txt">
+                        <div class="profile-add-form">
+                            <p>직업</p>
+                            <select name="major" id="major">
+                                <option value="major">선택해주세요</option>
+                                <option value="major">연주자</option>
+                                <option value="major">작곡가</option>
+                            </select>
+                        </div>
 
-                                <p>연극/뮤지컬</p>
+                        <div class="profile-add-form">
+                            <p>직업</p>
+                            <select name="major" id="major">
+                                <option value="major">선택해주세요</option>
+                                <option value="major">연주자</option>
+                                <option value="major">작곡가</option>
+                            </select>
+                        </div>
 
-                                <p>Be오케스트라</p>
+                        <div class="profile-add-form">
+                            <p>주전공</p>
+                            <select name="major" id="major">
+                                <option value="major">선택해주세요</option>
+                                <option value="major">클라리넷</option>
+                                <option value="major">플룻</option>
+                            </select>
+                        </div>
 
-                                <p>연주가</p>
+                        <div class="profile-add-form">
+                            <p>소속</p>
+                            <input type="text">
+                        </div>
+                        <div class="profile-add-form">
+                            <p>전화번호</p>
+                            <input type="text">
+                        </div>
+                    </div>
 
-                                <p>클라리넷</p>
+                    <div class="profile-location">
 
+                        <p>주 활동지역</p>
 
-                                <div class="chat">
-                                    <span class="material-symbols-outlined">
-                                        send
-                                    </span>
-                                </div>
-                            </div>
+                        <div class="location-wrap">
+                            <button>서울</button>
+                            <button>인천/부천</button>
+                            <button>경기북부</button>
+                            <button>경기남부</button>
+                            <button>강원/춘천</button>
+                            <button>충남/대전/세종</button>
+                            <button>충북/청주</button>
+                            <button>경북/대구</button>
+                            <button>경남/부산/울산</button>
+                            <button>전북/전주</button>
+                            <button>전남/광주</button>
+                            <button>제주</button>
                         </div>
 
                     </div>
+
+                    <!-- 학력사항 -->
+                    <div class="profile-edu">
+
+                        <div class="profile-edu-wrap">
+                            <p>학력사항</p>
+
+                            <div class="input-wrap">
+                                <input type="text"> ~ <input type="text">
+                                <input type="text">
+                            </div>
+                        </div>
+
+                        <div class="profile-edu-wrap">
+                            <p></p>
+
+                            <div class="input-wrap">
+                                <input type="text"> ~ <input type="text">
+                                <input type="text">
+                            </div>
+                        </div>
+
+                        <button id="addEdu">+ 학력사항 추가</button>
+                    </div>
+
+                    <!-- 경력사항 -->
+                    <div class="profile-history">
+
+                        <div class="profile-history-wrap">
+                            <p>경력사항</p>
+
+                            <div class="input-wrap">
+                                <input type="text"> ~ <input type="text">
+                                <input type="text">
+                            </div>
+                        </div>
+
+                        <div class="profile-history-wrap">
+                            <p></p>
+
+                            <div class="input-wrap">
+                                <input type="text"> ~ <input type="text">
+                                <input type="text">
+                            </div>
+                        </div>
+
+
+                        <button id="addHistory">+ 경력사항 추가</button>
+                    </div>
+
+
+                    <!-- 활동사항 -->
+                    <div class="profile-awards">
+
+                        <div class="profile-awards-wrap">
+                            <p>활동사항(수상, 보도)</p>
+
+                            <div class="input-wrap">
+                                <input type="text"> ~ <input type="text">
+                                <input type="text">
+                            </div>
+                        </div>
+
+                        <div class="profile-awards-wrap">
+                            <p></p>
+
+                            <div class="input-wrap">
+                                <input type="text"> ~ <input type="text">
+                                <input type="text">
+                            </div>
+                        </div>
+
+
+                        <button id="addAwards">+ 수상사항 추가</button>
+                    </div>
+
+                    <!-- 기타 자기소개 -->
+                    <div class="introduce">
+                        <p>기타 자기소개</p>
+                        <div class="textarea-container">
+                            <textarea id="introduceText" cols="30" rows="10" maxlength="500"></textarea>
+                            <div id="charCount">0/500</div>
+                        </div>
+                    </div>
                 </div>
+
             </main>
 
         </div>

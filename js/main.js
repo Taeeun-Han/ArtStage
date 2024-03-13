@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // 모든 버튼의 'active' 클래스 제거 및 배경색 초기화
             buttons.forEach(btn => {
                 btn.classList.remove('active');
-                btn.style.backgroundColor = '#f0f0f0';
+                btn.style.backgroundColor = '#f4f4f4';
             });
 
             // 클릭된 버튼에만 'active' 클래스 추가 및 배경색 변경
@@ -107,4 +107,19 @@ document.addEventListener('DOMContentLoaded', function () {
             this.classList.add('on');
         });
     });
+});
+
+
+
+// 제품 이미지 미리보기
+document.getElementById('productImage').addEventListener('change', function () {
+    const preview = document.getElementById('imagePreview');
+    const file = this.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            preview.innerHTML = `<img src="${e.target.result}" alt="Image preview">`;
+        };
+        reader.readAsDataURL(file);
+    }
 });

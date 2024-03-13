@@ -13,7 +13,6 @@
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 20px;
-	letter-spacing: 0.5px;
 	color: $white;
 }
 
@@ -75,7 +74,13 @@
 @mixin main-title {
 	font-family: "Pretendard-Regular", Arial, sans-serif;
 	font-weight: 700;
-	font-size: 16px;
+	font-size: 14px;
+}
+
+@mixin main-title-search {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 700;
+	font-size: 22px;
 }
 
 @mixin main-menu {
@@ -146,7 +151,7 @@
 	word-break: keep-all;
 }
 
-@mixin search-button {
+@mixin search-li {
 	font-family: "Pretendard-Regular", Arial, sans-serif;
 	font-weight: 500;
 	font-size: 12px;
@@ -156,14 +161,14 @@
 @mixin search-history {
 	font-family: "Pretendard-Regular", Arial, sans-serif;
 	font-weight: 500;
-	font-size: 14px;
+	font-size: 12px;
 	word-break: keep-all;
 }
 
 @mixin alarm-li {
 	font-family: "Pretendard-Regular", Arial, sans-serif;
 	font-weight: 500;
-	font-size: 14px;
+	font-size: 13px;
 	word-break: keep-all;
 }
 
@@ -192,6 +197,29 @@
 }
 
 @mixin profile-p {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 18px;
+	word-break: keep-all;
+}
+
+@mixin profile-add-title {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 18px;
+	word-break: keep-all;
+}
+
+@mixin profile-add-form {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 18px;
+	word-break: keep-all;
+}
+@mixin profile-add-form-button {
 	font-family: "Pretendard-Regular", Arial, sans-serif;
 	font-weight: 500;
 	font-size: 12px;
