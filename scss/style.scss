@@ -38,6 +38,11 @@ body {
 	padding-bottom: 96px;
 }
 
+.bg-light {
+	background-color: $main-color-light;
+	height: 100vh;
+}
+
 .wrap {
 	width: 100%;
 	position: relative;
@@ -1227,6 +1232,7 @@ main {
 	}
 }
 
+// 공연 예술인 프로필 리스트 페이지
 .profile-list {
 	background-color: $main-color-light;
 
@@ -1454,6 +1460,7 @@ main {
 	}
 }
 
+// 공연 예술인 프로필 등록 페이지 -> 임시 저장 버튼
 .draft {
 	width: calc(100% + 40px);
 	margin-left: -20px;
@@ -1494,6 +1501,7 @@ main {
 	}
 }
 
+// 공연 예술인 프로필 등록 페이지
 .profile-add {
 	display: flex;
 	flex-direction: column;
@@ -1820,6 +1828,7 @@ main {
 	}
 }
 
+// 공연 예술인 프로필 등록 페이지 -> 하단 임시저장|수정/저장|삭제 버튼
 .profile-add-btn-wrap {
 	width: calc(100% + 40px);
 	margin-right: -20px;
@@ -1850,6 +1859,77 @@ main {
 		&:nth-child(3) {
 			background-color: $main-color-light;
 			color: $main-color;
+		}
+	}
+}
+
+.profile-draft {
+	gap: 20px;
+	padding-bottom: 0px;
+	margin-top: 20px;
+
+	.profile-draft-wrap {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background-color: $white;
+		border-radius: 10px;
+		padding: 10px;
+
+		.img {
+			width: 50%;
+			height: 100px;
+			background-color: #eee;
+			border-radius: 10px;
+
+			img {
+			border-radius: 10px;
+
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
+		}
+
+		.content {
+			width: 80%;
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+
+			.major,
+			.save-date {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 0px 10px;
+
+				p {
+					@include profile-p;
+				}
+
+				span {
+					font-size: 18px;
+					line-height: 22px;
+				}
+
+				.button {
+					button {
+						@include search-history;
+						cursor: pointer;
+						background-color: $white;
+						border: 1px solid $main-color;
+						padding: 5px 15px;
+						border-radius: 5px;
+
+						&:hover,
+						&:active {
+							background-color: $main-color;
+							color: $white;
+						}
+					}
+				}
+			}
 		}
 	}
 }

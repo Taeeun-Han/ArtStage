@@ -32,20 +32,24 @@
 
 <body>
 
-    <div class="container profile-list">
+    <div class="container bg-light">
 
         <header>
             <div class="wrap">
 
-                <div class="header-left img">
-                    <a href="#">
-                        <img src="./img/logo/logo-full.png" alt="로고">
-                    </a>
+                <div class="header-left">
+                    <div class="icon">
+                        <a href="#">
+                            <span class="material-symbols-outlined">
+                                arrow_back_ios
+                            </span>
+                        </a>
+                    </div>
                 </div>
 
                 <div class="header-center">
                     <div class="txt">
-                        <p></p>
+                        <p>임시 저장 된 프로필</p>
                     </div>
                 </div>
 
@@ -57,223 +61,64 @@
 
         <div class="wrap">
 
-            <main class="profile-list-main">
-                <div class="category">
-                    <swiper-container class="mySwiper profileSwiper" space-between="10" slides-per-view="auto">
-                        <swiper-slide class="on">
-                            <span class="material-symbols-outlined">
-                                format_list_bulleted
-                            </span>
-                            <p>전체</p>
-                        </swiper-slide>
-                        <swiper-slide>
-                            <span class="material-symbols-outlined">
-                                theater_comedy
-                            </span>
-                            <p>연극/뮤지컬</p>
-                        </swiper-slide>
-                        <swiper-slide>
-                            <span class="material-symbols-outlined">
-                                accessibility_new
-                            </span>
-                            <p>무용</p>
-                        </swiper-slide>
-                        <swiper-slide>
-                            <span class="material-symbols-outlined">
-                                music_note
-                            </span>
-                            <p>음악</p>
-                        </swiper-slide>
-                        <swiper-slide>
-                            <span class="material-symbols-outlined">
-                                palette
-                            </span>
-                            <p>미술</p>
-                        </swiper-slide>
-                        <swiper-slide>
-                            <span class="material-symbols-outlined">
-                                more_horiz
-                            </span>
-                            <p>기타</p>
-                        </swiper-slide>
-                    </swiper-container>
-                </div>
+            <main class="profile-draft">
+                <div class="profile-draft-wrap">
+                    <div class="img">
+                        <img src="/img/img/leo2.jpg" alt="프로필 사진">
+                    </div>
 
-                <div class="search-option">
-                    <button>내 프로필 등록</button>
-                    <div class="filter">
-                        <select name="sortOrder" id="sortOrder">
-                            <option value="newest">최근등록순</option>
-                            <option value="random">랜덤순</option>
-                        </select>
+                    <div class="content">
+                        <div class="major">
+                            <div class="txt">
+                                <p>분야 | 직업</p>
+                            </div>
+
+                            <div class="icon">
+                                <span class="material-symbols-outlined">
+                                    delete
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="save-date">
+                            <div class="txt">
+                                <p>임시저장일</p>
+                            </div>
+
+                            <div class="button">
+                                <button>선택</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-
-                <div class="search-bar-option">
-                    <select name="search" id="search">
-                        <option value="name">이름</option>
-                        <option value="affiliation">소속</option>
-                        <option value="major">주전공</option>
-                        <option value="location">주활동지역</option>
-
-                    </select>
-                    <div class="search-bar">
-                        <input type="text" placeholder="검색어를 입력해주세요">
-                        <img class="searchImage" src="./img/icon/search.png" alt="검색">
-                    </div>
-                </div>
-
-
-                <div class="profile-wrap">
-                    <div class="profile">
-                        <div class="title">
-                            <p>독일에서 갈고 닦은 실력 보여주겠습니다!</p>
-
-                            <div class="review">
-                                <span class="material-symbols-outlined">
-                                    kid_star
-                                </span>
-                                <p>4.7</p>
-                            </div>
-                        </div>
-
-                        <div class="content">
-                            <div class="content-l">
-                                <div class="img">
-                                    <img src="./img/img/대표 악기 프로필 사진.jpg" alt="프로필 사진">
-                                </div>
-                                <div class="name">
-                                    <p>한동윤</p>
-                                </div>
-                                <div class="location">
-                                    <span class="material-symbols-outlined">
-                                        location_on
-                                    </span>
-                                    <p>서울 | 경기 | 인천</p>
-                                </div>
-                            </div>
-
-
-                            <div class="txt">
-
-                                <p>연극/뮤지컬</p>
-
-                                <p>Be오케스트라</p>
-
-                                <p>연주가</p>
-
-                                <p>클라리넷</p>
-
-
-                                <div class="chat">
-                                    <span class="material-symbols-outlined">
-                                        send
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
+                <div class="profile-draft-wrap">
+                    <div class="img">
+                        <img src="/img/img/leo2.jpg" alt="프로필 사진">
                     </div>
 
-                    <div class="profile">
-                        <div class="title">
-                            <p>독일에서 갈고 닦은 실력 보여주겠습니다!</p>
-
-                            <div class="review">
-                                <span class="material-symbols-outlined">
-                                    kid_star
-                                </span>
-                                <p>4.7</p>
-                            </div>
-                        </div>
-
-                        <div class="content">
-                            <div class="content-l">
-                                <div class="img">
-                                    <img src="./img/img/대표 악기 프로필 사진.jpg" alt="프로필 사진">
-                                </div>
-                                <div class="name">
-                                    <p>한동윤</p>
-                                </div>
-                                <div class="location">
-                                    <span class="material-symbols-outlined">
-                                        location_on
-                                    </span>
-                                    <p>서울 | 경기 | 인천</p>
-                                </div>
-                            </div>
-
-
+                    <div class="content">
+                        <div class="major">
                             <div class="txt">
-
-                                <p>연극/뮤지컬</p>
-
-                                <p>Be오케스트라</p>
-
-                                <p>연주가</p>
-
-                                <p>클라리넷</p>
-
-
-                                <div class="chat">
-                                    <span class="material-symbols-outlined">
-                                        send
-                                    </span>
-                                </div>
+                                <p>분야 | 직업</p>
                             </div>
-                        </div>
 
-                    </div>
-
-                    <div class="profile">
-                        <div class="title">
-                            <p>독일에서 갈고 닦은 실력 보여주겠습니다!</p>
-
-                            <div class="review">
+                            <div class="icon">
                                 <span class="material-symbols-outlined">
-                                    kid_star
+                                    delete
                                 </span>
-                                <p>4.7</p>
                             </div>
                         </div>
 
-                        <div class="content">
-                            <div class="content-l">
-                                <div class="img">
-                                    <img src="./img/img/대표 악기 프로필 사진.jpg" alt="프로필 사진">
-                                </div>
-                                <div class="name">
-                                    <p>한동윤</p>
-                                </div>
-                                <div class="location">
-                                    <span class="material-symbols-outlined">
-                                        location_on
-                                    </span>
-                                    <p>서울 | 경기 | 인천</p>
-                                </div>
-                            </div>
-
-
+                        <div class="save-date">
                             <div class="txt">
+                                <p>임시저장일</p>
+                            </div>
 
-                                <p>연극/뮤지컬</p>
-
-                                <p>Be오케스트라</p>
-
-                                <p>연주가</p>
-
-                                <p>클라리넷</p>
-
-
-                                <div class="chat">
-                                    <span class="material-symbols-outlined">
-                                        send
-                                    </span>
-                                </div>
+                            <div class="button">
+                                <button>선택</button>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </main>

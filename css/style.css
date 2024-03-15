@@ -181,6 +181,11 @@ body {
   padding-bottom: 96px;
 }
 
+.bg-light {
+  background-color: #f6f4fc;
+  height: 100vh;
+}
+
 .wrap {
   width: 100%;
   position: relative;
@@ -1914,6 +1919,76 @@ main .notifications .tab-content .content.active span {
 .profile-add-btn-wrap button:nth-child(1), .profile-add-btn-wrap button:nth-child(3) {
   background-color: #f6f4fc;
   color: #5d5fef;
+}
+
+.profile-draft {
+  gap: 20px;
+  padding-bottom: 0px;
+  margin-top: 20px;
+}
+.profile-draft .profile-draft-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+}
+.profile-draft .profile-draft-wrap .img {
+  width: 50%;
+  height: 100px;
+  background-color: #eee;
+  border-radius: 10px;
+}
+.profile-draft .profile-draft-wrap .img img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.profile-draft .profile-draft-wrap .content {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.profile-draft .profile-draft-wrap .content .major,
+.profile-draft .profile-draft-wrap .content .save-date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px;
+}
+.profile-draft .profile-draft-wrap .content .major p,
+.profile-draft .profile-draft-wrap .content .save-date p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  word-break: keep-all;
+}
+.profile-draft .profile-draft-wrap .content .major span,
+.profile-draft .profile-draft-wrap .content .save-date span {
+  font-size: 18px;
+  line-height: 22px;
+}
+.profile-draft .profile-draft-wrap .content .major .button button,
+.profile-draft .profile-draft-wrap .content .save-date .button button {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  word-break: keep-all;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: 1px solid #5d5fef;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+.profile-draft .profile-draft-wrap .content .major .button button:hover, .profile-draft .profile-draft-wrap .content .major .button button:active,
+.profile-draft .profile-draft-wrap .content .save-date .button button:hover,
+.profile-draft .profile-draft-wrap .content .save-date .button button:active {
+  background-color: #5d5fef;
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=style.css.map */
