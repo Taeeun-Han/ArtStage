@@ -68,7 +68,7 @@ document.getElementById('addHistory').addEventListener('click', function () {
     profileHistory.insertBefore(newHistoryWrap, addHistoryButton);
 });
 
-// 수상사항추가
+// 활동사항추가
 document.getElementById('addAwards').addEventListener('click', function () {
     // 새로운 .profile-awards-wrap 요소 생성
     const newAwardsWrap = document.createElement('div');
@@ -102,4 +102,44 @@ document.addEventListener('DOMContentLoaded', function () {
         const remaining = maxLength - currentLength;
         charCount.textContent = remaining;
     });
+});
+
+
+// 자격증 파일 업로드
+function updateFileNameOnSelect(inputId, labelQuery) {
+    const input = document.getElementById(inputId);
+    if (!input) return; // 요소가 없으면 종료
+
+    input.addEventListener('change', function () {
+        const fileName = input.files.length > 0 ? input.files[0].name : '';
+        const labelSpan = document.querySelector(labelQuery);
+        if (labelSpan) {
+            labelSpan.textContent = fileName || '여기를 눌러 파일을 업로드해주세요';
+        }
+    });
+}
+
+// 페이지 로드 시 기존 input[type="file"]에 이벤트 리스너 추가
+updateFileNameOnSelect('file-upload', 'label[for="file-upload"] span');
+
+document.getElementById('addQualification').addEventListener('click', function () {
+    const uniqueId = Date.now();
+    const newQualificationWrap = document.createElement('div');
+    newQualificationWrap.classList.add('qualification-wrap');
+    newQualificationWrap.innerHTML = `
+      <p>자격 증명</p>
+      <div class="input-wrap">
+          <p>* 공연 안전 이수증 등 자격 사항을 올려주세요</p>
+          <input type="text" placeholder="자격증명">
+          <input type="text" placeholder="발행처">
+          <input type="text" placeholder="취득년월(ex 2022. 01)">
+          <label for="file-upload-${uniqueId}" class="custom-file-upload">
+              <span>여기를 눌러 파일을 업로드해주세요</span>
+          </label>
+          <input id="file-upload-${uniqueId}" type="file" style="display: none;" />
+      </div>
+  `;
+
+    document.querySelector('.qualification').insertBefore(newQualificationWrap, this);
+    updateFileNameOnSelect(`file-upload-${uniqueId}`, `label[for="file-upload-${uniqueId}"] span`);
 });

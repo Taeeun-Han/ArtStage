@@ -35,11 +35,12 @@ body {
 	margin: 0 auto;
 	position: relative;
 	padding: 0px 20px;
-	padding-bottom: 130px;
+	padding-bottom: 96px;
 }
 
 .wrap {
 	width: 100%;
+	position: relative;
 }
 
 a {
@@ -163,6 +164,7 @@ header {
 	top: 0;
 	background: $white;
 	padding: 0px 15px;
+	height: 50px;
 
 	.wrap {
 		display: flex;
@@ -1441,10 +1443,22 @@ main {
 }
 
 .draft {
+	width: calc(100% + 40px);
+	margin-left: -20px;
+	margin-right: -20px;
+	padding: 0px 20px;
 	display: flex;
 	justify-content: flex-end;
-	padding-bottom: 15px;
+	padding: 15px 20px;
 	gap: 5px;
+
+	border-bottom: 1px solid #ccc;
+
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: 50px; /* 헤더의 높이를 고려한 값으로 조정 */
+	z-index: 1000; /* 다른 콘텐츠 위에 표시되도록 z-index 설정 */
+	background: white; /* 배경색을 설정하여 내용이 겹치지 않도록 함 */
 
 	button {
 		padding: 10px;
@@ -1580,12 +1594,12 @@ main {
 				p {
 					text-align: right;
 					@include profile-add-form;
-					width: 20%;
+					flex: 1 1 20%;
 				}
 
 				input,
 				select {
-					width: 80%;
+					flex: 1 1 80%;
 					padding: 5px 10px;
 					border: none;
 					border-bottom: 1px solid #ccc;
@@ -1601,13 +1615,13 @@ main {
 			gap: 20px;
 
 			p {
-				width: 20%;
+				flex: 1 1 20%;
 				text-align: right;
 				@include profile-add-form;
 			}
 
 			.location-wrap {
-				width: 80%;
+				flex: 1 1 80%;
 				display: flex;
 				flex-wrap: wrap;
 				gap: 10px;
@@ -1728,6 +1742,102 @@ main {
 					padding: 0px;
 				}
 			}
+		}
+
+		.qualification {
+			width: 100%;
+
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			align-items: flex-end;
+
+			.qualification-wrap {
+				width: 100%;
+				display: flex;
+				gap: 20px;
+
+				p {
+					@include profile-add-form;
+					flex: 1 1 20%;
+					text-align: right;
+				}
+
+				.input-wrap {
+					display: flex;
+					flex-direction: column;
+					flex: 1 1 80%;
+					gap: 10px;
+
+					p {
+						width: 100%;
+						text-align: left;
+						font-weight: 500;
+					}
+
+					input {
+						width: 100%;
+						padding: 5px 10px;
+						border: none;
+						border-bottom: 1px solid #ccc;
+						@include profile-add-form;
+						font-weight: 500;
+					}
+
+					.custom-file-upload {
+						border: none;
+						border-bottom: 1px solid #ccc;
+						display: inline-block;
+						padding: 5px 10px;
+						cursor: pointer;
+						margin-top: 10px;
+						@include profile-add-form;
+						font-weight: 500;
+					}
+				}
+			}
+
+			button {
+				padding: 10px 15px;
+				border-radius: 10px;
+				background-color: $main-color-light;
+				color: $dark-grey3;
+				@include profile-add-form-button;
+			}
+		}
+	}
+}
+
+.profile-add-btn-wrap {
+	width: calc(100% + 40px);
+	margin-right: -20px;
+	margin-left: -20px;
+
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 20px;
+
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	bottom: 96px; /* 헤더의 높이를 고려한 값으로 조정 */
+	z-index: 1000; /* 다른 콘텐츠 위에 표시되도록 z-index 설정 */
+	background: white; /* 배경색을 설정하여 내용이 겹치지 않도록 함 */
+
+	button {
+		padding: 15px 30px;
+		border-radius: 10px;
+		background-color: $main-color;
+		border: 1px solid $main-color;
+		color: $white;
+
+		@include search-history;
+
+		cursor: pointer;
+
+		&:nth-child(1),
+		&:nth-child(3) {
+			background-color: $main-color-light;
+			color: $main-color;
 		}
 	}
 }

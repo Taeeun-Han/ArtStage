@@ -1,11 +1,9 @@
 @charset "UTF-8";
-.container header {
-  margin-bottom: 20px;
-}
 .container .wrap .join {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  padding-top: 20px;
 }
 .container .wrap .join .progress-bar {
   width: 100%;
@@ -180,11 +178,12 @@ body {
   margin: 0 auto;
   position: relative;
   padding: 0px 20px;
-  padding-bottom: 130px;
+  padding-bottom: 96px;
 }
 
 .wrap {
   width: 100%;
+  position: relative;
 }
 
 a {
@@ -300,6 +299,7 @@ header {
   top: 0;
   background: #ffffff;
   padding: 0px 15px;
+  height: 50px;
 }
 header .wrap {
   display: flex;
@@ -1440,10 +1440,20 @@ main .notifications .tab-content .content.active span {
 }
 
 .draft {
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 0px 20px;
   display: flex;
   justify-content: flex-end;
-  padding-bottom: 15px;
+  padding: 15px 20px;
   gap: 5px;
+  border-bottom: 1px solid #ccc;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 50px; /* 헤더의 높이를 고려한 값으로 조정 */
+  z-index: 1000; /* 다른 콘텐츠 위에 표시되도록 z-index 설정 */
+  background: white; /* 배경색을 설정하여 내용이 겹치지 않도록 함 */
 }
 .draft button {
   padding: 10px;
@@ -1571,11 +1581,11 @@ main .notifications .tab-content .content.active span {
   font-size: 12px;
   line-height: 18px;
   word-break: keep-all;
-  width: 20%;
+  flex: 1 1 20%;
 }
 .profile-add .profile-content .profile-info .profile-add-form input,
 .profile-add .profile-content .profile-info .profile-add-form select {
-  width: 80%;
+  flex: 1 1 80%;
   padding: 5px 10px;
   border: none;
   border-bottom: 1px solid #ccc;
@@ -1592,7 +1602,7 @@ main .notifications .tab-content .content.active span {
   gap: 20px;
 }
 .profile-add .profile-content .profile-location p {
-  width: 20%;
+  flex: 1 1 20%;
   text-align: right;
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 700;
@@ -1601,7 +1611,7 @@ main .notifications .tab-content .content.active span {
   word-break: keep-all;
 }
 .profile-add .profile-content .profile-location .location-wrap {
-  width: 80%;
+  flex: 1 1 80%;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -1794,6 +1804,105 @@ main .notifications .tab-content .content.active span {
   font-weight: 500;
   font-size: 10px;
   padding: 0px;
+}
+.profile-add .profile-content .qualification {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-end;
+}
+.profile-add .profile-content .qualification .qualification-wrap {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+.profile-add .profile-content .qualification .qualification-wrap p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  word-break: keep-all;
+  flex: 1 1 20%;
+  text-align: right;
+}
+.profile-add .profile-content .qualification .qualification-wrap .input-wrap {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 80%;
+  gap: 10px;
+}
+.profile-add .profile-content .qualification .qualification-wrap .input-wrap p {
+  width: 100%;
+  text-align: left;
+  font-weight: 500;
+}
+.profile-add .profile-content .qualification .qualification-wrap .input-wrap input {
+  width: 100%;
+  padding: 5px 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  word-break: keep-all;
+  font-weight: 500;
+}
+.profile-add .profile-content .qualification .qualification-wrap .input-wrap .custom-file-upload {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  display: inline-block;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  word-break: keep-all;
+  font-weight: 500;
+}
+.profile-add .profile-content .qualification button {
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: #f6f4fc;
+  color: #242424;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  word-break: keep-all;
+}
+
+.profile-add-btn-wrap {
+  width: calc(100% + 40px);
+  margin-right: -20px;
+  margin-left: -20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  bottom: 96px; /* 헤더의 높이를 고려한 값으로 조정 */
+  z-index: 1000; /* 다른 콘텐츠 위에 표시되도록 z-index 설정 */
+  background: white; /* 배경색을 설정하여 내용이 겹치지 않도록 함 */
+}
+.profile-add-btn-wrap button {
+  padding: 15px 30px;
+  border-radius: 10px;
+  background-color: #5d5fef;
+  border: 1px solid #5d5fef;
+  color: #ffffff;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  word-break: keep-all;
+  cursor: pointer;
+}
+.profile-add-btn-wrap button:nth-child(1), .profile-add-btn-wrap button:nth-child(3) {
+  background-color: #f6f4fc;
+  color: #5d5fef;
 }
 
 /*# sourceMappingURL=style.css.map */

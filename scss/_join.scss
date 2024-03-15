@@ -2,16 +2,13 @@
 @import "font.scss";
 
 .container {
-	header {
-		margin-bottom: 20px;
-	}
-
 	.wrap {
 
 		.join {
 			display: flex;
 			flex-direction: column;
 			gap: 30px;
+			padding-top: 20px;
 
 			.progress-bar {
 				width: 100%;
