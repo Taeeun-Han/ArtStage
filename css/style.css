@@ -1245,6 +1245,12 @@ main .notifications .tab-content .content.active span {
   margin-left: -20px;
   background-color: #ffffff;
   padding: 5px 0px;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 50px; /* 헤더의 높이를 고려한 값으로 조정 */
+  z-index: 1000; /* 다른 콘텐츠 위에 표시되도록 z-index 설정 */
+  background: white; /* 배경색을 설정하여 내용이 겹치지 않도록 함 */
+  border-bottom: 1px solid #ccc;
 }
 .profile-list .wrap .profile-list-main .category swiper-container {
   width: 100%;
