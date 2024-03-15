@@ -1236,21 +1236,21 @@ main .notifications .tab-content .content.active span {
 .profile-list {
   background-color: #f6f4fc;
 }
-.profile-list .wrap .profile-add {
+.profile-list .wrap .profile-list-main {
   gap: 15px;
 }
-.profile-list .wrap .profile-add .category {
+.profile-list .wrap .profile-list-main .category {
   width: calc(100% + 40px);
   margin-right: -20px;
   margin-left: -20px;
   background-color: #ffffff;
   padding: 5px 0px;
 }
-.profile-list .wrap .profile-add .category swiper-container {
+.profile-list .wrap .profile-list-main .category swiper-container {
   width: 100%;
   padding: 0px 15px;
 }
-.profile-list .wrap .profile-add .category swiper-container swiper-slide {
+.profile-list .wrap .profile-list-main .category swiper-container swiper-slide {
   width: auto;
   padding: 10px;
   border-radius: 10px;
@@ -1259,32 +1259,32 @@ main .notifications .tab-content .content.active span {
   align-items: center;
   gap: 5px;
 }
-.profile-list .wrap .profile-add .category swiper-container swiper-slide span {
+.profile-list .wrap .profile-list-main .category swiper-container swiper-slide span {
   font-size: 18px;
 }
-.profile-list .wrap .profile-add .category swiper-container swiper-slide p {
+.profile-list .wrap .profile-list-main .category swiper-container swiper-slide p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
   word-break: keep-all;
 }
-.profile-list .wrap .profile-add .category swiper-container .on {
+.profile-list .wrap .profile-list-main .category swiper-container .on {
   background-color: #f6f4fc;
 }
-.profile-list .wrap .profile-add .category swiper-container .on span {
+.profile-list .wrap .profile-list-main .category swiper-container .on span {
   color: #4424a8;
 }
-.profile-list .wrap .profile-add .category swiper-container .on p {
+.profile-list .wrap .profile-list-main .category swiper-container .on p {
   color: #4424a8;
   font-weight: 700;
 }
-.profile-list .wrap .profile-add .search-bar-option {
+.profile-list .wrap .profile-list-main .search-bar-option {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.profile-list .wrap .profile-add .search-bar-option select {
+.profile-list .wrap .profile-list-main .search-bar-option select {
   padding: 10px;
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 500;
@@ -1294,17 +1294,17 @@ main .notifications .tab-content .content.active span {
   border-radius: 10px;
   border: 1px solid transparent;
 }
-.profile-list .wrap .profile-add .search-bar-option .search-bar input {
+.profile-list .wrap .profile-list-main .search-bar-option .search-bar input {
   padding-right: 20px;
   border-radius: 10px;
 }
-.profile-list .wrap .profile-add .search-option {
+.profile-list .wrap .profile-list-main .search-option {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.profile-list .wrap .profile-add .search-option button {
+.profile-list .wrap .profile-list-main .search-option button {
   padding: 8px 15px;
   border-radius: 10px;
   background-color: #5d5fef;
@@ -1316,12 +1316,12 @@ main .notifications .tab-content .content.active span {
   line-height: 18px;
   word-break: keep-all;
 }
-.profile-list .wrap .profile-add .search-option button:hover {
+.profile-list .wrap .profile-list-main .search-option button:hover {
   background-color: #ffffff;
   color: #5d5fef;
   border: 1px solid #5d5fef;
 }
-.profile-list .wrap .profile-add .search-option .filter select {
+.profile-list .wrap .profile-list-main .search-option .filter select {
   padding: 8% 10px;
   border-radius: 10px;
   border: 1px solid transparent;
@@ -1331,7 +1331,12 @@ main .notifications .tab-content .content.active span {
   line-height: 18px;
   word-break: keep-all;
 }
-.profile-list .wrap .profile-add .profile-wrap .profile {
+.profile-list .wrap .profile-list-main .profile-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.profile-list .wrap .profile-list-main .profile-wrap .profile {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -1341,47 +1346,47 @@ main .notifications .tab-content .content.active span {
   padding: 15px;
   border: 1px solid #f4f4f4;
 }
-.profile-list .wrap .profile-add .profile-wrap .profile .title {
+.profile-list .wrap .profile-list-main .profile-wrap .profile .title {
   display: flex;
   justify-content: space-between;
   width: 100%;
   align-items: center;
 }
-.profile-list .wrap .profile-add .profile-wrap .profile .title p {
+.profile-list .wrap .profile-list-main .profile-wrap .profile .title p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 700;
   font-size: 13px;
   line-height: 16px;
   word-break: keep-all;
 }
-.profile-list .wrap .profile-add .profile-wrap .profile .title .review {
+.profile-list .wrap .profile-list-main .profile-wrap .profile .title .review {
   display: flex;
   align-items: center;
   gap: 5px;
 }
-.profile-list .wrap .profile-add .profile-wrap .profile .title .review span {
+.profile-list .wrap .profile-list-main .profile-wrap .profile .title .review span {
   font-size: 16px;
   line-height: 18px;
 }
-.profile-list .wrap .profile-add .profile-wrap .profile .title .review p {
+.profile-list .wrap .profile-list-main .profile-wrap .profile .title .review p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 700;
   font-size: 13px;
   line-height: 16px;
   word-break: keep-all;
 }
-.profile-list .wrap .profile-add .profile-wrap .profile .content {
+.profile-list .wrap .profile-list-main .profile-wrap .profile .content {
   width: 100%;
   display: flex;
   gap: 15px;
 }
-.profile-list .wrap .profile-add .profile-wrap .profile .content .content-l {
+.profile-list .wrap .profile-list-main .profile-wrap .profile .content .content-l {
   display: flex;
   flex-direction: column;
   gap: 10px;
   align-items: center;
 }
-.profile-list .wrap .profile-add .profile-wrap .profile .content .content-l .img {
+.profile-list .wrap .profile-list-main .profile-wrap .profile .content .content-l .img {
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -1390,13 +1395,13 @@ main .notifications .tab-content .content.active span {
   justify-content: center;
   align-items: center;
 }
-.profile-list .wrap .profile-add .profile-wrap .profile .content .content-l .img img {
+.profile-list .wrap .profile-list-main .profile-wrap .profile .content .content-l .img img {
   border-radius: 50%;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.profile-list .wrap .profile-add .profile-wrap .profile .content .content-l .name {
+.profile-list .wrap .profile-list-main .profile-wrap .profile .content .content-l .name {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -1405,7 +1410,7 @@ main .notifications .tab-content .content.active span {
   font-weight: 700;
   font-size: 12px;
 }
-.profile-list .wrap .profile-add .profile-wrap .profile .content .content-l .location {
+.profile-list .wrap .profile-list-main .profile-wrap .profile .content .content-l .location {
   margin-top: -8px;
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 500;
@@ -1417,24 +1422,24 @@ main .notifications .tab-content .content.active span {
   align-items: center;
   gap: 0px;
 }
-.profile-list .wrap .profile-add .profile-wrap .profile .content .content-l .location span {
+.profile-list .wrap .profile-list-main .profile-wrap .profile .content .content-l .location span {
   font-size: 14px;
 }
-.profile-list .wrap .profile-add .profile-wrap .profile .content .txt {
+.profile-list .wrap .profile-list-main .profile-wrap .profile .content .txt {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 5px;
 }
-.profile-list .wrap .profile-add .profile-wrap .profile .content .txt p {
+.profile-list .wrap .profile-list-main .profile-wrap .profile .content .txt p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
   word-break: keep-all;
 }
-.profile-list .wrap .profile-add .profile-wrap .profile .content .txt .chat {
+.profile-list .wrap .profile-list-main .profile-wrap .profile .content .txt .chat {
   display: flex;
   justify-content: flex-end;
 }
