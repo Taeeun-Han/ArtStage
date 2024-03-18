@@ -58,222 +58,155 @@
         <div class="wrap">
 
             <main class="profile-list-main">
+
+                <swiper-container class="mySwiper swiper1" pagination="true" pagination-type="fraction">
+
+                    <swiper-slide>
+                        <div class="img">
+                            <img src="./img/img/visual-slide03.png" alt="슬라이드3">
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div class="img">
+                            <img src="./img/img/visual-slide02.jpg" alt="슬라이드2">
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div class="img">
+                            <img src="./img/img/visual-slide01.jpg" alt="슬라이드1">
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div class="img">
+                            <img src="./img/img/visual-slide02.jpg" alt="슬라이드2">
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div class="img">
+                            <img src="./img/img/visual-slide01.jpg" alt="슬라이드1">
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div class="img">
+                            <img src="./img/img/visual-slide03.png" alt="슬라이드3">
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div class="img">
+                            <img src="./img/img/visual-slide01.jpg" alt="슬라이드1">
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div class="img">
+                            <img src="./img/img/visual-slide02.jpg" alt="슬라이드2">
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div class="img">
+                            <img src="./img/img/visual-slide03.png" alt="슬라이드3">
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div class="img">
+                            <img src="./img/img/visual-slide01.jpg" alt="슬라이드1">
+                        </div>
+                    </swiper-slide>
+                </swiper-container>
+
+
                 <div class="category">
                     <swiper-container class="mySwiper profileSwiper" space-between="10" slides-per-view="auto">
-                        <swiper-slide class="on">
-                            <span class="material-symbols-outlined">
-                                format_list_bulleted
-                            </span>
+                        <swiper-slide onclick="filterByField('전체')">
+                            <span class="material-symbols-outlined">format_list_bulleted</span>
                             <p>전체</p>
                         </swiper-slide>
-                        <swiper-slide>
-                            <span class="material-symbols-outlined">
-                                theater_comedy
-                            </span>
+                        <swiper-slide onclick="filterByField('연극/뮤지컬')">
+                            <span class="material-symbols-outlined">theater_comedy</span>
                             <p>연극/뮤지컬</p>
                         </swiper-slide>
-                        <swiper-slide>
-                            <span class="material-symbols-outlined">
-                                accessibility_new
-                            </span>
+                        <swiper-slide onclick="filterByField('무용')">
+                            <span class="material-symbols-outlined">accessibility_new</span>
                             <p>무용</p>
                         </swiper-slide>
-                        <swiper-slide>
-                            <span class="material-symbols-outlined">
-                                music_note
-                            </span>
+                        <swiper-slide onclick="filterByField('음악')">
+                            <span class="material-symbols-outlined">music_note</span>
                             <p>음악</p>
                         </swiper-slide>
-                        <swiper-slide>
-                            <span class="material-symbols-outlined">
-                                palette
-                            </span>
+                        <swiper-slide onclick="filterByField('미술')">
+                            <span class="material-symbols-outlined">palette</span>
                             <p>미술</p>
                         </swiper-slide>
-                        <swiper-slide>
-                            <span class="material-symbols-outlined">
-                                more_horiz
-                            </span>
+                        <swiper-slide onclick="filterByField('기타')">
+                            <span class="material-symbols-outlined">more_horiz</span>
                             <p>기타</p>
                         </swiper-slide>
                     </swiper-container>
                 </div>
 
-                <div class="search-option">
-                    <button>내 프로필 등록</button>
-                    <div class="filter">
-                        <select name="sortOrder" id="sortOrder">
-                            <option value="newest">최근등록순</option>
-                            <option value="random">랜덤순</option>
+                <form action="/artist-profiles" method="get">
+                    <div class="search-option">
+                        <button type="button" onclick="window.location.href='/artistProfiles/new'">내 프로필 등록</button>
+                        <div class="filter">
+                            <select name="sortOrder" id="sortOrder" onchange="this.form.submit()">
+                                <option value="" th:selected="${sortOrder == null || sortOrder == ''}">정렬선택</option>
+                                <option value="newest" th:selected="${sortOrder == 'newest'}">최근등록순</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="search-bar-option">
+                        <select name="searchType" id="searchType">
+                            <option value="name">이름</option>
+                            <option value="affiliation">소속</option>
+                            <option value="major">주전공</option>
+                            <option value="location">주활동지역</option>
+                            <option value="profession">직업</option>
                         </select>
+                        <div class="search-bar">
+                            <input type="text" name="searchTerm" placeholder="검색어를 입력해주세요">
+                            <button type="submit" class="search-button">
+                            </button>
+                        </div>
                     </div>
-                </div>
-
-
-                <div class="search-bar-option">
-                    <select name="search" id="search">
-                        <option value="name">이름</option>
-                        <option value="affiliation">소속</option>
-                        <option value="major">주전공</option>
-                        <option value="location">주활동지역</option>
-
-                    </select>
-                    <div class="search-bar">
-                        <input type="text" placeholder="검색어를 입력해주세요">
-                        <img class="searchImage" src="./img/icon/search.png" alt="검색">
-                    </div>
-                </div>
+                </form>
 
 
                 <div class="profile-wrap">
-                    <div class="profile">
+                    <!-- profiles가 반복될 수 있도록 th:each를 사용하여 반복문 구현 -->
+                    <div th:each="profile : ${profiles}" class="profile">
                         <div class="title">
-                            <p>독일에서 갈고 닦은 실력 보여주겠습니다!</p>
-
+                            <p th:text="${profile.introduction}">소개 텍스트</p>
                             <div class="review">
-                                <span class="material-symbols-outlined">
-                                    kid_star
-                                </span>
+                                <span class="material-symbols-outlined">kid_star</span>
                                 <p>4.7</p>
                             </div>
                         </div>
-
                         <div class="content">
                             <div class="content-l">
                                 <div class="img">
+                                    <!-- 프로필 이미지 URL을 동적으로 바인딩 -->
                                     <img src="./img/img/대표 악기 프로필 사진.jpg" alt="프로필 사진">
                                 </div>
                                 <div class="name">
-                                    <p>한동윤</p>
+                                    <!-- 프로필 이름을 동적으로 바인딩 -->
+                                    <p th:text="${profile.profileName}">이름</p>
                                 </div>
                                 <div class="location">
-                                    <span class="material-symbols-outlined">
-                                        location_on
-                                    </span>
-                                    <p>서울 | 경기 | 인천</p>
+                                    <span class="material-symbols-outlined">location_on</span>
+                                    <!-- 활동 지역을 동적으로 바인딩 -->
+                                    <p th:text="${profile.regionName}">활동지역</p>
                                 </div>
                             </div>
-
-
                             <div class="txt">
-
-                                <p>연극/뮤지컬</p>
-
-                                <p>Be오케스트라</p>
-
-                                <p>연주가</p>
-
-                                <p>클라리넷</p>
-
-
+                                <!-- 각 필드를 동적으로 바인딩 -->
+                                <p th:text="${profile.fieldName}">분야</p>
+                                <p th:text="${profile.affiliation}">소속</p>
+                                <p th:text="${profile.professionName}">직업</p>
+                                <p th:text="${profile.majorName}">주전공</p>
                                 <div class="chat">
-                                    <span class="material-symbols-outlined">
-                                        send
-                                    </span>
+                                    <span class="material-symbols-outlined">send</span>
                                 </div>
                             </div>
                         </div>
-
-                    </div>
-
-                    <div class="profile">
-                        <div class="title">
-                            <p>독일에서 갈고 닦은 실력 보여주겠습니다!</p>
-
-                            <div class="review">
-                                <span class="material-symbols-outlined">
-                                    kid_star
-                                </span>
-                                <p>4.7</p>
-                            </div>
-                        </div>
-
-                        <div class="content">
-                            <div class="content-l">
-                                <div class="img">
-                                    <img src="./img/img/대표 악기 프로필 사진.jpg" alt="프로필 사진">
-                                </div>
-                                <div class="name">
-                                    <p>한동윤</p>
-                                </div>
-                                <div class="location">
-                                    <span class="material-symbols-outlined">
-                                        location_on
-                                    </span>
-                                    <p>서울 | 경기 | 인천</p>
-                                </div>
-                            </div>
-
-
-                            <div class="txt">
-
-                                <p>연극/뮤지컬</p>
-
-                                <p>Be오케스트라</p>
-
-                                <p>연주가</p>
-
-                                <p>클라리넷</p>
-
-
-                                <div class="chat">
-                                    <span class="material-symbols-outlined">
-                                        send
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="profile">
-                        <div class="title">
-                            <p>독일에서 갈고 닦은 실력 보여주겠습니다!</p>
-
-                            <div class="review">
-                                <span class="material-symbols-outlined">
-                                    kid_star
-                                </span>
-                                <p>4.7</p>
-                            </div>
-                        </div>
-
-                        <div class="content">
-                            <div class="content-l">
-                                <div class="img">
-                                    <img src="./img/img/대표 악기 프로필 사진.jpg" alt="프로필 사진">
-                                </div>
-                                <div class="name">
-                                    <p>한동윤</p>
-                                </div>
-                                <div class="location">
-                                    <span class="material-symbols-outlined">
-                                        location_on
-                                    </span>
-                                    <p>서울 | 경기 | 인천</p>
-                                </div>
-                            </div>
-
-
-                            <div class="txt">
-
-                                <p>연극/뮤지컬</p>
-
-                                <p>Be오케스트라</p>
-
-                                <p>연주가</p>
-
-                                <p>클라리넷</p>
-
-
-                                <div class="chat">
-                                    <span class="material-symbols-outlined">
-                                        send
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </main>
@@ -282,7 +215,7 @@
 
         <ul class="nav">
             <li>
-                <a href="./main.html">
+                <a href="../../../../../../../Downloads/Art-Stage-Publish-master/Art-Stage-Publish-master/main.html">
                     <i>
                         <!-- <img alt="홈" src=""> -->
                         <span class="material-symbols-outlined">
@@ -293,7 +226,7 @@
                 </a>
             </li>
             <li class="on">
-                <a href="./search.html">
+                <a href="../../../../../../../Downloads/Art-Stage-Publish-master/Art-Stage-Publish-master/search.html">
                     <i>
                         <!-- <img alt="검색" src=""> -->
                         <span class="material-symbols-outlined">
@@ -315,7 +248,7 @@
                 </a>
             </li>
             <li>
-                <a href="./alarm.html">
+                <a href="../../../../../../../Downloads/Art-Stage-Publish-master/Art-Stage-Publish-master/alarm.html">
                     <i>
                         <!-- <img alt="알림 버튼" src=""> -->
                         <span class="material-symbols-outlined">

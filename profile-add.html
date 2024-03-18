@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -30,311 +30,266 @@
 </head>
 
 <body>
+    <form action="#" th:action="@{/artistProfiles}" th:object="${artistProfile}" method="post"
+        enctype="multipart/form-data">
+        <div class="container">
 
-    <div class="container">
+            <header>
+                <div class="wrap">
 
-        <header>
+                    <div class="header-left">
+                        <div class="icon">
+                            <a href="/artist-profiles">
+                                <span class="material-symbols-outlined">
+                                    arrow_back_ios
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="header-center">
+                        <div class="txt">
+                            <p>내 프로필 등록</p>
+                        </div>
+                    </div>
+
+                    <div class="header-right">
+                    </div>
+
+                </div>
+            </header>
+
             <div class="wrap">
 
-                <div class="header-left">
-                    <div class="icon">
-                        <a href="#">
+                <div class="draft">
+                    <button>임시저장 불러오기</button>
+                    <button>저장</button>
+                </div>
+
+                <main class="profile-add">
+
+                    <!-- 프로필 이미지 -->
+                    <div class="profile-img">
+                        <label for="productImage"></label>
+                        <input type="file" id="productImage" name="profilePicture" required />
+                        <div class="image-preview" id="imagePreview">여기를 눌러서 프로필 사진을 등록해주세요</div>
+                    </div>
+
+                    <div class="profile-sentence">
+                        <p>" <input type="text" id="textInput" maxlength="35" placeholder="나의 한 줄 소개를 입력해주세요"
+                                th:field="*{introduction}" />"
+                            <span id="charCount">0/35</span>
+                        </p>
+                    </div>
+
+                    <!--기본정보-->
+                    <div class="profile-content">
+                        <div class="profile-info">
+                            <div class="profile-add-form">
+                                <p>기본정보</p>
+                                <input type="text">
+                            </div>
+
+                            <div class="profile-add-form">
+                                <p>이름</p>
+                                <input type="text" id="profileName" name="profileName" th:field="*{profileName}"
+                                    placeholder="이름을 입력해주세요">
+                            </div>
+
+                            <div class="profile-add-form">
+                                <p>분야</p>
+                                <select id="fieldID" th:field="*{fieldID}">
+                                    <option value="">선택해주세요</option>
+                                    <option th:each="field : ${artFields}" th:value="${field.fieldID}"
+                                        th:text="${field.fieldName}">분야명
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="profile-add-form">
+                                <p>직업</p>
+                                <select id="professionID" name="professionId"> <!-- `th:field` 대신 `name` 속성 사용 -->
+                                    <option value="">선택해주세요</option>
+                                    <option th:each="profession : ${professions}" th:value="${profession.professionID}"
+                                        th:text="${profession.professionName}"></option>
+                                </select>
+                            </div>
+
+                            <div class="profile-add-form">
+                                <p>주전공</p>
+                                <select th:field="*{majorID}">
+                                    <option value="">선택해주세요</option>
+                                    <option th:each="major : ${majors}" th:value="${major.majorID}"
+                                        th:text="${major.majorName}"></option>
+                                </select>
+                            </div>
+
+                            <div class="profile-add-form">
+                                <p>소속</p>
+                                <input type="text" th:field="*{affiliation}">
+                            </div>
+                            <div class="profile-add-form">
+                                <p>주소</p>
+                                <input type="text" th:field="*{address}">
+                            </div>
+                            <div class="profile-add-form">
+                                <p>전화번호</p>
+                                <input type="text" id="profilePhoneNumber" name="profilePhoneNumber"
+                                    th:field="*{profilePhoneNumber}" placeholder="전화번호를 입력해주세요">
+                            </div>
+                        </div>
+
+                        <div class="profile-location">
+
+                            <p>주 활동지역</p>
+
+                            <div class="location-wrap">
+                                <button type="button" class="region-btn" th:each="region : ${regions}"
+                                    th:attr="data-region-id=${region.regionID}" th:text="${region.regionName}"></button>
+                            </div>
+                        </div>
+
+                        <!-- 숨겨진 필드로 선택된 지역의 ID를 저장할 예정 -->
+                        <input type="hidden" id="selectedRegions" name="selectedRegions" value="">
+                        <!-- 기타 자기소개 -->
+                        <div class="introduce">
+                            <p>기타 자기소개</p>
+                            <div class="textarea-container">
+                                <textarea id="detailIntroduction" name="detailIntroduction" cols="30" rows="10"
+                                    maxlength="500" th:field="*{detailIntroduction}"></textarea>
+                                <div id="charCount1">0/500</div>
+                            </div>
+                        </div>
+
+                        <!-- 경력사항 -->
+                        <div class="profile-history">
+                            <div class="profile-history-wrap">
+                                <p>경력사항 1</p>
+                                <div class="input-wrap">
+                                    <input type="text"> ~ <input type="text">
+                                    <input type="text">
+                                    <!-- 초기 항목이므로 삭제 버튼은 포함하지 않습니다. -->
+                                </div>
+                            </div>
+                            <button id="addHistory" type="button">+ 경력사항 추가</button>
+                        </div>
+
+                        <!-- 활동사항 -->
+                        <div class="profile-awards">
+                            <div class="profile-awards-wrap">
+                                <p>활동사항 1</p>
+                                <div class="input-wrap">
+                                    <input type="text"> ~ <input type="text">
+                                    <input type="text">
+                                    <!-- 초기 항목이므로 삭제 버튼은 포함하지 않습니다. -->
+                                </div>
+                            </div>
+                            <button id="addAwards" type="button">+ 활동사항 추가</button>
+                        </div>
+
+
+
+                        <!-- 교육사항 -->
+                        <div class="profile-edu">
+                            <div class="profile-edu-wrap">
+                                <p>교육사항 1</p>
+                                <div class="input-wrap">
+                                    <input type="text"> ~ <input type="text">
+                                    <input type="text">
+                                    <!-- 초기 항목이므로 삭제 버튼은 포함하지 않습니다. -->
+                                </div>
+                            </div>
+                            <button id="addEdu" type="button">+ 교육사항 추가</button>
+                        </div>
+                        <!-- 자격증명 -->
+                        <div class="qualification" id="qualificationContainer">
+                            <!-- 초기 자격증명 입력 필드, 삭제 버튼 없음 -->
+                            <div class="qualification-wrap">
+                                <p>자격 증명</p>
+                                <div class="input-wrap">
+                                    <input type="text" placeholder="자격증명" name="certificationName[]">
+                                    <input type="text" placeholder="발행처" name="issuingAuthority[]">
+                                    <input type="date" placeholder="취득년월(ex 2022-01)" name="acquisitionDate[]">
+                                    <!-- 파일 업로드, 초기 항목에 대한 ID 'file-upload-0' -->
+                                    <input id="file-upload" type="file" style="display: none;" name="fileurl[]" />
+                                    <label for="file-upload" class="custom-file-upload">여기를 눌러 파일을 업로드해주세요</label>
+                                </div>
+                            </div>
+
+                            <!-- 자격증명 추가 버튼, 초기 항목과 별도로 렌더링 -->
+                            <button type="button" id="addQualification">+ 자격증명 추가</button>
+                        </div>
+
+                    </div>
+                </main>
+                <div class="profile-add-btn-wrap">
+                    <button type="submit" name="postStatus" value="임시저장">임시저장</button>
+                    <button type="submit" name="postStatus" value="게시완료">저장/수정</button>
+                </div>
+            </div>
+
+            <ul class="nav">
+                <li>
+                    <a
+                        href="../../../../../../../Downloads/Art-Stage-Publish-master/Art-Stage-Publish-master/main.html">
+                        <i>
+                            <!-- <img alt="홈" src=""> -->
                             <span class="material-symbols-outlined">
-                                arrow_back_ios
+                                home
                             </span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="header-center">
-                    <div class="txt">
-                        <p>내 프로필 등록</p>
-                    </div>
-                </div>
-
-                <div class="header-right">
-                </div>
-
-            </div>
-        </header>
-
-        <div class="wrap">
-
-            <div class="draft">
-                <button>임시저장 불러오기</button>
-                <button>저장</button>
-            </div>
-
-            <main class="profile-add">
-
-                <!-- 프로필 이미지 -->
-                <div class="profile-img">
-                    <label for="productImage"></label>
-                    <input type="file" id="productImage" name="productImage" accept="image/*" required>
-                    <div class="image-preview" id="imagePreview">여기를 눌러서 프로필 사진을 등록해주세요</div>
-                </div>
-
-                <div class="profile-sentence">
-                    <p>" <input type="text" id="textInput" maxlength="35" placeholder="나의 한 줄 소개를 입력해주세요" /> "
-                        <span id="charCount">0/35</span>
-                    </p>
-                </div>
-
-                <div class="profile-content">
-                    <div class="profile-info">
-                        <div class="profile-add-form">
-                            <p>기본설정</p>
-                            <input type="text">
-                        </div>
-
-                        <div class="profile-add-form">
-                            <p>이름</p>
-                            <input type="text">
-                        </div>
-
-                        <div class="profile-add-form">
-                            <p>분야</p>
-                            <select name="major" id="major">
-                                <option value="major">선택해주세요</option>
-                                <option value="major">연주자</option>
-                                <option value="major">작곡가</option>
-                            </select>
-                        </div>
-
-                        <div class="profile-add-form">
-                            <p>직업</p>
-                            <select name="major" id="major">
-                                <option value="major">선택해주세요</option>
-                                <option value="major">연주자</option>
-                                <option value="major">작곡가</option>
-                            </select>
-                        </div>
-
-                        <div class="profile-add-form">
-                            <p>직업</p>
-                            <select name="major" id="major">
-                                <option value="major">선택해주세요</option>
-                                <option value="major">연주자</option>
-                                <option value="major">작곡가</option>
-                            </select>
-                        </div>
-
-                        <div class="profile-add-form">
-                            <p>주전공</p>
-                            <select name="major" id="major">
-                                <option value="major">선택해주세요</option>
-                                <option value="major">클라리넷</option>
-                                <option value="major">플룻</option>
-                            </select>
-                        </div>
-
-                        <div class="profile-add-form">
-                            <p>소속</p>
-                            <input type="text">
-                        </div>
-                        <div class="profile-add-form">
-                            <p>전화번호</p>
-                            <input type="text">
-                        </div>
-                    </div>
-
-                    <div class="profile-location">
-
-                        <p>주 활동지역</p>
-
-                        <div class="location-wrap">
-                            <button>서울</button>
-                            <button>인천/부천</button>
-                            <button>경기북부</button>
-                            <button>경기남부</button>
-                            <button>강원/춘천</button>
-                            <button>충남/대전/세종</button>
-                            <button>충북/청주</button>
-                            <button>경북/대구</button>
-                            <button>경남/부산/울산</button>
-                            <button>전북/전주</button>
-                            <button>전남/광주</button>
-                            <button>제주</button>
-                        </div>
-
-                    </div>
-
-                    <!-- 학력사항 -->
-                    <div class="profile-edu">
-
-                        <div class="profile-edu-wrap">
-                            <p>학력사항</p>
-
-                            <div class="input-wrap">
-                                <input type="text"> ~ <input type="text">
-                                <input type="text">
-                            </div>
-                        </div>
-
-                        <div class="profile-edu-wrap">
-                            <p></p>
-
-                            <div class="input-wrap">
-                                <input type="text"> ~ <input type="text">
-                                <input type="text">
-                            </div>
-                        </div>
-
-                        <button id="addEdu">+ 학력사항 추가</button>
-                    </div>
-
-                    <!-- 경력사항 -->
-                    <div class="profile-history">
-
-                        <div class="profile-history-wrap">
-                            <p>경력사항</p>
-
-                            <div class="input-wrap">
-                                <input type="text"> ~ <input type="text">
-                                <input type="text">
-                            </div>
-                        </div>
-
-                        <div class="profile-history-wrap">
-                            <p></p>
-
-                            <div class="input-wrap">
-                                <input type="text"> ~ <input type="text">
-                                <input type="text">
-                            </div>
-                        </div>
-
-
-                        <button id="addHistory">+ 경력사항 추가</button>
-                    </div>
-
-
-                    <!-- 활동사항 -->
-                    <div class="profile-awards">
-
-                        <div class="profile-awards-wrap">
-                            <p>활동사항(수상, 보도)</p>
-
-                            <div class="input-wrap">
-                                <input type="text"> ~ <input type="text">
-                                <input type="text">
-                            </div>
-                        </div>
-
-                        <div class="profile-awards-wrap">
-                            <p></p>
-
-                            <div class="input-wrap">
-                                <input type="text"> ~ <input type="text">
-                                <input type="text">
-                            </div>
-                        </div>
-
-
-                        <button id="addAwards">+ 수상사항 추가</button>
-                    </div>
-
-                    <!-- 기타 자기소개 -->
-                    <div class="introduce">
-                        <p>기타 자기소개</p>
-                        <div class="textarea-container">
-                            <textarea id="introduceText" cols="30" rows="10" maxlength="500"></textarea>
-                            <div id="charCount">0/500</div>
-                        </div>
-                    </div>
-
-                    <!-- 자격증명 -->
-                    <div class="qualification">
-
-                        <div class="qualification-wrap">
-                            <p>자격 증명</p>
-
-                            <div class="input-wrap">
-                                <p>* 공연 안전 이수증 등 자격 사항을 올려주세요</p>
-                                <input type="text" placeholder="자격증명">
-                                <input type="text" placeholder="발행처">
-                                <input type="text" placeholder="취득년월(ex 2022. 01)">
-                                <label for="file-upload" class="custom-file-upload">
-                                    <span>여기를 눌러 파일을 업로드해주세요</span>
-                                </label>
-                                <input id="file-upload" type="file" style="display: none;" />
-                            </div>
-                        </div>
-
-                        <button id="addQualification">+ 자격증명 추가</button>
-                    </div>
-                </div>
-
-            </main>
-
-            <div class="profile-add-btn-wrap">
-                <button>임시저장</button>
-                <button>저장/수정</button>
-                <button>삭제</button>
-            </div>
-
+                        </i>
+                        <p>홈</p>
+                    </a>
+                </li>
+                <li class="on">
+                    <a
+                        href="../../../../../../../Downloads/Art-Stage-Publish-master/Art-Stage-Publish-master/search.html">
+                        <i>
+                            <!-- <img alt="검색" src=""> -->
+                            <span class="material-symbols-outlined">
+                                search
+                            </span>
+                        </i>
+                        <p>검색</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i>
+                            <!-- <img alt="채팅" src=""> -->
+                            <span class="material-symbols-outlined">
+                                forum
+                            </span>
+                        </i>
+                        <p>채팅</p>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="../../../../../../../Downloads/Art-Stage-Publish-master/Art-Stage-Publish-master/alarm.html">
+                        <i>
+                            <!-- <img alt="알림 버튼" src=""> -->
+                            <span class="material-symbols-outlined">
+                                notifications
+                            </span>
+                        </i>
+                        <p>알림</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i>
+                            <!-- <img alt="MY버튼" src=""> -->
+                            <span class="material-symbols-outlined">
+                                person
+                            </span>
+                        </i>
+                        <p>MY</p>
+                    </a>
+                </li>
+            </ul>
         </div>
-
-        <ul class="nav">
-            <li>
-                <a href="./main.html">
-                    <i>
-                        <!-- <img alt="홈" src=""> -->
-                        <span class="material-symbols-outlined">
-                            home
-                        </span>
-                    </i>
-                    <p>홈</p>
-                </a>
-            </li>
-            <li class="on">
-                <a href="./search.html">
-                    <i>
-                        <!-- <img alt="검색" src=""> -->
-                        <span class="material-symbols-outlined">
-                            search
-                        </span>
-                    </i>
-                    <p>검색</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i>
-                        <!-- <img alt="채팅" src=""> -->
-                        <span class="material-symbols-outlined">
-                            forum
-                        </span>
-                    </i>
-                    <p>채팅</p>
-                </a>
-            </li>
-            <li>
-                <a href="./alarm.html">
-                    <i>
-                        <!-- <img alt="알림 버튼" src=""> -->
-                        <span class="material-symbols-outlined">
-                            notifications
-                        </span>
-                    </i>
-                    <p>알림</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i>
-                        <!-- <img alt="MY버튼" src=""> -->
-                        <span class="material-symbols-outlined">
-                            person
-                        </span>
-                    </i>
-                    <p>MY</p>
-                </a>
-            </li>
-        </ul>
-
-    </div>
-
+    </form>
 
 </body>
 

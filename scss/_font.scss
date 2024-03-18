@@ -226,3 +226,87 @@
 	line-height: 18px;
 	word-break: keep-all;
 }
+
+@mixin profile-view-title {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 700;
+	font-size: 14px;
+	word-break: keep-all;
+}
+
+@mixin profile-menu {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 700;
+	font-size: 12px;
+	word-break: keep-all;
+	color: $grey4;
+}
+
+@mixin general-big-title {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 700;
+	font-size: 14px;
+	word-break: keep-all;
+	color: $dark-grey3;
+}
+
+@mixin general-title {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 700;
+	font-size: 12px;
+	word-break: keep-all;
+	color: $dark-grey3;
+}
+
+@mixin general-content {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 500;
+	font-size: 11px;
+	line-height: 20px;
+	word-break: keep-all;
+	color: $dark-grey3;
+}
+
+@mixin review-grade {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 700;
+	font-size: 34px;
+	word-break: keep-all;
+	color: $dark-grey3;
+}
+
+@mixin review-based {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 500;
+	font-size: 11px;
+	line-height: 20px;
+	word-break: keep-all;
+	color: $grey4;
+}
+
+@mixin profile-name {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 20px;
+	word-break: keep-all;
+	color: $dark-grey3;
+}
+
+@mixin profile-txt-title {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 700;
+	font-size: 13px;
+	line-height: 20px;
+	word-break: keep-all;
+	color: $dark-grey3;
+}
+
+@mixin profile-txt {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 500;
+	font-size: 11px;
+	line-height: 18px;
+	word-break: keep-all;
+	color: $dark-grey3;
+}

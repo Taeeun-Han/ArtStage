@@ -239,6 +239,10 @@ input[type=password]::placeholder {
   color: #e7e7e7;
 }
 
+.pd-10 {
+  padding-top: 10px;
+}
+
 .btn-wrap {
   z-index: 999;
   width: 100%;
@@ -564,8 +568,10 @@ ul.nav .on i span {
 }
 
 .swiper1 {
-  width: 100%;
-  height: 150px;
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  margin-right: -20px;
+  height: 170px;
   position: relative;
 }
 .swiper1 swiper-slide {
@@ -1290,6 +1296,11 @@ main .notifications .tab-content .content.active span {
   color: #4424a8;
   font-weight: 700;
 }
+.profile-list .wrap .profile-list-main form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 .profile-list .wrap .profile-list-main .search-bar-option {
   display: flex;
   align-items: center;
@@ -1356,6 +1367,7 @@ main .notifications .tab-content .content.active span {
   border-radius: 10px;
   padding: 15px;
   border: 1px solid #f4f4f4;
+  cursor: pointer;
 }
 .profile-list .wrap .profile-list-main .profile-wrap .profile .title {
   display: flex;
@@ -1752,12 +1764,15 @@ main .notifications .tab-content .content.active span {
 .profile-add .profile-content .profile-edu #addEdu,
 .profile-add .profile-content .profile-edu #addHistory,
 .profile-add .profile-content .profile-edu #addAwards,
+.profile-add .profile-content .profile-edu #addQualification,
 .profile-add .profile-content .profile-history #addEdu,
 .profile-add .profile-content .profile-history #addHistory,
 .profile-add .profile-content .profile-history #addAwards,
+.profile-add .profile-content .profile-history #addQualification,
 .profile-add .profile-content .profile-awards #addEdu,
 .profile-add .profile-content .profile-awards #addHistory,
-.profile-add .profile-content .profile-awards #addAwards {
+.profile-add .profile-content .profile-awards #addAwards,
+.profile-add .profile-content .profile-awards #addQualification {
   padding: 8px;
   border-radius: 8px;
   background-color: #f6f4fc;
@@ -1788,7 +1803,7 @@ main .notifications .tab-content .content.active span {
   height: 150px;
   position: relative;
 }
-.profile-add .profile-content .introduce .textarea-container #introduceText {
+.profile-add .profile-content .introduce .textarea-container #detailIntroduction {
   width: 100%;
   height: 150px;
   font-family: "Pretendard-Regular", Arial, sans-serif;
@@ -1801,11 +1816,11 @@ main .notifications .tab-content .content.active span {
   border: 1px solid #ccc;
   padding: 10px;
 }
-.profile-add .profile-content .introduce .textarea-container #introduceText:focus {
+.profile-add .profile-content .introduce .textarea-container #detailIntroduction:focus {
   border: 1px solid #ccc;
   outline: none;
 }
-.profile-add .profile-content .introduce .textarea-container #charCount {
+.profile-add .profile-content .introduce .textarea-container #charCount1 {
   position: absolute;
   bottom: 5px;
   right: 10px;
@@ -1896,7 +1911,8 @@ main .notifications .tab-content .content.active span {
   margin-right: -20px;
   margin-left: -20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10px;
   padding: 10px 20px;
   position: -webkit-sticky; /* Safari */
   position: sticky;
@@ -1910,6 +1926,7 @@ main .notifications .tab-content .content.active span {
   background-color: #5d5fef;
   border: 1px solid #5d5fef;
   color: #ffffff;
+  width: 50%;
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -1989,6 +2006,342 @@ main .notifications .tab-content .content.active span {
 .profile-draft .profile-draft-wrap .content .save-date .button button:active {
   background-color: #5d5fef;
   color: #ffffff;
+}
+
+.container-profile {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 96px;
+}
+.container-profile .profile-view-header {
+  background-color: transparent;
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 20px 20px;
+}
+.container-profile .profile-view-header .wrap .header-left .icon a span,
+.container-profile .profile-view-header .wrap .header-right .icon a span {
+  font-size: 21px;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.container-profile .profile-view-header .wrap .header-left .icon a .heart-color,
+.container-profile .profile-view-header .wrap .header-right .icon a .heart-color {
+  color: #f03d3d;
+}
+.container-profile .profile-view-wrap {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.container-profile .profile-view-wrap .img {
+  width: 100%;
+  height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-profile .profile-view-wrap .img img {
+  width: 100%;
+  height: 100%;
+}
+.container-profile .profile-view-wrap main {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  position: absolute;
+  top: 460px;
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-top: 20px;
+}
+.container-profile .profile-view-wrap main .border {
+  border: 1px solid #ccc;
+  width: 25%;
+  height: 1px;
+}
+.container-profile .profile-view-wrap main .sentence {
+  width: 100%;
+  padding: 20px 0px;
+}
+.container-profile .profile-view-wrap main .sentence p {
+  text-align: center;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  word-break: keep-all;
+}
+.container-profile .profile-view-wrap main .profile-menu {
+  width: 100%;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.container-profile .profile-view-wrap main .profile-menu .menu-general,
+.container-profile .profile-view-wrap main .profile-menu .menu-quali,
+.container-profile .profile-view-wrap main .profile-menu .menu-review {
+  padding: 10px;
+}
+.container-profile .profile-view-wrap main .profile-menu .menu-general p,
+.container-profile .profile-view-wrap main .profile-menu .menu-quali p,
+.container-profile .profile-view-wrap main .profile-menu .menu-review p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  word-break: keep-all;
+  color: #8b8b8b;
+}
+.container-profile .profile-view-wrap main .profile-menu .menu-general:active p, .container-profile .profile-view-wrap main .profile-menu .menu-general:focus p,
+.container-profile .profile-view-wrap main .profile-menu .menu-quali:active p,
+.container-profile .profile-view-wrap main .profile-menu .menu-quali:focus p,
+.container-profile .profile-view-wrap main .profile-menu .menu-review:active p,
+.container-profile .profile-view-wrap main .profile-menu .menu-review:focus p {
+  text-decoration: underline;
+}
+.container-profile .profile-view-wrap main .general {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.container-profile .profile-view-wrap main .general .general-big-title {
+  padding: 20px;
+  padding-bottom: 10px;
+}
+.container-profile .profile-view-wrap main .general .general-big-title p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  word-break: keep-all;
+  color: #242424;
+}
+.container-profile .profile-view-wrap main .general .general-info,
+.container-profile .profile-view-wrap main .general .quali-info {
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.container-profile .profile-view-wrap main .general .general-info .general-title,
+.container-profile .profile-view-wrap main .general .quali-info .general-title {
+  width: 30%;
+  text-align: right;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  word-break: keep-all;
+  color: #242424;
+}
+.container-profile .profile-view-wrap main .general .general-info .general-content,
+.container-profile .profile-view-wrap main .general .quali-info .general-content {
+  width: 70%;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 20px;
+  word-break: keep-all;
+  color: #242424;
+}
+.container-profile .profile-view-wrap main .general .general-info .general-introduce,
+.container-profile .profile-view-wrap main .general .quali-info .general-introduce {
+  width: 100%;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 20px;
+  word-break: keep-all;
+  color: #242424;
+  padding: 0px 20px;
+}
+.container-profile .profile-view-wrap main .quali {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.container-profile .profile-view-wrap main .quali .quali-wrap {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+}
+.container-profile .profile-view-wrap main .quali .quali-wrap .quali-info {
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.container-profile .profile-view-wrap main .quali .quali-wrap .quali-info .quali-title {
+  width: 30%;
+  text-align: right;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  word-break: keep-all;
+  color: #242424;
+}
+.container-profile .profile-view-wrap main .quali .quali-wrap .quali-info .quali-content {
+  width: 70%;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 20px;
+  word-break: keep-all;
+  color: #242424;
+}
+.container-profile .profile-view-wrap main .review {
+  width: 100%;
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+.container-profile .profile-view-wrap main .review .review-grade {
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  margin-top: 20px;
+}
+.container-profile .profile-view-wrap main .review .review-grade .grade p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  word-break: keep-all;
+  color: #242424;
+}
+.container-profile .profile-view-wrap main .review .review-grade .star-rating {
+  font-size: 18px;
+  color: #ffd700;
+}
+.container-profile .profile-view-wrap main .review .review-grade .star-rating p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 20px;
+  word-break: keep-all;
+  color: #8b8b8b;
+  margin-top: 5px;
+}
+.container-profile .profile-view-wrap main .review .button button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #5d5fef;
+  border: 1px solid #5d5fef;
+  color: #ffffff;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  word-break: keep-all;
+  cursor: pointer;
+}
+.container-profile .profile-view-wrap main .review .review-content {
+  width: 100%;
+  box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.container-profile .profile-view-wrap main .review .review-content .review-profile {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container-profile .profile-view-wrap main .review .review-content .review-profile .profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.container-profile .profile-view-wrap main .review .review-content .review-profile .profile img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.container-profile .profile-view-wrap main .review .review-content .review-profile .profile .txt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.container-profile .profile-view-wrap main .review .review-content .review-profile .profile .txt .profile-name {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  word-break: keep-all;
+  color: #242424;
+}
+.container-profile .profile-view-wrap main .review .review-content .review-profile .profile .txt .review-date {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 20px;
+  word-break: keep-all;
+  color: #8b8b8b;
+}
+.container-profile .profile-view-wrap main .review .review-content .review-profile .star {
+  font-size: 12px;
+  color: #ffd700;
+}
+.container-profile .profile-view-wrap main .review .review-content .review-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.container-profile .profile-view-wrap main .review .review-content .review-txt .title {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 20px;
+  word-break: keep-all;
+  color: #242424;
+}
+.container-profile .profile-view-wrap main .review .review-content .review-txt .title span {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 20px;
+  word-break: keep-all;
+  color: #242424;
+}
+.container-profile .profile-view-wrap main .review .review-content .review-txt p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 18px;
+  word-break: keep-all;
+  color: #242424;
+}
+.container-profile .profile-view-wrap main .review .review-content .report {
+  display: flex;
+  justify-content: flex-end;
+}
+.container-profile .profile-view-wrap main .review .review-content .report button {
+  background-color: transparent;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 20px;
+  word-break: keep-all;
+  color: #8b8b8b;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
