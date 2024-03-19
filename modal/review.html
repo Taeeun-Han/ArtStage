@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=360, user-scalable=no">
+    <title>Art Stage</title>
+
+
+    <!-- CSS 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- CSS 초기화 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Script 연결 -->
+    <script defer src="./js/swiper.js"></script>
+    <script defer src="./js/main.js"></script>
+    <script defer src="../js/modal.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- 모달 배경 -->
+        <div class="modal-backdrop"></div>
+
+        <!-- 모달 창 -->
+        <div class="modal modal-review">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <span></span>
+                    <h2>리뷰 등록하기</h2>
+                    <span class="close-button">&times;</span>
+                </div>
+
+                <!-- 별점과 별점리뷰 텍스트 추가 -->
+                <div class="rating">
+                    <div class="rating-text">별점 (0/5)</div>
+                    <div class="star-rating">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                </div>
+
+                <!-- 리뷰 제목 입력 영역 -->
+                <input type="text" placeholder="리뷰 제목을 입력해주세요">
+
+                <!-- 리뷰 내용 입력 영역 -->
+                <textarea id="review-content" name="review-content" rows="4" placeholder="리뷰 내용을 입력해주세요"></textarea>
+
+                <div class="button">
+                    <button>취소</button>
+                    <button>등록하기</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

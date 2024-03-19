@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=360, user-scalable=no">
+    <title>Art Stage</title>
+
+
+    <!-- CSS 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- CSS 초기화 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Script 연결 -->
+    <script defer src="./js/swiper.js"></script>
+    <script defer src="./js/main.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- 모달 배경 -->
+        <div id="modal-backdrop" class="modal-backdrop"></div>
+
+        <!-- 모달 창 -->
+        <div id="report-modal" class="modal">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <span></span>
+                    <h2>신고사유</h2>
+                    <span class="close-button">&times;</span>
+                </div>
+
+                <!-- 신고 사유 라디오 버튼 -->
+                <form id="report-reason-form">
+                    <div class="radio-option">
+                        <input type="radio" id="reason-false-information" name="report-reason"
+                            value="false-information">
+                        <label for="reason-false-information">허위사실유포</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="reason-inappropriate-expression" name="report-reason"
+                            value="inappropriate-expression">
+                        <label for="reason-inappropriate-expression">욕설, 인신공격, 비방 등 부적절한 표현</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="reason-obscenity" name="report-reason" value="obscenity">
+                        <label for="reason-obscenity">음란성, 선정성</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="reason-repetition" name="report-reason" value="repetition">
+                        <label for="reason-repetition">같은 내용 반복 게시</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="reason-commercial" name="report-reason" value="commercial">
+                        <label for="reason-commercial">영리목적, 홍보성</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="reason-other" name="report-reason" value="other">
+                        <label for="reason-other">기타 다른 문제</label>
+                    </div>
+
+                    <!-- 추가 의견 텍스트 에어리어 -->
+                    <textarea id="additional-comments" name="additional-comments" rows="4"
+                        placeholder="신고 내용을 입력해주세요"></textarea>
+                </form>
+
+                <button id="confirm-report">신고하기</button>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
