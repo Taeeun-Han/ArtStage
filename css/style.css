@@ -2589,6 +2589,7 @@ main .notifications .tab-content .content.active span {
 
 .recruitment-result {
   background-color: #f6f4fc;
+  padding-bottom: 0px;
 }
 .recruitment-result .wrap .recruitment-result-main {
   gap: 15px;
