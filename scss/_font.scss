@@ -5,7 +5,7 @@
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 24px;
-	color: $dark-grey2;
+	color: $dark-grey3;
 }
 
 @mixin header-span {
@@ -322,6 +322,24 @@
 @mixin modal-input {
 	font-family: "Pretendard-Regular", Arial, sans-serif;
 	font-weight: 500;
+	font-size: 12px;
+	word-break: keep-all;
+	color: $dark-grey3;
+}
+
+@mixin recruitment-list-txt {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 14px;
+	letter-spacing: 0.3px;
+	word-break: keep-all;
+	color: $grey4;
+}
+
+@mixin two-depth-menu {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 700;
 	font-size: 12px;
 	word-break: keep-all;
 	color: $dark-grey3;

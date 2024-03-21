@@ -44,7 +44,7 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
-  color: #3d3d3d;
+  color: #242424;
 }
 .container .wrap .join .join-content .join-txt p span {
   color: #5d5fef;
@@ -390,6 +390,11 @@ button {
   cursor: pointer;
 }
 
+.main-color {
+  color: #5d5fef;
+  font-weight: 700;
+}
+
 input[type=text],
 input[type=password] {
   outline: none;
@@ -508,7 +513,7 @@ header .wrap .header-right .icon a {
 }
 header .wrap .header-left .icon a span,
 header .wrap .header-right .icon a span {
-  font-size: 15px;
+  font-size: 18px;
 }
 header .wrap .img {
   width: 100px;
@@ -522,7 +527,7 @@ header .wrap .header-center .txt p {
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
-  color: #3d3d3d;
+  color: #242424;
   word-break: keep-all;
 }
 
@@ -859,7 +864,7 @@ ul.nav .on i span {
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
-  color: #3d3d3d;
+  color: #242424;
   word-break: keep-all;
 }
 .login .wrap {
@@ -886,7 +891,7 @@ ul.nav .on i span {
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
-  color: #3d3d3d;
+  color: #242424;
   font-size: 18px;
   color: #ffffff;
 }
@@ -1476,13 +1481,13 @@ main .notifications .tab-content .content.active span {
   flex-direction: column;
   gap: 10px;
 }
-.profile-list .wrap .profile-list-main .search-bar-option {
+.profile-list .wrap .profile-list-main form .search-bar-option {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.profile-list .wrap .profile-list-main .search-bar-option select {
-  padding: 10px;
+.profile-list .wrap .profile-list-main form .search-bar-option select {
+  padding: 8px;
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -1491,17 +1496,17 @@ main .notifications .tab-content .content.active span {
   border-radius: 10px;
   border: 1px solid transparent;
 }
-.profile-list .wrap .profile-list-main .search-bar-option .search-bar input {
-  padding-right: 20px;
+.profile-list .wrap .profile-list-main form .search-bar-option .search-bar input {
   border-radius: 10px;
+  padding: 10px 15px;
 }
-.profile-list .wrap .profile-list-main .search-option {
+.profile-list .wrap .profile-list-main form .search-option {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.profile-list .wrap .profile-list-main .search-option button {
+.profile-list .wrap .profile-list-main form .search-option button {
   padding: 8px 15px;
   border-radius: 10px;
   background-color: #5d5fef;
@@ -1513,12 +1518,12 @@ main .notifications .tab-content .content.active span {
   line-height: 18px;
   word-break: keep-all;
 }
-.profile-list .wrap .profile-list-main .search-option button:hover {
+.profile-list .wrap .profile-list-main form .search-option button:hover {
   background-color: #ffffff;
   color: #5d5fef;
   border: 1px solid #5d5fef;
 }
-.profile-list .wrap .profile-list-main .search-option .filter select {
+.profile-list .wrap .profile-list-main form .search-option .filter select {
   padding: 8% 10px;
   border-radius: 10px;
   border: 1px solid transparent;
@@ -2517,6 +2522,311 @@ main .notifications .tab-content .content.active span {
   word-break: keep-all;
   color: #8b8b8b;
   cursor: pointer;
+}
+
+.recruitment-list .wrap .recruitment-list-main {
+  gap: 15px;
+  padding-top: 30px;
+  padding-bottom: 0px;
+}
+.recruitment-list .wrap .recruitment-list-main .recruitment-list-txt {
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+}
+.recruitment-list .wrap .recruitment-list-main .recruitment-list-txt p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.3px;
+  word-break: keep-all;
+  color: #8b8b8b;
+}
+.recruitment-list .wrap .recruitment-list-main .recruitment-list-txt p span {
+  font-size: 18px;
+}
+.recruitment-list .wrap .recruitment-list-main .recruitment-list-txt p:nth-child(1) {
+  font-size: 16px;
+  font-weight: 700;
+  color: #242424;
+  margin-bottom: 10px;
+}
+.recruitment-list .wrap .recruitment-list-main .recruitment-list-txt p .main-color {
+  font-size: 13px;
+}
+.recruitment-list .wrap .recruitment-list-main .two-depth-menu .menu-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.recruitment-list .wrap .recruitment-list-main .two-depth-menu .menu-div > div {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+.recruitment-list .wrap .recruitment-list-main .two-depth-menu .menu-div > div img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.recruitment-list .wrap .recruitment-list-main .two-depth-menu .menu-div > div p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  word-break: keep-all;
+  color: #242424;
+}
+
+.recruitment-result {
+  background-color: #f6f4fc;
+}
+.recruitment-result .wrap .recruitment-result-main {
+  gap: 15px;
+}
+.recruitment-result .wrap .recruitment-result-main .category {
+  width: calc(100% + 40px);
+  margin-right: -20px;
+  margin-left: -20px;
+  background-color: #ffffff;
+  padding: 5px 0px;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 50px; /* 헤더의 높이를 고려한 값으로 조정 */
+  z-index: 1000; /* 다른 콘텐츠 위에 표시되도록 z-index 설정 */
+  background: white; /* 배경색을 설정하여 내용이 겹치지 않도록 함 */
+  border-bottom: 1px solid #ccc;
+}
+.recruitment-result .wrap .recruitment-result-main .category swiper-container {
+  width: 100%;
+  padding: 0px 15px;
+}
+.recruitment-result .wrap .recruitment-result-main .category swiper-container swiper-slide {
+  width: auto;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.recruitment-result .wrap .recruitment-result-main .category swiper-container swiper-slide span {
+  font-size: 18px;
+}
+.recruitment-result .wrap .recruitment-result-main .category swiper-container swiper-slide p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  word-break: keep-all;
+}
+.recruitment-result .wrap .recruitment-result-main .category swiper-container .on {
+  background-color: #f6f4fc;
+}
+.recruitment-result .wrap .recruitment-result-main .category swiper-container .on span {
+  color: #4424a8;
+}
+.recruitment-result .wrap .recruitment-result-main .category swiper-container .on p {
+  color: #4424a8;
+  font-weight: 700;
+}
+.recruitment-result .wrap .recruitment-result-main form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.recruitment-result .wrap .recruitment-result-main form .search-bar-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.recruitment-result .wrap .recruitment-result-main form .search-bar-option select {
+  padding: 10px;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  word-break: keep-all;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+.recruitment-result .wrap .recruitment-result-main form .search-bar-option .search-bar input {
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+.recruitment-result .wrap .recruitment-result-main form .search-option {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.recruitment-result .wrap .recruitment-result-main form .search-option button {
+  padding: 8px 15px;
+  border-radius: 10px;
+  background-color: #5d5fef;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  word-break: keep-all;
+}
+.recruitment-result .wrap .recruitment-result-main form .search-option button:hover {
+  background-color: #ffffff;
+  color: #5d5fef;
+  border: 1px solid #5d5fef;
+}
+.recruitment-result .wrap .recruitment-result-main form .search-option .filter select {
+  padding: 8% 10px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  word-break: keep-all;
+}
+.recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap .recruitment {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid #f4f4f4;
+  cursor: pointer;
+}
+.recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap .recruitment .title {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+}
+.recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap .recruitment .title p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  word-break: keep-all;
+}
+.recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap .recruitment .title .badge {
+  padding: 6px 14px;
+  background-color: #ff5959;
+  color: #ffffff;
+  border-radius: 8px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap .recruitment .title .badge p {
+  font-size: 12px;
+  font-weight: 500;
+}
+.recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap .recruitment .title .badge-com {
+  padding: 6px 14px;
+  background-color: #2f4f4f;
+  color: #ffffff;
+  border-radius: 8px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap .recruitment .title .badge-com p {
+  font-size: 12px;
+  font-weight: 500;
+}
+.recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap .recruitment .content {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+}
+.recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap .recruitment .content .content-l {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap .recruitment .content .content-l .img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap .recruitment .content .content-l .img img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap .recruitment .content .txt {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+}
+.recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap .recruitment .content .txt > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap .recruitment .content .txt p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  word-break: keep-all;
+}
+.recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap .recruitment .content .txt .location {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  word-break: keep-all;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap .recruitment .content .txt .location span {
+  font-size: 14px;
+}
+.recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap .recruitment .date {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+.recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap .recruitment .date p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  word-break: keep-all;
+  color: #8b8b8b;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -123,3 +123,35 @@ document.getElementById('productImage').addEventListener('change', function () {
         reader.readAsDataURL(file);
     }
 });
+
+
+// 공연, 예술인 모집 리스트 페이지
+document.querySelectorAll('.menu-button button').forEach(button => {
+    button.addEventListener('click', function () {
+        // 이전에 선택된 버튼의 스타일 초기화
+        document.querySelectorAll('.menu-button button').forEach(btn => {
+            btn.classList.remove('button-active');
+        });
+
+        // 현재 클릭된 버튼에 스타일 적용
+        this.classList.add('button-active');
+    });
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    var slides = document.querySelectorAll('.swiper-slide');
+
+    slides.forEach(function (slide) {
+        slide.addEventListener('click', function () {
+            // 모든 슬라이드에서 'swiper-slide-active' 클래스 제거
+            slides.forEach(function (slide) {
+                slide.classList.remove('swiper-slide-active');
+            });
+
+            // 클릭된 슬라이드에만 'swiper-slide-active' 클래스 추가
+            slide.classList.add('swiper-slide-active');
+        });
+    });
+});
