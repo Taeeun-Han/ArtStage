@@ -139,6 +139,43 @@ input[type="password"]::placeholder {
 	}
 }
 
+// 버튼 두 개일 때
+.btn-wrap2 {
+	z-index: 999;
+	width: 100%;
+
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+
+	background-color: #fff;
+	padding: 10px 15px 15px 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+
+	button {
+		background: $main-color;
+		border-radius: 16px;
+		color: #fff;
+		width: 100%;
+		height: 50px;
+		border: none;
+		cursor: pointer;
+		letter-spacing: 1px;
+
+		@include button;
+
+		&:nth-child(1) {
+			background-color: $main-color-light;
+			border: 1px solid $main-color;
+			color: $main-color;
+		}
+	}
+}
+
 // DISABD BUTTON STYLE
 .btn-wrap-disabled {
 	z-index: 999;
@@ -2605,6 +2642,479 @@ main {
 						p {
 							@include profile-p;
 							color: $grey4;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.recruitment-add {
+	.wrap {
+		.recruitment-add-main {
+			gap: 15px;
+			padding-top: 20px;
+			padding-bottom: 0px;
+
+			.progress-bar {
+				width: 100%;
+
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				gap: 10px;
+
+				progress {
+					-webkit-appearance: none;
+					width: 100%;
+					height: 8px;
+				}
+
+				::-webkit-progress-bar {
+					background-color: grey;
+					border-radius: 50px;
+					background-color: $main-color-light;
+				}
+
+				::-webkit-progress-value {
+					background-color: $main-color;
+					border-radius: 50px;
+				}
+			}
+
+			.img {
+				margin-top: 30px;
+				margin-bottom: 30px;
+				img {
+					width: 100%;
+				}
+			}
+
+			.recruitment-list-txt {
+				margin-top: 20px;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 10px;
+
+				p {
+					font-size: 16px;
+					color: $dark-grey2;
+
+					&:nth-child(1) {
+						font-size: 22px;
+						font-weight: 700;
+						color: $dark-grey3;
+						margin-bottom: 20px;
+					}
+
+					.main-color {
+						font-size: 16px;
+					}
+				}
+			}
+
+			.title {
+				margin: 20px 0px 10px 0px;
+				display: flex;
+				flex-direction: column;
+				gap: 5px;
+
+				p {
+					@include main-title;
+					font-size: 20px;
+					display: flex;
+					align-items: center;
+					justify-content: flex-start;
+					gap: 4px;
+				}
+			}
+
+			.recruitment-add-contents {
+				width: 100%;
+
+				margin-top: 10px;
+				display: flex;
+				flex-direction: column;
+				gap: 30px;
+				padding: 0px;
+
+				.contents {
+					display: flex;
+					flex-direction: column;
+					gap: 20px;
+
+					.recruitment-input {
+						background-color: $main-color02;
+						width: 100%;
+						border-radius: 10px;
+						padding: 20px 20px;
+						display: flex;
+						flex-direction: column;
+						gap: 5px;
+						position: relative;
+
+						p {
+							@include profile-add-title;
+							color: $dark-grey1;
+						}
+
+						input {
+							width: 100%;
+							height: 30px;
+							@include profile-add-title;
+							border-radius: 10px;
+							color: $dark-grey3;
+
+							background-color: $white;
+							padding: 0px 10px
+						}
+
+						label {
+							@include profile-add-title;
+							font-weight: 500;
+							display: flex;
+							align-items: center;
+							gap: 5px;
+
+							input[type="radio"] {
+								width: auto;
+								color: $dark-grey3;
+							}
+
+							p {
+								font-weight: 500;
+								font-size: 11px;
+								padding-left: 0px;
+								width: auto;
+								white-space: nowrap;
+							}
+
+							#externalLink {
+								flex-grow: 1;
+								color: $dark-grey3;
+								background-color: $white;
+								margin-left: 5px;
+								padding: 0px 10px;
+							}
+						}
+
+						.date-time-input {
+							display: flex;
+							align-items: center;
+							gap: 10px;
+
+							&:nth-child(2) {
+								margin-top: 5px;
+							}
+
+							label {
+								@include profile-add-title;
+								font-weight: 500;
+								padding: 0px;
+							}
+
+							input {
+								font-weight: 500;
+								background-color: $white;
+								padding: 0px 10px;
+							}
+						}
+
+						textarea {
+							border: 1px solid #ccc;
+							border-radius: 10px;
+							padding: 10px;
+							font-size: 12px;
+							margin-top: 5px;
+
+							&:focus {
+								outline: none;
+							}
+						}
+
+						#charCount {
+							position: absolute;
+							right: 30px;
+							bottom: 30px;
+							@include profile-add-title;
+							font-weight: 500;
+							font-size: 10px;
+						}
+					}
+
+					.img-prev {
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+						gap: 30px;
+						justify-content: center;
+
+						.txt {
+							display: flex;
+							flex-direction: column;
+							gap: 5px;
+							align-items: center;
+							justify-content: center;
+
+							p {
+								padding-left: 0px;
+							}
+
+							/* 파일 입력 필드 숨기기 */
+							#imageUpload {
+								display: none;
+							}
+
+							.custom-button {
+								background-color: $main-color;
+								color: white;
+								padding: 8px 13px;
+								margin: 8px 0;
+								border: none;
+								border-radius: 4px;
+								cursor: pointer;
+								@include profile-add-title;
+								font-weight: 500;
+								font-size: 12px;
+							}
+						}
+
+						.preview {
+							width: 150px;
+							height: 150px;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+
+							.image-preview {
+								width: 150px;
+								height: 150px;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								overflow: hidden;
+
+								background-color: $white;
+								border-radius: 20px;
+
+								img {
+									width: 100%;
+									height: auto;
+								}
+							}
+						}
+					}
+
+					.select {
+						label {
+							@include profile-add-title;
+							color: $dark-grey1;
+							padding: 0px;
+						}
+
+						select {
+							width: 100%;
+							padding: 10px 5px;
+							border: none;
+							border-radius: 10px;
+							font-size: 12px;
+							margin-top: 5px;
+						}
+					}
+
+					.checkbox {
+						.checkbox-wrap {
+							margin-top: 5px;
+							display: flex;
+							flex-wrap: wrap;
+							gap: 8px;
+
+							div {
+								display: flex;
+								align-items: center;
+								gap: 3px;
+
+								input[type="checkbox"] {
+									width: auto;
+								}
+
+								label {
+									@include profile-add-title;
+									color: $dark-grey1;
+									padding: 0px;
+									font-weight: 500;
+								}
+							}
+						}
+					}
+
+					.price {
+						.radio {
+							display: flex;
+							gap: 20px;
+							@include profile-add-title;
+							color: $dark-grey1;
+						}
+
+						.free,
+						#priceInput {
+							margin-top: 20px;
+							display: flex;
+							flex-direction: column;
+							gap: 10px;
+
+							.free-title {
+								display: flex;
+								justify-content: space-between;
+								align-items: center;
+
+								p {
+									font-weight: 500;
+									display: flex;
+									align-items: center;
+									gap: 3px;
+
+									span {
+										color: $red;
+									}
+								}
+
+								button {
+									@include profile-add-title;
+									font-weight: 500;
+									font-size: 11px;
+									padding: 5px 10px;
+									background-color: $main-color;
+									border-radius: 10px;
+									color: $white;
+									cursor: pointer;
+								}
+							}
+
+							.option-wrap {
+								display: flex;
+								flex-direction: column;
+								gap: 10px;
+								background-color: $main-color-light;
+								padding: 20px 10px;
+								border-radius: 10px;
+
+								.option-wrap-title {
+									display: flex;
+									align-items: center;
+									justify-content: space-between;
+									gap: 10px;
+
+									input[type="text"] {
+										padding: 0px 10px;
+										background-color: $white;
+									}
+								}
+
+								.participant-count {
+									display: flex;
+									align-items: center;
+									gap: 10px;
+
+									button {
+										width: 30px;
+										height: 30px;
+										display: flex;
+										justify-content: center;
+										align-items: center;
+
+										padding: 10px;
+										border-radius: 10px;
+										background-color: $white;
+									}
+
+									input[type="text"] {
+										text-align: center;
+									}
+								}
+
+								.options-checkboxes {
+									display: flex;
+									align-items: center;
+									justify-content: space-between;
+
+									div {
+										display: flex;
+										align-items: center;
+										gap: 5px;
+
+										input[type="checkbox"] {
+											width: auto;
+										}
+
+										label {
+											color: $dark-grey1;
+										}
+									}
+								}
+
+								.option-price {
+									display: flex;
+									justify-content: space-between;
+									gap: 10px;
+
+									p {
+										font-weight: 500;
+										display: flex;
+										align-items: center;
+										gap: 3px;
+										white-space: nowrap;
+
+										span {
+											color: $red;
+										}
+									}
+
+									label {
+										display: flex;
+										align-items: center;
+										gap: 8px;
+										position: relative;
+
+										p {
+											font-size: 12px;
+										}
+
+										input {
+											padding: 0px 10px;
+											font-weight: 500;
+											width: 80px;
+										}
+
+										.position {
+											position: absolute;
+											right: 10px;
+											font-size: 11px;
+										}
+									}
+
+									.checkbox-label {
+										input[type="checkbox"] {
+											width: auto;
+										}
+									}
+								}
+
+								.option-delete {
+									@include profile-add-title;
+									font-weight: 500;
+									font-size: 11px;
+									padding: 7px 10px;
+									background-color: $main-color;
+									border-radius: 10px;
+									color: $white;
+									cursor: pointer;
+								}
+							}
 						}
 					}
 				}

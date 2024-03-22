@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=360, user-scalable=no">
+    <title>Art Stage</title>
+
+
+    <!-- CSS 연결 -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- CSS 초기화 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+    <!-- Google Material Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+    <!-- Script 연결 -->
+    <script defer src="./js/recruitment-add.js"></script>
+
+</head>
+
+<body>
+    <form>
+        <div class="container recruitment-add">
+
+            <header>
+                <div class="wrap">
+
+                    <div class="header-left">
+                        <div class="icon">
+                            <a href="/artist-profiles">
+                                <span class="material-symbols-outlined">
+                                    arrow_back_ios
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="header-center">
+                        <div class="txt">
+                            <p>내 모집 등록</p>
+                        </div>
+                    </div>
+
+                    <div class="header-right">
+                    </div>
+
+                </div>
+            </header>
+
+            <div class="wrap">
+
+                <main class="recruitment-add-main">
+
+                    <!-- 프로그레스 바 -->
+                    <div class="progress-bar">
+                        <progress id="progress" value="80" min="0" max="100"></progress>
+                        <span class="material-symbols-outlined">
+                            sports_score
+                        </span>
+                    </div>
+
+                    <div class="title">
+                        <p>마지막으로</p>
+                        <p><span class="main-color">모집정보</span>의</p>
+                        <p>옵션을 설정해주세요</p>
+                    </div>
+
+                    <div class="recruitment-add-contents">
+                        <div class="contents">
+                            <div class="recruitment-input">
+                                <p>기타소개</p>
+                                <textarea id="introduction" name="introduction" cols="30" rows="10"
+                                    placeholder="500자 이내로 입력해주세요" oninput="updateCharacterCount()"></textarea>
+                                <div id="charCount">0/500</div>
+                            </div>
+
+                            <div class="recruitment-input price">
+                                <p>가격정책</p>
+                                <div class="radio">
+                                    <label><input type="radio" name="pricingPolicy" value="free"
+                                            onclick="togglePriceInput(false)"> 무료</label>
+                                    <label><input type="radio" name="pricingPolicy" value="paid"
+                                            onclick="togglePriceInput(true)"> 유료</label>
+                                </div>
+
+                                <div class="free">
+                                    <div class="free-title">
+                                        <p>일정별 옵션 <span>*</span></p>
+                                        <!-- 옵션 추가 버튼 -->
+                                        <button>+ 옵션 추가</button>
+                                    </div>
+
+                                    <div class="option-wrap">
+                                        <div class="option-wrap-title">
+                                            <input type="text" placeholder="옵션명 입력">
+                                        </div>
+
+                                        <div class="participant-count">
+                                            <button type="button" id="decreaseButton">-</button>
+                                            <input type="text" id="participantCount" placeholder="참여 가능 인원 수를 입력해주세요">
+                                            <button type="button" id="increaseButton">+</button>
+                                        </div>
+
+                                        <div class="options-checkboxes">
+                                            <div>
+                                                <input type="checkbox" id="unlimited" name="option" value="unlimited">
+                                                <label for="unlimited">제한없음</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" id="noDisplayRemaining" name="option"
+                                                    value="noDisplayRemaining">
+                                                <label for="noDisplayRemaining">잔여수량미표기</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" id="waitlistAvailable" name="option"
+                                                    value="waitlistAvailable">
+                                                <label for="waitlistAvailable">대기자접수가능</label>
+                                            </div>
+                                        </div>
+
+                                        <button class="option-delete">옵션 삭제</button>
+                                    </div>
+
+                                </div>
+
+                                <div id="priceInput" style="display: none;">
+                                    <div class="free-title">
+                                        <p>일정별 옵션 <span>*</span></p>
+                                        <!-- 옵션 추가 버튼 -->
+                                        <button>+ 옵션 추가</button>
+                                    </div>
+
+
+                                    <div class="option-wrap">
+                                        <div class="option-wrap-title">
+                                            <input type="text" placeholder="옵션명 입력">
+                                        </div>
+
+
+                                        <div class="participant-count">
+                                            <button>-</button>
+                                            <input type="text" placeholder="참여 가능 인원 수를 입력해주세요">
+                                            <button>+</button>
+                                        </div>
+
+                                        <div class="options-checkboxes">
+                                            <div>
+                                                <input type="checkbox">
+                                                <label>제한없음</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label>잔여수량미표기</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox">
+                                                <label>대기자접수가능</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="option-price">
+                                            <p>옵션별 금액 <span>*</span></p>
+
+                                            <label>
+                                                <p>유료</p>
+                                                <input type="text">
+                                                <p class="position">원</p>
+                                            </label>
+
+                                            <label class="checkbox-label">
+                                                <input type="checkbox">
+                                                <p>무료</p>
+                                            </label>
+                                        </div>
+
+                                        <button class="option-delete">옵션 삭제</button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </main>
+            </div>
+        </div>
+    </form>
+
+    <div class="btn-wrap2">
+        <button>임시저장</button>
+        <button>다음</button>
+    </div>
+
+</body>
+
+</html>

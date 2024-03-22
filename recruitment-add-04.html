@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=360, user-scalable=no">
+    <title>Art Stage</title>
+
+
+    <!-- CSS 연결 -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- CSS 초기화 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+    <!-- Google Material Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+    <!-- Script 연결 -->
+    <script defer src="./js/recruitment-add.js"></script>
+
+</head>
+
+<body>
+    <form>
+        <div class="container recruitment-add">
+
+            <header>
+                <div class="wrap">
+
+                    <div class="header-left">
+                        <div class="icon">
+                            <a href="/artist-profiles">
+                                <span class="material-symbols-outlined">
+                                    arrow_back_ios
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="header-center">
+                        <div class="txt">
+                            <p>내 모집 등록</p>
+                        </div>
+                    </div>
+
+                    <div class="header-right">
+                    </div>
+
+                </div>
+            </header>
+
+            <div class="wrap">
+
+                <main class="recruitment-add-main">
+
+                    <!-- 프로그레스 바 -->
+                    <div class="progress-bar">
+                        <progress id="progress" value="70" min="0" max="100"></progress>
+                        <span class="material-symbols-outlined">
+                            sports_score
+                        </span>
+                    </div>
+
+                    <div class="title">
+                        <p><span class="main-color">모집정보</span>에 대해</p>
+                        <p>좀 더 자세히</p>
+                        <p>알려주세요</p>
+                    </div>
+
+                    <div class="recruitment-add-contents">
+                        <div class="contents">
+                            <div class="recruitment-input">
+                                <p>모집 기한</p>
+                                <div class="date-time-input">
+                                    <label for="start-date">시작일시</label>
+                                    <input type="date" id="start-date" name="start-date">
+                                    <input type="time" id="start-time" name="start-time">
+                                </div>
+                                <div class="date-time-input">
+                                    <label for="end-date">종료일시</label>
+                                    <input type="date" id="end-date" name="end-date">
+                                    <input type="time" id="end-time" name="end-time">
+                                </div>
+                            </div>
+
+                            <div class="recruitment-input select">
+                                <label for="recruitment-field">모집분야</label>
+                                <select>
+                                    <option>선택해주세요</option>
+                                    <option value="theatre_musical">연극/뮤지컬</option>
+                                    <option value="dance">무용</option>
+                                    <option value="korean_music">국악</option>
+                                    <option value="music">음악</option>
+                                    <option value="art">미술</option>
+                                    <option value="others">기타</option>
+                                </select>
+                            </div>
+
+                            <div class="recruitment-input select">
+                                <label for="recruitment-field">모집구분</label>
+                                <select>
+                                    <option>선택해주세요</option>
+                                    <option>공연/연주</option>
+                                    <option>대회/공모/오디션</option>
+                                    <option>교육/레슨/세미나</option>
+                                    <option>멤버/세션</option>
+                                    <option>창작/녹음/영상</option>
+                                    <option>기타</option>
+                                </select>
+                            </div>
+
+                            <div class="recruitment-input select">
+                                <label for="recruitment-field">모집직업</label>
+                                <select>
+                                    <option>선택해주세요</option>
+                                    <option>곡예사</option>
+                                    <option>무대디자이너</option>
+                                </select>
+                            </div>
+
+                            <div class="recruitment-input select">
+                                <label for="recruitment-field">모집전공</label>
+                                <select>
+                                    <option>선택해주세요</option>
+                                    <option>가야금</option>
+                                    <option>거문고</option>
+                                </select>
+                            </div>
+
+                            <div class="recruitment-input checkbox">
+                                <p>모집지역</p>
+                                <div class="checkbox-wrap">
+                                    <div>
+                                        <input type="checkbox" id="nationwide" name="location" value="nationwide">
+                                        <label for="nationwide">전국</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="seoul" name="location" value="seoul">
+                                        <label for="seoul">서울</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="incheonBucheon" name="location"
+                                            value="incheonBucheon">
+                                        <label for="incheonBucheon">인천/부천</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="gyeonggi" name="location" value="gyeonggi">
+                                        <label for="gyeonggi">경기</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="gangwonChuncheon" name="location"
+                                            value="gangwonChuncheon">
+                                        <label for="gangwonChuncheon">강원/춘천</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="chungnamDaejeonSejong" name="location"
+                                            value="chungnamDaejeonSejong">
+                                        <label for="chungnamDaejeonSejong">충남/대전/세종</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="chungbukCheongju" name="location"
+                                            value="chungbukCheongju">
+                                        <label for="chungbukCheongju">충북/청주</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="gyeongbukDaegu" name="location"
+                                            value="gyeongbukDaegu">
+                                        <label for="gyeongbukDaegu">경북/대구</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="jeonbukJeonju" name="location" value="jeonbukJeonju">
+                                        <label for="jeonbukJeonju">전북/전주</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="jeonnamGwangju" name="location"
+                                            value="jeonnamGwangju">
+                                        <label for="jeonnamGwangju">전남/광주</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="gyeongnamBusanUlsan" name="location"
+                                            value="gyeongnamBusanUlsan">
+                                        <label for="gyeongnamBusanUlsan">경남/부산/울산</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="jeju" name="location" value="jeju">
+                                        <label for="jeju">제주</label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </main>
+            </div>
+        </div>
+    </form>
+
+    <div class="btn-wrap">
+        <button>다음</button>
+    </div>
+
+</body>
+
+</html>

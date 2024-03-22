@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=360, user-scalable=no">
+    <title>Art Stage</title>
+
+
+    <!-- CSS 연결 -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- CSS 초기화 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+    <!-- Google Material Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+    <!-- Script 연결 -->
+    <script defer src="./js/recruitment-add.js"></script>
+
+</head>
+
+<body>
+    <form>
+        <div class="container recruitment-add">
+
+            <header>
+                <div class="wrap">
+
+                    <div class="header-left">
+                        <div class="icon">
+                            <a href="/artist-profiles">
+                                <span class="material-symbols-outlined">
+                                    arrow_back_ios
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="header-center">
+                        <div class="txt">
+                            <p>내 모집 등록</p>
+                        </div>
+                    </div>
+
+                    <div class="header-right">
+                    </div>
+
+                </div>
+            </header>
+
+            <div class="wrap">
+
+                <main class="recruitment-add-main">
+
+                    <!-- 프로그레스 바 -->
+                    <div class="progress-bar">
+                        <progress id="progress" value="60" min="0" max="100"></progress>
+                        <span class="material-symbols-outlined">
+                            sports_score
+                        </span>
+                    </div>
+
+                    <div class="title">
+                        <p>이제</p>
+                        <p><span class="main-color">모집정보</span>에 대해</p>
+                        <p>알려주세요</p>
+                    </div>
+
+                    <div class="recruitment-add-contents">
+                        <div class="contents">
+                            <div class="recruitment-input img-prev">
+                                <div class="txt">
+                                    <p>썸네일 사진</p>
+
+                                    <!-- 사용자 정의 버튼 추가 -->
+                                    <button class="custom-button" id="uploadButton">이미지 업로드</button>
+
+                                    <input type="file" id="imageUpload" accept="image/*">
+                                </div>
+
+                                <div class="preview">
+                                    <div class="image-preview" id="imagePreview">
+                                        <img src="" alt="" id="imgPreview">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="recruitment-input">
+                                <p>모집 제목</p>
+                                <input type="text" placeholder="35글자 이내로 입력해주세요">
+                            </div>
+
+                            <div class="recruitment-input">
+                                <p>모집 형태</p>
+                                <label>
+                                    <input type="radio" name="recruitmentType" value="internal" checked>
+                                    <p>내부에서 모집</p>
+                                </label>
+                                <label>
+                                    <input type="radio" name="recruitmentType" value="external">
+                                    <p>외부에서 모집</p>
+                                    <input type="text" id="externalLink" placeholder="링크 입력">
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </main>
+            </div>
+        </div>
+    </form>
+
+    <div class="btn-wrap">
+        <button>다음</button>
+    </div>
+
+</body>
+
+</html>
