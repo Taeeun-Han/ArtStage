@@ -344,3 +344,66 @@
 	word-break: keep-all;
 	color: $dark-grey3;
 }
+
+// 공연 예술인 모집 상세페이지
+@mixin recruitment-view-main {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+	word-break: keep-all;
+	color: $dark-grey3;
+}
+
+@mixin recruitment-view-sub {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 500;
+	font-size: 12px;
+	word-break: keep-all;
+	color: $dark-grey1;
+	line-height: 18px;
+}
+
+@mixin ib-con-title {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 700;
+	font-size: 13px;
+	word-break: keep-all;
+	color: $dark-grey3;
+	line-height: 18px;
+}
+
+@mixin ib-con-txt {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 500;
+	font-size: 12px;
+	word-break: keep-all;
+	color: $dark-grey3;
+	line-height: 18px;
+}
+
+@mixin tab {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 500;
+	font-size: 13px;
+	word-break: keep-all;
+	color: $dark-grey3;
+	line-height: 18px;
+}
+
+@mixin rc-title {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 700;
+	font-size: 13px;
+	word-break: keep-all;
+	color: $dark-grey3;
+	line-height: 18px;
+}
+
+@mixin rc-p {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 500;
+	font-size: 13px;
+	word-break: keep-all;
+	color: $dark-grey3;
+	line-height: 20px;
+}
