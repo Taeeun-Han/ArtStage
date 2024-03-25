@@ -3331,6 +3331,7 @@ main .notifications .tab-content .content.active span {
   flex-direction: column;
   gap: 30px;
   padding-top: 30px;
+  padding-bottom: 0px;
 }
 .recruitment-view .wrap main .recruitment-profile {
   display: flex;
@@ -3529,6 +3530,51 @@ main .notifications .tab-content .content.active span {
   flex-direction: column;
   gap: 15px;
 }
+.recruitment-view .wrap main .recruitment-contents .box .box-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 10px;
+}
+.recruitment-view .wrap main .recruitment-contents .box .box-txt li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.recruitment-view .wrap main .recruitment-contents .box .box-txt li .title p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+.recruitment-view .wrap main .recruitment-contents .box .box-txt li .txt p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+  color: #555555;
+  font-weight: 400;
+  white-space: wrap;
+  font-size: 12.5px;
+}
+.recruitment-view .wrap main .recruitment-contents .box .box-txt .box-txt-number p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 18px;
+  text-decoration: underline;
+  margin-bottom: 5px;
+}
 .recruitment-view .wrap main .recruitment-contents .box .title p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 700;
@@ -3541,26 +3587,6 @@ main .notifications .tab-content .content.active span {
   display: flex;
   flex-direction: column;
   gap: 5px;
-}
-.recruitment-view .wrap main .recruitment-contents .box .txt p {
-  font-family: "Pretendard-Regular", Arial, sans-serif;
-  font-weight: 500;
-  font-size: 13px;
-  word-break: keep-all;
-  color: #242424;
-  line-height: 20px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  white-space: nowrap;
-}
-.recruitment-view .wrap main .recruitment-contents .box .txt p span {
-  color: #555555;
-  font-weight: 400;
-  white-space: wrap;
-}
-.recruitment-view .wrap main .recruitment-contents .box .txt p .txt-span-date {
-  font-size: 12.5px;
 }
 .recruitment-view .wrap main .recruitment-contents .box .txt .txt-p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
@@ -3729,7 +3755,6 @@ main .notifications .tab-content .content.active span {
   margin-top: -20px;
   padding: 0px 20px;
   height: 100%;
-  margin-bottom: -40px;
   background-color: #ffffff;
 }
 .recruitment-view .wrap main .recruitment-cancel .cancel-box {

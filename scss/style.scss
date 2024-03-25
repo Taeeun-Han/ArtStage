@@ -3135,6 +3135,7 @@ main {
 			flex-direction: column;
 			gap: 30px;
 			padding-top: 30px;
+			padding-bottom: 0px;
 
 			.recruitment-profile {
 				display: flex;
@@ -3329,6 +3330,47 @@ main {
 					flex-direction: column;
 					gap: 15px;
 
+					.box-txt {
+						display: flex;
+						flex-direction: column;
+						gap: 5px;
+						border-radius: 10px;
+
+						li {
+							display: flex;
+							align-items: center;
+							gap: 5px;
+
+							.title {
+								p {
+									@include rc-p;
+									display: flex;
+									align-items: center;
+									gap: 5px;
+									white-space: nowrap;
+								}
+							}
+
+							.txt {
+								p {
+									@include rc-p;
+									color: $dark-grey1;
+									font-weight: 400;
+									white-space: wrap;
+									font-size: 12.5px;
+								}
+							}
+						}
+
+						.box-txt-number {
+							p {
+								@include rc-title;
+								text-decoration: underline;
+								margin-bottom: 5px;
+							}
+						}
+					}
+
 					.title {
 						p {
 							@include rc-title;
@@ -3339,24 +3381,6 @@ main {
 						display: flex;
 						flex-direction: column;
 						gap: 5px;
-
-						p {
-							@include rc-p;
-							display: flex;
-							align-items: center;
-							gap: 5px;
-							white-space: nowrap;
-
-							span {
-								color: $dark-grey1;
-								font-weight: 400;
-								white-space: wrap;
-							}
-
-							.txt-span-date {
-								font-size: 12.5px;
-							}
-						}
 
 						.txt-p {
 							@include rc-p;
@@ -3516,7 +3540,6 @@ main {
 				margin-top: -20px;
 				padding: 0px 20px;
 				height: 100%;
-				margin-bottom: -40px;
 				background-color: $white;
 
 				.cancel-box {
