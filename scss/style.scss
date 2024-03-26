@@ -3579,3 +3579,170 @@ main {
 		}
 	}
 }
+
+// 정부 공고
+.government-list {
+	background-color: #f6f4fc;
+	.wrap {
+		.government-list-main {
+			gap: 15px;
+
+			.government-list-swiper {
+				width: calc(100% + 40px);
+				margin-right: -20px;
+				margin-left: -20px;
+				background-color: $white;
+				padding: 5px 0px;
+
+				position: -webkit-sticky;
+				position: sticky;
+				top: 50px;
+				z-index: 1000;
+				background: white;
+
+				border-bottom: 1px solid #ccc;
+
+				swiper-container {
+					width: 100%;
+					padding: 0px 15px;
+
+					swiper-slide {
+						width: auto;
+						padding: 10px;
+						border-radius: 10px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						gap: 5px;
+
+						p {
+							@include profile-add;
+						}
+					}
+
+					.on {
+						background-color: #f6f4fc;
+
+						p {
+							color: #4424a8;
+							font-weight: 700;
+						}
+					}
+				}
+			}
+
+			.search-option {
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				gap: 10px;
+
+				.search-bar-option {
+					display: flex;
+					align-items: center;
+					gap: 10px;
+					width: 100%;
+
+					.search-bar {
+						width: 100%;
+
+						input {
+							width: 100%;
+							border-radius: 10px;
+							padding: 10px 15px;
+							background-color: $white;
+						}
+					}
+				}
+
+				.filter {
+					select {
+						padding: 8% 10px;
+						border-radius: 10px;
+						border: 1px solid transparent;
+
+						@include profile-add;
+					}
+				}
+			}
+
+			.government-list-wrap {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+
+				.government {
+					display: flex;
+					flex-direction: column;
+					gap: 20px;
+					align-items: center;
+					background-color: $white;
+					border-radius: 10px;
+					padding: 15px;
+
+					border: 1px solid $bg;
+
+					cursor: pointer;
+
+					.title {
+						display: flex;
+						width: 100%;
+						align-items: center;
+						gap: 10px;
+
+						p {
+							@include profile-title;
+						}
+					}
+
+					.content {
+						width: 100%;
+						display: flex;
+						flex-direction: column;
+						gap: 10px;
+
+						.txt {
+							display: flex;
+							gap: 5px;
+
+							p {
+								@include profile-p;
+							}
+						}
+
+						.location {
+							@include profile-p;
+							display: flex;
+							align-items: center;
+							gap: 3px;
+
+							span {
+								font-size: 14px;
+							}
+						}
+					}
+
+					.date {
+						width: 100%;
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						gap: 10px;
+
+						p {
+							@include profile-p;
+							color: $grey4;
+						}
+
+						span {
+							font-size: 20px;
+							color: $red;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1645,6 +1645,7 @@ main .notifications .tab-content .content.active span {
   font-size: 12px;
   line-height: 18px;
   word-break: keep-all;
+  color: #242424;
   font-weight: 700;
   font-size: 12px;
 }
@@ -1655,6 +1656,7 @@ main .notifications .tab-content .content.active span {
   font-size: 12px;
   line-height: 18px;
   word-break: keep-all;
+  color: #242424;
   font-size: 10px;
   display: flex;
   align-items: center;
@@ -1676,6 +1678,7 @@ main .notifications .tab-content .content.active span {
   font-size: 12px;
   line-height: 18px;
   word-break: keep-all;
+  color: #242424;
 }
 .profile-list .wrap .profile-list-main .profile-wrap .profile .content .txt .chat {
   display: flex;
@@ -2198,6 +2201,7 @@ main .notifications .tab-content .content.active span {
   font-size: 12px;
   line-height: 18px;
   word-break: keep-all;
+  color: #242424;
 }
 .profile-draft .profile-draft-wrap .content .major span,
 .profile-draft .profile-draft-wrap .content .save-date span {
@@ -2834,6 +2838,7 @@ main .notifications .tab-content .content.active span {
   font-size: 12px;
   line-height: 18px;
   word-break: keep-all;
+  color: #242424;
 }
 .recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap .recruitment .content .txt .location {
   font-family: "Pretendard-Regular", Arial, sans-serif;
@@ -2841,6 +2846,7 @@ main .notifications .tab-content .content.active span {
   font-size: 12px;
   line-height: 18px;
   word-break: keep-all;
+  color: #242424;
   font-size: 10px;
   display: flex;
   align-items: center;
@@ -2862,6 +2868,7 @@ main .notifications .tab-content .content.active span {
   font-size: 12px;
   line-height: 18px;
   word-break: keep-all;
+  color: #242424;
   color: #8b8b8b;
 }
 
@@ -3793,6 +3800,167 @@ main .notifications .tab-content .content.active span {
 .recruitment-view .wrap main .recruitment-cancel .cancel-box .txt li:last-child {
   font-weight: 700;
   text-decoration: underline;
+}
+
+.government-list {
+  background-color: #f6f4fc;
+}
+.government-list .wrap .government-list-main {
+  gap: 15px;
+}
+.government-list .wrap .government-list-main .government-list-swiper {
+  width: calc(100% + 40px);
+  margin-right: -20px;
+  margin-left: -20px;
+  background-color: #ffffff;
+  padding: 5px 0px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50px;
+  z-index: 1000;
+  background: white;
+  border-bottom: 1px solid #ccc;
+}
+.government-list .wrap .government-list-main .government-list-swiper swiper-container {
+  width: 100%;
+  padding: 0px 15px;
+}
+.government-list .wrap .government-list-main .government-list-swiper swiper-container swiper-slide {
+  width: auto;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.government-list .wrap .government-list-main .government-list-swiper swiper-container swiper-slide p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  word-break: keep-all;
+}
+.government-list .wrap .government-list-main .government-list-swiper swiper-container .on {
+  background-color: #f6f4fc;
+}
+.government-list .wrap .government-list-main .government-list-swiper swiper-container .on p {
+  color: #4424a8;
+  font-weight: 700;
+}
+.government-list .wrap .government-list-main .search-option {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.government-list .wrap .government-list-main .search-option .search-bar-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+.government-list .wrap .government-list-main .search-option .search-bar-option .search-bar {
+  width: 100%;
+}
+.government-list .wrap .government-list-main .search-option .search-bar-option .search-bar input {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px 15px;
+  background-color: #ffffff;
+}
+.government-list .wrap .government-list-main .search-option .filter select {
+  padding: 8% 10px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  word-break: keep-all;
+}
+.government-list .wrap .government-list-main .government-list-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.government-list .wrap .government-list-main .government-list-wrap .government {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid #f4f4f4;
+  cursor: pointer;
+}
+.government-list .wrap .government-list-main .government-list-wrap .government .title {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+}
+.government-list .wrap .government-list-main .government-list-wrap .government .title p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  word-break: keep-all;
+}
+.government-list .wrap .government-list-main .government-list-wrap .government .content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.government-list .wrap .government-list-main .government-list-wrap .government .content .txt {
+  display: flex;
+  gap: 5px;
+}
+.government-list .wrap .government-list-main .government-list-wrap .government .content .txt p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  word-break: keep-all;
+  color: #242424;
+}
+.government-list .wrap .government-list-main .government-list-wrap .government .content .location {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  word-break: keep-all;
+  color: #242424;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.government-list .wrap .government-list-main .government-list-wrap .government .content .location span {
+  font-size: 14px;
+}
+.government-list .wrap .government-list-main .government-list-wrap .government .date {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.government-list .wrap .government-list-main .government-list-wrap .government .date p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  word-break: keep-all;
+  color: #242424;
+  color: #8b8b8b;
+}
+.government-list .wrap .government-list-main .government-list-wrap .government .date span {
+  font-size: 20px;
+  color: #ff5959;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
