@@ -408,3 +408,60 @@
 	color: $dark-grey3;
 	line-height: 20px;
 }
+
+@mixin apply-title {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 700;
+	font-size: 14px;
+	word-break: keep-all;
+	color: $dark-grey3;
+	line-height: 20px;
+}
+
+@mixin mypage-title {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 700;
+	font-size: 18px;
+	word-break: keep-all;
+	letter-spacing: 1.2px;
+	color: $dark-grey3;
+	line-height: 20px;
+}
+
+@mixin mypage-name {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+	word-break: keep-all;
+	letter-spacing: 1.1px;
+	color: $dark-grey3;
+	line-height: 20px;
+}
+
+@mixin mypage-email {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 500;
+	font-size: 12px;
+	word-break: keep-all;
+	color: $dark-grey1;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+}
+
+@mixin mypage-menu-title {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 700;
+	font-size: 12px;
+	word-break: keep-all;
+	color: $dark-grey3;
+	line-height: 20px;
+}
+
+@mixin mypage-menu-contents {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 500;
+	font-size: 12px;
+	word-break: keep-all;
+	color: $dark-grey3;
+	line-height: 20px;
+}

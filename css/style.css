@@ -164,13 +164,15 @@
 }
 .container .modal {
   width: 280px;
+  max-height: 90vh;
+  overflow-y: scroll;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
   background-color: white;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -180,9 +182,16 @@
   gap: 30px;
 }
 .container .modal .modal-content .modal-header {
+  width: calc(100% + 40px);
+  margin: 0 -20px;
+  height: 45px;
+  padding: 0px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
 }
 .container .modal .modal-content .modal-header span {
   font-size: 22px;
@@ -323,6 +332,183 @@
   color: #ffffff;
 }
 .container .modal-review .modal-content .button button:first-child {
+  background-color: #f6f4fc;
+  border: 1px solid #5d5fef;
+  color: #5d5fef;
+}
+.container .recruitment-apply {
+  width: 300px;
+}
+.container .recruitment-apply .modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container .recruitment-apply .modal-content .check {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.container .recruitment-apply .modal-content .check .title p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+}
+.container .recruitment-apply .modal-content .check .txt p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+  font-weight: 500;
+  font-size: 13px;
+  color: #555555;
+}
+.container .recruitment-apply .modal-content .choice {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.container .recruitment-apply .modal-content .choice .title p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+}
+.container .recruitment-apply .modal-content .choice .cv {
+  display: flex;
+  flex-direction: column;
+}
+.container .recruitment-apply .modal-content .choice .cv .profile {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  padding: 15px 10px;
+}
+.container .recruitment-apply .modal-content .choice .cv .profile .radio {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  width: 100%;
+}
+.container .recruitment-apply .modal-content .choice .cv .profile .radio .txt {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.container .recruitment-apply .modal-content .choice .cv .profile .radio .txt label p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+  font-weight: 500;
+}
+.container .recruitment-apply .modal-content .choice .cv .profile .radio .txt p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+  font-weight: 500;
+  font-size: 12px;
+  color: #555555;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.container .recruitment-apply .modal-content .choice .cv .profile .radio .txt p span {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+  font-weight: 500;
+  font-size: 12px;
+  color: #555555;
+}
+.container .recruitment-apply .modal-content .choice .cv .profile .buttons {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.container .recruitment-apply .modal-content .choice .cv .profile .buttons button {
+  padding: 3px 9px;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+  font-weight: 500;
+  font-size: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+}
+.container .recruitment-apply .modal-content .msg {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.container .recruitment-apply .modal-content .msg .title p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+}
+.container .recruitment-apply .modal-content .msg .msg-content {
+  position: relative;
+}
+.container .recruitment-apply .modal-content .msg .msg-content textarea {
+  width: 100%;
+  padding: 10px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+}
+.container .recruitment-apply .modal-content .msg .msg-content span {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+  font-weight: 500;
+  font-size: 12px;
+  color: #8b8b8b;
+}
+.container .recruitment-apply .modal-content .button {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .recruitment-apply .modal-content .button button {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  word-break: keep-all;
+  color: #242424;
+  color: #ffffff;
+}
+.container .recruitment-apply .modal-content .button button:first-child {
   background-color: #f6f4fc;
   border: 1px solid #5d5fef;
   color: #5d5fef;
@@ -3961,6 +4147,301 @@ main .notifications .tab-content .content.active span {
   font-size: 20px;
   color: #ff5959;
   cursor: pointer;
+}
+
+.mypage {
+  padding-bottom: 20px;
+}
+.mypage .mypage-wrap {
+  width: calc(100% + 40px);
+  margin: 0px -20px;
+  padding: 0px 20px;
+  background-color: #f6f4fc;
+  position: relative;
+}
+.mypage .mypage-wrap .topBox {
+  background-color: #5d5fef;
+  width: calc(100% + 40px);
+  margin: 0px -20px;
+  height: 230px;
+  padding: 50px 20px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.mypage .mypage-wrap .topBox .title,
+.mypage .mypage-wrap .topBox .icon {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  word-break: keep-all;
+  letter-spacing: 1.2px;
+  color: #242424;
+  line-height: 20px;
+  color: #ffffff;
+}
+.mypage .mypage-wrap .topBox .title span,
+.mypage .mypage-wrap .topBox .icon span {
+  font-size: 21px;
+}
+.mypage .mypage-wrap main {
+  position: relative;
+  top: -80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.mypage .mypage-wrap main .mypage-profile,
+.mypage .mypage-wrap main .mypageAll {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+  border-radius: 20px;
+  background-color: #ffffff;
+  padding: 20px 20px;
+}
+.mypage .mypage-wrap main .mypage-profile .img,
+.mypage .mypage-wrap main .mypageAll .img {
+  position: absolute;
+  top: -65px;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+}
+.mypage .mypage-wrap main .mypage-profile .img img,
+.mypage .mypage-wrap main .mypageAll .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.mypage .mypage-wrap main .mypage-profile .name,
+.mypage .mypage-wrap main .mypageAll .name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+.mypage .mypage-wrap main .mypage-profile .name p,
+.mypage .mypage-wrap main .mypageAll .name p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  word-break: keep-all;
+  letter-spacing: 1.1px;
+  color: #242424;
+  line-height: 20px;
+}
+.mypage .mypage-wrap main .mypage-profile .name p:last-child,
+.mypage .mypage-wrap main .mypageAll .name p:last-child {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  word-break: keep-all;
+  color: #555555;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+}
+.mypage .mypage-wrap main .mypage-profile .title,
+.mypage .mypage-wrap main .mypageAll .title {
+  margin-bottom: 10px;
+  width: 100%;
+}
+.mypage .mypage-wrap main .mypage-profile .title p,
+.mypage .mypage-wrap main .mypageAll .title p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+}
+.mypage .mypage-wrap main .mypage-profile .contents,
+.mypage .mypage-wrap main .mypageAll .contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.mypage .mypage-wrap main .mypage-profile .contents p,
+.mypage .mypage-wrap main .mypageAll .contents p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+}
+.mypage .mypage-wrap main .mypage-profile .contents span,
+.mypage .mypage-wrap main .mypageAll .contents span {
+  font-size: 14px;
+  color: #242424;
+}
+.mypage .mypage-wrap main .mypage-profile {
+  padding: 85px 20px 20px 20px;
+  align-items: center;
+}
+
+.mypage-setting .border {
+  border: 1px solid #f6f4fc;
+  margin: 0px 10px;
+}
+.mypage-setting .mypageAll {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+  border-radius: 20px;
+  background-color: #ffffff;
+  padding: 20px 20px;
+}
+.mypage-setting .mypageAll .title {
+  margin-bottom: 10px;
+  width: 100%;
+}
+.mypage-setting .mypageAll .title p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+}
+.mypage-setting .mypageAll .contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  /* 토글 스위치의 전체적인 스타일 */
+}
+.mypage-setting .mypageAll .contents .txt {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.mypage-setting .mypageAll .contents .txt p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+}
+.mypage-setting .mypageAll .contents .txt span {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+  font-size: 10px;
+  color: #8b8b8b;
+  line-height: 10px;
+}
+.mypage-setting .mypageAll .contents p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+  width: 100%;
+}
+.mypage-setting .mypageAll .contents span {
+  font-size: 14px;
+  color: #242424;
+}
+.mypage-setting .mypageAll .contents .version {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+  font-weight: 700;
+  color: #5d5fef;
+}
+.mypage-setting .mypageAll .contents .switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 15px;
+  /* 슬라이더 */
+  /* 슬라이더 상태 변화에 따른 스타일 변경 */
+}
+.mypage-setting .mypageAll .contents .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.mypage-setting .mypageAll .contents .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+.mypage-setting .mypageAll .contents .switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 1px;
+  bottom: 1px;
+  background-color: white;
+  transition: 0.4s;
+}
+.mypage-setting .mypageAll .contents .switch .slider.round {
+  border-radius: 15px;
+}
+.mypage-setting .mypageAll .contents .switch .slider.round:before {
+  border-radius: 50%;
+}
+.mypage-setting .mypageAll .contents .switch input:checked + .slider {
+  background-color: #5d5fef;
+}
+.mypage-setting .mypageAll .contents .switch input:checked + .slider:before {
+  transform: translateX(15px);
+}
+.mypage-setting .mypageAll .contents .switch input:focus + .slider {
+  box-shadow: 0 0 1px #5d5fef;
+}
+.mypage-setting .mypageAll .contents .edit {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.mypage-setting .mypageAll .contents .edit p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+}
+.mypage-setting .mypageAll .contents .edit button {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+  background-color: transparent;
+  color: #5d5fef;
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */
