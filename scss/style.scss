@@ -3587,7 +3587,6 @@ main {
 	gap: 30px;
 
 	padding-top: 30px;
-	
 
 	.check {
 		display: flex;
@@ -3714,7 +3713,7 @@ main {
 				background-color: $white;
 				border: 1px solid #ccc;
 
-				&:focus{
+				&:focus {
 					outline: none;
 				}
 			}
@@ -4085,6 +4084,7 @@ main {
 				display: flex;
 				flex-direction: column;
 				gap: 5px;
+				width: 100%;
 
 				p {
 					@include mypage-menu-contents;
@@ -4164,7 +4164,7 @@ main {
 
 					&:before {
 						transform: translateX(
-							15px
+							12px
 						); // 선택 시 내부 원의 이동 거리를 15px로 조정
 					}
 				}
@@ -4190,6 +4190,192 @@ main {
 					color: $main-color;
 					font-weight: 700;
 					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+// 마이페이지 - 리뷰
+
+.mypage-review {
+	background-color: $main-color02;
+
+	.wrap {
+		.mypage-review-main {
+			padding-bottom: 30px;
+			background-color: $main-color02;
+			gap: 20px;
+
+			.tabs {
+				width: calc(100% + 40px);
+				margin: 0 -20px;
+				padding: 20px;
+				display: flex;
+				flex-direction: column;
+				padding-bottom: 20px;
+				border-bottom: 2px solid $bg3;
+
+				background-color: $white;
+
+				gap: 20px;
+
+				.tab-titles {
+					display: flex;
+					align-items: center;
+					background-color: $bg;
+					border-radius: 50px;
+					gap: 10px;
+
+					p {
+						width: 100%;
+						text-align: center;
+						padding: 10px;
+						border-radius: 50px;
+						@include mypage-review-tab;
+
+						background-color: $bg;
+
+						&:first-child {
+							background-color: $main-color;
+							color: $white;
+							box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+						}
+					}
+				}
+			}
+
+			.review-menu{
+				width: calc(100% + 40px);
+				margin: 0 -20px;
+				margin-top: -20px;
+				padding: 10px 20px;
+				background-color: $white;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 10px;
+
+				p{
+					@include mypage-review-title;
+					color: $dark-grey1;
+
+					&:active,
+					&:focus{
+						font-weight: 700;
+						color: $main-color;
+						text-decoration: underline;
+					}
+				}
+			}
+
+			.filter {
+				display: flex;
+				justify-content: flex-end;
+				gap: 10px;
+
+				select {
+					padding: 7px 12px;
+					border-radius: 8px;
+					border: 1px solid #ccc;
+				}
+			}
+
+			.tab-content {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+
+				.review-wrap {
+					display: flex;
+					flex-direction: column;
+					gap: 10px;
+
+					.review {
+						width: 100%;
+						box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.1);
+
+						display: flex;
+						flex-direction: column;
+						gap: 10px;
+
+						padding: 10px 20px;
+
+						border-radius: 10px;
+
+						background-color: $white;
+
+						.review-profile {
+							width: 100%;
+							display: flex;
+							align-items: center;
+							justify-content: space-between;
+
+							.profile {
+								display: flex;
+								align-items: center;
+								gap: 15px;
+
+								img {
+									width: 60px;
+									height: 60px;
+									object-fit: cover;
+									border-radius: 50%;
+								}
+
+								.txt {
+									display: flex;
+									flex-direction: column;
+									align-items: flex-start;
+
+									.profile-name {
+										@include profile-name;
+									}
+
+									.review-date {
+										@include review-based;
+									}
+								}
+							}
+
+							.star {
+								font-size: 12px;
+								color: #ffd700;
+							}
+						}
+
+						.review-txt {
+							display: flex;
+							flex-direction: column;
+							gap: 10px;
+							width: 100%;
+
+							.title {
+								@include profile-txt-title;
+
+								span {
+									@include profile-txt-title;
+								}
+							}
+
+							p {
+								@include profile-txt;
+							}
+						}
+
+						.report {
+							display: flex;
+							justify-content: flex-end;
+
+							button {
+								background-color: transparent;
+
+								@include review-based;
+
+								cursor: pointer;
+							}
+						}
+					}
 				}
 			}
 		}

@@ -465,3 +465,21 @@
 	color: $dark-grey3;
 	line-height: 20px;
 }
+
+@mixin mypage-review-tab {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 700;
+	font-size: 12px;
+	word-break: keep-all;
+	color: $dark-grey3;
+	line-height: 20px;
+}
+
+@mixin mypage-review-title {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 500;
+	font-size: 12px;
+	word-break: keep-all;
+	color: $dark-grey3;
+	line-height: 20px;
+}

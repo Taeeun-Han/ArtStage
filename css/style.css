@@ -76,7 +76,7 @@
 .container .wrap .join .join-content .terms .all-agreed,
 .container .wrap .join .join-content .terms .terms-con {
   width: 100%;
-  background-color: #f4f4f4;
+  background-color: #f1f1f1;
   padding: 20px;
   border-radius: 10px;
   display: flex;
@@ -959,7 +959,7 @@ ul.nav .on i span {
   padding-bottom: 50px;
 }
 .login .wrap main .member {
-  background-color: #f4f4f4;
+  background-color: #f1f1f1;
   padding: 5px;
   border-radius: 10px;
   display: flex;
@@ -967,7 +967,7 @@ ul.nav .on i span {
 }
 .login .wrap main .member button {
   width: 100%;
-  background-color: #f4f4f4;
+  background-color: #f1f1f1;
   border-radius: 10px;
   padding: 9px 30px;
   border: none;
@@ -1226,7 +1226,7 @@ main .menu .menu-ul3 li {
 main .menu .menu-ul3 li .img {
   width: 50%;
   height: 100%;
-  background-color: #f4f4f4;
+  background-color: #f1f1f1;
 }
 main .menu .menu-ul3 li .img img {
   width: 100%;
@@ -1590,7 +1590,7 @@ main .notifications .tab-content .content.active span {
   background-color: #ffffff;
   border-radius: 10px;
   padding: 15px;
-  border: 1px solid #f4f4f4;
+  border: 1px solid #f1f1f1;
   cursor: pointer;
 }
 .profile-list .wrap .profile-list-main .profile-wrap .profile .title {
@@ -2758,7 +2758,7 @@ main .notifications .tab-content .content.active span {
   background-color: #ffffff;
   border-radius: 10px;
   padding: 15px;
-  border: 1px solid #f4f4f4;
+  border: 1px solid #f1f1f1;
   cursor: pointer;
 }
 .recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap .recruitment .title {
@@ -4085,7 +4085,7 @@ main .notifications .tab-content .content.active span {
   background-color: #ffffff;
   border-radius: 10px;
   padding: 15px;
-  border: 1px solid #f4f4f4;
+  border: 1px solid #f1f1f1;
   cursor: pointer;
 }
 .government-list .wrap .government-list-main .government-list-wrap .government .title {
@@ -4332,6 +4332,7 @@ main .notifications .tab-content .content.active span {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  width: 100%;
 }
 .mypage-setting .mypageAll .contents .txt p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
@@ -4418,7 +4419,7 @@ main .notifications .tab-content .content.active span {
   background-color: #5d5fef;
 }
 .mypage-setting .mypageAll .contents .switch input:checked + .slider:before {
-  transform: translateX(15px);
+  transform: translateX(12px);
 }
 .mypage-setting .mypageAll .contents .switch input:focus + .slider {
   box-shadow: 0 0 1px #5d5fef;
@@ -4448,6 +4449,192 @@ main .notifications .tab-content .content.active span {
   color: #5d5fef;
   font-weight: 700;
   text-decoration: underline;
+}
+
+.mypage-review {
+  background-color: #f9f9f9;
+}
+.mypage-review .wrap .mypage-review-main {
+  padding-bottom: 30px;
+  background-color: #f9f9f9;
+  gap: 20px;
+}
+.mypage-review .wrap .mypage-review-main .tabs {
+  width: calc(100% + 40px);
+  margin: 0 -20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #ECEEEF;
+  background-color: #ffffff;
+  gap: 20px;
+}
+.mypage-review .wrap .mypage-review-main .tabs .tab-titles {
+  display: flex;
+  align-items: center;
+  background-color: #f1f1f1;
+  border-radius: 50px;
+  gap: 10px;
+}
+.mypage-review .wrap .mypage-review-main .tabs .tab-titles p {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 50px;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+  background-color: #f1f1f1;
+}
+.mypage-review .wrap .mypage-review-main .tabs .tab-titles p:first-child {
+  background-color: #5d5fef;
+  color: #ffffff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.mypage-review .wrap .mypage-review-main .review-menu {
+  width: calc(100% + 40px);
+  margin: 0 -20px;
+  margin-top: -20px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.mypage-review .wrap .mypage-review-main .review-menu p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+  color: #555555;
+}
+.mypage-review .wrap .mypage-review-main .review-menu p:active, .mypage-review .wrap .mypage-review-main .review-menu p:focus {
+  font-weight: 700;
+  color: #5d5fef;
+  text-decoration: underline;
+}
+.mypage-review .wrap .mypage-review-main .filter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.mypage-review .wrap .mypage-review-main .filter select {
+  padding: 7px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.mypage-review .wrap .mypage-review-main .tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.mypage-review .wrap .mypage-review-main .tab-content .review-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.mypage-review .wrap .mypage-review-main .tab-content .review-wrap .review {
+  width: 100%;
+  box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+.mypage-review .wrap .mypage-review-main .tab-content .review-wrap .review .review-profile {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mypage-review .wrap .mypage-review-main .tab-content .review-wrap .review .review-profile .profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.mypage-review .wrap .mypage-review-main .tab-content .review-wrap .review .review-profile .profile img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.mypage-review .wrap .mypage-review-main .tab-content .review-wrap .review .review-profile .profile .txt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.mypage-review .wrap .mypage-review-main .tab-content .review-wrap .review .review-profile .profile .txt .profile-name {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  word-break: keep-all;
+  color: #242424;
+}
+.mypage-review .wrap .mypage-review-main .tab-content .review-wrap .review .review-profile .profile .txt .review-date {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 20px;
+  word-break: keep-all;
+  color: #8b8b8b;
+}
+.mypage-review .wrap .mypage-review-main .tab-content .review-wrap .review .review-profile .star {
+  font-size: 12px;
+  color: #ffd700;
+}
+.mypage-review .wrap .mypage-review-main .tab-content .review-wrap .review .review-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.mypage-review .wrap .mypage-review-main .tab-content .review-wrap .review .review-txt .title {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 20px;
+  word-break: keep-all;
+  color: #242424;
+}
+.mypage-review .wrap .mypage-review-main .tab-content .review-wrap .review .review-txt .title span {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 20px;
+  word-break: keep-all;
+  color: #242424;
+}
+.mypage-review .wrap .mypage-review-main .tab-content .review-wrap .review .review-txt p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 18px;
+  word-break: keep-all;
+  color: #242424;
+}
+.mypage-review .wrap .mypage-review-main .tab-content .review-wrap .review .report {
+  display: flex;
+  justify-content: flex-end;
+}
+.mypage-review .wrap .mypage-review-main .tab-content .review-wrap .review .report button {
+  background-color: transparent;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 20px;
+  word-break: keep-all;
+  color: #8b8b8b;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
