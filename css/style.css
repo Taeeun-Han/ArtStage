@@ -4453,9 +4453,13 @@ main .notifications .tab-content .content.active span {
 
 .mypage-review {
   background-color: #f9f9f9;
+  height: 100vh;
 }
 .mypage-review .wrap .mypage-review-main {
-  padding-bottom: 30px;
+  width: calc(100% + 40px);
+  margin: 0 -20px;
+  padding: 0px 20px;
+  padding-bottom: 120px;
   background-color: #f9f9f9;
   gap: 20px;
 }
@@ -4469,6 +4473,8 @@ main .notifications .tab-content .content.active span {
   border-bottom: 2px solid #ECEEEF;
   background-color: #ffffff;
   gap: 20px;
+  position: sticky;
+  top: 50px;
 }
 .mypage-review .wrap .mypage-review-main .tabs .tab-titles {
   display: flex;
@@ -4634,6 +4640,414 @@ main .notifications .tab-content .content.active span {
   line-height: 20px;
   word-break: keep-all;
   color: #8b8b8b;
+  cursor: pointer;
+}
+
+.mypage-favorite {
+  background-color: #f9f9f9;
+  height: 100vh;
+}
+.mypage-favorite .wrap .mypage-favorite-main {
+  width: calc(100% + 40px);
+  margin: 0 -20px;
+  padding: 0px 20px;
+  padding-bottom: 120px;
+  background-color: #f9f9f9;
+  gap: 20px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .category {
+  width: calc(100% + 40px);
+  margin-right: -20px;
+  margin-left: -20px;
+  background-color: #ffffff;
+  padding: 5px 0px;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 50px; /* 헤더의 높이를 고려한 값으로 조정 */
+  z-index: 1000; /* 다른 콘텐츠 위에 표시되도록 z-index 설정 */
+  background: white; /* 배경색을 설정하여 내용이 겹치지 않도록 함 */
+  border-bottom: 1px solid #ccc;
+}
+.mypage-favorite .wrap .mypage-favorite-main .category swiper-container {
+  width: 100%;
+  padding: 0px 15px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .category swiper-container swiper-slide {
+  width: auto;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .category swiper-container swiper-slide p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  word-break: keep-all;
+}
+.mypage-favorite .wrap .mypage-favorite-main .category swiper-container .on {
+  background-color: #f6f4fc;
+}
+.mypage-favorite .wrap .mypage-favorite-main .category swiper-container .on span {
+  color: #4424a8;
+}
+.mypage-favorite .wrap .mypage-favorite-main .category swiper-container .on p {
+  color: #4424a8;
+  font-weight: 700;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content {
+  display: flex;
+  flex-direction: column;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid #f1f1f1;
+  cursor: pointer;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .title p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  word-break: keep-all;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .title .review {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .title .review span {
+  font-size: 16px;
+  line-height: 18px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .title .review p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  word-break: keep-all;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .content {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .content .content-l {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .content .content-l .img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .content .content-l .img img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .content .content-l .name {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  word-break: keep-all;
+  color: #242424;
+  font-weight: 700;
+  font-size: 12px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .content .content-l .location {
+  margin-top: -8px;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  word-break: keep-all;
+  color: #242424;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  gap: 0px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .content .content-l .location span {
+  font-size: 14px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .content .txt {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .content .txt p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  word-break: keep-all;
+  color: #242424;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .content .txt .favorite {
+  display: flex;
+  justify-content: flex-end;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .content .txt .favorite span {
+  font-size: 20px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid #f1f1f1;
+  cursor: pointer;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .title {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .title p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  word-break: keep-all;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .title .badge {
+  padding: 6px 14px;
+  background-color: #ff5959;
+  color: #ffffff;
+  border-radius: 8px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .title .badge p {
+  font-size: 12px;
+  font-weight: 500;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .title .badge-com {
+  padding: 6px 14px;
+  background-color: #2f4f4f;
+  color: #ffffff;
+  border-radius: 8px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .title .badge-com p {
+  font-size: 12px;
+  font-weight: 500;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .content {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .content .content-l {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .content .content-l .img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .content .content-l .img img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .content .txt {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .content .txt > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .content .txt p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  word-break: keep-all;
+  color: #242424;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .content .txt .location {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  word-break: keep-all;
+  color: #242424;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .content .txt .location span {
+  font-size: 14px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .date {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .date p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  word-break: keep-all;
+  color: #242424;
+  color: #8b8b8b;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .date .favorite {
+  display: flex;
+  justify-content: flex-end;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .date .favorite span {
+  font-size: 20px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .government-list-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .government-list-wrap .government {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid #f1f1f1;
+  cursor: pointer;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .government-list-wrap .government .title {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .government-list-wrap .government .title p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  word-break: keep-all;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .government-list-wrap .government .content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .government-list-wrap .government .content .txt {
+  display: flex;
+  gap: 5px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .government-list-wrap .government .content .txt p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  word-break: keep-all;
+  color: #242424;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .government-list-wrap .government .content .location {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  word-break: keep-all;
+  color: #242424;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .government-list-wrap .government .content .location span {
+  font-size: 14px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .government-list-wrap .government .date {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .government-list-wrap .government .date p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  word-break: keep-all;
+  color: #242424;
+  color: #8b8b8b;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .government-list-wrap .government .date span {
+  font-size: 20px;
+  color: #ff5959;
   cursor: pointer;
 }
 

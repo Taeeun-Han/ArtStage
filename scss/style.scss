@@ -4197,13 +4197,16 @@ main {
 }
 
 // 마이페이지 - 리뷰
-
 .mypage-review {
 	background-color: $main-color02;
+	height: 100vh;
 
 	.wrap {
 		.mypage-review-main {
-			padding-bottom: 30px;
+			width: calc(100% + 40px);
+			margin: 0 -20px;
+			padding: 0px 20px;
+			padding-bottom: 120px;
 			background-color: $main-color02;
 			gap: 20px;
 
@@ -4219,6 +4222,9 @@ main {
 				background-color: $white;
 
 				gap: 20px;
+
+				position: sticky;
+				top: 50px;
 
 				.tab-titles {
 					display: flex;
@@ -4245,7 +4251,7 @@ main {
 				}
 			}
 
-			.review-menu{
+			.review-menu {
 				width: calc(100% + 40px);
 				margin: 0 -20px;
 				margin-top: -20px;
@@ -4256,12 +4262,12 @@ main {
 				align-items: center;
 				gap: 10px;
 
-				p{
+				p {
 					@include mypage-review-title;
 					color: $dark-grey1;
 
 					&:active,
-					&:focus{
+					&:focus {
 						font-weight: 700;
 						color: $main-color;
 						text-decoration: underline;
@@ -4372,6 +4378,428 @@ main {
 
 								@include review-based;
 
+								cursor: pointer;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// 마이페이지 - 찜 리스트
+.mypage-favorite {
+	background-color: $main-color02;
+	height: 100vh;
+
+	.wrap {
+		.mypage-favorite-main {
+			width: calc(100% + 40px);
+			margin: 0 -20px;
+			padding: 0px 20px;
+			padding-bottom: 120px;
+			background-color: $main-color02;
+			gap: 20px;
+
+			.category {
+				width: calc(100% + 40px);
+				margin-right: -20px;
+				margin-left: -20px;
+				background-color: $white;
+				padding: 5px 0px;
+
+				position: -webkit-sticky; /* Safari */
+				position: sticky;
+				top: 50px; /* 헤더의 높이를 고려한 값으로 조정 */
+				z-index: 1000; /* 다른 콘텐츠 위에 표시되도록 z-index 설정 */
+				background: white; /* 배경색을 설정하여 내용이 겹치지 않도록 함 */
+
+				border-bottom: 1px solid #ccc;
+
+				swiper-container {
+					width: 100%;
+					padding: 0px 15px;
+
+					swiper-slide {
+						width: auto;
+						padding: 10px;
+						border-radius: 10px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						gap: 5px;
+
+						p {
+							@include profile-add;
+						}
+					}
+
+					.on {
+						background-color: #f6f4fc;
+
+						span {
+							color: #4424a8;
+						}
+
+						p {
+							color: #4424a8;
+							font-weight: 700;
+						}
+					}
+				}
+			}
+
+			.tab-content {
+				display: flex;
+				flex-direction: column;
+
+				// 공연/예술인 프로필
+				.favorite-wrap {
+					display: flex;
+					flex-direction: column;
+					gap: 10px;
+
+					.profile-wrap {
+						display: flex;
+						flex-direction: column;
+						gap: 20px;
+
+						.profile {
+							display: flex;
+							flex-direction: column;
+							gap: 15px;
+							align-items: center;
+							background-color: $white;
+							border-radius: 10px;
+							padding: 15px;
+
+							border: 1px solid $bg;
+
+							cursor: pointer;
+
+							.title {
+								display: flex;
+								justify-content: space-between;
+								width: 100%;
+								align-items: center;
+
+								p {
+									@include profile-title;
+								}
+
+								.review {
+									display: flex;
+									align-items: center;
+									gap: 5px;
+
+									span {
+										font-size: 16px;
+										line-height: 18px;
+									}
+
+									p {
+										@include profile-title;
+									}
+								}
+							}
+
+							.content {
+								width: 100%;
+								display: flex;
+								gap: 15px;
+
+								.content-l {
+									display: flex;
+									flex-direction: column;
+									gap: 10px;
+									align-items: center;
+
+									.img {
+										width: 70px;
+										height: 70px;
+										border-radius: 50%;
+										overflow: hidden;
+										display: flex;
+										justify-content: center;
+										align-items: center;
+
+										img {
+											border-radius: 50%;
+											width: 100%;
+											height: 100%;
+											object-fit: cover;
+										}
+									}
+
+									.name {
+										@include profile-p;
+										font-weight: 700;
+										font-size: 12px;
+									}
+
+									.location {
+										margin-top: -8px;
+										@include profile-p;
+										font-size: 10px;
+
+										display: flex;
+										align-items: center;
+										gap: 0px;
+
+										span {
+											font-size: 14px;
+										}
+									}
+								}
+
+								.txt {
+									flex-grow: 1;
+
+									display: flex;
+									flex-direction: column;
+									justify-content: center;
+									gap: 5px;
+
+									p {
+										@include profile-p;
+									}
+
+									.favorite {
+										display: flex;
+										justify-content: flex-end;
+
+										span {
+											font-size: 20px;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+				// 공연 예술인 모집
+				.recruitment-result-wrap {
+					display: flex;
+					flex-direction: column;
+					gap: 10px;
+
+					.recruitment {
+						display: flex;
+						flex-direction: column;
+						gap: 10px;
+						align-items: center;
+						background-color: $white;
+						border-radius: 10px;
+						padding: 15px;
+
+						border: 1px solid $bg;
+
+						cursor: pointer;
+
+						.title {
+							display: flex;
+							width: 100%;
+							align-items: center;
+							gap: 10px;
+
+							p {
+								@include profile-title;
+							}
+
+							.badge {
+								padding: 6px 14px;
+								background-color: $red;
+								color: $white;
+								border-radius: 8px;
+								width: 70px;
+								display: flex;
+								justify-content: center;
+								align-items: center;
+
+								p {
+									font-size: 12px;
+									font-weight: 500;
+								}
+							}
+
+							.badge-com {
+								padding: 6px 14px;
+								background-color: $green;
+								color: $white;
+								border-radius: 8px;
+								width: 70px;
+								display: flex;
+								justify-content: center;
+								align-items: center;
+
+								p {
+									font-size: 12px;
+									font-weight: 500;
+								}
+							}
+						}
+
+						.content {
+							width: 100%;
+							display: flex;
+							gap: 15px;
+
+							.content-l {
+								display: flex;
+								flex-direction: column;
+								gap: 10px;
+								align-items: center;
+								justify-content: center;
+
+								.img {
+									width: 70px;
+									height: 70px;
+									border-radius: 50%;
+									overflow: hidden;
+									display: flex;
+									justify-content: center;
+									align-items: center;
+
+									img {
+										border-radius: 50%;
+										width: 100%;
+										height: 100%;
+										object-fit: cover;
+									}
+								}
+							}
+
+							.txt {
+								flex-grow: 1;
+
+								display: flex;
+								flex-direction: column;
+								justify-content: center;
+								gap: 7px;
+
+								> div {
+									display: flex;
+									align-items: center;
+									gap: 10px;
+								}
+
+								p {
+									@include profile-p;
+								}
+
+								.location {
+									@include profile-p;
+									font-size: 10px;
+
+									display: flex;
+									align-items: center;
+									gap: 3px;
+
+									span {
+										font-size: 14px;
+									}
+								}
+							}
+						}
+
+						.date {
+							width: 100%;
+							display: flex;
+							justify-content: flex-end;
+							align-items: center;
+							gap: 10px;
+
+							p {
+								@include profile-p;
+								color: $grey4;
+							}
+
+							.favorite {
+								display: flex;
+								justify-content: flex-end;
+
+								span {
+									font-size: 20px;
+								}
+							}
+						}
+					}
+				}
+
+				// 정부 공고
+				.government-list-wrap {
+					display: flex;
+					flex-direction: column;
+					gap: 10px;
+
+					.government {
+						display: flex;
+						flex-direction: column;
+						gap: 20px;
+						align-items: center;
+						background-color: $white;
+						border-radius: 10px;
+						padding: 15px;
+
+						border: 1px solid $bg;
+
+						cursor: pointer;
+
+						.title {
+							display: flex;
+							width: 100%;
+							align-items: center;
+							gap: 10px;
+
+							p {
+								@include profile-title;
+							}
+						}
+
+						.content {
+							width: 100%;
+							display: flex;
+							flex-direction: column;
+							gap: 10px;
+
+							.txt {
+								display: flex;
+								gap: 5px;
+
+								p {
+									@include profile-p;
+								}
+							}
+
+							.location {
+								@include profile-p;
+								display: flex;
+								align-items: center;
+								gap: 3px;
+
+								span {
+									font-size: 14px;
+								}
+							}
+						}
+
+						.date {
+							width: 100%;
+							display: flex;
+							align-items: center;
+							justify-content: space-between;
+							gap: 10px;
+
+							p {
+								@include profile-p;
+								color: $grey4;
+							}
+
+							span {
+								font-size: 20px;
+								color: $red;
 								cursor: pointer;
 							}
 						}
