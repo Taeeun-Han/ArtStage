@@ -336,183 +336,6 @@
   border: 1px solid #5d5fef;
   color: #5d5fef;
 }
-.container .recruitment-apply {
-  width: 300px;
-}
-.container .recruitment-apply .modal-content {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.container .recruitment-apply .modal-content .check {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-.container .recruitment-apply .modal-content .check .title p {
-  font-family: "Pretendard-Regular", Arial, sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  word-break: keep-all;
-  color: #242424;
-  line-height: 20px;
-}
-.container .recruitment-apply .modal-content .check .txt p {
-  font-family: "Pretendard-Regular", Arial, sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  word-break: keep-all;
-  color: #242424;
-  line-height: 20px;
-  font-weight: 500;
-  font-size: 13px;
-  color: #555555;
-}
-.container .recruitment-apply .modal-content .choice {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.container .recruitment-apply .modal-content .choice .title p {
-  font-family: "Pretendard-Regular", Arial, sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  word-break: keep-all;
-  color: #242424;
-  line-height: 20px;
-}
-.container .recruitment-apply .modal-content .choice .cv {
-  display: flex;
-  flex-direction: column;
-}
-.container .recruitment-apply .modal-content .choice .cv .profile {
-  display: flex;
-  align-items: flex-end;
-  gap: 5px;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-  padding: 15px 10px;
-}
-.container .recruitment-apply .modal-content .choice .cv .profile .radio {
-  display: flex;
-  align-items: center;
-  gap: 13px;
-  width: 100%;
-}
-.container .recruitment-apply .modal-content .choice .cv .profile .radio .txt {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-.container .recruitment-apply .modal-content .choice .cv .profile .radio .txt label p {
-  font-family: "Pretendard-Regular", Arial, sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  word-break: keep-all;
-  color: #242424;
-  line-height: 20px;
-  font-weight: 500;
-}
-.container .recruitment-apply .modal-content .choice .cv .profile .radio .txt p {
-  font-family: "Pretendard-Regular", Arial, sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  word-break: keep-all;
-  color: #242424;
-  line-height: 20px;
-  font-weight: 500;
-  font-size: 12px;
-  color: #555555;
-  display: flex;
-  align-items: center;
-  gap: 3px;
-}
-.container .recruitment-apply .modal-content .choice .cv .profile .radio .txt p span {
-  font-family: "Pretendard-Regular", Arial, sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  word-break: keep-all;
-  color: #242424;
-  line-height: 20px;
-  font-weight: 500;
-  font-size: 12px;
-  color: #555555;
-}
-.container .recruitment-apply .modal-content .choice .cv .profile .buttons {
-  display: flex;
-  align-items: center;
-  gap: 3px;
-}
-.container .recruitment-apply .modal-content .choice .cv .profile .buttons button {
-  padding: 3px 9px;
-  font-family: "Pretendard-Regular", Arial, sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  word-break: keep-all;
-  color: #242424;
-  line-height: 20px;
-  font-weight: 500;
-  font-size: 10px;
-  background-color: #ffffff;
-  border: 1px solid #ccc;
-}
-.container .recruitment-apply .modal-content .msg {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.container .recruitment-apply .modal-content .msg .title p {
-  font-family: "Pretendard-Regular", Arial, sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  word-break: keep-all;
-  color: #242424;
-  line-height: 20px;
-}
-.container .recruitment-apply .modal-content .msg .msg-content {
-  position: relative;
-}
-.container .recruitment-apply .modal-content .msg .msg-content textarea {
-  width: 100%;
-  padding: 10px;
-  height: 100px;
-  border-radius: 10px;
-  background-color: #ffffff;
-  border: 1px solid #ccc;
-}
-.container .recruitment-apply .modal-content .msg .msg-content span {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  font-family: "Pretendard-Regular", Arial, sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  word-break: keep-all;
-  color: #242424;
-  line-height: 20px;
-  font-weight: 500;
-  font-size: 12px;
-  color: #8b8b8b;
-}
-.container .recruitment-apply .modal-content .button {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  justify-content: space-between;
-}
-.container .recruitment-apply .modal-content .button button {
-  font-family: "Pretendard-Regular", Arial, sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  word-break: keep-all;
-  color: #242424;
-  color: #ffffff;
-}
-.container .recruitment-apply .modal-content .button button:first-child {
-  background-color: #f6f4fc;
-  border: 1px solid #5d5fef;
-  color: #5d5fef;
-}
 
 @font-face {
   font-family: "Pretendard-Regular";
@@ -3986,6 +3809,189 @@ main .notifications .tab-content .content.active span {
 .recruitment-view .wrap main .recruitment-cancel .cancel-box .txt li:last-child {
   font-weight: 700;
   text-decoration: underline;
+}
+
+.recruitment-apply {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 30px;
+}
+.recruitment-apply .check {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.recruitment-apply .check .title p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+}
+.recruitment-apply .check .txt p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+  font-weight: 500;
+  font-size: 13px;
+  color: #555555;
+}
+.recruitment-apply .choice {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.recruitment-apply .choice .title p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+}
+.recruitment-apply .choice .cv {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.recruitment-apply .choice .cv .profile {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  padding: 15px 10px;
+}
+.recruitment-apply .choice .cv .profile .radio {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  width: 100%;
+}
+.recruitment-apply .choice .cv .profile .radio .txt {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.recruitment-apply .choice .cv .profile .radio .txt label p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+  font-weight: 500;
+}
+.recruitment-apply .choice .cv .profile .radio .txt p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+  font-weight: 500;
+  font-size: 12px;
+  color: #555555;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.recruitment-apply .choice .cv .profile .radio .txt p span {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+  font-weight: 500;
+  font-size: 12px;
+  color: #555555;
+}
+.recruitment-apply .choice .cv .profile .buttons {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.recruitment-apply .choice .cv .profile .buttons button {
+  padding: 3px 9px;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+  font-weight: 500;
+  font-size: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+}
+.recruitment-apply .msg {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.recruitment-apply .msg .title p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+}
+.recruitment-apply .msg .msg-content {
+  position: relative;
+}
+.recruitment-apply .msg .msg-content textarea {
+  width: 100%;
+  padding: 10px;
+  height: 130px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+}
+.recruitment-apply .msg .msg-content textarea:focus {
+  outline: none;
+}
+.recruitment-apply .msg .msg-content span {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+  font-weight: 500;
+  font-size: 12px;
+  color: #8b8b8b;
+}
+.recruitment-apply .button {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+.recruitment-apply .button button {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  word-break: keep-all;
+  color: #242424;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+.recruitment-apply .button button:first-child {
+  background-color: #f6f4fc;
+  border: 1px solid #5d5fef;
+  color: #5d5fef;
 }
 
 .government-list {
