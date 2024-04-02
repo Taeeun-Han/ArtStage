@@ -501,3 +501,58 @@
 	color: $dark-grey3;
 	line-height: 20px;
 }
+
+@mixin mypage-notice-date {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 500;
+	font-size: 12px;
+	word-break: keep-all;
+	color: $grey4;
+	line-height: 20px;
+	letter-spacing: -0.5px;
+}
+
+@mixin mypage-notice-title {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 700;
+	font-size: 12px;
+	word-break: keep-all;
+	color: $dark-grey3;
+	line-height: 20px;
+}
+
+@mixin mypage-notice-content {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 500;
+	font-size: 13px;
+	word-break: keep-all;
+	color: $dark-grey3;
+	line-height: 20px;
+}
+
+@mixin terms {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 700;
+	font-size: 13px;
+	word-break: keep-all;
+	color: $dark-grey3;
+	line-height: 20px;
+}
+
+@mixin terms-content {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 500;
+	font-size: 14px;
+	word-break: keep-all;
+	color: $dark-grey3;
+	line-height: 20px;
+}
+
+@mixin apply-date {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 700;
+	font-size: 12px;
+	word-break: keep-all;
+	color: $dark-grey1;
+	line-height: 20px;
+}
