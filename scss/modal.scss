@@ -23,7 +23,7 @@
 
 		background-color: white;
 
-		padding: 0 20px 20px 20px;
+		padding: 0 20px 30px 20px;
 		border-radius: 10px;
 
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -183,6 +183,220 @@
 						border: 1px solid $main-color;
 						color: $main-color;
 					}
+				}
+			}
+		}
+	}
+
+	// 마이페이지 - 나의 신청 내역 - 상세 보기
+	.application {
+		width: 85%;
+
+		.modal-content {
+			.recruitment-apply {
+				display: flex;
+				flex-direction: column;
+				gap: 30px;
+				padding-top: 0px;
+
+				.status {
+					display: flex;
+
+					.badgeA,
+					.badgeB,
+					.badgeC,
+					.badgeD {
+						padding: 10px 15px;
+						background-color: #4caf50;
+						color: $white;
+						border-radius: 8px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+
+						p {
+							font-size: 12px;
+							font-weight: 500;
+							line-height: 11px;
+							color: $white;
+						}
+					}
+
+					.badgeB {
+						background-color: #c62828;
+					}
+
+					.badgeC {
+						background-color: #ffc107;
+					}
+
+					.badgeD {
+						background-color: #9e9e9e;
+					}
+				}
+
+				.check {
+					display: flex;
+					flex-direction: column;
+					gap: 5px;
+
+					.title {
+						p {
+							@include apply-title;
+						}
+					}
+
+					.txt {
+						p {
+							@include apply-title;
+							font-weight: 500;
+							font-size: 13px;
+							color: $dark-grey1;
+						}
+					}
+				}
+
+				.choice {
+					display: flex;
+					flex-direction: column;
+					gap: 10px;
+
+					.title {
+						p {
+							@include apply-title;
+						}
+					}
+
+					.cv {
+						display: flex;
+						flex-direction: column;
+						gap: 10px;
+
+						.profile {
+							display: flex;
+							align-items: center;
+							gap: 5px;
+
+							border-radius: 10px;
+							background-color: $main-color02;
+
+							padding: 15px;
+
+							border: 1px solid #ccc;
+
+							.radio {
+								display: flex;
+								align-items: center;
+								gap: 13px;
+								width: 100%;
+
+								.txt {
+									display: flex;
+									flex-direction: column;
+									align-items: center;
+									gap: 5px;
+
+									label {
+										p {
+											@include apply-title;
+											font-weight: 500;
+										}
+									}
+								}
+							}
+
+							.buttons {
+								display: flex;
+								align-items: center;
+								gap: 3px;
+
+								button {
+									padding: 3px 9px;
+									@include apply-title;
+									font-weight: 500;
+									font-size: 10px;
+									background-color: $white;
+									border: 1px solid #ccc;
+									border-radius: 7px;
+								}
+							}
+						}
+					}
+				}
+
+				.msg {
+					display: flex;
+					flex-direction: column;
+					gap: 10px;
+
+					.title {
+						p {
+							@include apply-title;
+						}
+					}
+
+					.msg-content {
+						border: 1px solid #ccc;
+						padding: 15px;
+						border-radius: 10px;
+						background-color: $main-color02;
+
+						p {
+							@include apply-title;
+							font-weight: 500;
+							font-size: 12px;
+							color: $dark-grey1;
+						}
+					}
+				}
+
+				.button {
+					display: flex;
+					gap: 10px;
+					align-items: center;
+					justify-content: space-between;
+
+					button {
+						@include modal-input;
+						color: $white;
+						border-radius: 10px;
+						padding: 10px 20px;
+
+						&:first-child {
+							background-color: $main-color-light;
+							border: 1px solid $main-color;
+							color: $main-color;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.modal-error {
+
+		.txt{
+			width: 100%;
+			text-align: center;
+			margin-bottom: 10px;
+		}
+
+		.button {
+			display: flex;
+			gap: 10px;
+			align-items: center;
+			justify-content: space-between;
+
+			button {
+				@include modal-input;
+				color: $white;
+				border-radius: 10px;
+				padding: 10px 20px;
+
+				&:first-child {
+					background-color: $main-color-light;
+					border: 1px solid $main-color;
+					color: $main-color;
 				}
 			}
 		}

@@ -5003,6 +5003,8 @@ main {
 			}
 
 			.q-answer {
+				width: 100%;
+
 				p {
 					@include mypage-qna-question;
 				}
@@ -5431,68 +5433,6 @@ main {
 	}
 }
 
-// 마이페이지 - 나의 신청 내역 - 상세 보기
-.mypage-apply-enter {
-	border: 1px solid red;
-
-	.wrap {
-		.mypage-apply-enter-main {
-			border: 1px solid orange;
-
-			.profile-container {
-				width: 100%;
-				background: $white;
-
-				box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-
-				border: 1px solid cornflowerblue;
-
-				table {
-					width: 100%;
-					border-collapse: collapse;
-					border: 1px solid seagreen;
-
-					th {
-						width: 60%;
-						font-weight: 800;
-						background-color: #eaeaea;
-						padding: 10px;
-					}
-
-					td {
-						width: 40%;
-						font-weight: 500;
-						padding: 10px;
-
-						.inner-table {
-							width: 100%;
-							border-collapse: collapse;
-							margin-top: 10px;
-							border: 1px solid red;
-
-							th,
-							td {
-								border: 1px solid #ddd;
-								padding: 8px;
-								text-align: left;
-							}
-							th {
-								background-color: #f9f9f9;
-							}
-						}
-					}
-				}
-
-				img {
-					width: 100px;
-					height: auto;
-					border-radius: 50%;
-				}
-			}
-		}
-	}
-}
-
 // 마이페이지 - 내 공연/예술인 모집 관리
 .mypage-recruitment-setting {
 	.wrap {
@@ -5868,6 +5808,163 @@ main {
 							}
 						}
 					}
+				}
+			}
+		}
+	}
+}
+
+// 마이페이지- 문의하기
+.mypage-ask {
+	.wrap {
+		.mypage-ask-main {
+			padding-top: 10px;
+			gap: 20px;
+
+			.button {
+				display: flex;
+				justify-content: flex-end;
+
+				button {
+					background-color: $main-color;
+					color: $white;
+					padding: 10px 20px;
+					border-radius: 10px;
+				}
+			}
+
+			.inquiry-table {
+				width: 100%;
+				border-collapse: collapse;
+
+				th,
+				td {
+					padding: 8px;
+					text-align: left;
+					@include ask-table;
+					text-align: center;
+				}
+
+				tr:nth-child(even) {
+					background-color: $main-color-light;
+				}
+
+				th {
+					background-color: $main-color;
+					color: white;
+					font-size: 13px;
+
+					&:nth-child(1) {
+						width: 10%;
+					}
+
+					&:nth-child(2) {
+						width: 50%;
+					}
+
+					&:nth-child(3) {
+						width: 30%;
+					}
+
+					&:nth-child(4) {
+						width: 10%;
+					}
+				}
+
+				td {
+					&:nth-child(3) {
+						font-size: 11px;
+					}
+				}
+			}
+
+			.ask {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				padding: 20px;
+				border: 1px solid #ccc;
+				border-radius: 10px;
+
+				.title,
+				.date {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+
+					p {
+						@include ask-table;
+						color: $dark-grey3;
+					}
+
+					span {
+						color: $dark-grey3;
+					}
+				}
+
+				.date {
+					p {
+						color: $grey4;
+						font-size: 12px;
+					}
+				}
+
+				.title {
+					p {
+						line-height: 20px;
+					}
+				}
+
+				.status-badge {
+					width: 23%;
+					padding: 8px 10px;
+					background-color: $red;
+					color: $white;
+					border-radius: 8px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					p {
+						font-size: 12px;
+						font-weight: 500;
+					}
+				}
+
+				.status-badge-comp {
+					background-color: $green;
+				}
+			}
+		}
+	}
+}
+
+// 마이페이지 - 문의하기 - 답변
+.mypage-ask-enter {
+	.wrap {
+		main {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 10px;
+
+			padding-top: 30px;
+
+			.date {
+				width: 100%;
+
+				p {
+					@include mypage-qna-question;
+					color: $grey4;
+				}
+			}
+
+			.q-answer {
+				width: 100%;
+
+				p {
+					@include mypage-qna-question;
 				}
 			}
 		}
