@@ -6212,43 +6212,6 @@ main .notifications .tab-content .content.active span {
   padding: 10px 20px;
   border-radius: 10px;
 }
-.mypage-ask .wrap .mypage-ask-main .inquiry-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-.mypage-ask .wrap .mypage-ask-main .inquiry-table th,
-.mypage-ask .wrap .mypage-ask-main .inquiry-table td {
-  padding: 8px;
-  text-align: left;
-  font-family: "Pretendard-Regular", Arial, sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  word-break: keep-all;
-  text-align: center;
-}
-.mypage-ask .wrap .mypage-ask-main .inquiry-table tr:nth-child(even) {
-  background-color: #f6f4fc;
-}
-.mypage-ask .wrap .mypage-ask-main .inquiry-table th {
-  background-color: #5d5fef;
-  color: white;
-  font-size: 13px;
-}
-.mypage-ask .wrap .mypage-ask-main .inquiry-table th:nth-child(1) {
-  width: 10%;
-}
-.mypage-ask .wrap .mypage-ask-main .inquiry-table th:nth-child(2) {
-  width: 50%;
-}
-.mypage-ask .wrap .mypage-ask-main .inquiry-table th:nth-child(3) {
-  width: 30%;
-}
-.mypage-ask .wrap .mypage-ask-main .inquiry-table th:nth-child(4) {
-  width: 10%;
-}
-.mypage-ask .wrap .mypage-ask-main .inquiry-table td:nth-child(3) {
-  font-size: 11px;
-}
 .mypage-ask .wrap .mypage-ask-main .ask {
   display: flex;
   flex-direction: column;
@@ -6304,14 +6267,52 @@ main .notifications .tab-content .content.active span {
 .mypage-ask-enter .wrap main {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  gap: 30px;
   padding-top: 30px;
 }
-.mypage-ask-enter .wrap main .date {
+.mypage-ask-enter .wrap main .ask,
+.mypage-ask-enter .wrap main .answer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.mypage-ask-enter .wrap main .ask .title,
+.mypage-ask-enter .wrap main .answer .title {
   width: 100%;
 }
-.mypage-ask-enter .wrap main .date p {
+.mypage-ask-enter .wrap main .ask .title p,
+.mypage-ask-enter .wrap main .answer .title p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+  font-weight: 700;
+}
+.mypage-ask-enter .wrap main .ask .txt,
+.mypage-ask-enter .wrap main .answer .txt {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.mypage-ask-enter .wrap main .ask .txt p,
+.mypage-ask-enter .wrap main .answer .txt p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  word-break: keep-all;
+  color: #242424;
+  line-height: 20px;
+}
+.mypage-ask-enter .wrap main .ask .date,
+.mypage-ask-enter .wrap main .answer .date {
+  margin-top: 10px;
+}
+.mypage-ask-enter .wrap main .ask .date p,
+.mypage-ask-enter .wrap main .answer .date p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 500;
   font-size: 13px;
@@ -6319,17 +6320,93 @@ main .notifications .tab-content .content.active span {
   color: #242424;
   line-height: 20px;
   color: #8b8b8b;
+  text-align: right;
+  font-size: 11px;
 }
-.mypage-ask-enter .wrap main .q-answer {
+.mypage-ask-enter .wrap main .border {
   width: 100%;
+  height: 3px;
+  background-color: #f6f4fc;
 }
-.mypage-ask-enter .wrap main .q-answer p {
+
+.mypage-ask-write .wrap main {
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+.mypage-ask-write .wrap main .ask-input,
+.mypage-ask-write .wrap main .ask-text,
+.mypage-ask-write .wrap main .ask-attach {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.mypage-ask-write .wrap main .ask-input .title p,
+.mypage-ask-write .wrap main .ask-text .title p,
+.mypage-ask-write .wrap main .ask-attach .title p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
-  font-weight: 500;
-  font-size: 13px;
+  font-weight: 700;
+  font-size: 14px;
   word-break: keep-all;
-  color: #242424;
-  line-height: 20px;
+}
+.mypage-ask-write .wrap main .ask-input .input,
+.mypage-ask-write .wrap main .ask-text .input,
+.mypage-ask-write .wrap main .ask-attach .input {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.mypage-ask-write .wrap main .ask-input textarea,
+.mypage-ask-write .wrap main .ask-text textarea,
+.mypage-ask-write .wrap main .ask-attach textarea {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+}
+.mypage-ask-write .wrap main .ask-input textarea:focus,
+.mypage-ask-write .wrap main .ask-text textarea:focus,
+.mypage-ask-write .wrap main .ask-attach textarea:focus {
+  outline: none;
+}
+.mypage-ask-write .wrap main .ask-input input[type=file],
+.mypage-ask-write .wrap main .ask-text input[type=file],
+.mypage-ask-write .wrap main .ask-attach input[type=file] {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  word-break: keep-all;
+  font-weight: 500;
+  font-size: 12px;
+}
+.mypage-ask-write .wrap main .info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.mypage-ask-write .wrap main .info li {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  word-break: keep-all;
+  font-weight: 500;
+  font-size: 12px;
+  color: #8b8b8b;
+  line-height: 18px;
+  letter-spacing: 0px;
+  position: relative;
+  margin-left: 15px;
+}
+.mypage-ask-write .wrap main .info li span {
+  text-decoration: underline;
+}
+.mypage-ask-write .wrap main .info li::before {
+  content: "▪";
+  position: absolute;
+  left: -15px;
 }
 
 /*# sourceMappingURL=style.css.map */
