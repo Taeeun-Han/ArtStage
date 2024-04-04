@@ -758,21 +758,23 @@ header .wrap {
 header .wrap .header-left,
 header .wrap .header-right {
   width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 header .wrap .header-left .icon,
 header .wrap .header-right .icon {
   width: 24px;
-}
-header .wrap .header-left .icon a,
-header .wrap .header-right .icon a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 24px;
 }
-header .wrap .header-left .icon a span,
-header .wrap .header-right .icon a span {
-  font-size: 18px;
+header .wrap .header-left .icon a,
+header .wrap .header-right .icon a {
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 header .wrap .img {
   width: 100px;
@@ -1109,9 +1111,8 @@ ul.nav .on i span {
 .login header > .wrap .header-left .icon a,
 .login header > .wrap .header-right .icon a {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  width: 24px;
 }
 .login header > .wrap .header-left .icon a span,
 .login header > .wrap .header-right .icon a span {
@@ -1270,10 +1271,10 @@ main .menu .menu-ul {
 }
 main .menu .menu-ul li {
   width: 30%;
-  padding: 10px;
   border-radius: 10px;
   transition: all 0.3s;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 main .menu .menu-ul li a {
   display: flex;
@@ -1288,7 +1289,14 @@ main .menu .menu-ul li a .img {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  background-color: white;
   border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(to bottom, #005ead, #92278f);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
 }
 main .menu .menu-ul li a .img img {
   width: 30px;
@@ -1308,7 +1316,7 @@ main .menu .menu-ul li:hover a {
   color: #ffffff;
 }
 main .menu .menu-ul li:nth-child(1) a .img {
-  background-color: #f4d5d9;
+  background-color: #ffffff;
 }
 main .menu .menu-ul li:nth-child(2) a .img {
   background-color: #dbecee;
@@ -4365,9 +4373,7 @@ main .notifications .tab-content .content.active span {
   color: #242424;
   color: #8b8b8b;
 }
-.government-list .wrap .government-list-main .government-list-wrap .government .date span {
-  font-size: 20px;
-  color: #ff5959;
+.government-list .wrap .government-list-main .government-list-wrap .government .date img {
   cursor: pointer;
 }
 

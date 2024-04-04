@@ -227,19 +227,21 @@ header {
 		.header-left,
 		.header-right {
 			width: 24px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
 			.icon {
 				width: 24px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
 
 				a {
+					width: 24px;
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					width: 24px;
-
-					span {
-						font-size: 18px;
-					}
 				}
 			}
 		}
@@ -621,9 +623,8 @@ ul.nav {
 
 					a {
 						display: flex;
-						justify-content: center;
+						justify-content: flex-start;
 						align-items: center;
-						width: 24px;
 
 						span {
 							font-size: 15px;
@@ -792,10 +793,10 @@ main {
 
 			li {
 				width: 30%;
-				padding: 10px;
 				border-radius: 10px;
 				transition: all 0.3s;
 				cursor: pointer;
+				margin-bottom: 20px;
 
 				a {
 					display: flex;
@@ -807,12 +808,20 @@ main {
 					.img {
 						width: 50px;
 						height: 50px;
-
 						display: flex;
 						justify-content: center;
 						align-items: center;
-
+						position: relative;
+						background-color: white;
 						border-radius: 10px;
+						overflow: hidden;
+
+						border: 2px solid transparent;
+
+						background-image: linear-gradient(#fff, #fff),
+							linear-gradient(to bottom, #005ead, #92278f);
+						background-origin: border-box;
+						background-clip: content-box, border-box;
 
 						img {
 							width: 30px;
@@ -836,7 +845,7 @@ main {
 				&:nth-child(1) {
 					a {
 						.img {
-							background-color: $main-li1;
+							background-color: $white;
 						}
 					}
 				}
@@ -3902,14 +3911,13 @@ main {
 						justify-content: space-between;
 						gap: 10px;
 
+
 						p {
 							@include profile-p;
 							color: $grey4;
 						}
 
-						span {
-							font-size: 20px;
-							color: $red;
+						img {
 							cursor: pointer;
 						}
 					}
