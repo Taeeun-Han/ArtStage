@@ -364,6 +364,14 @@
 	line-height: 18px;
 }
 
+@mixin recruitment-buttons {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 500;
+	font-size: 12px;
+	word-break: keep-all;
+	color: $dark-grey1;
+}
+
 @mixin ib-con-title {
 	font-family: "Pretendard-Regular", Arial, sans-serif;
 	font-weight: 700;
@@ -568,5 +576,20 @@
 	font-family: "Pretendard-Regular", Arial, sans-serif;
 	font-weight: 700;
 	font-size: 14px;
+	word-break: keep-all;
+}
+
+// 마이페이지 - 내 공연/예술인 모집 - 참가자 관리
+@mixin applicant-title {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 500;
+	font-size: 14px;
+	word-break: keep-all;
+}
+
+@mixin applicant-txt {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 500;
+	font-size: 13px;
 	word-break: keep-all;
 }

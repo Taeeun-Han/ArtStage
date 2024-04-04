@@ -5615,17 +5615,146 @@ main {
 					}
 				}
 
-				.date {
+				.bottom {
 					width: 100%;
 					display: flex;
-					justify-content: flex-end;
+					justify-content: space-between;
 					align-items: center;
-					gap: 10px;
+					margin-top: 5px;
 
-					p {
-						@include profile-p;
-						color: $grey4;
+					.date {
+						width: 100%;
+						display: flex;
+						justify-content: flex-start;
+						align-items: center;
+						gap: 10px;
+
+						p {
+							@include profile-p;
+							color: $grey4;
+						}
 					}
+
+					.buttons {
+						width: 100%;
+						display: flex;
+						justify-content: flex-end;
+						align-items: center;
+						gap: 10px;
+
+						button {
+							background-color: $white;
+							text-decoration: underline;
+							@include recruitment-buttons;
+
+							&:focus {
+								font-weight: 700;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// 마이페이지 - 내 공연/예술인 모집 - 참가자 관리
+.mypage-recruitment-applicant {
+	.wrap {
+		main {
+			padding-top: 20px;
+			gap: 20px;
+
+			.total-applicants {
+				width: 100%;
+				@include applicant-title;
+				text-align: right;
+				padding-right: 10px;
+			}
+
+			.participant-list {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+
+				.participant-header,
+				.participant {
+					display: flex;
+					justify-content: space-between;
+					padding: 10px;
+					border-radius: 8px;
+				}
+
+				.participant-header {
+					background-color: $main-color;
+					@include applicant-title;
+					color: $white;
+				}
+
+				.header-item,
+				.item {
+					flex: 1;
+					text-align: center;
+
+					&:first-child {
+						flex: 0 0 15%;
+					}
+
+					&:nth-child(2) {
+						flex: 0 0 25%;
+					}
+
+					&:nth-child(3) {
+						flex: 0 0 30%;
+					}
+
+					&:last-child {
+						flex: 0 0 30%;
+					}
+				}
+
+				.item {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					@include applicant-txt;
+					position: relative;
+				}
+
+				.participant {
+					background-color: $main-color-light;
+				}
+
+				a {
+					color: $main-color;
+					text-decoration: underline;
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+
+				select {
+					width: 100%;
+					border: 1px solid #ced4da;
+					border-radius: 8px;
+					padding: 8px;
+					background-color: #fff;
+
+					-webkit-appearance: none; /* 스타일을 위해 기본 디자인 제거 */
+					-moz-appearance: none;
+					appearance: none;
+
+					flex-grow: 1; /* select를 확장하여 화살표 옆에 표시 */
+					@include applicant-txt;
+				}
+
+				.arrow {
+					pointer-events: none;
+					position: absolute;
+					right: 8px; /* 우측 패딩과 일치 */
+
+					font-size: 20px;
 				}
 			}
 		}

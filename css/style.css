@@ -6003,14 +6003,21 @@ main .notifications .tab-content .content.active span {
 .mypage-recruitment-setting .wrap .recruitment-result-wrap .recruitment .content .txt .location span {
   font-size: 14px;
 }
-.mypage-recruitment-setting .wrap .recruitment-result-wrap .recruitment .date {
+.mypage-recruitment-setting .wrap .recruitment-result-wrap .recruitment .bottom {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+.mypage-recruitment-setting .wrap .recruitment-result-wrap .recruitment .bottom .date {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
   gap: 10px;
 }
-.mypage-recruitment-setting .wrap .recruitment-result-wrap .recruitment .date p {
+.mypage-recruitment-setting .wrap .recruitment-result-wrap .recruitment .bottom .date p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -6018,6 +6025,121 @@ main .notifications .tab-content .content.active span {
   word-break: keep-all;
   color: #242424;
   color: #8b8b8b;
+}
+.mypage-recruitment-setting .wrap .recruitment-result-wrap .recruitment .bottom .buttons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+.mypage-recruitment-setting .wrap .recruitment-result-wrap .recruitment .bottom .buttons button {
+  background-color: #ffffff;
+  text-decoration: underline;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  word-break: keep-all;
+  color: #555555;
+}
+.mypage-recruitment-setting .wrap .recruitment-result-wrap .recruitment .bottom .buttons button:focus {
+  font-weight: 700;
+}
+
+.mypage-recruitment-applicant .wrap main {
+  padding-top: 20px;
+  gap: 20px;
+}
+.mypage-recruitment-applicant .wrap main .total-applicants {
+  width: 100%;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  word-break: keep-all;
+  text-align: right;
+  padding-right: 10px;
+}
+.mypage-recruitment-applicant .wrap main .participant-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.mypage-recruitment-applicant .wrap main .participant-list .participant-header,
+.mypage-recruitment-applicant .wrap main .participant-list .participant {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 8px;
+}
+.mypage-recruitment-applicant .wrap main .participant-list .participant-header {
+  background-color: #5d5fef;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  word-break: keep-all;
+  color: #ffffff;
+}
+.mypage-recruitment-applicant .wrap main .participant-list .header-item,
+.mypage-recruitment-applicant .wrap main .participant-list .item {
+  flex: 1;
+  text-align: center;
+}
+.mypage-recruitment-applicant .wrap main .participant-list .header-item:first-child,
+.mypage-recruitment-applicant .wrap main .participant-list .item:first-child {
+  flex: 0 0 15%;
+}
+.mypage-recruitment-applicant .wrap main .participant-list .header-item:nth-child(2),
+.mypage-recruitment-applicant .wrap main .participant-list .item:nth-child(2) {
+  flex: 0 0 25%;
+}
+.mypage-recruitment-applicant .wrap main .participant-list .header-item:nth-child(3),
+.mypage-recruitment-applicant .wrap main .participant-list .item:nth-child(3) {
+  flex: 0 0 30%;
+}
+.mypage-recruitment-applicant .wrap main .participant-list .header-item:last-child,
+.mypage-recruitment-applicant .wrap main .participant-list .item:last-child {
+  flex: 0 0 30%;
+}
+.mypage-recruitment-applicant .wrap main .participant-list .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  word-break: keep-all;
+  position: relative;
+}
+.mypage-recruitment-applicant .wrap main .participant-list .participant {
+  background-color: #f6f4fc;
+}
+.mypage-recruitment-applicant .wrap main .participant-list a {
+  color: #5d5fef;
+  text-decoration: underline;
+}
+.mypage-recruitment-applicant .wrap main .participant-list a:hover {
+  text-decoration: underline;
+}
+.mypage-recruitment-applicant .wrap main .participant-list select {
+  width: 100%;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  padding: 8px;
+  background-color: #fff;
+  -webkit-appearance: none; /* 스타일을 위해 기본 디자인 제거 */
+  -moz-appearance: none;
+  appearance: none;
+  flex-grow: 1; /* select를 확장하여 화살표 옆에 표시 */
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  word-break: keep-all;
+}
+.mypage-recruitment-applicant .wrap main .participant-list .arrow {
+  pointer-events: none;
+  position: absolute;
+  right: 8px; /* 우측 패딩과 일치 */
+  font-size: 20px;
 }
 
 .mypage-profile .wrap .mypage-profile-main {
