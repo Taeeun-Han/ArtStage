@@ -651,6 +651,7 @@ input[type=password]::placeholder {
 .btn-wrap {
   z-index: 999;
   width: 100%;
+  height: 75px;
   position: fixed;
   bottom: 0;
   left: 50%;
@@ -772,16 +773,28 @@ header .wrap .header-right .icon {
 header .wrap .header-left .icon a,
 header .wrap .header-right .icon a {
   width: 24px;
+  height: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-header .wrap .img {
+header .wrap .header-left .icon a img,
+header .wrap .header-right .icon a img {
+  width: 70%;
+  height: 70%;
+}
+header .wrap .logo {
   width: 100px;
 }
-header .wrap .img a img {
+header .wrap .logo .icon {
   width: 100%;
-  object-fit: contain;
+}
+header .wrap .logo .icon a {
+  width: 100%;
+}
+header .wrap .logo .icon a img {
+  width: 100%;
+  height: 100%;
 }
 header .wrap .header-center .txt p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
@@ -800,22 +813,22 @@ header .wrap .header-center .txt p {
 }
 .search-bar input {
   width: 100%;
-  border-radius: 50px;
+  border-radius: 10px;
   padding: 12px 45px 12px 45px;
   font-size: 12px;
   font-weight: 500;
-  background-color: #fafafa;
+  background-color: #f9f9f9;
 }
 .search-bar input::placeholder {
   color: #e7e7e7;
 }
 .search-bar .searchImage {
-  width: 16px;
+  width: 17px;
   position: absolute;
   left: 15px;
 }
 .search-bar .deleteImage {
-  width: 14px;
+  width: 17px;
   position: absolute;
   right: 15px;
   cursor: pointer;
@@ -993,9 +1006,9 @@ ul.nav li a p {
   text-align: center;
   color: #8b8b8b;
 }
-ul.nav li a i span {
-  color: #8b8b8b;
-  font-size: 24px;
+ul.nav li a i img {
+  width: 22px;
+  height: 22px;
 }
 ul.nav .on {
   background-color: #5d5fef;
@@ -1258,10 +1271,22 @@ main .menu .main-title p {
   font-size: 14px;
   color: #242424;
 }
-main .menu .main-title p:nth-child(2) {
-  font-size: 10px;
+main .menu .main-title .delete-all {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+main .menu .main-title .delete-all p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  font-size: 11px;
   color: #8b8b8b;
   font-weight: 500;
+}
+main .menu .main-title .delete-all img {
+  width: 15px;
+  height: 15px;
 }
 main .menu .menu-ul {
   display: flex;
@@ -1496,9 +1521,9 @@ main .menu .more-btn p {
   text-align: center;
   line-height: 12px;
 }
-main .menu .more-btn span {
-  font-size: 18px;
-  line-height: 12px;
+main .menu .more-btn img {
+  width: 18px;
+  height: 18px;
 }
 main .menu .more-btn:hover {
   background-color: #2f31ea;
@@ -1547,28 +1572,19 @@ main .menu .main-content ul li {
   width: 100%;
   padding: 10px 5px;
   background-color: #ffffff;
-  font-family: "Pretendard-Regular", Arial, sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  word-break: keep-all;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 7px;
 }
-main .menu .main-content ul li span {
-  border: 1px solid #5d5fef;
-  width: 15px;
-  height: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #5d5fef;
-  color: #ffffff;
+main .menu .main-content ul li img {
+  width: 22px;
+  height: 22px;
+}
+main .menu .main-content ul li p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 500;
   font-size: 12px;
   word-break: keep-all;
-  font-size: 11px;
 }
 main .menu .search-history {
   display: flex;
@@ -1579,11 +1595,12 @@ main .menu .search-history {
 main .menu .search-history .search-history-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
-  border-radius: 50px;
-  padding: 10px 30px 10px 20px;
-  background-color: #f7f8fd;
+  gap: 5px;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
 }
 main .menu .search-history .search-history-content p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
@@ -1592,11 +1609,9 @@ main .menu .search-history .search-history-content p {
   word-break: keep-all;
   color: #8b8b8b;
 }
-main .menu .search-history .search-history-content span {
-  font-size: 14px;
-  color: #e7e7e7;
-  position: absolute;
-  right: 10px;
+main .menu .search-history .search-history-content img {
+  width: 13px;
+  height: 13px;
 }
 main .search {
   display: flex;
@@ -1653,7 +1668,7 @@ main .notifications .tab-content {
 main .notifications .tab-content .content {
   width: 100%;
   display: none;
-  background-color: #f7f8fd;
+  background-color: #f9f9f9;
   padding: 15px;
   border-radius: 15px;
 }
@@ -1686,9 +1701,9 @@ main .notifications .tab-content .content.active .txt p:nth-child(2) {
   color: #8b8b8b;
   font-size: 10px;
 }
-main .notifications .tab-content .content.active span {
-  font-size: 20px;
-  color: #e7e7e7;
+main .notifications .tab-content .content.active .delete {
+  width: 15px;
+  height: 15px;
 }
 
 .profile-list {
@@ -1717,15 +1732,16 @@ main .notifications .tab-content .content.active span {
 }
 .profile-list .wrap .profile-list-main .category swiper-container swiper-slide {
   width: auto;
-  padding: 10px;
+  padding: 8px 10px;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5px;
 }
-.profile-list .wrap .profile-list-main .category swiper-container swiper-slide span {
-  font-size: 18px;
+.profile-list .wrap .profile-list-main .category swiper-container swiper-slide img {
+  width: 18px;
+  height: 18px;
 }
 .profile-list .wrap .profile-list-main .category swiper-container swiper-slide p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
@@ -1833,11 +1849,11 @@ main .notifications .tab-content .content.active span {
 .profile-list .wrap .profile-list-main .profile-wrap .profile .title .review {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 7px;
 }
-.profile-list .wrap .profile-list-main .profile-wrap .profile .title .review span {
-  font-size: 16px;
-  line-height: 18px;
+.profile-list .wrap .profile-list-main .profile-wrap .profile .title .review img {
+  width: 16px;
+  height: 16px;
 }
 .profile-list .wrap .profile-list-main .profile-wrap .profile .title .review p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
@@ -1845,6 +1861,8 @@ main .notifications .tab-content .content.active span {
   font-size: 13px;
   line-height: 16px;
   word-break: keep-all;
+  height: 14px;
+  letter-spacing: 0.5px;
 }
 .profile-list .wrap .profile-list-main .profile-wrap .profile .content {
   width: 100%;
@@ -1893,10 +1911,20 @@ main .notifications .tab-content .content.active span {
   font-size: 10px;
   display: flex;
   align-items: center;
-  gap: 0px;
+  gap: 3px;
 }
-.profile-list .wrap .profile-list-main .profile-wrap .profile .content .content-l .location span {
-  font-size: 14px;
+.profile-list .wrap .profile-list-main .profile-wrap .profile .content .content-l .location img {
+  width: 14px;
+  height: 14px;
+}
+.profile-list .wrap .profile-list-main .profile-wrap .profile .content .content-l .location .location-name {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.profile-list .wrap .profile-list-main .profile-wrap .profile .content .content-l .location .location-name p,
+.profile-list .wrap .profile-list-main .profile-wrap .profile .content .content-l .location .location-name span {
+  height: 16px;
 }
 .profile-list .wrap .profile-list-main .profile-wrap .profile .content .txt {
   flex-grow: 1;
@@ -1917,6 +1945,10 @@ main .notifications .tab-content .content.active span {
   display: flex;
   justify-content: flex-end;
 }
+.profile-list .wrap .profile-list-main .profile-wrap .profile .content .txt .chat img {
+  width: 18px;
+  height: 18px;
+}
 
 .draft {
   width: calc(100% + 40px);
@@ -1926,7 +1958,7 @@ main .notifications .tab-content .content.active span {
   display: flex;
   justify-content: flex-end;
   padding: 15px 20px;
-  gap: 5px;
+  gap: 10px;
   border-bottom: 1px solid #ccc;
   position: -webkit-sticky; /* Safari */
   position: sticky;
@@ -1947,7 +1979,7 @@ main .notifications .tab-content .content.active span {
   cursor: pointer;
 }
 .draft button:nth-child(1) {
-  background-color: #f6f4fc;
+  background-color: #ffffff;
   color: #5d5fef;
 }
 .draft button:nth-child(2) {
@@ -2390,7 +2422,7 @@ main .notifications .tab-content .content.active span {
 }
 
 .profile-draft {
-  gap: 20px;
+  gap: 10px;
   padding-bottom: 0px;
   margin-top: 20px;
 }
@@ -2401,18 +2433,19 @@ main .notifications .tab-content .content.active span {
   background-color: #ffffff;
   border-radius: 10px;
   padding: 10px;
+  gap: 10px;
 }
 .profile-draft .profile-draft-wrap .img {
-  width: 50%;
+  width: 100px;
   height: 100px;
   background-color: #eee;
   border-radius: 10px;
 }
 .profile-draft .profile-draft-wrap .img img {
   border-radius: 10px;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
 }
 .profile-draft .profile-draft-wrap .content {
   width: 80%;
@@ -2426,6 +2459,17 @@ main .notifications .tab-content .content.active span {
   align-items: center;
   justify-content: space-between;
   padding: 0px 10px;
+}
+.profile-draft .profile-draft-wrap .content .major .txt,
+.profile-draft .profile-draft-wrap .content .save-date .txt {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.profile-draft .profile-draft-wrap .content .major .icon img,
+.profile-draft .profile-draft-wrap .content .save-date .icon img {
+  width: 18px;
+  height: 18px;
 }
 .profile-draft .profile-draft-wrap .content .major p,
 .profile-draft .profile-draft-wrap .content .save-date p {
@@ -2450,7 +2494,7 @@ main .notifications .tab-content .content.active span {
   cursor: pointer;
   background-color: #ffffff;
   border: 1px solid #5d5fef;
-  padding: 5px 15px;
+  padding: 5px 10px;
   border-radius: 5px;
 }
 .profile-draft .profile-draft-wrap .content .major .button button:hover, .profile-draft .profile-draft-wrap .content .major .button button:active,
@@ -2473,16 +2517,32 @@ main .notifications .tab-content .content.active span {
   margin-right: 0px;
   padding: 20px 20px;
 }
-.container-profile .profile-view-header .wrap .header-left .icon a span,
-.container-profile .profile-view-header .wrap .header-right .icon a span {
-  font-size: 21px;
-  border-radius: 50%;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.4);
+.container-profile .profile-view-header .wrap .header-left,
+.container-profile .profile-view-header .wrap .header-right {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
 }
-.container-profile .profile-view-header .wrap .header-left .icon a .heart-color,
-.container-profile .profile-view-header .wrap .header-right .icon a .heart-color {
-  color: #f03d3d;
+.container-profile .profile-view-header .wrap .header-left .icon,
+.container-profile .profile-view-header .wrap .header-right .icon {
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+}
+.container-profile .profile-view-header .wrap .header-left .icon a img,
+.container-profile .profile-view-header .wrap .header-right .icon a img {
+  width: 18px;
+  height: 18px;
+}
+.container-profile .profile-view-header .wrap .header-right {
+  justify-content: flex-end;
+}
+.container-profile .profile-view-header .wrap .header-right .icon a img {
+  width: 19px;
+  height: 19px;
 }
 .container-profile .profile-view-wrap {
   position: absolute;
@@ -2674,6 +2734,7 @@ main .notifications .tab-content .content.active span {
   font-size: 34px;
   word-break: keep-all;
   color: #242424;
+  letter-spacing: 1px;
 }
 .container-profile .profile-view-wrap main .review .review-grade .star-rating {
   font-size: 18px;
@@ -2784,8 +2845,15 @@ main .notifications .tab-content .content.active span {
 .container-profile .profile-view-wrap main .review .review-content .report {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+  height: 13px;
 }
 .container-profile .profile-view-wrap main .review .review-content .report button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
   background-color: transparent;
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 500;
@@ -2794,6 +2862,10 @@ main .notifications .tab-content .content.active span {
   word-break: keep-all;
   color: #8b8b8b;
   cursor: pointer;
+}
+.container-profile .profile-view-wrap main .review .review-content .report img {
+  width: 13px;
+  height: 13px;
 }
 
 .recruitment-list .wrap .recruitment-list-main {
@@ -2861,7 +2933,6 @@ main .notifications .tab-content .content.active span {
 
 .recruitment-result {
   background-color: #f6f4fc;
-  padding-bottom: 100px;
 }
 .recruitment-result .wrap .recruitment-result-main {
   gap: 15px;
@@ -2915,7 +2986,7 @@ main .notifications .tab-content .content.active span {
 .recruitment-result .wrap .recruitment-result-main form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 .recruitment-result .wrap .recruitment-result-main form .search-bar-option {
   display: flex;
@@ -2935,6 +3006,7 @@ main .notifications .tab-content .content.active span {
 .recruitment-result .wrap .recruitment-result-main form .search-bar-option .search-bar input {
   border-radius: 10px;
   padding: 10px 15px;
+  background-color: #ffffff;
 }
 .recruitment-result .wrap .recruitment-result-main form .search-option {
   width: 100%;
@@ -2989,7 +3061,7 @@ main .notifications .tab-content .content.active span {
   display: flex;
   width: 100%;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 .recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap .recruitment .title p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
@@ -3029,7 +3101,8 @@ main .notifications .tab-content .content.active span {
 .recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap .recruitment .content {
   width: 100%;
   display: flex;
-  gap: 15px;
+  gap: 20px;
+  align-items: flex-start;
 }
 .recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap .recruitment .content .content-l {
   display: flex;
@@ -3085,17 +3158,18 @@ main .notifications .tab-content .content.active span {
   align-items: center;
   gap: 3px;
 }
-.recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap .recruitment .content .txt .location span {
-  font-size: 14px;
+.recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap .recruitment .content .txt .location img {
+  width: 14px;
+  height: 14px;
 }
-.recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap .recruitment .date {
+.recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap .recruitment .content .txt .date {
   width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
-.recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap .recruitment .date p {
+.recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap .recruitment .content .txt .date p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -3103,6 +3177,11 @@ main .notifications .tab-content .content.active span {
   word-break: keep-all;
   color: #242424;
   color: #8b8b8b;
+  font-size: 11px;
+}
+.recruitment-result .wrap .recruitment-result-main .recruitment-result-wrap .recruitment .content .txt .date img {
+  width: 18px;
+  height: 18px;
 }
 
 .recruitment-add .wrap .recruitment-add-main {
@@ -3130,6 +3209,10 @@ main .notifications .tab-content .content.active span {
 .recruitment-add .wrap .recruitment-add-main .progress-bar ::-webkit-progress-value {
   background-color: #5d5fef;
   border-radius: 50px;
+}
+.recruitment-add .wrap .recruitment-add-main .progress-bar img {
+  width: 20px;
+  height: 20px;
 }
 .recruitment-add .wrap .recruitment-add-main .img {
   margin-top: 30px;
@@ -3565,6 +3648,7 @@ main .notifications .tab-content .content.active span {
 
 .recruitment-view {
   background-color: #f6f4fc;
+  padding-bottom: 74px;
 }
 .recruitment-view .wrap main {
   display: flex;
@@ -3628,12 +3712,17 @@ main .notifications .tab-content .content.active span {
   align-items: center;
   gap: 6px;
 }
-.recruitment-view .wrap main .recruitment-profile .badge-favorite-share .icon span {
-  font-size: 20px;
+.recruitment-view .wrap main .recruitment-profile .badge-favorite-share .icon .icon-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
   background-color: #ffffff;
-  padding: 8px;
-  border-radius: 10px;
-  color: #242424;
+  border-radius: 50%;
+}
+.recruitment-view .wrap main .recruitment-profile .badge-favorite-share .icon .icon-wrap img {
+  width: 22px;
+  height: 22px;
   cursor: pointer;
 }
 .recruitment-view .wrap main .recruitment-profile .title {
@@ -3710,7 +3799,7 @@ main .notifications .tab-content .content.active span {
   border-radius: 10px;
   padding: 10px;
 }
-.recruitment-view .wrap main .recruitment-profile .introduce-info .ib-con p:first-child {
+.recruitment-view .wrap main .recruitment-profile .introduce-info .ib-con p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 700;
   font-size: 13px;
@@ -3719,13 +3808,19 @@ main .notifications .tab-content .content.active span {
   line-height: 18px;
   color: #5d5fef;
 }
-.recruitment-view .wrap main .recruitment-profile .introduce-info .ib-con p:last-child {
+.recruitment-view .wrap main .recruitment-profile .introduce-info .ib-con .txt {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.recruitment-view .wrap main .recruitment-profile .introduce-info .ib-con .txt p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 500;
   font-size: 12px;
   word-break: keep-all;
   color: #242424;
   line-height: 18px;
+  color: #242424;
 }
 .recruitment-view .wrap main .tab {
   width: calc(100% + 40px);
@@ -3757,7 +3852,7 @@ main .notifications .tab-content .content.active span {
 .recruitment-view .wrap main .recruitment-contents {
   width: calc(100% + 40px);
   margin: 0px -20px;
-  padding: 0 20px;
+  padding: 0 20px 30px px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -3850,7 +3945,6 @@ main .notifications .tab-content .content.active span {
   gap: 20px;
   background-color: #ffffff;
   height: 100%;
-  margin-bottom: -60px;
 }
 .recruitment-view .wrap main .recruitment-review .review-grade {
   padding: 10px;
@@ -3978,8 +4072,15 @@ main .notifications .tab-content .content.active span {
 .recruitment-view .wrap main .recruitment-review .review-content .report {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+  height: 13px;
 }
 .recruitment-view .wrap main .recruitment-review .review-content .report button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
   background-color: transparent;
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 500;
@@ -3988,6 +4089,10 @@ main .notifications .tab-content .content.active span {
   word-break: keep-all;
   color: #8b8b8b;
   cursor: pointer;
+}
+.recruitment-view .wrap main .recruitment-review .review-content .report img {
+  width: 13px;
+  height: 13px;
 }
 .recruitment-view .wrap main .recruitment-cancel {
   width: calc(100% + 40px);
@@ -3999,7 +4104,7 @@ main .notifications .tab-content .content.active span {
 }
 .recruitment-view .wrap main .recruitment-cancel .cancel-box {
   padding: 10px;
-  margin: 20px 0px;
+  margin: 20px 0px 30px 0px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -4354,8 +4459,9 @@ main .notifications .tab-content .content.active span {
   align-items: center;
   gap: 3px;
 }
-.government-list .wrap .government-list-main .government-list-wrap .government .content .location span {
-  font-size: 14px;
+.government-list .wrap .government-list-main .government-list-wrap .government .content .location img {
+  width: 14px;
+  height: 14px;
 }
 .government-list .wrap .government-list-main .government-list-wrap .government .date {
   width: 100%;
@@ -4375,6 +4481,8 @@ main .notifications .tab-content .content.active span {
 }
 .government-list .wrap .government-list-main .government-list-wrap .government .date img {
   cursor: pointer;
+  width: 20px;
+  height: 20px;
 }
 
 .mypage {
@@ -4407,9 +4515,10 @@ main .notifications .tab-content .content.active span {
   line-height: 20px;
   color: #ffffff;
 }
-.mypage .mypage-wrap .topBox .title span,
-.mypage .mypage-wrap .topBox .icon span {
-  font-size: 21px;
+.mypage .mypage-wrap .topBox .title img,
+.mypage .mypage-wrap .topBox .icon img {
+  width: 18px;
+  height: 18px;
 }
 .mypage .mypage-wrap main {
   position: relative;
@@ -4485,7 +4594,7 @@ main .notifications .tab-content .content.active span {
 .mypage .mypage-wrap main .mypageAll .title p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 13px;
   word-break: keep-all;
   color: #242424;
   line-height: 20px;
@@ -4497,8 +4606,20 @@ main .notifications .tab-content .content.active span {
   align-items: center;
   width: 100%;
 }
-.mypage .mypage-wrap main .mypage-profile .contents p,
-.mypage .mypage-wrap main .mypageAll .contents p {
+.mypage .mypage-wrap main .mypage-profile .contents .contents-title,
+.mypage .mypage-wrap main .mypageAll .contents .contents-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.mypage .mypage-wrap main .mypage-profile .contents .contents-title img,
+.mypage .mypage-wrap main .mypageAll .contents .contents-title img {
+  width: 14px;
+  height: 14px;
+}
+.mypage .mypage-wrap main .mypage-profile .contents .contents-title p,
+.mypage .mypage-wrap main .mypageAll .contents .contents-title p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -4506,16 +4627,19 @@ main .notifications .tab-content .content.active span {
   color: #242424;
   line-height: 20px;
 }
-.mypage .mypage-wrap main .mypage-profile .contents span,
-.mypage .mypage-wrap main .mypageAll .contents span {
-  font-size: 14px;
-  color: #242424;
+.mypage .mypage-wrap main .mypage-profile .contents img,
+.mypage .mypage-wrap main .mypageAll .contents img {
+  width: 18px;
+  height: 18px;
 }
 .mypage .mypage-wrap main .mypage-profile {
   padding: 85px 20px 20px 20px;
   align-items: center;
 }
 
+.mypage-setting {
+  padding-top: 20px;
+}
 .mypage-setting .border {
   border: 1px solid #f6f4fc;
   margin: 0px 10px;
@@ -4527,9 +4651,9 @@ main .notifications .tab-content .content.active span {
   align-items: flex-start;
   gap: 20px;
   position: relative;
+  padding: 10px;
   border-radius: 20px;
   background-color: #ffffff;
-  padding: 20px 20px;
 }
 .mypage-setting .mypageAll .title {
   margin-bottom: 10px;
@@ -4538,7 +4662,7 @@ main .notifications .tab-content .content.active span {
 .mypage-setting .mypageAll .title p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 13px;
   word-break: keep-all;
   color: #242424;
   line-height: 20px;
@@ -4549,6 +4673,9 @@ main .notifications .tab-content .content.active span {
   align-items: center;
   width: 100%;
   /* 토글 스위치의 전체적인 스타일 */
+}
+.mypage-setting .mypageAll .contents:last-child {
+  align-items: flex-start;
 }
 .mypage-setting .mypageAll .contents .txt {
   display: flex;
@@ -4584,9 +4711,9 @@ main .notifications .tab-content .content.active span {
   line-height: 20px;
   width: 100%;
 }
-.mypage-setting .mypageAll .contents span {
-  font-size: 14px;
-  color: #242424;
+.mypage-setting .mypageAll .contents img {
+  width: 18px;
+  height: 18px;
 }
 .mypage-setting .mypageAll .contents .version {
   font-family: "Pretendard-Regular", Arial, sans-serif;
@@ -4854,8 +4981,15 @@ main .notifications .tab-content .content.active span {
 .mypage-review .wrap .mypage-review-main .tab-content .review-wrap .review .report {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+  height: 13px;
 }
 .mypage-review .wrap .mypage-review-main .tab-content .review-wrap .review .report button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
   background-color: transparent;
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 500;
@@ -4864,6 +4998,10 @@ main .notifications .tab-content .content.active span {
   word-break: keep-all;
   color: #8b8b8b;
   cursor: pointer;
+}
+.mypage-review .wrap .mypage-review-main .tab-content .review-wrap .review .report img {
+  width: 13px;
+  height: 13px;
 }
 
 .mypage-favorite {
@@ -4962,11 +5100,11 @@ main .notifications .tab-content .content.active span {
 .mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .title .review {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 7px;
 }
-.mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .title .review span {
-  font-size: 16px;
-  line-height: 18px;
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .title .review img {
+  width: 16px;
+  height: 16px;
 }
 .mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .title .review p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
@@ -4974,6 +5112,8 @@ main .notifications .tab-content .content.active span {
   font-size: 13px;
   line-height: 16px;
   word-break: keep-all;
+  height: 14px;
+  letter-spacing: 0.5px;
 }
 .mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .content {
   width: 100%;
@@ -5022,10 +5162,20 @@ main .notifications .tab-content .content.active span {
   font-size: 10px;
   display: flex;
   align-items: center;
-  gap: 0px;
+  gap: 3px;
 }
-.mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .content .content-l .location span {
-  font-size: 14px;
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .content .content-l .location img {
+  width: 14px;
+  height: 14px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .content .content-l .location .location-name {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .content .content-l .location .location-name p,
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .content .content-l .location .location-name span {
+  height: 16px;
 }
 .mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .content .txt {
   flex-grow: 1;
@@ -5042,12 +5192,13 @@ main .notifications .tab-content .content.active span {
   word-break: keep-all;
   color: #242424;
 }
-.mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .content .txt .favorite {
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .content .txt .chat {
   display: flex;
   justify-content: flex-end;
 }
-.mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .content .txt .favorite span {
-  font-size: 20px;
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .favorite-wrap .profile-wrap .profile .content .txt .chat img {
+  width: 18px;
+  height: 18px;
 }
 .mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap {
   display: flex;
@@ -5069,7 +5220,7 @@ main .notifications .tab-content .content.active span {
   display: flex;
   width: 100%;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 .mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .title p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
@@ -5109,7 +5260,8 @@ main .notifications .tab-content .content.active span {
 .mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .content {
   width: 100%;
   display: flex;
-  gap: 15px;
+  gap: 20px;
+  align-items: flex-start;
 }
 .mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .content .content-l {
   display: flex;
@@ -5165,17 +5317,18 @@ main .notifications .tab-content .content.active span {
   align-items: center;
   gap: 3px;
 }
-.mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .content .txt .location span {
-  font-size: 14px;
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .content .txt .location img {
+  width: 14px;
+  height: 14px;
 }
-.mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .date {
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .content .txt .date {
   width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
-.mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .date p {
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .content .txt .date p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -5183,13 +5336,11 @@ main .notifications .tab-content .content.active span {
   word-break: keep-all;
   color: #242424;
   color: #8b8b8b;
+  font-size: 11px;
 }
-.mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .date .favorite {
-  display: flex;
-  justify-content: flex-end;
-}
-.mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .date .favorite span {
-  font-size: 20px;
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .recruitment-result-wrap .recruitment .content .txt .date img {
+  width: 18px;
+  height: 18px;
 }
 .mypage-favorite .wrap .mypage-favorite-main .tab-content .government-list-wrap {
   display: flex;
@@ -5249,8 +5400,9 @@ main .notifications .tab-content .content.active span {
   align-items: center;
   gap: 3px;
 }
-.mypage-favorite .wrap .mypage-favorite-main .tab-content .government-list-wrap .government .content .location span {
-  font-size: 14px;
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .government-list-wrap .government .content .location img {
+  width: 14px;
+  height: 14px;
 }
 .mypage-favorite .wrap .mypage-favorite-main .tab-content .government-list-wrap .government .date {
   width: 100%;
@@ -5268,10 +5420,10 @@ main .notifications .tab-content .content.active span {
   color: #242424;
   color: #8b8b8b;
 }
-.mypage-favorite .wrap .mypage-favorite-main .tab-content .government-list-wrap .government .date span {
-  font-size: 20px;
-  color: #ff5959;
+.mypage-favorite .wrap .mypage-favorite-main .tab-content .government-list-wrap .government .date img {
   cursor: pointer;
+  width: 20px;
+  height: 20px;
 }
 
 .mypage-qna {
@@ -5419,8 +5571,14 @@ main .notifications .tab-content .content.active span {
   color: #242424;
   line-height: 20px;
 }
-.mypage-qna .wrap .mypage-qna-main .contents .qna-list ul li .qna-enter span {
-  font-size: 20px;
+.mypage-qna .wrap .mypage-qna-main .contents .qna-list ul li .qna-enter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mypage-qna .wrap .mypage-qna-main .contents .qna-list ul li .qna-enter img {
+  width: 18px;
+  height: 18px;
 }
 
 .mypage-qna-enter .wrap main {
@@ -5471,10 +5629,10 @@ main .notifications .tab-content .content.active span {
   padding: 20px;
   border-radius: 20px;
 }
-.mypage-notice .wrap .mypage-notice-main .notice .icon span,
-.mypage-notice .wrap .mypage-notice-main .notice .enter span {
-  font-size: 28px;
-  color: #8b8b8b;
+.mypage-notice .wrap .mypage-notice-main .notice .icon img,
+.mypage-notice .wrap .mypage-notice-main .notice .enter img {
+  width: 20px;
+  height: 20px;
 }
 .mypage-notice .wrap .mypage-notice-main .notice .txt {
   display: flex;
@@ -5577,8 +5735,9 @@ main .notifications .tab-content .content.active span {
   color: #242424;
   line-height: 20px;
 }
-.mypage-terms .wrap .mypage-terms-main .terms .content span {
-  font-size: 20px;
+.mypage-terms .wrap .mypage-terms-main .terms .content img {
+  width: 18px;
+  height: 18px;
 }
 
 .mypage-terms01 .wrap .mypage-terms01-main {
@@ -5704,7 +5863,7 @@ main .notifications .tab-content .content.active span {
 .mypage-apply .wrap .mypage-apply-main .mypage-apply-content .mypage-recruitment .recruitment-wrap .recruitment .title .badgeB,
 .mypage-apply .wrap .mypage-apply-main .mypage-apply-content .mypage-recruitment .recruitment-wrap .recruitment .title .badgeC,
 .mypage-apply .wrap .mypage-apply-main .mypage-apply-content .mypage-recruitment .recruitment-wrap .recruitment .title .badgeD {
-  padding: 6px 14px;
+  padding: 8px 16px;
   background-color: #4caf50;
   color: #ffffff;
   border-radius: 8px;
@@ -5809,9 +5968,9 @@ main .notifications .tab-content .content.active span {
   gap: 3px;
   line-height: 11px;
 }
-.mypage-apply .wrap .mypage-apply-main .mypage-apply-content .mypage-recruitment .recruitment-wrap .recruitment .content .txt .location span {
-  font-size: 14px;
-  line-height: 0px;
+.mypage-apply .wrap .mypage-apply-main .mypage-apply-content .mypage-recruitment .recruitment-wrap .recruitment .content .txt .location img {
+  width: 14px;
+  height: 14px;
 }
 .mypage-apply .wrap .mypage-apply-main .mypage-apply-content .mypage-recruitment .recruitment-wrap .recruitment .more {
   width: 100%;
@@ -5833,7 +5992,7 @@ main .notifications .tab-content .content.active span {
   cursor: pointer;
 }
 .mypage-apply .wrap .mypage-apply-main .mypage-apply-content .mypage-recruitment::before {
-  content: url("../img/Ellipse.svg");
+  content: url("../img/icon/Ellipse.svg");
   position: absolute;
   left: -5px;
   top: -7px;
@@ -5903,14 +6062,14 @@ main .notifications .tab-content .content.active span {
   background-color: #ffffff;
   border-radius: 10px;
   padding: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #f1f1f1;
   cursor: pointer;
 }
 .mypage-recruitment-setting .wrap .recruitment-result-wrap .recruitment .title {
   display: flex;
   width: 100%;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 .mypage-recruitment-setting .wrap .recruitment-result-wrap .recruitment .title p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
@@ -5950,7 +6109,8 @@ main .notifications .tab-content .content.active span {
 .mypage-recruitment-setting .wrap .recruitment-result-wrap .recruitment .content {
   width: 100%;
   display: flex;
-  gap: 15px;
+  gap: 20px;
+  align-items: flex-start;
 }
 .mypage-recruitment-setting .wrap .recruitment-result-wrap .recruitment .content .content-l {
   display: flex;
@@ -6006,24 +6166,17 @@ main .notifications .tab-content .content.active span {
   align-items: center;
   gap: 3px;
 }
-.mypage-recruitment-setting .wrap .recruitment-result-wrap .recruitment .content .txt .location span {
-  font-size: 14px;
+.mypage-recruitment-setting .wrap .recruitment-result-wrap .recruitment .content .txt .location img {
+  width: 14px;
+  height: 14px;
 }
-.mypage-recruitment-setting .wrap .recruitment-result-wrap .recruitment .bottom {
-  width: 100%;
+.mypage-recruitment-setting .wrap .recruitment-result-wrap .recruitment .content .txt .bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 5px;
+  margin-top: 3px;
 }
-.mypage-recruitment-setting .wrap .recruitment-result-wrap .recruitment .bottom .date {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 10px;
-}
-.mypage-recruitment-setting .wrap .recruitment-result-wrap .recruitment .bottom .date p {
+.mypage-recruitment-setting .wrap .recruitment-result-wrap .recruitment .content .txt .bottom .date p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -6031,25 +6184,24 @@ main .notifications .tab-content .content.active span {
   word-break: keep-all;
   color: #242424;
   color: #8b8b8b;
+  font-size: 11px;
 }
-.mypage-recruitment-setting .wrap .recruitment-result-wrap .recruitment .bottom .buttons {
-  width: 100%;
+.mypage-recruitment-setting .wrap .recruitment-result-wrap .recruitment .content .txt .bottom .buttons {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  gap: 10px;
+  gap: 6px;
 }
-.mypage-recruitment-setting .wrap .recruitment-result-wrap .recruitment .bottom .buttons button {
-  background-color: #ffffff;
+.mypage-recruitment-setting .wrap .recruitment-result-wrap .recruitment .content .txt .bottom .buttons button {
   text-decoration: underline;
+  background-color: #ffffff;
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 500;
   font-size: 12px;
+  line-height: 18px;
   word-break: keep-all;
-  color: #555555;
-}
-.mypage-recruitment-setting .wrap .recruitment-result-wrap .recruitment .bottom .buttons button:focus {
-  font-weight: 700;
+  color: #242424;
+  color: #8b8b8b;
+  font-size: 12px;
 }
 
 .mypage-recruitment-applicant .wrap main {
@@ -6212,7 +6364,6 @@ main .notifications .tab-content .content.active span {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding-top: 10px;
 }
 .mypage-profile .wrap .mypage-profile-main .profile-wrap .profile {
   display: flex;
@@ -6222,7 +6373,7 @@ main .notifications .tab-content .content.active span {
   background-color: #ffffff;
   border-radius: 10px;
   padding: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #f1f1f1;
   cursor: pointer;
 }
 .mypage-profile .wrap .mypage-profile-main .profile-wrap .profile .title {
@@ -6241,11 +6392,11 @@ main .notifications .tab-content .content.active span {
 .mypage-profile .wrap .mypage-profile-main .profile-wrap .profile .title .review {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 7px;
 }
-.mypage-profile .wrap .mypage-profile-main .profile-wrap .profile .title .review span {
-  font-size: 16px;
-  line-height: 18px;
+.mypage-profile .wrap .mypage-profile-main .profile-wrap .profile .title .review img {
+  width: 16px;
+  height: 16px;
 }
 .mypage-profile .wrap .mypage-profile-main .profile-wrap .profile .title .review p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
@@ -6253,6 +6404,8 @@ main .notifications .tab-content .content.active span {
   font-size: 13px;
   line-height: 16px;
   word-break: keep-all;
+  height: 14px;
+  letter-spacing: 0.5px;
 }
 .mypage-profile .wrap .mypage-profile-main .profile-wrap .profile .content {
   width: 100%;
@@ -6301,10 +6454,20 @@ main .notifications .tab-content .content.active span {
   font-size: 10px;
   display: flex;
   align-items: center;
-  gap: 0px;
+  gap: 3px;
 }
-.mypage-profile .wrap .mypage-profile-main .profile-wrap .profile .content .content-l .location span {
-  font-size: 14px;
+.mypage-profile .wrap .mypage-profile-main .profile-wrap .profile .content .content-l .location img {
+  width: 14px;
+  height: 14px;
+}
+.mypage-profile .wrap .mypage-profile-main .profile-wrap .profile .content .content-l .location .location-name {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.mypage-profile .wrap .mypage-profile-main .profile-wrap .profile .content .content-l .location .location-name p,
+.mypage-profile .wrap .mypage-profile-main .profile-wrap .profile .content .content-l .location .location-name span {
+  height: 16px;
 }
 .mypage-profile .wrap .mypage-profile-main .profile-wrap .profile .content .txt {
   flex-grow: 1;
@@ -6324,6 +6487,10 @@ main .notifications .tab-content .content.active span {
 .mypage-profile .wrap .mypage-profile-main .profile-wrap .profile .content .txt .chat {
   display: flex;
   justify-content: flex-end;
+}
+.mypage-profile .wrap .mypage-profile-main .profile-wrap .profile .content .txt .chat img {
+  width: 18px;
+  height: 18px;
 }
 
 .mypage-ask .wrap .mypage-ask-main {
@@ -6374,6 +6541,10 @@ main .notifications .tab-content .content.active span {
 .mypage-ask .wrap .mypage-ask-main .ask .title p {
   line-height: 20px;
 }
+.mypage-ask .wrap .mypage-ask-main .ask .title img {
+  width: 22px;
+  height: 22px;
+}
 .mypage-ask .wrap .mypage-ask-main .ask .status-badge {
   width: 23%;
   padding: 8px 10px;
@@ -6389,7 +6560,18 @@ main .notifications .tab-content .content.active span {
   font-weight: 500;
 }
 .mypage-ask .wrap .mypage-ask-main .ask .status-badge-comp {
+  width: 23%;
+  padding: 8px 10px;
   background-color: #2f4f4f;
+  color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mypage-ask .wrap .mypage-ask-main .ask .status-badge-comp p {
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .mypage-ask-enter .wrap main {

@@ -40,9 +40,7 @@
                 <div class="header-left">
                     <div class="icon">
                         <a href="#">
-                            <span class="material-symbols-outlined">
-                                arrow_back_ios_new
-                            </span>
+                            <img src="../img/icon/header-icon/arrow-left-black.svg" alt="뒤로가기">
                         </a>
                     </div>
                 </div>
@@ -90,12 +88,12 @@
                     <div class="favorite-wrap">
 
                         <!-- 공연/예술인 프로필 -->
-                        <div class="profile-wrap" style="display: none;">
+                        <div class="profile-wrap">
                             <div class="profile">
                                 <div class="title">
                                     <p>소개 텍스트</p>
                                     <div class="review">
-                                        <span class="material-symbols-outlined">kid_star</span>
+                                        <img src="../img/icon/star.svg" alt="리뷰평점">
                                         <p>4.7</p>
                                     </div>
                                 </div>
@@ -108,17 +106,26 @@
                                             <p>이름</p>
                                         </div>
                                         <div class="location">
-                                            <span class="material-symbols-outlined">location_on</span>
-                                            <p>활동지역</p>
+                                            <img src="../img/icon/location.svg" alt="장소">
+
+                                            <div class="location-name">
+                                                <p>서울</p>
+                                                <span>|</span>
+                                                <p>경기</p>
+                                            </div>
+
                                         </div>
                                     </div>
                                     <div class="txt">
-                                        <p>분야</p>
-                                        <p>소속</p>
-                                        <p>직업</p>
-                                        <p>주전공</p>
-                                        <div class="favorite">
-                                            <span class="material-symbols-outlined">favorite</span>
+                                        <p th:text="${profile.fieldName}">분야</p>
+                                        <p th:text="${profile.affiliation}">소속</p>
+                                        <p th:text="${profile.professionName}">직업</p>
+                                        <p th:text="${profile.majorName}">주전공</p>
+                                        <div class="chat">
+                                            <img src="../img/icon/heart.svg" alt="좋아요버튼">
+
+                                            <!-- 좋아요 버튼 눌렀을 때 -->
+                                            <!-- <img src="../img/icon/heart-fill.svg" alt="좋아요버튼"> -->
                                         </div>
                                     </div>
                                 </div>
@@ -128,7 +135,7 @@
                                 <div class="title">
                                     <p>소개 텍스트</p>
                                     <div class="review">
-                                        <span class="material-symbols-outlined">kid_star</span>
+                                        <img src="../img/icon/star.svg" alt="리뷰평점">
                                         <p>4.7</p>
                                     </div>
                                 </div>
@@ -141,17 +148,26 @@
                                             <p>이름</p>
                                         </div>
                                         <div class="location">
-                                            <span class="material-symbols-outlined">location_on</span>
-                                            <p>활동지역</p>
+                                            <img src="../img/icon/location.svg" alt="장소">
+
+                                            <div class="location-name">
+                                                <p>서울</p>
+                                                <span>|</span>
+                                                <p>경기</p>
+                                            </div>
+
                                         </div>
                                     </div>
                                     <div class="txt">
-                                        <p>분야</p>
-                                        <p>소속</p>
-                                        <p>직업</p>
-                                        <p>주전공</p>
-                                        <div class="favorite">
-                                            <span class="material-symbols-outlined">favorite</span>
+                                        <p th:text="${profile.fieldName}">분야</p>
+                                        <p th:text="${profile.affiliation}">소속</p>
+                                        <p th:text="${profile.professionName}">직업</p>
+                                        <p th:text="${profile.majorName}">주전공</p>
+                                        <div class="chat">
+                                            <img src="../img/icon/heart.svg" alt="좋아요버튼">
+
+                                            <!-- 좋아요 버튼 눌렀을 때 -->
+                                            <!-- <img src="../img/icon/heart-fill.svg" alt="좋아요버튼"> -->
                                         </div>
                                     </div>
                                 </div>
@@ -172,7 +188,7 @@
                                 <div class="content">
                                     <div class="content-l">
                                         <div class="img">
-                                            <img src="./img/img/로고.png" alt="로고">
+                                            <img src="../img/img/로고.png" alt="로고">
                                         </div>
                                     </div>
                                     <div class="txt">
@@ -186,19 +202,20 @@
                                         </div>
 
                                         <div class="location">
-                                            <span class="material-symbols-outlined">location_on</span>
-                                            <p>서울 | 경기 | 인천</p>
+                                            <img src="../img/icon/location.svg" alt="장소">
+                                            <p>서울</p>
+                                            <p>|</p>
+                                            <p>경기</p>
+                                        </div>
+
+                                        <div class="date">
+                                            <p>~ 2024. 04. 17</p>
+                                            <img src="../img/icon/heart.svg" alt="좋아요버튼">
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="date">
-                                    <p>~ 2024. 04. 17</p>
 
-                                    <div class="favorite">
-                                        <span class="material-symbols-outlined">favorite</span>
-                                    </div>
-                                </div>
                             </div>
 
                             <div class="recruitment">
@@ -212,7 +229,7 @@
                                 <div class="content">
                                     <div class="content-l">
                                         <div class="img">
-                                            <img src="./img/img/로고.png" alt="로고">
+                                            <img src="../img/img/로고.png" alt="로고">
                                         </div>
                                     </div>
                                     <div class="txt">
@@ -226,25 +243,26 @@
                                         </div>
 
                                         <div class="location">
-                                            <span class="material-symbols-outlined">location_on</span>
-                                            <p>서울 | 경기 | 인천</p>
+                                            <img src="../img/icon/location.svg" alt="장소">
+                                            <p>서울</p>
+                                            <p>|</p>
+                                            <p>경기</p>
+                                        </div>
+
+                                        <div class="date">
+                                            <p>~ 2024. 04. 17</p>
+                                            <img src="../img/icon/heart.svg" alt="좋아요버튼">
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="date">
-                                    <p>~ 2024. 04. 17</p>
 
-                                    <div class="favorite">
-                                        <span class="material-symbols-outlined">favorite</span>
-                                    </div>
-                                </div>
                             </div>
                         </div>
 
 
                         <!-- 정부 공고 -->
-                        <div class="government-list-wrap">
+                        <div class="government-list-wrap" style="display: none;">
                             <div class="government">
                                 <div class="title">
                                     <p>2023 노는예술 피칭데이 참여 신청 안내</p>
@@ -257,17 +275,20 @@
                                         <p>수원시</p>
                                     </div>
                                     <div class="location">
-                                        <span class="material-symbols-outlined">location_on</span>
-                                        <p>서울 | 경기 | 인천</p>
+                                        <img src="../img/icon/location.svg" alt="장소아이콘">
+                                        <p>서울</p>
+                                        <p>|</p>
+                                        <p>경기</p>
                                     </div>
                                 </div>
 
                                 <div class="date">
                                     <p>2024. 04. 17</p>
 
-                                    <span class="material-symbols-outlined">
-                                        favorite
-                                    </span>
+                                    <img src="../img/icon/heart.svg" alt="좋아요버튼">
+
+                                    <!-- 좋아요 눌렀을 때 -->
+                                    <!-- <img src="../img/icon/heart-fill.svg" alt="좋아요버튼"> -->
                                 </div>
                             </div>
 
@@ -283,17 +304,20 @@
                                         <p>수원시</p>
                                     </div>
                                     <div class="location">
-                                        <span class="material-symbols-outlined">location_on</span>
-                                        <p>서울 | 경기 | 인천</p>
+                                        <img src="../img/icon/location.svg" alt="장소아이콘">
+                                        <p>서울</p>
+                                        <p>|</p>
+                                        <p>경기</p>
                                     </div>
                                 </div>
 
                                 <div class="date">
                                     <p>2024. 04. 17</p>
 
-                                    <span class="material-symbols-outlined">
-                                        favorite
-                                    </span>
+                                    <img src="../img/icon/heart.svg" alt="좋아요버튼">
+
+                                    <!-- 좋아요 눌렀을 때 -->
+                                    <!-- <img src="../img/icon/heart-fill.svg" alt="좋아요버튼"> -->
                                 </div>
                             </div>
                         </div>
@@ -308,24 +332,25 @@
 
 
     <ul class="nav">
-        <li class="on">
-            <a href="./main.html">
+        <li>
+            <a href="../main.html">
                 <i>
-                    <!-- <img alt="홈" src=""> -->
-                    <span class="material-symbols-outlined">
-                        home
-                    </span>
+                    <!-- 기본 -->
+                    <img src="../img/icon/nav/home.svg" alt="홈">
+
+                    <!-- 선택됐을 때 -->
+                    <!-- <img src="../img/icon/nav/selected-home.svg" alt="홈"> -->
                 </i>
                 <p>홈</p>
             </a>
         </li>
         <li>
-            <a href="./search.html">
+            <a href="../search.html">
                 <i>
-                    <!-- <img alt="검색" src=""> -->
-                    <span class="material-symbols-outlined">
-                        search
-                    </span>
+                    <img src="../img/icon/nav/search.svg" alt="검색">
+
+                    <!-- 선택됐을때 -->
+                    <!-- <img src="../img/icon/nav/selected-search.svg" alt="검색"> -->
                 </i>
                 <p>검색</p>
             </a>
@@ -333,32 +358,32 @@
         <li>
             <a href="#">
                 <i>
-                    <!-- <img alt="채팅" src=""> -->
-                    <span class="material-symbols-outlined">
-                        forum
-                    </span>
+                    <img src="../img/icon/nav/chat.svg" alt="채팅">
+
+                    <!-- 선택됐을 때 -->
+                    <!-- <img src="../img/icon/nav/selected-chat.svg" alt="채팅"> -->
                 </i>
                 <p>채팅</p>
             </a>
         </li>
         <li>
-            <a href="./alarm.html">
+            <a href="../alarm.html">
                 <i>
-                    <!-- <img alt="알림 버튼" src=""> -->
-                    <span class="material-symbols-outlined">
-                        notifications
-                    </span>
+                    <img src="../img/icon/nav/alarm.svg" alt="알람">
+
+                    <!-- 선택됐을 때 -->
+                    <!-- <img src="../img/icon/nav/selected-alarm.svg" alt="알람"> -->
                 </i>
                 <p>알림</p>
             </a>
         </li>
-        <li>
+        <li class="on">
             <a href="#">
                 <i>
-                    <!-- <img alt="MY버튼" src=""> -->
-                    <span class="material-symbols-outlined">
-                        person
-                    </span>
+                    <!-- <img src="../img/icon/nav/mypage.svg" alt="마이페이지"> -->
+
+                    <!-- 선택됐을 때 -->
+                    <img src="../img/icon/nav/selected-mypage.svg" alt="마이페이지">
                 </i>
                 <p>MY</p>
             </a>

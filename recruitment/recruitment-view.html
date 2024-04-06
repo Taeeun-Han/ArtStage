@@ -40,9 +40,7 @@
                 <div class="header-left">
                     <div class="icon">
                         <a href="#">
-                            <span class="material-symbols-outlined">
-                                arrow_back_ios_new
-                            </span>
+                            <img src="../img/icon/header-icon/arrow-left-black.svg" alt="뒤로가기">
                         </a>
                     </div>
                 </div>
@@ -67,7 +65,7 @@
 
                 <div class="recruitment-profile">
                     <div class="img">
-                        <img src="./img/img/leo2.jpg" alt="이미지">
+                        <img src="../img/img/leo2.jpg" alt="이미지">
                     </div>
 
 
@@ -83,12 +81,14 @@
                         </div>
 
                         <div class="icon">
-                            <span class="material-symbols-outlined">
-                                favorite
-                            </span>
-                            <span class="material-symbols-outlined">
-                                share
-                            </span>
+                            <div class="icon-wrap">
+                                <img src="../img/icon/heart.svg" alt="좋아요">
+                                <!-- <img src="../img/icon/heart-fill.svg" alt="좋아요"> -->
+                            </div>
+
+                            <div class="icon-wrap">
+                                <img src="../img/icon/share.svg" alt="공유하기">
+                            </div>
                         </div>
                     </div>
 
@@ -116,15 +116,26 @@
                     <div class="introduce-info">
                         <div class="ib-con">
                             <p>모집분야</p>
-                            <p>음악</p>
+
+                            <div class="txt">
+                                <p>음악</p>
+                            </div>
                         </div>
                         <div class="ib-con">
                             <p>모집구분</p>
-                            <p>멤버/세션</p>
+
+                            <div class="txt">
+                                <p>멤버/세션</p>
+                            </div>
                         </div>
                         <div class="ib-con">
                             <p>모집장소</p>
-                            <p>서울 | 경기</p>
+
+                            <div class="txt">
+                                <p>서울</p>
+                                <p>|</p>
+                                <p>경기</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -139,7 +150,7 @@
                 </div>
 
                 <!-- tab - 모집정보 div -->
-                <div class="recruitment-contents">
+                <div class="recruitment-contents" style="display: none;">
 
                     <div class="box">
                         <div class="title">
@@ -424,7 +435,7 @@
                     <div class="review-content">
                         <div class="review-profile">
                             <div class="profile">
-                                <img src="./img/img/leo2.jpg" alt="프로필 사진">
+                                <img src="../img/img/leo2.jpg" alt="프로필사진">
 
                                 <div class="txt">
                                     <p class="profile-name">Leo Han</p>
@@ -455,6 +466,7 @@
 
                         <div class="report">
                             <button>신고하기</button>
+                            <img src="../img/icon/report.svg" alt="신고하기">
                         </div>
 
                     </div>
@@ -462,7 +474,7 @@
                     <div class="review-content">
                         <div class="review-profile">
                             <div class="profile">
-                                <img src="./img/img/대표 악기 프로필 사진.jpg" alt="프로필 사진">
+                                <img src="../img/img/leo2.jpg" alt="프로필사진">
 
                                 <div class="txt">
                                     <p class="profile-name">Leo Han</p>
@@ -479,6 +491,7 @@
                             </div>
                         </div>
 
+
                         <div class="review-txt">
                             <p class="title">
                                 " <span>시간 약속 잘 지키시는 실력파 성악가님!</span> "
@@ -492,13 +505,15 @@
 
                         <div class="report">
                             <button>신고하기</button>
+                            <img src="../img/icon/report.svg" alt="신고하기">
                         </div>
+
                     </div>
 
                     <div class="review-content">
                         <div class="review-profile">
                             <div class="profile">
-                                <img src="./img/img/대표 악기 프로필 사진.jpg" alt="프로필 사진">
+                                <img src="../img/img/leo2.jpg" alt="프로필사진">
 
                                 <div class="txt">
                                     <p class="profile-name">Leo Han</p>
@@ -515,6 +530,7 @@
                             </div>
                         </div>
 
+
                         <div class="review-txt">
                             <p class="title">
                                 " <span>시간 약속 잘 지키시는 실력파 성악가님!</span> "
@@ -528,12 +544,14 @@
 
                         <div class="report">
                             <button>신고하기</button>
+                            <img src="../img/icon/report.svg" alt="신고하기">
                         </div>
+
                     </div>
                 </div>
 
                 <!-- tab - 취소 div -->
-                <div class="recruitment-cancel" style="display: none;">
+                <div class="recruitment-cancel" >
                     <div class="cancel-box">
                         <div class="title">
                             <p>취소 규정</p>
@@ -561,8 +579,7 @@
 
     </div>
 
-    <div class="btn-wrap2">
-        <button>채팅상담</button>
+    <div class="btn-wrap">
         <button>참가신청</button>
     </div>
 

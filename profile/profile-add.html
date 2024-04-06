@@ -40,9 +40,7 @@
                     <div class="header-left">
                         <div class="icon">
                             <a href="/artist-profiles">
-                                <span class="material-symbols-outlined">
-                                    arrow_back_ios
-                                </span>
+                                <img src="../img/icon/header-icon/arrow-left-black.svg" alt="뒤로가기">
                             </a>
                         </div>
                     </div>
@@ -85,11 +83,6 @@
                     <!--기본정보-->
                     <div class="profile-content">
                         <div class="profile-info">
-                            <div class="profile-add-form">
-                                <p>기본정보</p>
-                                <input type="text">
-                            </div>
-
                             <div class="profile-add-form">
                                 <p>이름</p>
                                 <input type="text" id="profileName" name="profileName" th:field="*{profileName}"
@@ -222,74 +215,14 @@
 
                     </div>
                 </main>
-                <div class="profile-add-btn-wrap">
-                    <button type="submit" name="postStatus" value="임시저장">임시저장</button>
-                    <button type="submit" name="postStatus" value="게시완료">저장/수정</button>
-                </div>
             </div>
-
-            <ul class="nav">
-                <li>
-                    <a
-                        href="../../../../../../../Downloads/Art-Stage-Publish-master/Art-Stage-Publish-master/main.html">
-                        <i>
-                            <!-- <img alt="홈" src=""> -->
-                            <span class="material-symbols-outlined">
-                                home
-                            </span>
-                        </i>
-                        <p>홈</p>
-                    </a>
-                </li>
-                <li class="on">
-                    <a
-                        href="../../../../../../../Downloads/Art-Stage-Publish-master/Art-Stage-Publish-master/search.html">
-                        <i>
-                            <!-- <img alt="검색" src=""> -->
-                            <span class="material-symbols-outlined">
-                                search
-                            </span>
-                        </i>
-                        <p>검색</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i>
-                            <!-- <img alt="채팅" src=""> -->
-                            <span class="material-symbols-outlined">
-                                forum
-                            </span>
-                        </i>
-                        <p>채팅</p>
-                    </a>
-                </li>
-                <li>
-                    <a
-                        href="../../../../../../../Downloads/Art-Stage-Publish-master/Art-Stage-Publish-master/alarm.html">
-                        <i>
-                            <!-- <img alt="알림 버튼" src=""> -->
-                            <span class="material-symbols-outlined">
-                                notifications
-                            </span>
-                        </i>
-                        <p>알림</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i>
-                            <!-- <img alt="MY버튼" src=""> -->
-                            <span class="material-symbols-outlined">
-                                person
-                            </span>
-                        </i>
-                        <p>MY</p>
-                    </a>
-                </li>
-            </ul>
         </div>
     </form>
+
+    <div class="btn-wrap2">
+        <button type="submit" name="postStatus" value="임시저장">임시저장</button>
+        <button type="submit" name="postStatus" value="게시완료">저장/수정</button>
+    </div>
 
 </body>
 
