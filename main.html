@@ -51,6 +51,11 @@
                 </div>
 
                 <div class="header-right">
+                    <div class="icon">
+                        <a href="#">
+                            <img src="./img/icon/header-icon/login.png" alt="로그인">
+                        </a>
+                    </div>
                 </div>
 
             </div>
@@ -58,7 +63,7 @@
 
         <div class="wrap">
 
-            <main>
+            <main class="main-main">
                 <swiper-container class="mySwiper swiper1" pagination="true" pagination-type="fraction">
 
                     <swiper-slide>
@@ -114,63 +119,66 @@
                 </swiper-container>
 
                 <div class="menu">
-                    <div class="main-title">
-                        <p>MENU</p>
-                    </div>
+
+                    <!-- <div class="main-search">
+                        <input type="text" placeholder="검색어를 입력해주세요">
+                        <img src="./img/icon/search-mainColor.svg" alt="검색">
+                    </div> -->
+
 
                     <ul class="menu-ul">
                         <li>
                             <a href="">
+                                <p>공연예술인 찾기</p>
                                 <div class="img">
                                     <img src="./img/icon/search-artist.svg" alt="공연예술인 찾기">
                                 </div>
-                                <p>공연예술인 찾기</p>
                             </a>
                         </li>
                         <li>
                             <a href="">
+                                <p>공연예술인 모집</p>
                                 <div class="img">
                                     <img src="./img/icon/recruitment-artist.svg" alt="공연예술인 모집">
                                 </div>
-                                <p>공연예술인 모집</p>
                             </a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="">
                                 <div class="img">
                                     <img src="./img/icon/register.svg" alt="행사 참가">
                                 </div>
                                 <p>행사참가</p>
                             </a>
-                        </li>
-                        <li>
+                        </li> -->
+                        <!-- <li>
                             <a href="">
                                 <div class="img">
                                     <img src="./img/icon/company.svg" alt="기업/기관/단체">
                                 </div>
                                 <p>기업/기관/단체</p>
                             </a>
-                        </li>
+                        </li> -->
                         <li>
                             <a href="">
+                                <p>전국 정부 공고 리스트</p>
                                 <div class="img">
-                                    <img src="./img/icon/government.svg" alt="정부 공고">
+                                    <img src="./img/icon/government2.png" alt="정부 공고">
                                 </div>
-                                <p>정부공고</p>
                             </a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="">
                                 <div class="img">
                                     <img src="./img/icon/promotion.svg" alt="광고">
                                 </div>
                                 <p>광고</p>
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
 
-                <div class="menu">
+                <div class="menu menu2">
                     <div class="main-title">
                         <p>공연/예술인 찾기</p>
                     </div>
@@ -181,7 +189,7 @@
                                 <div class="img">
                                     <img src="./img/icon/play.svg" alt="연기">
                                 </div>
-                                <p>연기</p>
+                                <p>연극/뮤지컬</p>
                             </a>
                         </li>
                         <li>
@@ -200,14 +208,14 @@
                                 <p>음악</p>
                             </a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="">
                                 <div class="img">
-                                    <img src="./img/icon/korean-music.svg" alt="국악">
+                                    <img src="./img/icon/korean-music2.png" alt="국악">
                                 </div>
                                 <p>국악</p>
                             </a>
-                        </li>
+                        </li> -->
                         <li>
                             <a href="">
                                 <div class="img">
@@ -227,72 +235,180 @@
                     </ul>
                 </div>
 
-                <div class="menu">
-                    <div class="main-title">
+                <div class="menu menu3">
+                    <div class="main-title arrow">
                         <p>공연/예술인 모집</p>
+                        <img src="./img/icon/arrow-right.svg" alt="우측화살표">
                     </div>
 
-                    <div class="recruitment-table-container">
-                        <table class="recruitment-table">
-                            <thead>
-                                <tr>
-                                    <th>순번</th>
-                                    <th>
-                                        <div class="ellipsis">
-                                            제목
+                    <div class="category">
+                        <swiper-container class="mySwiper profileSwiper" space-between="7" slides-per-view="auto">
+                            <swiper-slide class="on">
+                                <p>연극/뮤지컬</p>
+                            </swiper-slide>
+                            <swiper-slide>
+                                <p>무용</p>
+                            </swiper-slide>
+                            <swiper-slide>
+                                <p>음악</p>
+                            </swiper-slide>
+                            <swiper-slide>
+                                <p>미술</p>
+                            </swiper-slide>
+                            <swiper-slide>
+                                <p>기타</p>
+                            </swiper-slide>
+                        </swiper-container>
+                    </div>
+
+                    <div class="recruitment-result-wrap">
+                        <swiper-container class="mySwiper" space-between="10" slides-per-view="auto">
+                            <swiper-slide>
+                                <div class="recruitment">
+                                    <div class="content-l">
+                                        <div class="img">
+                                            <img src="./img/img/orchestra.jpg" alt="로고">
                                         </div>
-                                    </th>
-                                    <th>업로드날짜</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>
-                                        <div class="ellipsis">
-                                            국악 코리아행사 악기 연주자 모집합니다
+                                    </div>
+
+                                    <div class="content">
+                                        <div class="title">
+                                            <p>서울 직장인 밴드 하실 분 간절하게 구합니다~</p>
                                         </div>
-                                    </td>
-                                    <td>2023-01-01</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>
-                                        <div class="ellipsis">
-                                            코리아뮤직페스티벌 베이스기타, 드럼 연주자 28일 급구
+
+                                        <div class="txt">
+                                            <div class="location">
+                                                <img src="../img/icon/location.svg" alt="장소">
+
+                                                <div class="locationText">
+                                                    <p>서울</p>
+                                                    <p>|</p>
+                                                    <p>경기</p>
+                                                </div>
+                                            </div>
+
+                                            <p class="endDate">~ 2024. 04. 17</p>
                                         </div>
-                                    </td>
-                                    <td>2023-01-02</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>
-                                        <div class="ellipsis">
-                                            코리아뮤지컬에 함께하실 조명기사 모십니다.
+                                    </div>
+                                </div>
+                            </swiper-slide>
+                            <swiper-slide>
+                                <div class="recruitment">
+                                    <div class="content-l">
+                                        <div class="img">
+                                            <img src="./img/img/orchestra.jpg" alt="로고">
                                         </div>
-                                    </td>
-                                    <td>2023-01-03</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>
-                                        <div class="ellipsis">
-                                            [한국무용] 천안 지역 행사 함께 하실 분
+                                    </div>
+
+                                    <div class="content">
+                                        <div class="title">
+                                            <p>서울 직장인 밴드 하실 분 간절하게 구합니다~</p>
                                         </div>
-                                    </td>
-                                    <td>2023-01-04</td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>
-                                        <div class="ellipsis">
-                                            공연예술인 모집공고 제목 5
+
+                                        <div class="txt">
+                                            <div class="location">
+                                                <img src="../img/icon/location.svg" alt="장소">
+
+                                                <div class="locationText">
+                                                    <p>서울</p>
+                                                    <p>|</p>
+                                                    <p>경기</p>
+                                                </div>
+                                            </div>
+
+                                            <p class="endDate">~ 2024. 04. 17</p>
                                         </div>
-                                    </td>
-                                    <td>2023-01-05</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                    </div>
+                                </div>
+                            </swiper-slide>
+                            <swiper-slide>
+                                <div class="recruitment">
+                                    <div class="content-l">
+                                        <div class="img">
+                                            <img src="./img/img/orchestra.jpg" alt="로고">
+                                        </div>
+                                    </div>
+
+                                    <div class="content">
+                                        <div class="title">
+                                            <p>서울 직장인 밴드 하실 분 간절하게 구합니다~</p>
+                                        </div>
+
+                                        <div class="txt">
+                                            <div class="location">
+                                                <img src="../img/icon/location.svg" alt="장소">
+
+                                                <div class="locationText">
+                                                    <p>서울</p>
+                                                    <p>|</p>
+                                                    <p>경기</p>
+                                                </div>
+                                            </div>
+
+                                            <p class="endDate">~ 2024. 04. 17</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </swiper-slide>
+                            <swiper-slide>
+                                <div class="recruitment">
+                                    <div class="content-l">
+                                        <div class="img">
+                                            <img src="./img/img/orchestra.jpg" alt="로고">
+                                        </div>
+                                    </div>
+
+                                    <div class="content">
+                                        <div class="title">
+                                            <p>서울 직장인 밴드 하실 분 간절하게 구합니다~</p>
+                                        </div>
+
+                                        <div class="txt">
+                                            <div class="location">
+                                                <img src="../img/icon/location.svg" alt="장소">
+
+                                                <div class="locationText">
+                                                    <p>서울</p>
+                                                    <p>|</p>
+                                                    <p>경기</p>
+                                                </div>
+                                            </div>
+
+                                            <p class="endDate">~ 2024. 04. 17</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </swiper-slide>
+                            <swiper-slide>
+                                <div class="recruitment">
+                                    <div class="content-l">
+                                        <div class="img">
+                                            <img src="./img/img/orchestra.jpg" alt="로고">
+                                        </div>
+                                    </div>
+
+                                    <div class="content">
+                                        <div class="title">
+                                            <p>서울 직장인 밴드 하실 분 간절하게 구합니다~</p>
+                                        </div>
+
+                                        <div class="txt">
+                                            <div class="location">
+                                                <img src="../img/icon/location.svg" alt="장소">
+
+                                                <div class="locationText">
+                                                    <p>서울</p>
+                                                    <p>|</p>
+                                                    <p>경기</p>
+                                                </div>
+                                            </div>
+
+                                            <p class="endDate">~ 2024. 04. 17</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </swiper-slide>
+                        </swiper-container>
                     </div>
 
                     <button class="more-btn">
@@ -303,10 +419,10 @@
                     </button>
                 </div>
 
-                <div class="menu">
+                <div class="menu menu4" style="display: none;">
                     <div class="main-title">
                         <p>빠른 신청 가능 행사</p>
-                        <p>AD</p>
+                        <p class="ad">AD</p>
                     </div>
 
                     <ul class="menu-ul3">
@@ -340,7 +456,7 @@
                     </button>
                 </div>
 
-                <div class="menu">
+                <div class="menu menu5">
                     <div class="swiper-wrap">
                         <p>정부공고</p>
 
@@ -377,14 +493,47 @@
 
                 </div>
 
-                <div class="menu">
+                <div class="menu menu6">
                     <div class="company-info">
-                        <p>아트스테이지는</p>
-                        <p>공연 예술 종사자들과 함께 하는</p>
-                        <p>서비스를 지향합니다.</p>
+                        <div class="txt">
+                            <p>아트스테이지는</p>
+                            <p>공연 예술 종사자들과 함께 하는 서비스를 지향합니다.</p>
+                        </div>
 
-                        <button class="company-info-btn">서비스 소개</button>
+                        <div class="buttons">
+                            <button class="company-info-btn">
+                                아트스테이지 소개
+                                <img src="./img/icon/arrow-right-white.svg" alt="우측아이콘">
+                            </button>
+                            <button class="company-info-btn">
+                                영상/기획 서비스 소개
+                                <img src="./img/icon/arrow-right-white.svg" alt="우측아이콘">
+                            </button>
+                        </div>
+
+
                     </div>
+
+                    <!-- <swiper-container class="mySwiper profileSwiper" space-between="0" slides-per-view="auto">
+                        <swiper-slide class="on">
+                            <div class="company-info">
+                                <p>아트스테이지는</p>
+                                <p>공연 예술 종사자들과 함께 하는</p>
+                                <p>서비스를 지향합니다.</p>
+
+                                <button class="company-info-btn">서비스 소개</button>
+                            </div>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div class="company-info">
+                                <p>아트스테이지는</p>
+                                <p>공연 예술 종사자들과 함께 하는</p>
+                                <p>서비스를 지향합니다.</p>
+
+                                <button class="company-info-btn">서비스 소개</button>
+                            </div>
+                        </swiper-slide>
+                    </swiper-container> -->
                 </div>
             </main>
 

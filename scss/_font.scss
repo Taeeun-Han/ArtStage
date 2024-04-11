@@ -76,7 +76,7 @@
 	font-family: "Pretendard-Regular", Arial, sans-serif;
 	font-weight: 700;
 	font-size: 15px;
-	color: #3D3D3D;
+	color: #3d3d3d;
 }
 
 @mixin main-title {
@@ -93,10 +93,11 @@
 
 @mixin main-menu {
 	font-family: "Pretendard-Regular", Arial, sans-serif;
-	font-weight: 500;
-	font-size: 12px;
+	font-weight: 700;
+	font-size: 13px;
 	word-break: keep-all;
-	text-align: center;
+	color: $dark-grey3;
+	letter-spacing: -0.3px;
 }
 
 @mixin main-table-title {
@@ -147,16 +148,21 @@
 
 @mixin main-company-info {
 	font-family: "Pretendard-Regular", Arial, sans-serif;
-	font-weight: 500;
+	font-weight: 600;
 	font-size: 14px;
+	letter-spacing: 0px;
+	color: $dark-grey3;
 	word-break: keep-all;
 }
 
 @mixin main-company-info-btn {
 	font-family: "Pretendard-Regular", Arial, sans-serif;
-	font-weight: 700;
-	font-size: 12px;
+	font-weight: 500;
+	font-size: 11px;
+	letter-spacing: 0px;
+	color: $white;
 	word-break: keep-all;
+	line-height: 11px;
 }
 
 @mixin search-li {
