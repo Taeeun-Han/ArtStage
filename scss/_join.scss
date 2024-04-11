@@ -3,8 +3,8 @@
 
 .container {
 	.wrap {
-
-		.join {
+		.join,
+		.findPw {
 			display: flex;
 			flex-direction: column;
 			gap: 30px;
@@ -34,6 +34,11 @@
 				::-webkit-progress-value {
 					background-color: $main-color;
 					border-radius: 50px;
+				}
+
+				img {
+					width: 20px;
+					height: 20px;
 				}
 			}
 
@@ -153,6 +158,142 @@
 							color: $main-color;
 						}
 					}
+				}
+			}
+
+			.emailInfo,
+			.socialInfo {
+				margin-top: 30px;
+				border: 1px solid $main-color;
+				background-color: $main-color-light;
+				border-radius: 10px;
+				padding: 50px 30px;
+
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				gap: 20px;
+
+				p {
+					@include emailInfo;
+				}
+
+				.socialMail {
+					color: #555555;
+					font-weight: 500;
+				}
+
+				.socialInfoCon {
+					margin-top: 10px;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					gap: 8px;
+
+					p {
+						font-weight: 500;
+						color: #6f6f6f;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// 이메일로 보내는 비밀번호 변경 CSS
+.email {
+	background-color: $main-color-light;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 100%;
+	height: 100vh;
+
+	padding: 100px;
+
+	.wrap {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 80px;
+		padding: 50px 50px 70px 50px;
+		border-radius: 50px;
+
+		background-color: $main-color;
+
+		width: 50%;
+
+		.logo {
+			width: 100%;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+
+			img {
+				width: 150px;
+			}
+		}
+
+		.txt {
+			border: 2px solid $white;
+			border-radius: 30px;
+			padding: 50px;
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 20px;
+
+			width: 70%;
+
+			background-color: rgba(255, 255, 255, 0.5);
+
+			.title {
+				p {
+					font-weight: 700;
+					font-size: 20px;
+					color: #3D3D3D;
+					letter-spacing: 0.5px;
+					text-align: center;
+				}
+			}
+
+			.con {
+				p {
+					font-weight: 700;
+					font-size: 16px;
+					letter-spacing: 0.5px;
+					color: #555555;
+					text-align: center;
+				}
+			}
+
+			.button {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+
+				button {
+					font-weight: 700;
+					font-size: 18px;
+					background-color: $main-color;
+					border-radius: 20px;
+					color: $white;
+					padding: 16px;
+
+					width: 100%;
+
+					margin-top: 20px;
+
+					font-weight: 500;
+					font-size: 16px;
+					letter-spacing: 1px;
+					color: $white;
 				}
 			}
 		}

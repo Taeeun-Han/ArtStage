@@ -60,9 +60,7 @@
                 <!-- 프로그레스 바 -->
                 <div class="progress-bar">
                     <progress id="progress" value="40" min="0" max="100"></progress>
-                    <span class="material-symbols-outlined">
-                        sports_score
-                    </span>
+                    <img src="../img/icon/flag.svg" alt="깃발">
                 </div>
 
                 <div class="login-form">
@@ -70,6 +68,12 @@
                     <div class="login-input">
                         <p>이메일 <span>*</span></p>
                         <input type="text" placeholder="이메일을 입력해주세요">
+
+                        <!-- 이메일 오류일 때 -->
+                        <div class="err-text" style="display: none;">
+                            <img src="../img/icon/error-login.svg" alt="에러아이콘">
+                            <p>이메일을 확인해주세요.</p>
+                        </div>
                     </div>
 
                     <!-- 비밀번호 입력 -->
@@ -82,6 +86,12 @@
                     <div class="login-input">
                         <p>비밀번호 재확인 <span>*</span></p>
                         <input type="text" placeholder="비밀번호를 재입력해주세요">
+
+                        <!-- text 오류 날 때 -->
+                        <div class="err-text" style="display: none;">
+                            <img src="../img/icon/error-login.svg" alt="에러아이콘">
+                            <p>비밀번호가 일치하지 않습니다.</p>
+                        </div>
                     </div>
                 </div>
             </main>

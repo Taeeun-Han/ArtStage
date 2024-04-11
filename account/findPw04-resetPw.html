@@ -45,7 +45,7 @@
 
                 <div class="header-center">
                     <div class="txt">
-                        <p>본인인증</p>
+                        <p>비밀번호 재설정</p>
                     </div>
                 </div>
 
@@ -56,7 +56,7 @@
         </header>
 
         <div class="wrap">
-            <main class="join">
+            <main class="findPw">
                 <!-- 프로그레스 바 -->
                 <div class="progress-bar">
                     <progress id="progress" value="60" min="0" max="100"></progress>
@@ -64,9 +64,22 @@
                 </div>
 
                 <div class="login-form">
+                    <!-- 비밀번호 입력 -->
                     <div class="login-input">
-                        <p>본인인증 <span>*</span></p>
-                        <button type="button" onclick="location.href='join04-personal-info.html'">본인인증 하기</button>
+                        <p>비밀번호 <span>*</span></p>
+                        <input type="text" placeholder="최소 8자리 및 영문 소문자 + 숫자 조합">
+                    </div>
+
+                    <!-- 비밀번호 재확인 -->
+                    <div class="login-input">
+                        <p>비밀번호 재확인 <span>*</span></p>
+                        <input type="text" placeholder="비밀번호를 재입력해주세요">
+
+                        <!-- 비밀번호가 일치하지 않을 때 -->
+                        <div class="err-text" style="display: none;">
+                            <img src="../img/icon/error-login.svg" alt="에러아이콘">
+                            <p>비밀번호가 일치하지 않습니다.</p>
+                        </div>
                     </div>
                 </div>
             </main>
@@ -74,6 +87,14 @@
 
     </div>
 
+    <div class="btn-wrap" style="display: none;">
+        <button>확인</button>
+    </div>
+
+    <!-- 비활성화 버튼일 때 -->
+    <div class="btn-wrap-disabled">
+        <button>확인</button>
+    </div>
 
 </body>
 

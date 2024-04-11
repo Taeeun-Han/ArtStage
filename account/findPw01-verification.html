@@ -45,7 +45,7 @@
 
                 <div class="header-center">
                     <div class="txt">
-                        <p>본인인증</p>
+                        <p>아이디/비밀번호 찾기</p>
                     </div>
                 </div>
 
@@ -56,7 +56,7 @@
         </header>
 
         <div class="wrap">
-            <main class="join">
+            <main class="findPw">
                 <!-- 프로그레스 바 -->
                 <div class="progress-bar">
                     <progress id="progress" value="60" min="0" max="100"></progress>
@@ -67,7 +67,15 @@
                     <div class="login-input">
                         <p>본인인증 <span>*</span></p>
                         <button type="button" onclick="location.href='join04-personal-info.html'">본인인증 하기</button>
+
+                        <!-- 가입 이력 없을 때 -->
+                        <div class="err-text" style="display: none;">
+                            <img src="../img/icon/error-login.svg" alt="에러아이콘">
+                            <p>가입되지 않은 사용자입니다.</p>
+                        </div>
                     </div>
+
+
                 </div>
             </main>
         </div>

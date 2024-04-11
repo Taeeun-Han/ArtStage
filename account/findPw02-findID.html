@@ -45,7 +45,7 @@
 
                 <div class="header-center">
                     <div class="txt">
-                        <p>본인인증</p>
+                        <p>아이디/비밀번호 찾기</p>
                     </div>
                 </div>
 
@@ -56,22 +56,39 @@
         </header>
 
         <div class="wrap">
-            <main class="join">
+            <main class="findPw">
                 <!-- 프로그레스 바 -->
                 <div class="progress-bar">
-                    <progress id="progress" value="60" min="0" max="100"></progress>
+                    <progress id="progress" value="100" min="0" max="100"></progress>
                     <img src="../img/icon/flag.svg" alt="깃발">
                 </div>
 
-                <div class="login-form">
-                    <div class="login-input">
-                        <p>본인인증 <span>*</span></p>
-                        <button type="button" onclick="location.href='join04-personal-info.html'">본인인증 하기</button>
+                <!-- 일반 계정 이메일 찾기 -->
+                <div class="emailInfo" style="display: none;">
+                    <p>이메일 주소</p>
+                    <p class="socialMail">taeeun@colon-b.com</p>
+                </div>
+
+                <!-- 소셜 계정 이메일 찾기 -->
+                <div class="socialInfo">
+                    <p>이메일 주소</p>
+                    <p class="socialMail">taeeun@colon-b.com</p>
+
+                    <div class="socialInfoCon">
+                        <p>소셜서비스로 가입하신 계정이네요!</p>
+                        <p>간편로그인의 아이디와 비밀번호는</p>
+                        <p>가입하신 소셜서비스를 통해 찾아주세요.</p>
                     </div>
+
                 </div>
             </main>
         </div>
 
+    </div>
+
+    <div class="btn-wrap3">
+        <button>로그인</button>
+        <button>비밀번호 재설정 이메일 보내기</button>
     </div>
 
 

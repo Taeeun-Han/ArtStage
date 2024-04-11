@@ -1,63 +1,80 @@
 @charset "UTF-8";
-.container .wrap .join {
+.container .wrap .join,
+.container .wrap .findPw {
   display: flex;
   flex-direction: column;
   gap: 30px;
   padding-top: 20px;
 }
-.container .wrap .join .progress-bar {
+.container .wrap .join .progress-bar,
+.container .wrap .findPw .progress-bar {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
 }
-.container .wrap .join .progress-bar progress {
+.container .wrap .join .progress-bar progress,
+.container .wrap .findPw .progress-bar progress {
   -webkit-appearance: none;
   width: 100%;
   height: 8px;
 }
-.container .wrap .join .progress-bar ::-webkit-progress-bar {
+.container .wrap .join .progress-bar ::-webkit-progress-bar,
+.container .wrap .findPw .progress-bar ::-webkit-progress-bar {
   background-color: grey;
   border-radius: 50px;
   background-color: #f6f4fc;
 }
-.container .wrap .join .progress-bar ::-webkit-progress-value {
+.container .wrap .join .progress-bar ::-webkit-progress-value,
+.container .wrap .findPw .progress-bar ::-webkit-progress-value {
   background-color: #5d5fef;
   border-radius: 50px;
 }
-.container .wrap .join .join-content {
+.container .wrap .join .progress-bar img,
+.container .wrap .findPw .progress-bar img {
+  width: 20px;
+  height: 20px;
+}
+.container .wrap .join .join-content,
+.container .wrap .findPw .join-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 40px;
 }
-.container .wrap .join .join-content .join-txt {
+.container .wrap .join .join-content .join-txt,
+.container .wrap .findPw .join-content .join-txt {
   width: 100%;
   display: flex;
   flex-direction: column;
   text-align: left;
 }
-.container .wrap .join .join-content .join-txt p {
+.container .wrap .join .join-content .join-txt p,
+.container .wrap .findPw .join-content .join-txt p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
   color: #242424;
 }
-.container .wrap .join .join-content .join-txt p span {
+.container .wrap .join .join-content .join-txt p span,
+.container .wrap .findPw .join-content .join-txt p span {
   color: #5d5fef;
 }
-.container .wrap .join .join-content .join-confirm {
+.container .wrap .join .join-content .join-confirm,
+.container .wrap .findPw .join-content .join-confirm {
   gap: 10px;
 }
-.container .wrap .join .join-content .join-confirm p {
+.container .wrap .join .join-content .join-confirm p,
+.container .wrap .findPw .join-content .join-confirm p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 700;
   font-size: 20px;
 }
-.container .wrap .join .join-content .join-confirm span {
+.container .wrap .join .join-content .join-confirm span,
+.container .wrap .findPw .join-content .join-confirm span {
   margin-top: 10px;
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 500;
@@ -67,7 +84,8 @@
   line-height: 20px;
   color: #8b8b8b;
 }
-.container .wrap .join .join-content .terms {
+.container .wrap .join .join-content .terms,
+.container .wrap .findPw .join-content .terms {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -76,7 +94,9 @@
   gap: 10px;
 }
 .container .wrap .join .join-content .terms .all-agreed,
-.container .wrap .join .join-content .terms .terms-con {
+.container .wrap .join .join-content .terms .terms-con,
+.container .wrap .findPw .join-content .terms .all-agreed,
+.container .wrap .findPw .join-content .terms .terms-con {
   width: 100%;
   background-color: #f1f1f1;
   padding: 20px;
@@ -86,7 +106,9 @@
   align-items: center;
 }
 .container .wrap .join .join-content .terms .all-agreed label,
-.container .wrap .join .join-content .terms .terms-con label {
+.container .wrap .join .join-content .terms .terms-con label,
+.container .wrap .findPw .join-content .terms .all-agreed label,
+.container .wrap .findPw .join-content .terms .terms-con label {
   width: 100%;
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 700;
@@ -94,7 +116,9 @@
   color: #3d3d3d;
 }
 .container .wrap .join .join-content .terms .all-agreed label a,
-.container .wrap .join .join-content .terms .terms-con label a {
+.container .wrap .join .join-content .terms .terms-con label a,
+.container .wrap .findPw .join-content .terms .all-agreed label a,
+.container .wrap .findPw .join-content .terms .terms-con label a {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -104,14 +128,18 @@
   color: #3d3d3d;
 }
 .container .wrap .join .join-content .terms .all-agreed label a span,
-.container .wrap .join .join-content .terms .terms-con label a span {
+.container .wrap .join .join-content .terms .terms-con label a span,
+.container .wrap .findPw .join-content .terms .all-agreed label a span,
+.container .wrap .findPw .join-content .terms .terms-con label a span {
   color: #3d3d3d;
 }
-.container .wrap .join .join-content .terms .terms-con {
+.container .wrap .join .join-content .terms .terms-con,
+.container .wrap .findPw .join-content .terms .terms-con {
   background-color: transparent;
   padding: 10px 20px;
 }
-.container .wrap .join .join-content .terms .terms-con label {
+.container .wrap .join .join-content .terms .terms-con label,
+.container .wrap .findPw .join-content .terms .terms-con label {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -119,7 +147,8 @@
   color: #242424;
   line-height: 20px;
 }
-.container .wrap .join .join-content .terms .terms-con label a {
+.container .wrap .join .join-content .terms .terms-con label a,
+.container .wrap .findPw .join-content .terms .terms-con label a {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -130,33 +159,161 @@
   color: #242424;
   line-height: 20px;
 }
-.container .wrap .join .join-content .terms .terms-con label a span {
+.container .wrap .join .join-content .terms .terms-con label a span,
+.container .wrap .findPw .join-content .terms .terms-con label a span {
   color: #3d3d3d;
 }
-.container .wrap .join .join-content .img {
+.container .wrap .join .join-content .img,
+.container .wrap .findPw .join-content .img {
   width: 230px;
   height: 230px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.container .wrap .join .join-content .img img {
+.container .wrap .join .join-content .img img,
+.container .wrap .findPw .join-content .img img {
   width: 100%;
   height: auto;
   object-fit: contain;
 }
-.container .wrap .join .join-content .join-biz-txt {
+.container .wrap .join .join-content .join-biz-txt,
+.container .wrap .findPw .join-content .join-biz-txt {
   display: flex;
   align-items: center;
 }
-.container .wrap .join .join-content .join-biz-txt p {
+.container .wrap .join .join-content .join-biz-txt p,
+.container .wrap .findPw .join-content .join-biz-txt p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 600;
   font-size: 14px;
   color: #3d3d3d;
 }
-.container .wrap .join .join-content .join-biz-txt p span {
+.container .wrap .join .join-content .join-biz-txt p span,
+.container .wrap .findPw .join-content .join-biz-txt p span {
   color: #5d5fef;
+}
+.container .wrap .join .emailInfo,
+.container .wrap .join .socialInfo,
+.container .wrap .findPw .emailInfo,
+.container .wrap .findPw .socialInfo {
+  margin-top: 30px;
+  border: 1px solid #5d5fef;
+  background-color: #f6f4fc;
+  border-radius: 10px;
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.container .wrap .join .emailInfo p,
+.container .wrap .join .socialInfo p,
+.container .wrap .findPw .emailInfo p,
+.container .wrap .findPw .socialInfo p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #3D3D3D;
+}
+.container .wrap .join .emailInfo .socialMail,
+.container .wrap .join .socialInfo .socialMail,
+.container .wrap .findPw .emailInfo .socialMail,
+.container .wrap .findPw .socialInfo .socialMail {
+  color: #555555;
+  font-weight: 500;
+}
+.container .wrap .join .emailInfo .socialInfoCon,
+.container .wrap .join .socialInfo .socialInfoCon,
+.container .wrap .findPw .emailInfo .socialInfoCon,
+.container .wrap .findPw .socialInfo .socialInfoCon {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.container .wrap .join .emailInfo .socialInfoCon p,
+.container .wrap .join .socialInfo .socialInfoCon p,
+.container .wrap .findPw .emailInfo .socialInfoCon p,
+.container .wrap .findPw .socialInfo .socialInfoCon p {
+  font-weight: 500;
+  color: #6f6f6f;
+  font-size: 14px;
+}
+
+.email {
+  background-color: #f6f4fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+}
+.email .wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+  padding: 50px 50px 70px 50px;
+  border-radius: 50px;
+  background-color: #5d5fef;
+  width: 50%;
+}
+.email .wrap .logo {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.email .wrap .logo img {
+  width: 150px;
+}
+.email .wrap .txt {
+  border: 2px solid #ffffff;
+  border-radius: 30px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 70%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.email .wrap .txt .title p {
+  font-weight: 700;
+  font-size: 20px;
+  color: #3D3D3D;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+.email .wrap .txt .con p {
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: #555555;
+  text-align: center;
+}
+.email .wrap .txt .button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.email .wrap .txt .button button {
+  font-weight: 700;
+  font-size: 18px;
+  background-color: #5d5fef;
+  border-radius: 20px;
+  color: #ffffff;
+  padding: 16px;
+  width: 100%;
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #ffffff;
 }
 
 .container .modal-backdrop {
@@ -552,6 +709,41 @@
   border: 1px solid #5d5fef;
   color: #5d5fef;
 }
+.container .join-terms .modal-content .button1 {
+  margin-top: 10px;
+}
+.container .findPwModal .modal-content {
+  gap: 20px;
+}
+.container .findPwModal .modal-content .txt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.container .findPwModal .modal-content .txt p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #3D3D3D;
+  font-size: 16px;
+  color: #3D3D3D;
+}
+.container .findPwModal .modal-content .txt .txtCon {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.container .findPwModal .modal-content .txt .txtCon p {
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #3D3D3D;
+  font-weight: 500;
+  color: #6F6F6F;
+}
 
 @font-face {
   font-family: "Pretendard-Regular";
@@ -675,6 +867,7 @@ input[type=password]::placeholder {
   font-weight: 700;
   font-size: 14px;
   text-align: center;
+  letter-spacing: 0.3px;
 }
 
 .btn-wrap2 {
@@ -704,8 +897,45 @@ input[type=password]::placeholder {
   font-weight: 700;
   font-size: 14px;
   text-align: center;
+  letter-spacing: 0.3px;
 }
 .btn-wrap2 button:nth-child(1) {
+  background-color: #f6f4fc;
+  border: 1px solid #5d5fef;
+  color: #5d5fef;
+}
+
+.btn-wrap3 {
+  z-index: 999;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #fff;
+  padding: 10px 15px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.btn-wrap3 button {
+  background: #5d5fef;
+  border-radius: 16px;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+.btn-wrap3 button:nth-child(2) {
   background-color: #f6f4fc;
   border: 1px solid #5d5fef;
   color: #5d5fef;
@@ -737,6 +967,7 @@ input[type=password]::placeholder {
   font-weight: 700;
   font-size: 14px;
   text-align: center;
+  letter-spacing: 0.3px;
 }
 
 header {
@@ -843,7 +1074,7 @@ header .wrap .header-center .txt p {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 .login-form .login-input p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
@@ -874,6 +1105,16 @@ header .wrap .header-center .txt p {
 .login-form .login-input input[type=text]:focus,
 .login-form .login-input select:focus {
   outline: none;
+}
+.login-form .login-input .err-text {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.login-form .login-input .err-text p {
+  font-weight: 700;
+  font-size: 14px;
+  color: #ff5959;
 }
 .login-form .login-input #custom-button {
   padding: 10px 15px 10px 15px;
@@ -906,7 +1147,7 @@ header .wrap .header-center .txt p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: -25px;
+  margin-top: -10px;
 }
 .login-form .login-option .toggle {
   display: flex;

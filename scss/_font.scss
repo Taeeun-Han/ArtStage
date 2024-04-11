@@ -63,12 +63,20 @@
 	font-weight: 700;
 	font-size: 14px;
 	text-align: center;
+	letter-spacing: 0.3px;
 }
 
 @mixin join-confirm {
 	font-family: "Pretendard-Regular", Arial, sans-serif;
 	font-weight: 700;
 	font-size: 20px;
+}
+
+@mixin emailInfo {
+	font-family: "Pretendard-Regular", Arial, sans-serif;
+	font-weight: 700;
+	font-size: 15px;
+	color: #3D3D3D;
 }
 
 @mixin main-title {
