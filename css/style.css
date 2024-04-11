@@ -1805,6 +1805,7 @@ main .menu3 .category swiper-container swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #ffffff;
   cursor: pointer;
 }
 main .menu3 .category swiper-container swiper-slide span {
