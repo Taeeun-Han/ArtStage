@@ -1795,23 +1795,17 @@ main .menu3 {
 main .menu3 .category {
   width: 100%;
 }
-main .menu3 .category swiper-container {
-  width: 100%;
+main .menu3 .category .categoryWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-main .menu3 .category swiper-container swiper-slide {
-  width: auto;
+main .menu3 .category .categoryWrap .categoryDiv {
+  background-color: #ffffff;
   padding: 7px 15px;
   border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff;
-  cursor: pointer;
 }
-main .menu3 .category swiper-container swiper-slide span {
-  font-size: 18px;
-}
-main .menu3 .category swiper-container swiper-slide p {
+main .menu3 .category .categoryWrap .categoryDiv p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -1819,26 +1813,26 @@ main .menu3 .category swiper-container swiper-slide p {
   word-break: keep-all;
   color: #555555;
 }
-main .menu3 .category swiper-container swiper-slide:focus p {
+main .menu3 .category .categoryWrap .categoryDiv:focus p {
   color: #5d5fef;
   font-weight: 700;
 }
-main .menu3 .category swiper-container .on {
+main .menu3 .category .categoryWrap .on {
   background-color: #f6f4fc;
 }
-main .menu3 .category swiper-container .on p {
+main .menu3 .category .categoryWrap .on p {
   color: #5d5fef;
   font-weight: 700;
 }
 main .menu3 .recruitment-result-wrap {
   width: calc(100% + 40px);
-  margin: -10px -20px;
+  margin: 0px -20px;
   padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
-main .menu3 .recruitment-result-wrap swiper-container swiper-slide {
-  width: 80%;
-}
-main .menu3 .recruitment-result-wrap swiper-container swiper-slide .recruitment {
+main .menu3 .recruitment-result-wrap .recruitment {
   width: 100%;
   display: flex;
   align-items: center;
@@ -1849,12 +1843,12 @@ main .menu3 .recruitment-result-wrap swiper-container swiper-slide .recruitment 
   border: 1px solid #f1f1f1;
   cursor: pointer;
 }
-main .menu3 .recruitment-result-wrap swiper-container swiper-slide .recruitment .content-l {
+main .menu3 .recruitment-result-wrap .recruitment .content-l {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-main .menu3 .recruitment-result-wrap swiper-container swiper-slide .recruitment .content-l .img {
+main .menu3 .recruitment-result-wrap .recruitment .content-l .img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -1863,25 +1857,25 @@ main .menu3 .recruitment-result-wrap swiper-container swiper-slide .recruitment 
   justify-content: center;
   align-items: center;
 }
-main .menu3 .recruitment-result-wrap swiper-container swiper-slide .recruitment .content-l .img img {
+main .menu3 .recruitment-result-wrap .recruitment .content-l .img img {
   border-radius: 50%;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-main .menu3 .recruitment-result-wrap swiper-container swiper-slide .recruitment .content {
+main .menu3 .recruitment-result-wrap .recruitment .content {
   width: calc(100% - 63px);
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-main .menu3 .recruitment-result-wrap swiper-container swiper-slide .recruitment .content .title {
+main .menu3 .recruitment-result-wrap .recruitment .content .title {
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-main .menu3 .recruitment-result-wrap swiper-container swiper-slide .recruitment .content .title p {
+main .menu3 .recruitment-result-wrap .recruitment .content .title p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 700;
   font-size: 13px;
@@ -1893,24 +1887,24 @@ main .menu3 .recruitment-result-wrap swiper-container swiper-slide .recruitment 
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-main .menu3 .recruitment-result-wrap swiper-container swiper-slide .recruitment .content .txt {
+main .menu3 .recruitment-result-wrap .recruitment .content .txt {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-main .menu3 .recruitment-result-wrap swiper-container swiper-slide .recruitment .content .txt .location {
+main .menu3 .recruitment-result-wrap .recruitment .content .txt .location {
   display: flex;
   align-items: center;
   gap: 5px;
   width: 100%;
 }
-main .menu3 .recruitment-result-wrap swiper-container swiper-slide .recruitment .content .txt .location .locationText {
+main .menu3 .recruitment-result-wrap .recruitment .content .txt .location .locationText {
   display: flex;
   align-items: center;
   gap: 3px;
 }
-main .menu3 .recruitment-result-wrap swiper-container swiper-slide .recruitment .content .txt .location .locationText p {
+main .menu3 .recruitment-result-wrap .recruitment .content .txt .location .locationText p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -1919,11 +1913,11 @@ main .menu3 .recruitment-result-wrap swiper-container swiper-slide .recruitment 
   color: #242424;
   font-size: 11px;
 }
-main .menu3 .recruitment-result-wrap swiper-container swiper-slide .recruitment .content .txt .location img {
+main .menu3 .recruitment-result-wrap .recruitment .content .txt .location img {
   width: 11px;
   height: 11px;
 }
-main .menu3 .recruitment-result-wrap swiper-container swiper-slide .recruitment .content .txt .endDate {
+main .menu3 .recruitment-result-wrap .recruitment .content .txt .endDate {
   width: 100%;
   text-align: right;
   font-family: "Pretendard-Regular", Arial, sans-serif;
@@ -1935,7 +1929,7 @@ main .menu3 .recruitment-result-wrap swiper-container swiper-slide .recruitment 
   font-size: 10px;
   color: #8b8b8b;
 }
-main .menu3 .recruitment-result-wrap swiper-container swiper-slide .recruitment .content .txt p {
+main .menu3 .recruitment-result-wrap .recruitment .content .txt p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -2948,7 +2942,8 @@ main .notifications .tab-content .content.active .delete {
   width: 100%;
   height: 100%;
 }
-.container-profile .profile-view-wrap main {
+.container-profile .profile-view-wrap .profile-view-wrap-main {
+  margin: 0;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   position: absolute;
@@ -2961,24 +2956,25 @@ main .notifications .tab-content .content.active .delete {
   gap: 10px;
   padding-top: 20px;
 }
-.container-profile .profile-view-wrap main .border {
+.container-profile .profile-view-wrap .profile-view-wrap-main .border {
   border: 1px solid #ccc;
   width: 25%;
   height: 1px;
 }
-.container-profile .profile-view-wrap main .sentence {
+.container-profile .profile-view-wrap .profile-view-wrap-main .sentence {
   width: 100%;
   padding: 20px 0px;
 }
-.container-profile .profile-view-wrap main .sentence p {
+.container-profile .profile-view-wrap .profile-view-wrap-main .sentence p {
   text-align: center;
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 700;
   font-size: 14px;
   word-break: keep-all;
 }
-.container-profile .profile-view-wrap main .profile-menu {
-  width: 100%;
+.container-profile .profile-view-wrap .profile-view-wrap-main .profile-menu {
+  width: calc(100% + 40px);
+  margin: 0 -20px;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   display: flex;
@@ -2986,53 +2982,53 @@ main .notifications .tab-content .content.active .delete {
   justify-content: center;
   gap: 50px;
 }
-.container-profile .profile-view-wrap main .profile-menu .menu-general,
-.container-profile .profile-view-wrap main .profile-menu .menu-quali,
-.container-profile .profile-view-wrap main .profile-menu .menu-review {
+.container-profile .profile-view-wrap .profile-view-wrap-main .profile-menu .menu-general,
+.container-profile .profile-view-wrap .profile-view-wrap-main .profile-menu .menu-quali,
+.container-profile .profile-view-wrap .profile-view-wrap-main .profile-menu .menu-review {
   padding: 10px;
 }
-.container-profile .profile-view-wrap main .profile-menu .menu-general p,
-.container-profile .profile-view-wrap main .profile-menu .menu-quali p,
-.container-profile .profile-view-wrap main .profile-menu .menu-review p {
+.container-profile .profile-view-wrap .profile-view-wrap-main .profile-menu .menu-general p,
+.container-profile .profile-view-wrap .profile-view-wrap-main .profile-menu .menu-quali p,
+.container-profile .profile-view-wrap .profile-view-wrap-main .profile-menu .menu-review p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 700;
   font-size: 12px;
   word-break: keep-all;
   color: #8b8b8b;
 }
-.container-profile .profile-view-wrap main .profile-menu .menu-general:active p, .container-profile .profile-view-wrap main .profile-menu .menu-general:focus p,
-.container-profile .profile-view-wrap main .profile-menu .menu-quali:active p,
-.container-profile .profile-view-wrap main .profile-menu .menu-quali:focus p,
-.container-profile .profile-view-wrap main .profile-menu .menu-review:active p,
-.container-profile .profile-view-wrap main .profile-menu .menu-review:focus p {
+.container-profile .profile-view-wrap .profile-view-wrap-main .profile-menu .menu-general:active p, .container-profile .profile-view-wrap .profile-view-wrap-main .profile-menu .menu-general:focus p,
+.container-profile .profile-view-wrap .profile-view-wrap-main .profile-menu .menu-quali:active p,
+.container-profile .profile-view-wrap .profile-view-wrap-main .profile-menu .menu-quali:focus p,
+.container-profile .profile-view-wrap .profile-view-wrap-main .profile-menu .menu-review:active p,
+.container-profile .profile-view-wrap .profile-view-wrap-main .profile-menu .menu-review:focus p {
   text-decoration: underline;
 }
-.container-profile .profile-view-wrap main .general {
+.container-profile .profile-view-wrap .profile-view-wrap-main .general {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.container-profile .profile-view-wrap main .general .general-big-title {
+.container-profile .profile-view-wrap .profile-view-wrap-main .general .general-big-title {
   padding: 20px;
   padding-bottom: 10px;
 }
-.container-profile .profile-view-wrap main .general .general-big-title p {
+.container-profile .profile-view-wrap .profile-view-wrap-main .general .general-big-title p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 700;
   font-size: 14px;
   word-break: keep-all;
   color: #242424;
 }
-.container-profile .profile-view-wrap main .general .general-info,
-.container-profile .profile-view-wrap main .general .quali-info {
+.container-profile .profile-view-wrap .profile-view-wrap-main .general .general-info,
+.container-profile .profile-view-wrap .profile-view-wrap-main .general .quali-info {
   padding: 0px 20px;
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.container-profile .profile-view-wrap main .general .general-info .general-title,
-.container-profile .profile-view-wrap main .general .quali-info .general-title {
+.container-profile .profile-view-wrap .profile-view-wrap-main .general .general-info .general-title,
+.container-profile .profile-view-wrap .profile-view-wrap-main .general .quali-info .general-title {
   width: 30%;
   text-align: right;
   font-family: "Pretendard-Regular", Arial, sans-serif;
@@ -3041,8 +3037,8 @@ main .notifications .tab-content .content.active .delete {
   word-break: keep-all;
   color: #242424;
 }
-.container-profile .profile-view-wrap main .general .general-info .general-content,
-.container-profile .profile-view-wrap main .general .quali-info .general-content {
+.container-profile .profile-view-wrap .profile-view-wrap-main .general .general-info .general-content,
+.container-profile .profile-view-wrap .profile-view-wrap-main .general .quali-info .general-content {
   width: 70%;
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 500;
@@ -3051,8 +3047,8 @@ main .notifications .tab-content .content.active .delete {
   word-break: keep-all;
   color: #242424;
 }
-.container-profile .profile-view-wrap main .general .general-info .general-introduce,
-.container-profile .profile-view-wrap main .general .quali-info .general-introduce {
+.container-profile .profile-view-wrap .profile-view-wrap-main .general .general-info .general-introduce,
+.container-profile .profile-view-wrap .profile-view-wrap-main .general .quali-info .general-introduce {
   width: 100%;
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 500;
@@ -3062,25 +3058,24 @@ main .notifications .tab-content .content.active .delete {
   color: #242424;
   padding: 0px 20px;
 }
-.container-profile .profile-view-wrap main .quali {
+.container-profile .profile-view-wrap .profile-view-wrap-main .quali {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-right: 30px;
-  padding-left: 30px;
+  padding: 0 10px;
 }
-.container-profile .profile-view-wrap main .quali .quali-wrap {
+.container-profile .profile-view-wrap .profile-view-wrap-main .quali .quali-wrap {
   border: 1px solid #ccc;
   padding: 20px;
   border-radius: 10px;
 }
-.container-profile .profile-view-wrap main .quali .quali-wrap .quali-info {
+.container-profile .profile-view-wrap .profile-view-wrap-main .quali .quali-wrap .quali-info {
   padding: 0px 20px;
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.container-profile .profile-view-wrap main .quali .quali-wrap .quali-info .quali-title {
+.container-profile .profile-view-wrap .profile-view-wrap-main .quali .quali-wrap .quali-info .quali-title {
   width: 30%;
   text-align: right;
   font-family: "Pretendard-Regular", Arial, sans-serif;
@@ -3089,7 +3084,7 @@ main .notifications .tab-content .content.active .delete {
   word-break: keep-all;
   color: #242424;
 }
-.container-profile .profile-view-wrap main .quali .quali-wrap .quali-info .quali-content {
+.container-profile .profile-view-wrap .profile-view-wrap-main .quali .quali-wrap .quali-info .quali-content {
   width: 70%;
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 500;
@@ -3098,15 +3093,14 @@ main .notifications .tab-content .content.active .delete {
   word-break: keep-all;
   color: #242424;
 }
-.container-profile .profile-view-wrap main .review {
+.container-profile .profile-view-wrap .profile-view-wrap-main .review {
   width: 100%;
-  padding: 0px 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 20px;
 }
-.container-profile .profile-view-wrap main .review .review-grade {
+.container-profile .profile-view-wrap .profile-view-wrap-main .review .review-grade {
   padding: 10px;
   border-radius: 10px;
   display: flex;
@@ -3116,7 +3110,7 @@ main .notifications .tab-content .content.active .delete {
   width: 100%;
   margin-top: 20px;
 }
-.container-profile .profile-view-wrap main .review .review-grade .grade p {
+.container-profile .profile-view-wrap .profile-view-wrap-main .review .review-grade .grade p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 700;
   font-size: 34px;
@@ -3124,11 +3118,11 @@ main .notifications .tab-content .content.active .delete {
   color: #242424;
   letter-spacing: 1px;
 }
-.container-profile .profile-view-wrap main .review .review-grade .star-rating {
+.container-profile .profile-view-wrap .profile-view-wrap-main .review .review-grade .star-rating {
   font-size: 18px;
   color: #ffd700;
 }
-.container-profile .profile-view-wrap main .review .review-grade .star-rating p {
+.container-profile .profile-view-wrap .profile-view-wrap-main .review .review-grade .star-rating p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 500;
   font-size: 11px;
@@ -3137,7 +3131,7 @@ main .notifications .tab-content .content.active .delete {
   color: #8b8b8b;
   margin-top: 5px;
 }
-.container-profile .profile-view-wrap main .review .button button {
+.container-profile .profile-view-wrap .profile-view-wrap-main .review .button button {
   padding: 10px 20px;
   border-radius: 10px;
   background-color: #5d5fef;
@@ -3149,7 +3143,7 @@ main .notifications .tab-content .content.active .delete {
   word-break: keep-all;
   cursor: pointer;
 }
-.container-profile .profile-view-wrap main .review .review-content {
+.container-profile .profile-view-wrap .profile-view-wrap-main .review .review-content {
   width: 100%;
   box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.1);
   display: flex;
@@ -3158,29 +3152,29 @@ main .notifications .tab-content .content.active .delete {
   padding: 10px 20px;
   border-radius: 10px;
 }
-.container-profile .profile-view-wrap main .review .review-content .review-profile {
+.container-profile .profile-view-wrap .profile-view-wrap-main .review .review-content .review-profile {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.container-profile .profile-view-wrap main .review .review-content .review-profile .profile {
+.container-profile .profile-view-wrap .profile-view-wrap-main .review .review-content .review-profile .profile {
   display: flex;
   align-items: center;
   gap: 15px;
 }
-.container-profile .profile-view-wrap main .review .review-content .review-profile .profile img {
+.container-profile .profile-view-wrap .profile-view-wrap-main .review .review-content .review-profile .profile img {
   width: 60px;
   height: 60px;
   object-fit: cover;
   border-radius: 50%;
 }
-.container-profile .profile-view-wrap main .review .review-content .review-profile .profile .txt {
+.container-profile .profile-view-wrap .profile-view-wrap-main .review .review-content .review-profile .profile .txt {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.container-profile .profile-view-wrap main .review .review-content .review-profile .profile .txt .profile-name {
+.container-profile .profile-view-wrap .profile-view-wrap-main .review .review-content .review-profile .profile .txt .profile-name {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 700;
   font-size: 14px;
@@ -3188,7 +3182,7 @@ main .notifications .tab-content .content.active .delete {
   word-break: keep-all;
   color: #242424;
 }
-.container-profile .profile-view-wrap main .review .review-content .review-profile .profile .txt .review-date {
+.container-profile .profile-view-wrap .profile-view-wrap-main .review .review-content .review-profile .profile .txt .review-date {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 500;
   font-size: 11px;
@@ -3196,17 +3190,17 @@ main .notifications .tab-content .content.active .delete {
   word-break: keep-all;
   color: #8b8b8b;
 }
-.container-profile .profile-view-wrap main .review .review-content .review-profile .star {
+.container-profile .profile-view-wrap .profile-view-wrap-main .review .review-content .review-profile .star {
   font-size: 12px;
   color: #ffd700;
 }
-.container-profile .profile-view-wrap main .review .review-content .review-txt {
+.container-profile .profile-view-wrap .profile-view-wrap-main .review .review-content .review-txt {
   display: flex;
   flex-direction: column;
   gap: 10px;
   width: 100%;
 }
-.container-profile .profile-view-wrap main .review .review-content .review-txt .title {
+.container-profile .profile-view-wrap .profile-view-wrap-main .review .review-content .review-txt .title {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 700;
   font-size: 13px;
@@ -3214,7 +3208,7 @@ main .notifications .tab-content .content.active .delete {
   word-break: keep-all;
   color: #242424;
 }
-.container-profile .profile-view-wrap main .review .review-content .review-txt .title span {
+.container-profile .profile-view-wrap .profile-view-wrap-main .review .review-content .review-txt .title span {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 700;
   font-size: 13px;
@@ -3222,7 +3216,7 @@ main .notifications .tab-content .content.active .delete {
   word-break: keep-all;
   color: #242424;
 }
-.container-profile .profile-view-wrap main .review .review-content .review-txt p {
+.container-profile .profile-view-wrap .profile-view-wrap-main .review .review-content .review-txt p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 500;
   font-size: 11px;
@@ -3230,14 +3224,14 @@ main .notifications .tab-content .content.active .delete {
   word-break: keep-all;
   color: #242424;
 }
-.container-profile .profile-view-wrap main .review .review-content .report {
+.container-profile .profile-view-wrap .profile-view-wrap-main .review .review-content .report {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 5px;
   height: 13px;
 }
-.container-profile .profile-view-wrap main .review .review-content .report button {
+.container-profile .profile-view-wrap .profile-view-wrap-main .review .review-content .report button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3251,7 +3245,7 @@ main .notifications .tab-content .content.active .delete {
   color: #8b8b8b;
   cursor: pointer;
 }
-.container-profile .profile-view-wrap main .review .review-content .report img {
+.container-profile .profile-view-wrap .profile-view-wrap-main .review .review-content .report img {
   width: 13px;
   height: 13px;
 }

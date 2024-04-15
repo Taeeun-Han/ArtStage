@@ -1162,25 +1162,15 @@ main {
 		.category {
 			width: 100%;
 
-			swiper-container {
-				width: 100%;
+			.categoryWrap {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
 
-				swiper-slide {
-					width: auto;
+				.categoryDiv {
+					background-color: $white;
 					padding: 7px 15px;
 					border-radius: 20px;
-
-					display: flex;
-					justify-content: center;
-					align-items: center;
-
-					background-color: $white;
-
-					cursor: pointer;
-
-					span {
-						font-size: 18px;
-					}
 
 					p {
 						@include profile-add;
@@ -1208,114 +1198,92 @@ main {
 
 		.recruitment-result-wrap {
 			width: calc(100% + 40px);
-			margin: -10px -20px;
+			margin: 0px -20px;
 			padding: 0px 20px;
 
-			swiper-container {
-				swiper-slide {
-					width: 80%;
+			display: flex;
+			align-items: center;
+			gap: 20px;
 
-					.recruitment {
+			.recruitment {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				background-color: $white;
+				border-radius: 10px;
+				padding: 20px 10px;
+				gap: 13px;
+
+				border: 1px solid $bg;
+				cursor: pointer;
+
+				.content-l {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					.img {
+						width: 50px;
+						height: 50px;
+						border-radius: 50%;
+
+						overflow: hidden;
+
+						display: flex;
+						justify-content: center;
+						align-items: center;
+
+						img {
+							border-radius: 50%;
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+						}
+					}
+				}
+
+				.content {
+					width: calc(100% - 63px);
+
+					display: flex;
+					flex-direction: column;
+					gap: 10px;
+
+					.title {
 						width: 100%;
+						overflow: hidden;
+						white-space: nowrap;
+						text-overflow: ellipsis;
+
+						p {
+							@include profile-title;
+							font-size: 12px;
+
+							width: 100%;
+
+							overflow: hidden;
+							white-space: nowrap;
+							text-overflow: ellipsis;
+						}
+					}
+
+					.txt {
+						width: 100%;
+
 						display: flex;
 						align-items: center;
-						background-color: $white;
-						border-radius: 10px;
-						padding: 20px 10px;
-						gap: 13px;
+						justify-content: space-between;
 
-						border: 1px solid $bg;
-
-						cursor: pointer;
-
-						.content-l {
+						.location {
 							display: flex;
-							justify-content: center;
 							align-items: center;
+							gap: 5px;
+							width: 100%;
 
-							.img {
-								width: 50px;
-								height: 50px;
-								border-radius: 50%;
-
-								overflow: hidden;
-
-								display: flex;
-								justify-content: center;
-								align-items: center;
-
-								img {
-									border-radius: 50%;
-									width: 100%;
-									height: 100%;
-									object-fit: cover;
-								}
-							}
-						}
-
-						.content {
-							width: calc(100% - 63px);
-
-							display: flex;
-							flex-direction: column;
-							gap: 10px;
-
-							.title {
-								width: 100%;
-								overflow: hidden;
-								white-space: nowrap;
-								text-overflow: ellipsis;
-
-								p {
-									@include profile-title;
-									font-size: 12px;
-
-									width: 100%;
-
-									overflow: hidden;
-									white-space: nowrap;
-									text-overflow: ellipsis;
-								}
-							}
-
-							.txt {
-								width: 100%;
-
+							.locationText {
 								display: flex;
 								align-items: center;
-								justify-content: space-between;
-
-								.location {
-									display: flex;
-									align-items: center;
-									gap: 5px;
-									width: 100%;
-
-									.locationText {
-										display: flex;
-										align-items: center;
-										gap: 3px;
-
-										p {
-											@include profile-p;
-											font-size: 11px;
-										}
-									}
-
-									img {
-										width: 11px;
-										height: 11px;
-									}
-								}
-
-								.endDate {
-									width: 100%;
-									text-align: right;
-
-									@include profile-p;
-									font-size: 10px;
-									color: $grey4;
-								}
+								gap: 3px;
 
 								p {
 									@include profile-p;
@@ -1323,48 +1291,67 @@ main {
 								}
 							}
 
-							// .content-l {
-							// 	display: flex;
-							// 	flex-direction: column;
-							// 	gap: 10px;
-							// 	align-items: center;
-							// 	justify-content: center;
+							img {
+								width: 11px;
+								height: 11px;
+							}
+						}
 
-							// 	.img {
-							// 		width: 50px;
-							// 		height: 50px;
-							// 		border-radius: 50%;
-							// 		overflow: hidden;
-							// 		display: flex;
-							// 		justify-content: center;
-							// 		align-items: center;
+						.endDate {
+							width: 100%;
+							text-align: right;
 
-							// 		img {
-							// 			border-radius: 50%;
-							// 			width: 100%;
-							// 			height: 100%;
-							// 			object-fit: cover;
-							// 		}
-							// 	}
-							// }
+							@include profile-p;
+							font-size: 10px;
+							color: $grey4;
+						}
 
-							// .txt {
-							// 	flex-grow: 1;
-
-							// 	display: flex;
-							// 	flex-direction: column;
-							// 	justify-content: center;
-							// 	gap: 8px;
-
-							// 	p {
-							// 		@include profile-p;
-							// 		color: $grey4;
-							// 		font-size: 10px;
-							// 		line-height: 0px;
-							// 	}
-							// }
+						p {
+							@include profile-p;
+							font-size: 11px;
 						}
 					}
+
+					// .content-l {
+					// 	display: flex;
+					// 	flex-direction: column;
+					// 	gap: 10px;
+					// 	align-items: center;
+					// 	justify-content: center;
+
+					// 	.img {
+					// 		width: 50px;
+					// 		height: 50px;
+					// 		border-radius: 50%;
+					// 		overflow: hidden;
+					// 		display: flex;
+					// 		justify-content: center;
+					// 		align-items: center;
+
+					// 		img {
+					// 			border-radius: 50%;
+					// 			width: 100%;
+					// 			height: 100%;
+					// 			object-fit: cover;
+					// 		}
+					// 	}
+					// }
+
+					// .txt {
+					// 	flex-grow: 1;
+
+					// 	display: flex;
+					// 	flex-direction: column;
+					// 	justify-content: center;
+					// 	gap: 8px;
+
+					// 	p {
+					// 		@include profile-p;
+					// 		color: $grey4;
+					// 		font-size: 10px;
+					// 		line-height: 0px;
+					// 	}
+					// }
 				}
 			}
 		}
@@ -2379,7 +2366,9 @@ main {
 			}
 		}
 
-		main {
+		.profile-view-wrap-main {
+			margin: 0;
+
 			border-top-left-radius: 20px;
 			border-top-right-radius: 20px;
 			position: absolute;
@@ -2411,7 +2400,8 @@ main {
 			}
 
 			.profile-menu {
-				width: 100%;
+				width: calc(100% + 40px);
+				margin: 0 -20px;
 				border-top: 1px solid #ccc;
 				border-bottom: 1px solid #ccc;
 
@@ -2483,8 +2473,7 @@ main {
 				width: 100%;
 				display: flex;
 				flex-direction: column;
-				padding-right: 30px;
-				padding-left: 30px;
+				padding: 0 10px;
 
 				.quali-wrap {
 					border: 1px solid #ccc;
@@ -2513,7 +2502,6 @@ main {
 
 			.review {
 				width: 100%;
-				padding: 0px 20px;
 				display: flex;
 				flex-direction: column;
 				align-items: flex-end;
