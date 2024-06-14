@@ -56,7 +56,6 @@
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 700;
   font-size: 16px;
-  line-height: 24px;
   color: #242424;
 }
 .container .wrap .join .join-content .join-txt p span,
@@ -745,6 +744,16 @@
   color: #6F6F6F;
 }
 
+.serviceModal .serviceModalCon {
+  width: 90vw;
+}
+.serviceModal .serviceModalCon .modal-content {
+  gap: 0px;
+}
+.serviceModal .serviceModalCon .modal-content img {
+  width: 100%;
+}
+
 @font-face {
   font-family: "Pretendard-Regular";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
@@ -1031,9 +1040,129 @@ header .wrap .header-center .txt p {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 700;
   font-size: 16px;
-  line-height: 24px;
   color: #242424;
   word-break: keep-all;
+}
+
+footer {
+  border-top: 1px solid #ddd;
+  width: calc(100% + 40px);
+  margin: 0 -20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .arrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .arrow p {
+  font-size: 10px;
+  color: #8b8b8b;
+}
+footer .arrow img {
+  width: 10px;
+  height: 10px;
+}
+footer .top {
+  display: flex;
+  align-items: stretch;
+  gap: 50px;
+}
+footer .top .cs {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+footer .top .cs .title a {
+  font-weight: 600;
+  font-size: 11px;
+  color: #5d5fef;
+  line-height: 1.5;
+  vertical-align: middle;
+  display: inline-block;
+}
+footer .top .cs .qna a {
+  font-weight: 500;
+  font-size: 10px;
+  color: #242424;
+  line-height: 1.5;
+  vertical-align: middle;
+  display: inline-block;
+}
+footer .top .cs .time {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+footer .top .cs .time p {
+  font-size: 10px;
+  color: #8b8b8b;
+  line-height: 1;
+  vertical-align: middle;
+  display: inline-block;
+}
+footer .top .social {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: space-between;
+}
+footer .top .social .title {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+footer .top .social .title p {
+  font-weight: 600;
+  font-size: 11px;
+  color: #5d5fef;
+  line-height: 1.5;
+  vertical-align: middle;
+  display: inline-block;
+}
+footer .top .social .title .img {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.5;
+}
+footer .top .social .title .img a img {
+  width: 12px;
+  height: 12px;
+}
+footer .top .social .terms {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+footer .top .social .terms a {
+  font-weight: 500;
+  font-size: 10px;
+  color: #8b8b8b;
+  line-height: 1;
+  vertical-align: middle;
+  display: inline-block;
+}
+footer .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+footer .bottom p,
+footer .bottom a {
+  font-size: 10px;
+  color: #8b8b8b;
+  font-weight: 500;
+}
+footer .bottom .mb7 {
+  margin-bottom: 7px;
+}
+footer .bottom a {
+  color: #5d5fef;
+  font-weight: 600;
 }
 
 .search-bar {
@@ -1377,7 +1506,6 @@ ul.nav .on i span {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 700;
   font-size: 16px;
-  line-height: 24px;
   color: #242424;
   word-break: keep-all;
 }
@@ -1404,7 +1532,6 @@ ul.nav .on i span {
   font-family: "Pretendard-Regular", Arial, sans-serif;
   font-weight: 700;
   font-size: 16px;
-  line-height: 24px;
   color: #242424;
   font-size: 18px;
   color: #ffffff;
@@ -1490,6 +1617,7 @@ ul.nav .on i span {
 
 .main-main {
   background-color: #f9f9f9;
+  padding-bottom: 0px;
 }
 
 main {
@@ -1781,6 +1909,108 @@ main .menu .search-history .search-history-content img {
   width: 13px;
   height: 13px;
 }
+main .menu .sub {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+main .menu .sub p {
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+  word-break: keep-all;
+  line-height: 24px;
+  color: #242424;
+}
+main .menu .sub p span {
+  color: #ff5959;
+  font-weight: 600;
+  font-size: 14px;
+}
+main .menu .sub button {
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #5d5fef;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 13px;
+}
+main .menu .tabWrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 50px;
+  background-color: #474747;
+  padding: 5px;
+}
+main .menu .tabWrap .tab {
+  padding: 10px;
+  flex: 1;
+  text-align: center;
+  font-weight: 500;
+  font-size: 13px;
+  border-radius: 50px;
+  color: #ffffff;
+}
+main .menu .tabWrap .on {
+  background-color: #ffffff;
+  color: #242424;
+}
+main .menu .tabCon {
+  width: 100%;
+  padding-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+}
+main .menu .tabCon .video {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: calc(50% - 5px);
+  margin-bottom: 20px;
+}
+main .menu .tabCon .video .imgWrap {
+  position: relative;
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+main .menu .tabCon .video .imgWrap img {
+  width: 100%;
+  height: 200px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+main .menu .tabCon .video .imgWrap .badge {
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  padding: 8px 15px;
+  background-color: #ff5959;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 12px;
+}
+main .menu .tabCon .video .videoTitle {
+  font-weight: 400;
+  font-size: 13px;
+  word-break: keep-all;
+  color: #ffffff;
+}
+main .pdn {
+  padding: 0px 20px 20px 20px;
+}
+main .pdn2 {
+  padding: 10px 20px 20px 20px;
+}
 main .menu2,
 main .menu4,
 main .menu5 {
@@ -1830,7 +2060,8 @@ main .menu3 .recruitment-result-wrap {
   padding: 0px 20px;
   display: flex;
   align-items: center;
-  gap: 20px;
+  flex-direction: column;
+  gap: 10px;
 }
 main .menu3 .recruitment-result-wrap .recruitment {
   width: 100%;
@@ -1940,6 +2171,8 @@ main .menu3 .recruitment-result-wrap .recruitment .content .txt p {
 }
 main .menu6 {
   padding: 0px 20px;
+  padding-bottom: 30px;
+  background-color: #ffffff;
 }
 main .menu6 .company-info {
   width: calc(100% + 40px);
@@ -2086,6 +2319,10 @@ main .notifications .tab-content .content.active .txt p:nth-child(2) {
 main .notifications .tab-content .content.active .delete {
   width: 15px;
   height: 15px;
+}
+
+.ottMain .menu {
+  background-color: #242424;
 }
 
 .profile-list {
@@ -7099,6 +7336,137 @@ main .notifications .tab-content .content.active .delete {
   content: "▪";
   position: absolute;
   left: -15px;
+}
+
+.ott-view {
+  background-color: #242424;
+}
+.ott-view header {
+  background-color: #242424;
+}
+.ott-view header .wrap .header-center .txt p {
+  color: #ffffff;
+}
+.ott-view .ott-view-wrap .ott-view-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.ott-view .ott-view-wrap .ott-view-main .img {
+  width: calc(100% + 40px);
+  margin: 0 -20px;
+  height: 300px;
+}
+.ott-view .ott-view-wrap .ott-view-main .img img {
+  width: 100%;
+  height: 100%;
+}
+.ott-view .ott-view-wrap .ott-view-main .btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.ott-view .ott-view-wrap .ott-view-main .btn button {
+  width: 100%;
+  background-color: #ff5959;
+  border-radius: 7px;
+  padding: 10px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 500;
+  font-size: 14px;
+}
+.ott-view .ott-view-wrap .ott-view-main .btn button img {
+  width: 12px;
+  height: 12px;
+}
+.ott-view .ott-view-wrap .ott-view-main .ottTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+.ott-view .ott-view-wrap .ott-view-main .ottTitle span {
+  font-weight: 600;
+  font-size: 16px;
+  color: #ffffff;
+}
+.ott-view .ott-view-wrap .ott-view-main .ottTitle .titleSub {
+  font-weight: 500;
+  font-size: 12px;
+}
+.ott-view .ott-view-wrap .ott-view-main .ottTitle .badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ott-view .ott-view-wrap .ott-view-main .ottTitle .badge span {
+  font-weight: 500;
+  font-size: 10px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  text-align: center;
+  white-space: nowrap;
+}
+.ott-view .ott-view-wrap .ott-view-main .ottTitle .badge .all {
+  background-color: #009149;
+}
+.ott-view .ott-view-wrap .ott-view-main .ottTitle .badge .free {
+  background-color: #3a4ca8;
+}
+.ott-view .ott-view-wrap .ott-view-main .ottTitle .badge .classic {
+  background-color: #fd9f28;
+}
+.ott-view .ott-view-wrap .ott-view-main .border {
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff;
+}
+.ott-view .ott-view-wrap .ott-view-main .con {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ott-view .ott-view-wrap .ott-view-main .con .bigTitle {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+.ott-view .ott-view-wrap .ott-view-main .con .conTitle {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ott-view .ott-view-wrap .ott-view-main .con .conTitle p {
+  width: 18%;
+}
+.ott-view .ott-view-wrap .ott-view-main .con .conTitle span {
+  font-size: 11px;
+  font-weight: 400;
+  flex: 1;
+}
+.ott-view .ott-view-wrap .ott-view-main .con .flex {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.ott-view .ott-view-wrap .ott-view-main .player .imgWrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.ott-view .ott-view-wrap .ott-view-main .player .imgWrap img {
+  width: 100px;
+  height: 150px;
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

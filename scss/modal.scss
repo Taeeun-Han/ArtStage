@@ -445,3 +445,18 @@
 		}
 	}
 }
+
+
+.serviceModal{
+	.serviceModalCon{
+		width: 90vw;
+
+		.modal-content{
+			gap: 0px;
+
+			img{
+				width: 100%;
+			}
+		}
+	}
+}
