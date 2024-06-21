@@ -7885,8 +7885,8 @@ main .notifications .tab-content .content.active .delete {
 }
 .ott-view .ott-view-wrap .ott-view-main .player .imgWrap {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  gap: 10px;
 }
 .ott-view .ott-view-wrap .ott-view-main .player .imgWrap img {
   width: 100px;
